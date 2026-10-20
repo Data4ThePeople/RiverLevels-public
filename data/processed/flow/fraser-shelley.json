@@ -22,13 +22,13 @@
   "River ice in winter changes the level for a given flow, so winter days marked with the ice symbol (B) are estimated by other means; they are marked estimated here (Environment and Climate Change Canada).",
   "Discharge at Shelley starts in 1950, decades before the level record shown here, which starts in 2011 (Environment and Climate Change Canada).",
   "Approved daily means (HYDAT) run from 1950-05-01 to 2025-10-01. Discharge symbols: {'none': 16155, 'Ice Conditions': 10891, 'Estimated': 287, 'Partial Day': 209}. Ice conditions (B) and estimated (E) are marked estimated; partial day (A) and other symbols stay measured. Skipped 36 HYDAT days with no discharge and 0 negative values (Environment and Climate Change Canada).",
-  "Check: on 198 days in both HYDAT and the real-time record, our daily mean of the 5-minute readings differed from the approved HYDAT value by a median of -0.0% (range -0.5% to +0.5%), so real-time values may shift when approved (Environment and Climate Change Canada).",
-  "After HYDAT ends: 5-minute real-time readings (2025-03-17 to 2026-10-17 UTC) averaged into 380 daily means by local standard time day. A day needs readings in at least 20 of its 24 hours; 1 days left out. All real-time days are provisional, or estimated if any reading has symbol B or E. Approval of the readings: {'Provisional/Provisoire': 109573, 'Final/Finales': 57092}; symbols: {'none': 166665} (Environment and Climate Change Canada).",
+  "Check: on 195 days in both HYDAT and the real-time record, our daily mean of the 5-minute readings differed from the approved HYDAT value by a median of -0.0% (range -0.5% to +0.5%), so real-time values may shift when approved (Environment and Climate Change Canada).",
+  "After HYDAT ends: 5-minute real-time readings (2025-03-20 to 2026-10-20 UTC) averaged into 383 daily means by local standard time day. A day needs readings in at least 20 of its 24 hours; 1 days left out. All real-time days are provisional, or estimated if any reading has symbol B or E. Approval of the readings: {'Provisional/Provisoire': 110389, 'Final/Finales': 56275}; symbols: {'none': 166664} (Environment and Climate Change Canada).",
   "Station status: Active (Environment and Climate Change Canada)."
  ],
  "first_date": "1950-05-01",
- "last_date": "2026-10-16",
- "n_days": 27922,
+ "last_date": "2026-10-19",
+ "n_days": 27925,
  "coverage_by_decade": [
   {
    "decade": 1950,
@@ -82,9 +82,9 @@
   {
    "decade": 2020,
    "share_days": 0.9976,
-   "share_measured": 0.5707,
-   "share_estimated": 0.2737,
-   "share_provisional": 0.1532
+   "share_measured": 0.57,
+   "share_estimated": 0.2733,
+   "share_provisional": 0.1542
   }
  ]
 }

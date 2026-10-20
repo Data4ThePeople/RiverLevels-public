@@ -41268,9 +41268,6 @@ date,flow,quality
 2025-02-22,849.0,measured
 2025-02-23,1050.0,measured
 2025-02-24,1000.0,measured
-2025-03-18,1061.193,provisional
-2025-03-19,1033.194,provisional
-2025-03-20,1010.924,provisional
 2025-03-21,1001.24,provisional
 2025-03-22,989.582,provisional
 2025-03-23,986.594,provisional
@@ -41838,3 +41835,6 @@ date,flow,quality
 2026-10-14,2461.736,provisional
 2026-10-15,2103.889,provisional
 2026-10-16,1866.667,provisional
+2026-10-17,1796.146,provisional
+2026-10-18,1848.715,provisional
+2026-10-19,1755.833,provisional

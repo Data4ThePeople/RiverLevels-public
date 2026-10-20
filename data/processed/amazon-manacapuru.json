@@ -13,8 +13,8 @@
   "datum": "cm above the local staff gauge zero (ANA does not publish the zero's elevation in this service)",
   "daily_stat": "mean",
   "first_date": "1972-01-01",
-  "last_date": "2026-10-14",
-  "n_days": 19958,
+  "last_date": "2026-10-11",
+  "n_days": 19955,
   "coverage_by_decade": [
     {
       "decade": 1970,
@@ -54,9 +54,9 @@
     {
       "decade": 2020,
       "share_days": 1.0,
-      "share_measured": 0.5684,
+      "share_measured": 0.5691,
       "share_estimated": 0.0315,
-      "share_provisional": 0.4002
+      "share_provisional": 0.3994
     }
   ],
   "license": "No license on the HidroWeb service itself. The SNIRH metadata record for the national hydrometric network allows reproduction of the data provided the source is cited (https://metadados.snirh.gov.br/geonetwork/srv/api/records/f85dbf06-a869-414c-afc5-bb01869e9156). Credit: Agencia Nacional de Aguas e Saneamento Basico (ANA), HidroWeb.",
@@ -65,9 +65,9 @@
     "Historic series: ANA HidroSerieHistorica, tipoDados=1 (stage). Where a month exists at consistency level 2 (consistent, reviewed by ANA) we use it; otherwise level 1 (raw) and mark it provisional. Last level-2 date: 2023-12-31. Level-1 days used: 852.",
     "Per-day status codes from ANA (CotaNNStatus): 724 days flagged 2 'estimated' are marked estimated; 4 days flagged 3 'doubtful' and 0 days flagged 4 'dry staff gauge' are kept as published with their consistency-level quality.",
     "Daily value: ANA's daily-mean row where published (normally the mean of the 07:00 and 17:00 staff readings); otherwise the mean of the reading rows for that day. Days by source row: {'daily_mean_row': 19791}.",
-    "Historic record ends 2026-04-30. Days after that come from the ANA telemetry feed (DadosHidrometeorologicos, mostly 15-minute readings), averaged to a daily mean (167 days, marked provisional). Telemetry days with fewer than 12 readings: 3.",
+    "Historic record ends 2026-04-30. Days after that come from the ANA telemetry feed (DadosHidrometeorologicos, mostly 15-minute readings), averaged to a daily mean (164 days, marked provisional). Telemetry days with fewer than 12 readings: 0. Dropped as partial days (fewer than 75% of the readings the gauge usually sends per day, the median over the 61 days around it): 9, most recent 2026-10-16, 2026-10-17, 2026-10-18, 2026-10-19, 2026-10-20.",
     "No fill values found in this series; ANA leaves missing days blank.",
-    "Share of days marked estimated by decade: {1970: 0.01, 1980: 0.009, 1990: 0.134, 2000: 0.011, 2010: 0.014, 2020: 0.031}."
+    "Share of days marked estimated by decade: {1970: 0.01, 1980: 0.009, 1990: 0.134, 2000: 0.011, 2010: 0.014, 2020: 0.032}."
   ],
   "measurement_history": [
     {

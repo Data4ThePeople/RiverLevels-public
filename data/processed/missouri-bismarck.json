@@ -13,8 +13,8 @@
   "datum": "ft above gauge datum (1619.64 ft NAVD88)",
   "daily_stat": "mean",
   "first_date": "1897-04-05",
-  "last_date": "2026-10-14",
-  "n_days": 45755,
+  "last_date": "2026-10-19",
+  "n_days": 45760,
   "coverage_by_decade": [
     {
       "decade": 1890,
@@ -110,16 +110,16 @@
     {
       "decade": 2020,
       "share_days": 0.9996,
-      "share_measured": 0.8645,
+      "share_measured": 0.8627,
       "share_estimated": 0.0,
-      "share_provisional": 0.1351
+      "share_provisional": 0.1369
     }
   ],
   "license": "Public domain (US federal government work). Credit: U.S. Geological Survey.",
   "notes": [
     "DATUM BREAK: USGS Water-Supply Paper 1309 says the recorder datum was lowered 4.24 ft to the present datum on 1934-10-01; before that (chain gauge to 1928-10-17, then the recorder) readings were on a datum 4.24 ft higher. The daily values are not adjusted: yearly minimums jump from -2.9 ft in 1934 to +2.4 ft in 1935. Also April 1936 to September 1937 used mostly a wire-weight gauge at a datum 0.47 ft lower. Do not compare levels across 1934 without adding 4.24 ft to the earlier values (we leave them as published).",
     "Flow has been regulated by Garrison Dam (Lake Sakakawea), about 75 miles upstream, since November 1953. Lake Oahe begins downstream; whether its backwater reaches the gauge was not found in USGS reports.",
-    "USGS approval codes in the file: {'A': 45406, 'P': 335, 'A:e': 14}. A (approved) -> measured, P (provisional) -> provisional, any code with 'e' (estimated by USGS) -> estimated, even if approved.",
+    "USGS approval codes in the file: {'A': 45406, 'P': 340, 'A:e': 14}. A (approved) -> measured, P (provisional) -> provisional, any code with 'e' (estimated by USGS) -> estimated, even if approved.",
     "Non-numeric value codes skipped (equipment, ice and similar): none. Dropped 0 fill values.",
     "Daily mean of the gauge's readings for the day, as computed by USGS. In early years the 'daily mean' may rest on one or two staff-gauge readings a day; see measurement_history.",
     "Legacy waterservices.usgs.gov endpoint; USGS plans to retire it in favor of api.waterdata.usgs.gov, so this URL may need to change.",
@@ -158,7 +158,7 @@
     },
     {
       "date": "1936-04-10",
-      "fact": "Apr. 1936 to Sept. 1937, mostly a wire-weight gauge 2,000 ft downstream at a datum 0.47 ft lower.",
+      "fact": "Apr. 10, 1936, to Sept. 30, 1937, all readings came from a site 2,000 ft downstream at a datum 0.47 ft lower: a wire-weight gauge, and a recorder from Apr. 5 to July 23, 1937.",
       "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
     },
     {
@@ -187,5 +187,5 @@
       "source_url": "https://pubs.usgs.gov/wdr/2004/wdr-nd-04-1/htdocs/Output/06342500.2004.sw.html"
     }
   ],
-  "public_notes": "Before October 1, 1934, the readings in this file were measured from a gauge zero 4.24 feet higher than today's, and USGS did not adjust them, so early low readings look about 4 feet lower than they would today. Since Garrison Dam began holding back water in 1953, the river here has been lower and steadier, and winter ice can push readings up."
+  "public_notes": "Before October 1, 1934, the readings in this file were measured from a gauge zero 4.24 feet higher than today's, and USGS did not adjust them, so early low readings look about 4 feet lower than they would today. Garrison Dam upstream has regulated the river here since November 1953 (USGS), and winter ice can push readings up."
 }

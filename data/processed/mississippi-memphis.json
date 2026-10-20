@@ -171,12 +171,12 @@
       "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
     },
     {
-      "date": "not found",
-      "fact": "USGS and USACE now list gauge zero as 184.03 ft NAVD88; date of that update not found.",
+      "date": "current",
+      "fact": "USGS lists gauge zero as 184.03 ft NAVD88; the date of that update was not found.",
       "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-07032000/"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "USGS says the gauge height is furnished by the USACE Memphis District; USGS uses it to publish discharge.",
       "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-07032000/"
     },

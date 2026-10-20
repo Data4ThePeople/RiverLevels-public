@@ -1,7 +1,9 @@
 """France Hub'Eau hydrometrie API (no key): daily mean flow (QmnJ, L/s) for the
 Seine at Paris-Austerlitz, on the same station chain as the level series
-(hubeau.py): F700000109, F700000110, F700000111, F700000102, each used only
-inside its own window. F700000103 (the post-2006 flow station) is not joined.
+(hubeau.py): F700000109, F700000110, F700000111, F700000102 to 2005, then the
+Austerlitz flow station F700000103 from 2006 on, where Hub'Eau publishes Paris
+flow after 2005. Each station is used only inside its own window. Joined
+October 20, 2026, after the independent tie-out found 2006 to 2026 missing.
 
 Every API page is saved raw as data/raw/flow_hubeau/<code>_QmnJ_p<NNN>.json.
 Contract: scripts/fetch/FLOW.md.
@@ -21,8 +23,10 @@ from hubeau import LICENSE, METHOD_MEASURED, PARIS, describe_flags, frame  # noq
 
 API = "https://hubeau.eaufrance.fr/api/v2/hydrometrie"
 RAWDIR = RAW / "flow_hubeau"
-CODES = [c for c, _, _ in PARIS]
-assert "F700000103" not in CODES
+# the level chain, except that from 2006 on flow comes from the Austerlitz flow station F700000103
+CHAIN = [(c, lo, hi) for c, lo, hi in PARIS if c != "F700000102"] + [
+    ("F700000102", "1990-01-01", "2005-12-31"), ("F700000103", "2006-01-01", "2100-01-01")]
+CODES = [c for c, _, _ in CHAIN]
 DOUBTFUL = 12  # Sandre 515 code_qualification: 12 Douteuse, 16 Bonne, 20 non qualifiee, 30 Estimee
 
 
@@ -93,7 +97,7 @@ def main():
     per_day = alld.groupby("date_obs_elab").code_station.nunique()
     overlap = per_day[per_day > 1]
     pieces, notes_st = [], []
-    for code, lo, hi in PARIS:
+    for code, lo, hi in CHAIN:
         d = data[code]
         dd = d[(d.date_obs_elab >= lo) & (d.date_obs_elab <= hi)].copy()
         out = d[(d.date_obs_elab < lo) | (d.date_obs_elab > hi)]
@@ -111,7 +115,16 @@ def main():
     nan_years = paris[paris.resultat_obs_elab.isna()].date_obs_elab.str[:4].value_counts().sort_index().to_dict()
     n_neg = int((paris.resultat_obs_elab < 0).sum())
     paris = paris[paris.resultat_obs_elab.notna() & (paris.resultat_obs_elab >= 0)]
-    n_102_late = int((paris.code_station.eq("F700000102") & (paris.date_obs_elab >= "2006-01-01")).sum())
+    # agreement between the two Austerlitz stations on days both publish a flow from 2006 on
+    a, b = data["F700000102"], data["F700000103"]
+    both = a[a.date_obs_elab >= "2006-01-01"].merge(b, on="date_obs_elab", suffixes=("_102", "_103"))
+    both = both[both.resultat_obs_elab_102.notna() & both.resultat_obs_elab_103.notna()]
+    rel = (both.resultat_obs_elab_102 / both.resultat_obs_elab_103 - 1) * 100
+    join_note = (f"On {len(both)} days from 2006 on that both F700000102 and F700000103 publish a flow, "
+                 f"F700000102 differs from F700000103 by a median {rel.median():+.1f}% (5th to 95th percentile "
+                 f"{rel.quantile(.05):+.1f}% to {rel.quantile(.95):+.1f}%) (Hub'Eau).") if len(both) else (
+                 "F700000102 and F700000103 publish no flow on the same day from 2006 on, so the join could not "
+                 "be checked against an overlap (Hub'Eau).")
     dbt = paris[paris.code_qualification == DOUBTFUL]
     dbt_dec = (dbt.date_obs_elab.str[:3] + "0s").value_counts().sort_index().to_dict()
     prov = paris[paris.quality == "provisional"]
@@ -120,7 +133,7 @@ def main():
         "id": "seine-paris", "river": "seine", "name": "Paris-Austerlitz",
         "station_name": "La Seine à Paris - Austerlitz",
         "station_code": "F700000109 (1900-1965), F700000110 (1966-1973), F700000111 (1974-1989), "
-                        "F700000102 (1990-)",
+                        "F700000102 (1990-2005), F700000103 (2006-)",
         "country": "France", "lat": round(pm["latitude_station"], 6), "lon": round(pm["longitude_station"], 6),
         "same_station": True, "offset_note": "", "kind": "river flow", "unit": "L/s",
         "daily_stat": "mixed",
@@ -139,8 +152,10 @@ def main():
             "once a day (more often in floods), so the early 'daily mean' often rests on one reading (Hub'Eau "
             "station history, as in the level series).",
             "Flow is in liters per second as published (100,000 L/s is 100 m³/s); not converted (Hub'Eau).",
-            "The same four station codes as the level series are used, each only inside its window, with no "
-            "offset. The flow station F700000103 (2006 on) is a separate station and is not joined (Hub'Eau).",
+            "The same station codes as the level series are used through 2005, each only inside its window, "
+            "with no offset. From 2006 on, Hub'Eau publishes Paris flow mainly under the Austerlitz flow station "
+            "F700000103, so the series uses it from January 1, 2006 (Hub'Eau).",
+            join_note,
             f"Days published by more than one chain station: {len(overlap)}"
             + (f" ({overlap.index.min()} to {overlap.index.max()}); on those days the station whose window holds "
                "the date wins, as in the level series" if len(overlap) else "") + " (Hub'Eau).",
@@ -149,12 +164,8 @@ def main():
             "be off, not that it was estimated (Hub'Eau).",
             (f"Provisional (not yet validated) days: {len(prov)}, {prov.date_obs_elab.min()} to "
              f"{prov.date_obs_elab.max()} (Hub'Eau).") if len(prov) else "No provisional days (Hub'Eau).",
-            "Paris flow is affected by four large reservoir lakes upstream, run by Seine Grands Lacs, which hold "
-            "back winter high water and release it in summer and fall, so recent flows differ from natural flows "
-            "(Seine Grands Lacs).",
-            f"From 2006 on, F700000102 has flow on only {n_102_late} days, because Hub'Eau publishes Paris "
-            "flow from then on mainly under the separate flow station F700000103, which is not joined here "
-            "(Hub'Eau).",
+            "Paris flow is influenced by four large reservoir lakes upstream, which Hub'Eau says reduce flood "
+            "peaks, so recent flows differ from natural flows (Hub'Eau).",
             f"Rows in window: {n_raw}. Empty values dropped: {n_nan}"
             + (f" (by year {nan_years}; these rows carry no status either)" if n_nan else "")
             + f". Negative values dropped: {n_neg} (Hub'Eau).",

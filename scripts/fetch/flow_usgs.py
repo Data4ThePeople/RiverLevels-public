@@ -27,7 +27,9 @@ GAUGES = [
     dict(id="mississippi-stlouis", river="mississippi", name="St. Louis", site="07010000",
          offset="", notes=[
              "How USGS built the earliest St. Louis flows (1861 to the 1930s) is not documented "
-             "in the daily-values file; they rest on few field measurements (USGS).",
+             "in the daily-values file. A 2009 USGS study says the first discharge measurement "
+             "there was made in 1866 and early daily flows were obtained from the daily stage "
+             "through the rating in use at the time (USGS).",
          ]),
     dict(id="mississippi-memphis", river="mississippi", name="Memphis", site="07032000",
          offset="", notes=[]),

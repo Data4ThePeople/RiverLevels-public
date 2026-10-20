@@ -13,8 +13,8 @@
   "datum": "m above the local gauge zero (cero de escala); INA lists the zero at 2.923 m IGN (Argentine national vertical datum)",
   "daily_stat": "mixed (see notes)",
   "first_date": "1884-01-02",
-  "last_date": "2026-10-14",
-  "n_days": 51996,
+  "last_date": "2026-10-19",
+  "n_days": 52001,
   "coverage_by_decade": [
     {
       "decade": 1880,
@@ -116,8 +116,8 @@
     },
     {
       "decade": 2020,
-      "share_days": 0.9939,
-      "share_measured": 0.9939,
+      "share_days": 0.994,
+      "share_measured": 0.994,
       "share_estimated": 0.0,
       "share_provisional": 0.0
     }
@@ -126,7 +126,7 @@
   "notes": [
     "INA series 34 ('medición directa', variable 'Altura hidrométrica'), station Rosario (INA station 34, PNA code 280), owner PNA.",
     "INA publishes no per-value quality flag, so every value is marked measured. This includes the most recent days, which INA may still correct.",
-    "53732 raw observations. Days with more than one reading (averaged to a daily mean): 1285, from 2016-01-04 to 2026-07-10. Before that each day has a single reading.",
+    "53738 raw observations. Days with more than one reading (averaged to a daily mean): 1285, from 2016-01-04 to 2026-07-10. Before that each day has a single reading.",
     "Most common local timestamp by decade: {1880: '07:00', 1890: '07:00', 1900: '07:00', 1910: '07:00', 1920: '07:00', 1930: '07:00', 1940: '07:00', 1950: '07:00', 1960: '07:00', 1970: '07:00', 1980: '06:00', 1990: '06:00', 2000: '04:00', 2010: '04:00', 2020: '00:00'}. These are the times INA stored; the uniform 07:00 before 1980 looks like a loading convention, not a documented reading hour.",
     "No fill values found.",
     "INA alert thresholds for this gauge: alert 5 m, evacuation 5.25 m, low water 1.64 m."
@@ -138,20 +138,20 @@
       "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"
     },
     {
-      "date": "2018 survey",
+      "date": "current",
       "fact": "INA metadata: Prefectura staff gauge (not automatic), zero at 2.923 m IGN.",
       "source": "https://alerta.ina.gob.ar/a5/obs/puntual/estaciones?nombre=Rosario&format=json"
     },
     {
-      "date": "1875-1908",
-      "fact": "Antico et al. (2020) rescued the early Rosario record, re-digitized it and corrected errors from a gradual sinking of the gauge. Whether INA's series includes that correction is not stated.",
+      "date": "1875-1883",
+      "fact": "Antico et al. (2020) digitized typewritten daily Rosario levels for 1875 to 1883, tied them to the modern datum and corrected them for errors from a gradual sinking of the gauge. These years come before INA's series, which starts in 1884.",
       "source": "https://ri.conicet.gov.ar/handle/11336/145296?show=full"
     },
     {
       "date": null,
-      "fact": "Not found: reading hours and readings per day, gauge moves, telemetry start, whether the INA series includes the sinking correction.",
+      "fact": "Not found: reading hours and readings per day, gauge moves, telemetry start, whether the gauge sinking affected years after 1883.",
       "source": null
     }
   ],
-  "public_notes": "Rosario's record goes back to 1884, one of the longest in South America. Researchers found the gauge slowly sank in its early decades, and it is not clear whether this copy of the data was corrected for that, so the earliest years are less certain."
+  "public_notes": "Rosario's record in this file starts in 1884. Researchers describe Rosario's as the longest water level record on the Paraná; they corrected the earlier 1875 to 1883 readings, which are not in this file, for a slow sinking of the gauge."
 }

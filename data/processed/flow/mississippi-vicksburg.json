@@ -21,14 +21,14 @@
   "Flow is computed from the Vicksburg water level through a rating curve; the Corps file does not describe the rating or how it changed (USACE).",
   "USGS lists at least six gauge sites at Vicksburg since 1871, and the file does not say which site each year uses (USGS).",
   "On the lower Mississippi the same level can carry different flows on a rising and a falling river, so single-rating flows are least certain in floods (USGS).",
-  "One reading a day, not a daily mean, stamped at UTC {'12:00': 45940}; dates are days in the file's time zone (CST6CDT) (USACE).",
-  "CWMS quality codes: {0: 45940}. Code 0 means the value was never screened, so the Corps file gives no approved or provisional status; those values are marked measured (USACE).",
+  "One reading a day, not a daily mean, stamped at UTC {'12:00': 45943}; dates are days in the file's time zone (CST6CDT) (USACE).",
+  "CWMS quality codes: {0: 45943}. Code 0 means the value was never screened, so the Corps file gives no approved or provisional status; those values are marked measured (USACE).",
   "Dropped 5 empty values, 0 flagged missing or rejected, and 0 negative values (USACE).",
   "Flows are rounded to whole cfs: the API converts from stored metric values and returns float noise such as 545725.0657 (USACE)."
  ],
  "first_date": "1901-01-02",
- "last_date": "2026-10-16",
- "n_days": 45939,
+ "last_date": "2026-10-19",
+ "n_days": 45942,
  "coverage_by_decade": [
   {
    "decade": 1900,

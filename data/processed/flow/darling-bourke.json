@@ -21,13 +21,13 @@
   "BoM publishes discharge that the station owner computes from the water level through a rating curve, checked by field flow measurements (Bureau of Meteorology).",
   "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 169509010, station 425003 DARLING@BOURKE TOWN; data owner NSW - Water NSW (Bureau of Meteorology).",
   "Daily mean of the merged quality-controlled record, computed by BoM over 24 hours; the API does not say how many readings fed each early-year mean (Bureau of Meteorology).",
-  "Quality codes (10 quality-A best available Quality; 90 quality-B compromised; 110 quality-C estimate; 140 quality-E unknown): counts {10: 9955, 90: 4023, 110: 232, 140: 5757}. A and B (compromised) are measured, C (estimate) estimated, and E (unknown quality) measured before 1991 and provisional from 1991 on (188 days), where it marks recent unchecked values (Bureau of Meteorology).",
-  "Share of days with code E (unknown quality) by decade: {1970: 1.0, 1980: 0.818, 1990: 0.018, 2020: 0.05}; with code B (compromised): {1890: 1.0, 1990: 0.481, 2000: 0.435, 2010: 0.073, 2020: 0.032} (Bureau of Meteorology).",
+  "Quality codes (10 quality-A best available Quality; 90 quality-B compromised; 110 quality-C estimate; 140 quality-E unknown): counts {10: 9955, 90: 4023, 110: 232, 140: 5760}. A and B (compromised) are measured, C (estimate) estimated, and E (unknown quality) measured before 1991 and provisional from 1991 on (191 days), where it marks recent unchecked values (Bureau of Meteorology).",
+  "Share of days with code E (unknown quality) by decade: {1970: 1.0, 1980: 0.818, 1990: 0.018, 2020: 0.051}; with code B (compromised): {1890: 1.0, 1990: 0.481, 2000: 0.435, 2010: 0.073, 2020: 0.032} (Bureau of Meteorology).",
   "Dropped: 28138 empty timestamps, 0 values coded F (missing or incorrect) and 0 negative values (Bureau of Meteorology)."
  ],
  "first_date": "1895-02-02",
- "last_date": "2026-10-16",
- "n_days": 19967,
+ "last_date": "2026-10-19",
+ "n_days": 19970,
  "coverage_by_decade": [
   {
    "decade": 1890,
@@ -123,9 +123,9 @@
   {
    "decade": 2020,
    "share_days": 1.0,
-   "share_measured": 0.946,
+   "share_measured": 0.9448,
    "share_estimated": 0.0044,
-   "share_provisional": 0.0496
+   "share_provisional": 0.0507
   }
  ]
 }

@@ -19,12 +19,12 @@
  "flag_rule": "USGS code A is measured and P provisional; any code with e (estimated) or an ice code is estimated.",
  "notes": [
   "USGS computes daily discharge from the gauge's water level through a rating curve (stage-discharge relation), adjusted by shifts after each field measurement, and approves a year of data some months after it ends (USGS).",
-  "USGS approval codes: {'A': 35066, 'A:e': 691, 'P': 48, 'P:e': 1}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
+  "USGS approval codes: {'A': 35066, 'A:e': 691, 'P': 51, 'P:e': 1}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
   "Skipped 0 days with no number (codes such as Ice or Eqp: none) and 0 negative values (USGS)."
  ],
  "first_date": "1928-10-01",
- "last_date": "2026-10-16",
- "n_days": 35806,
+ "last_date": "2026-10-19",
+ "n_days": 35809,
  "coverage_by_decade": [
   {
    "decade": 1920,
@@ -99,9 +99,9 @@
   {
    "decade": 2020,
    "share_days": 0.9984,
-   "share_measured": 0.7767,
-   "share_estimated": 0.2023,
-   "share_provisional": 0.0193
+   "share_measured": 0.7758,
+   "share_estimated": 0.2021,
+   "share_provisional": 0.0205
   }
  ]
 }

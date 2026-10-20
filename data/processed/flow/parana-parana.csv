@@ -1617,6 +1617,7 @@ date,flow,quality
 2019-12-28,11138.1,measured
 2019-12-29,11286.7,measured
 2019-12-30,11311.7,measured
+2019-12-31,11387.2,measured
 2020-01-01,11387.2,measured
 2020-01-02,11286.7,measured
 2020-01-03,11187.3,measured
@@ -2925,3 +2926,6 @@ date,flow,quality
 2026-10-14,17177.0,measured
 2026-10-15,17293.0,measured
 2026-10-16,17390.0,measured
+2026-10-17,17483.0,measured
+2026-10-18,17572.0,measured
+2026-10-19,17712.0,measured

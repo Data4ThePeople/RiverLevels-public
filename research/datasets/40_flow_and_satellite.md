@@ -109,6 +109,9 @@ months from 1996 to 2023 were computed from filled-in levels. License CC BY
 liters per second. Same historical stations as level: F700000109 (1900 to
 1965), F700000110 (1966 to 1973), F700000111 (1974 to 1989), F700000102
 (1990 on), and the dedicated flow station F700000103 at Austerlitz (2006 on).
+The flow series uses F700000102 through 2005 and F700000103 from January 1,
+2006 (joined October 20, 2026; on 1,366 days both publish a flow, F700000102
+reads a median 1.9% higher).
 Each value has a status (raw, pre-validated, validated), a method
 (calculated, expert-reviewed, reconstructed) and a qualification (good,
 doubtful). Before 1955, about three in four values are qualified "doubtful."
@@ -228,10 +231,12 @@ change dry-season flows (dates to be sourced). MRC Non-commercial
 Data Use Licence, not open. Not shown on the page from October 19, 2026,
 because the license requires MRC's written permission to republish.
 
-## As built (October 17, 2026)
+## As built (October 20, 2026)
 
-Flow was downloaded October 17, 2026, two days after the level cache, so
-flow can run two days past the level at the same gauge. Fetch scripts:
+Level and flow were both downloaded again on October 20, 2026 (the first
+build used a level cache from October 15 and flow from October 17). The
+table below is generated from the processed files by
+`scripts/as_built_flow_table.py`, so it cannot drift from the data. Fetch scripts:
 `scripts/fetch/flow_*.py`; contract and station choices:
 `scripts/fetch/FLOW.md`. Each flow file's JSON keeps every bookkeeping note
 (counts by publisher code, rows dropped); the page shows only the
@@ -240,41 +245,37 @@ plain-language notes. Shares below are of the days with a value.
 | Gauge | Flow station | Kind | Record | Days | Measured / provisional / estimated | Unit |
 |---|---|---|---|---|---|---|
 | amazon-manacapuru | Manacapuru (same station) | river flow | 1972-01-02 to 2026-04-30 | 19,731 | 95% / 4% / 1% | m3/s |
-| amazon-obidos | Óbidos (same station) | river flow | 1968-01-01 to 2026-02-28 | 20,858 | 96% / 4% / 1% | m3/s |
+| amazon-obidos | Óbidos (same station) | river flow | 1968-01-01 to 2026-05-31 | 20,950 | 95% / 4% / 1% | m3/s |
 | amazon-tabatinga | Tabatinga (same station) | river flow | 1995-01-01 to 2026-05-31 | 11,452 | 89% / 8% / 3% | m3/s |
-| colorado-lake-mead | Lake Mead Hoover Dam and Powerplant Daily Lake/Reservoir Release - Total-cfs Time Series Data (same station) | dam release | 1934-04-01 to 2026-10-16 | 33,802 | 99% / 1% / 0% | cfs |
-| colorado-lake-powell | Lake Powell Glen Canyon Dam and Powerplant Daily Lake/Reservoir Release - Total-cfs Time Series Data (same station) | dam release | 1963-03-14 to 2026-10-16 | 23,228 | 98% / 2% / 0% | cfs |
-| danube-hofkirchen | Hofkirchen (same station) | river flow | 1900-11-01 to 2026-10-16 | 46,006 | 99% / 1% / 0% | m3/s |
-| danube-kienstock | Kienstock (same station) | river flow | 1978-01-01 to 2023-12-31 | 16,801 | 86% / 0% / 14% | m3/s |
-| danube-pfelling | Pfelling (same station) | river flow | 1925-11-01 to 2026-10-16 | 36,874 | 99% / 1% / 0% | m3/s |
-| darling-bourke | DARLING@BOURKE TOWN (same station) | river flow | 1895-02-02 to 2026-10-16 | 19,967 | 98% / 1% / 1% | m3/s |
-| fraser-hope | FRASER RIVER AT HOPE (same station) | river flow | 1912-03-01 to 2026-10-16 | 41,839 | 95% / 1% / 4% | m3/s |
-| fraser-mission | FRASER RIVER AT HOPE (Hope, 68 km upstream) | river flow | 1912-03-01 to 2026-10-16 | 41,839 | 95% / 1% / 4% | m3/s |
-| fraser-shelley | FRASER RIVER AT SHELLEY (same station) | river flow | 1950-05-01 to 2026-10-16 | 27,922 | 59% / 1% / 40% | m3/s |
+| colorado-lake-mead | Lake Mead Hoover Dam and Powerplant Daily Lake/Reservoir Release - Total-cfs Time Series Data (same station) | dam release | 1934-04-01 to 2026-10-19 | 33,805 | 99% / 1% / 0% | cfs |
+| colorado-lake-powell | Lake Powell Glen Canyon Dam and Powerplant Daily Lake/Reservoir Release - Total-cfs Time Series Data (same station) | dam release | 1963-03-14 to 2026-10-19 | 23,231 | 98% / 2% / 0% | cfs |
+| danube-hofkirchen | Hofkirchen (same station) | river flow | 1900-11-01 to 2026-10-19 | 46,009 | 99% / 1% / 0% | m3/s |
+| danube-kienstock | Kienstock (same station) | river flow | 1978-01-01 to 2023-12-31 | 16,801 | 85% / 0% / 15% | m3/s |
+| danube-pfelling | Pfelling (same station) | river flow | 1925-11-01 to 2026-10-19 | 36,877 | 99% / 1% / 0% | m3/s |
+| darling-bourke | DARLING@BOURKE TOWN (same station) | river flow | 1895-02-02 to 2026-10-19 | 19,970 | 98% / 1% / 1% | m3/s |
+| fraser-hope | FRASER RIVER AT HOPE (same station) | river flow | 1912-03-01 to 2026-10-19 | 41,839 | 95% / 1% / 4% | m3/s |
+| fraser-mission | FRASER RIVER AT HOPE (Hope, 68 km upstream) | river flow | 1912-03-01 to 2026-10-19 | 41,839 | 95% / 1% / 4% | m3/s |
+| fraser-shelley | FRASER RIVER AT SHELLEY (same station) | river flow | 1950-05-01 to 2026-10-19 | 27,925 | 59% / 1% / 40% | m3/s |
 | lena-kyusyur | Lena at Kyusyur (same station) | river flow | 1936-01-01 to 2026-01-17 | 32,701 | 91% / 9% / 0% | m3/s |
-| mekong-chiangsaen | Chiang Saen (same station) | river flow | 1960-01-01 to 2026-10-16 | 24,395 | 100% / 0% / 0% | m3/s |
-| mekong-kratie | Kratie (same station) | river flow | 1924-01-01 to 2026-10-16 | 37,339 | 93% / 0% / 7% | m3/s |
-| mekong-pakse | Pakse (same station) | river flow | 1923-01-01 to 2026-10-16 | 37,878 | 100% / 0% / 0% | m3/s |
-| mekong-vientiane | Nong Khai (Nong Khai, 13 km downstream) | river flow | 1969-01-01 to 2026-10-16 | 21,105 | 100% / 0% / 0% | m3/s |
 | mississippi-helena | MISSISSIPPI RIVER AT HELENA, AR (same station) | river flow | 1928-01-01 to 1977-09-29 | 18,170 | 100% / 0% / 0% | cfs |
-| mississippi-memphis | MISSISSIPPI RIVER AT MEMPHIS, TN (same station) | river flow | 1933-01-01 to 2026-10-16 | 26,951 | 100% / 0% / 0% | cfs |
-| mississippi-stlouis | Mississippi River at St. Louis, MO (same station) | river flow | 1861-01-01 to 2026-10-16 | 60,186 | 100% / 0% / 0% | cfs |
-| mississippi-vicksburg | Mississippi River @ Vicksburg, MS (same station) | river flow | 1901-01-02 to 2026-10-16 | 45,939 | 100% / 0% / 0% | cfs |
-| missouri-bismarck | MISSOURI RIVER AT BISMARCK, ND (same station) | river flow | 1927-10-01 to 2026-10-16 | 36,024 | 89% / 1% / 11% | cfs |
-| missouri-hermann | Missouri River at Hermann, MO (same station) | river flow | 1928-10-01 to 2026-10-16 | 35,806 | 98% / 0% / 2% | cfs |
-| murray-albury | MURRAY @ DOCTORS PNT (Doctors Point, 4 km downstream) | river flow | 1929-11-02 to 2026-10-16 | 32,662 | 77% / 21% / 2% | m3/s |
-| murray-euston | MURRAY @ EUSTON (same station) | river flow | 1975-08-29 to 2026-10-16 | 18,675 | 93% / 1% / 5% | m3/s |
-| murray-swanhill | MURRAY @ SWAN HILL (same station) | river flow | 1974-11-14 to 2026-10-16 | 18,965 | 94% / 2% / 4% | m3/s |
+| mississippi-memphis | MISSISSIPPI RIVER AT MEMPHIS, TN (same station) | river flow | 1933-01-01 to 2026-10-19 | 26,954 | 100% / 0.3% / 0.1% | cfs |
+| mississippi-stlouis | Mississippi River at St. Louis, MO (same station) | river flow | 1861-01-01 to 2026-10-19 | 60,189 | 100% / 0.2% / 0.2% | cfs |
+| mississippi-vicksburg | Mississippi River @ Vicksburg, MS (same station) | river flow | 1901-01-02 to 2026-10-19 | 45,942 | 100% / 0% / 0% | cfs |
+| missouri-bismarck | MISSOURI RIVER AT BISMARCK, ND (same station) | river flow | 1927-10-01 to 2026-10-19 | 36,027 | 89% / 1% / 11% | cfs |
+| missouri-hermann | Missouri River at Hermann, MO (same station) | river flow | 1928-10-01 to 2026-10-19 | 35,809 | 98% / 0.1% / 2% | cfs |
+| murray-albury | MURRAY @ DOCTORS PNT (Doctors Point, 4 km downstream) | river flow | 1929-11-02 to 2026-10-19 | 32,665 | 77% / 21% / 2% | m3/s |
+| murray-euston | MURRAY @ EUSTON (same station) | river flow | 1975-08-29 to 2026-10-19 | 18,678 | 93% / 1% / 5% | m3/s |
+| murray-swanhill | MURRAY @ SWAN HILL (same station) | river flow | 1974-11-14 to 2026-10-19 | 18,968 | 94% / 2% / 4% | m3/s |
 | ob-salekhard | Ob at Salekhard (same station) | river flow | 1936-01-01 to 2025-12-10 | 32,792 | 77% / 23% / 0% | m3/s |
-| ohio-cairo | OHIO RIVER AT OLMSTED, IL (Olmsted, about 17 river miles upstream) | river flow | 2013-03-01 to 2026-10-16 | 4,965 | 62% / 15% / 24% | cfs |
-| ohio-cincinnati | OHIO RIVER AT MARKLAND DAM NEAR WARSAW, KY (Markland Dam, about 61 river miles downstream) | river flow | 1970-05-01 to 2026-10-16 | 20,618 | 97% / 2% / 2% | cfs |
-| ohio-louisville | OHIO RIVER AT LOUISVILLE, KY (same station) | river flow | 1928-01-01 to 2026-10-16 | 36,063 | 95% / 1% / 3% | cfs |
-| parana-corrientes | Corrientes (same station) | river flow | 1904-01-01 to 2026-10-16 | 43,684 | 100% / 0% / 0% | m3/s |
-| parana-parana | Paraná (same station) | river flow | 2015-07-21 to 2026-10-16 | 2,926 | 100% / 0% / 0% | m3/s |
+| ohio-cairo | OHIO RIVER AT OLMSTED, IL (Olmsted, about 17 river miles upstream) | river flow | 2013-03-01 to 2026-10-19 | 4,968 | 62% / 15% / 24% | cfs |
+| ohio-cincinnati | OHIO RIVER AT MARKLAND DAM NEAR WARSAW, KY (Markland Dam, about 61 river miles downstream) | river flow | 1970-05-01 to 2026-10-19 | 20,621 | 97% / 2% / 2% | cfs |
+| ohio-louisville | OHIO RIVER AT LOUISVILLE, KY (same station) | river flow | 1928-01-01 to 2026-10-19 | 36,066 | 95% / 1% / 3% | cfs |
+| parana-corrientes | Corrientes (same station) | river flow | 1904-01-01 to 2026-10-19 | 43,688 | 100% / 0% / 0% | m3/s |
+| parana-parana | Paraná (same station) | river flow | 2015-07-21 to 2026-10-19 | 2,930 | 100% / 0% / 0% | m3/s |
 | parana-posadas | Posadas (same station) | river flow | 1970-01-01 to 2017-09-08 | 17,342 | 100% / 0% / 0% | m3/s |
-| parana-rosario | Rosario (same station) | river flow | 2015-07-21 to 2026-10-16 | 2,941 | 100% / 0% / 0% | m3/s |
-| rhine-lobith | Lobith (Bovenrijn, Tolkamer) (same station) | river flow | 1901-01-01 to 2026-10-16 | 45,942 | 14% / 86% / 0% | m3/s |
-| seine-paris | La Seine à Paris - Austerlitz (same station) | river flow | 1900-01-02 to 2026-03-16 | 39,992 | 99% / 1% / 0% | L/s |
+| parana-rosario | Rosario (same station) | river flow | 2015-07-21 to 2026-10-19 | 2,945 | 100% / 0% / 0% | m3/s |
+| rhine-lobith | Lobith (Bovenrijn, Tolkamer) (same station) | river flow | 1901-01-01 to 2026-10-19 | 45,945 | 14% / 86% / 0% | m3/s |
+| seine-paris | La Seine à Paris - Austerlitz (same station) | river flow | 1900-01-02 to 2026-10-19 | 46,169 | 98% / 2% / 0.0% | L/s |
 | yenisei-igarka | Yenisey at Igarka (same station) | river flow | 1936-01-01 to 2026-01-31 | 30,402 | 76% / 24% / 0% | m3/s |
 
 **On the page.** Each gauge with flow shows a dial (lowest to highest daily
@@ -306,7 +307,10 @@ flow chart starts January 1, 1972, like its level chart.
   the rating label changes in 2003 and 2017. From November 27, 2025 one
   10-minute series marked checked reads about 20% of the live series (276
   against 1,325 m3/s at 795 cm), so series are chosen by rating, newest
-  first, never by status. Every day before May 1, 2003 is unchecked, so 86%
+  first, never by status. Within a rating, a day uses the sub-daily series
+  first, then RWS's own 24-hour mean, then the single daily reading; within
+  those, the live series (BemonsteringsSoort SB) comes first; a series counts
+  only on days with at least 90% of its usual readings. Every day before May 1, 2003 is unchecked, so 86%
   of the series is provisional. In the cold winters of 1917, 1929, 1940,
   1947, 1954 and 1963 flow departs from the usual level-flow relation;
   ice is a guess, not sourced, and is not on the page. Readings coded 99
@@ -314,11 +318,10 @@ flow chart starts January 1, 1972, like its level chart.
   2026). After that, September 29 and 30, 2026 have fewer than 90% of their
   usual readings and are left out, so the record low is 553 m3/s on October
   1, 2026 (provisional).
-- Hub'Eau Paris: F700000102 has near-complete flow only through 2005; after
-  that flow moved to F700000103, which is not joined, so 2006 on is sparse
-  (20% to 65% of days per decade). Last value March 16, 2026; 752 empty rows
-  from 2024 to 2026 dropped. 25,285 days are qualified "doubtful" (70% to
-  85% per decade before 1990); they keep their status label.
+- Hub'Eau Paris: F700000102 has near-complete flow only through 2005, so
+  from 2006 the series uses the Austerlitz flow station F700000103 (joined
+  October 20, 2026; before that, 2006 on was left out). Most days before
+  1990 are qualified "doubtful"; they keep their status label.
 - eHYD Kienstock: no gap (the research note's "one gap" is the end marker).
   74 whole months from 1996 to 2016, plus October 2023 (75 in all), are estimated, because
   station footnotes say flow was computed from filled-in levels. A choice:

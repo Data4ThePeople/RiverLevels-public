@@ -6,20 +6,20 @@
       {"date": "1977", "fact": "Iffezheim barrage, about 28 km upstream, completed; erosion of the riverbed below the last barrage was expected (weak source: old study cited in a search result).", "source": "https://elib.uni-stuttgart.de/bitstream/11682/8287/1/kob90.pdf"},
       {"date": "2017-07-18", "fact": "PEGELONLINE lists the current gauge zero (97.721 m NHN) as valid from this date, unlike the 2019-11-01 height-system switch at most gauges; the reason was not found. Our neighbor comparison shows no step at that date.", "source": "https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/23700200.json?includeTimeseries=true"},
       {"date": "1960-2026", "fact": "Neighbor comparison (hyd1d_stepscan.py) found no gauge-zero step of 15 cm or more; the relation to nearby gauges drifts by about 10 to 20 cm over decades, consistent with riverbed change.", "source": "scripts/fetch/hyd1d_stepscan.py"},
-      {"date": "1960-2025", "fact": "Daily values through 2025 are validated by the federal waterway agency; days after 2025-12-31 are means of raw readings.", "source": "https://hyd1d.bafg.de/reference/df.gauging_data.html"}
+      {"date": "1960-2025", "fact": "hyd1d says its daily values through 2025 are validated; values from 2026 are not officially validated.", "source": "https://hyd1d.bafg.de/reference/df.gauging_data.html"}
     ],
     "public_notes": "The level is measured against a fixed mark at the gauge, not the riverbed, so it is not the water depth. Values from 2026 are raw readings that have not been checked yet, and August 11 to September 14, 2026 is missing."
   },
   "rhine-kaub": {
     "measurement_history": [
       {"date": "1856", "fact": "First staff-gauge readings at Kaub, in Nassau decimal feet.", "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"},
-      {"date": "1905-05-18", "fact": "Gauge tower with a recording gauge opened; electric operation from 1951.", "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"},
+      {"date": "1905-05-18", "fact": "Gauge tower with a recording gauge opened; its gauge clock has run on electricity since 1951.", "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"},
       {"date": "1951-01-01", "fact": "Gauge zero 67.66 m above sea level (NN) since this date; 67.669 m NHN in the current height system (from 2019-11-01).", "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"},
       {"date": "1967-1973", "fact": "Remote reporting from 1967, a phone announcer from 1968, a punched-tape recorder from 1973.", "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"},
       {"date": "1969-11-01", "fact": "The hyd1d daily record for Kaub starts here, later than the 1960 start of most other gauges.", "source": "https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS"},
       {"date": "1930s-2014", "fact": "A federal waterway working group found the low-water level at Kaub fell about 45 cm since the 1930s at the same flow, although the bed there is largely rock.", "source": "https://izw.baw.de/publikationen/vzb_dokumente_oeffentlich/0/Frei-fliessende-Rhein_2014.pdf"},
       {"date": "2011", "fact": "Paper recording ended; a second, redundant gauge was added.", "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"},
-      {"date": "2023-01-01", "fact": "The official equivalent low-water level (GlW) at Kaub is 77 cm for 2023 to 2031; the earlier value (GlW 2012) was 78 cm, the figure the shipping trade still quotes.", "source": "https://www.ccr-zkr.org/12030100-en.html"},
+      {"date": "2023-01-01", "fact": "The official equivalent low-water level (GlW) at Kaub is 77 cm for 2023 to 2031; the earlier value (GlW 2012) was 78 cm.", "source": "https://www.ccr-zkr.org/12030100-en.html"},
       {"date": "1969-2026", "fact": "Neighbor comparison (hyd1d_stepscan.py) found no gauge-zero step.", "source": "scripts/fetch/hyd1d_stepscan.py"}
     ],
     "public_notes": "The Kaub reading is measured against a fixed mark, not the riverbed, so it is not the depth of the river, and it can go below zero. The river's low-water level here has dropped about 45 cm since the 1930s at the same flow, so old and new lows are not exactly equal conditions. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
@@ -32,24 +32,24 @@
       {"date": "1960-2026", "fact": "Neighbor comparison (hyd1d_stepscan.py) found no gauge-zero step. Nearby Koeln, Bonn and Rees each jump about 100 cm in November 1979; Ruhrort does not.", "source": "scripts/fetch/hyd1d_stepscan.py"},
       {"date": "current", "fact": "PEGELONLINE notes that discharge cannot currently be computed below 120 cm.", "source": "https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/2770010.json"}
     ],
-    "public_notes": "The level is measured against a fixed mark, not the riverbed. The riverbed here has sunk over the decades from erosion and mining, so the same flow now reads lower than it did in the 1960s. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
+    "public_notes": "The level is measured against a fixed mark, not the riverbed. The riverbed between Ruhrort and Emmerich dropped over the 20th century, partly because coal and salt mining made the ground sink, so compare old and new lows with care. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
   },
   "elbe-dresden": {
     "measurement_history": [
       {"date": "not found", "fact": "Start of readings and early reading hour: not found. The hyd1d record used here starts 1960-01-01.", "source": "https://hyd1d.bafg.de/reference/df.gauging_data.html"},
-      {"date": "about 1890-2000s", "fact": "The Elbe bed lowered for about 140 years, fastest around 1890 to 1904 at gauges from Dresden to Magdeburg (about 3 cm a year); work on the Augustus Bridge, where the gauge sits, may have affected readings directly.", "source": "https://izw.baw.de/publikationen.php?file=mitteilungsblaetter/0/mb74_Glazik.pdf"},
+      {"date": "1890-1904; after 1934", "fact": "A 1996 federal study charts 140 years of falling levels at Dresden. The fall was fastest around 1890 to 1904 at most gauges from Dresden to Magdeburg (about 3 cm a year). After low-water works shortly after 1934, the bed near Dresden appears to have held about steady. Work on the Augustus Bridge, where the gauge sits, may have affected readings directly.", "source": "https://izw.baw.de/publikationen.php?file=mitteilungsblaetter/0/mb74_Glazik.pdf"},
       {"date": "current", "fact": "The gauge is at the Augustus Bridge and is read automatically by the federal waterway agency.", "source": "https://www.dresden.de/de/stadtraum/umwelt/umwelt/messwerte-online/Pegelstaende_und_Alarmstufen.php"},
       {"date": "1960-2026", "fact": "Neighbor comparison (hyd1d_stepscan.py) found no gauge-zero step.", "source": "scripts/fetch/hyd1d_stepscan.py"}
     ],
-    "public_notes": "The level is measured against a fixed mark, not the riverbed, so it is not the water depth. The Elbe bed has worn down over the past century, which can make recent lows read lower than older lows at the same flow. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
+    "public_notes": "The level is measured against a fixed mark, not the riverbed, so it is not the water depth. A 1996 federal study found the Elbe bed near Dresden wore down fastest around 1890 to 1904 and has changed little since the 1930s. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
   },
   "elbe-magdeburg": {
     "measurement_history": [
-      {"date": "1727-04-17", "fact": "Continuous observations at Magdeburg since this date, per a Potsdam Institute publication (seen only as a search summary, not opened).", "source": "https://publications.pik-potsdam.de/pubman/item/item_16251"},
+      {"date": "1727-04-17", "fact": "Continuous observations at Magdeburg since this date, per a Potsdam Institute publication.", "source": "https://publications.pik-potsdam.de/pubman/item/item_16251"},
       {"date": "1898-2004", "fact": "Magdeburg (km 326) is one of the Elbe reaches where the riverbed has eroded, up to about 2 cm a year at the worst spots.", "source": "https://doi.bafg.de/KLIWAS/2014/Kliwas_Binnenelbe.pdf"},
       {"date": "1960-2026", "fact": "Neighbor comparison (hyd1d_stepscan.py) found shifts of 20 to 50 cm against Barby and Rothensee in the 1960s and later, but they track river flow, not a single date; no gauge-zero step identified.", "source": "scripts/fetch/hyd1d_stepscan.py"}
     ],
-    "public_notes": "The level is measured against a fixed mark, not the riverbed. The riverbed at Magdeburg has eroded over the past century, so the same flow can read lower today than decades ago. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
+    "public_notes": "The level is measured against a fixed mark, not the riverbed. The riverbed near Magdeburg has eroded over the past century, so compare old and new lows with care. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
   },
   "elbe-wittenberge": {
     "measurement_history": [
@@ -64,11 +64,11 @@
       {"date": "1866-1934", "fact": "One staff-gauge reading a day, usually at 08:40; the data list the method as a staff gauge read during a 1-minute immersion.", "source": "https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen"},
       {"date": "1935-1987", "fact": "Float gauge with a chart, read by eye once a day (usually 08:40, then 08:00 from the 1950s).", "source": "https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen"},
       {"date": "1979-1987", "fact": "Hourly values read from recorder charts also exist but were never checked; we use the checked daily reading where both exist (1986 has only the hourly values).", "source": "https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen"},
-      {"date": "1987", "fact": "Automatic float gauge with 10-minute averages; hourly values until about 2010, every 10 minutes after that.", "source": "https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen"},
+      {"date": "late 1980s", "fact": "Automatic float gauge: the data show hourly values, each a 10-minute average, in 1990, and values every 10 minutes by 2012.", "source": "https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen"},
       {"date": "1875 onward", "fact": "Levels are relative to NAP, the national datum, which Rijkswaterstaat checks with precise leveling every 25 to 40 years.", "source": "https://www.rijkswaterstaat.nl/zakelijk/open-data/normaal-amsterdams-peil/geschiedenis-nap"},
       {"date": "not found", "fact": "Gauge relocations and any NAP correction at Lobith: not found.", "source": "https://rijkswaterstaatdata.nl/waterdata/"}
     ],
-    "public_notes": "Before 1986 each day is a single reading taken around 8 in the morning, so short peaks and dips inside a day are missed; later days are averages of hourly or 10-minute readings. Recent months are not yet checked by Rijkswaterstaat."
+    "public_notes": "Until the late 1980s most days are a single reading taken around 8 in the morning, so short peaks and dips inside a day are missed; later days are averages of hourly or 10-minute readings. Recent months are not yet checked by Rijkswaterstaat."
   },
   "danube-hofkirchen": {
     "measurement_history": [
@@ -83,7 +83,7 @@
   "danube-pfelling": {
     "measurement_history": [
       {"date": "1927-04-04", "fact": "The GKD daily record starts on this date.", "source": "https://www.gkd.bayern.de/de/fluesse/wasserstand/kelheim/pfelling-10078000/download"},
-      {"date": "current", "fact": "Gauge zero 308.12 m NHN (DHHN2016). Past gauge zeros are not listed.", "source": "https://www.gkd.bayern.de/en/rivers/discharge/bayern/pfelling-10078000"},
+      {"date": "current", "fact": "Gauge zero 308.12 m NHN (DHHN2016). Past gauge zeros are not listed.", "source": "https://www.gkd.bayern.de/de/fluesse/wasserstand/kelheim/pfelling-10078000"},
       {"date": "not found", "fact": "Commissioning dates of the Straubing and Geisling barrages upstream and any backwater effect at Pfelling: not found.", "source": "https://www.gkd.bayern.de/de/fluesse/wasserstand/kelheim/pfelling-10078000"},
       {"date": "1964-1966", "fact": "Our comparison with Hofkirchen shows the gap between the two gauges changing by about 20 cm over 1964 to 1966 at similar flows; cause not found.", "source": "scripts/fetch/gkd_bayern.py output (data/processed/danube-hofkirchen.csv vs danube-pfelling.csv)"}
     ],
@@ -98,14 +98,14 @@
       {"date": "1997-01-01", "fact": "Float recorder output digitized.", "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"},
       {"date": "2002-03-13", "fact": "Pressure sensor with data logger added; remote transmission from 2009-01-29.", "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"},
       {"date": "2010-01-01", "fact": "Station coordinates updated, a shift of about 115 m on the national grid.", "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"},
-      {"date": "1996-2023", "fact": "Footnotes say discharge in many months was computed from filled-in water levels; the level series has no per-day flag for these.", "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"},
+      {"date": "1996-2016; 2023", "fact": "Footnotes say discharge in many months of 1996 to 2016 was computed from filled-in water levels, and in 2023 from filled-in data; the level series has no per-day flag for these.", "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"},
       {"date": "2023-12-31", "fact": "The record ends with the last published hydrological yearbook; eHYD holds history only up to the current yearbook.", "source": "https://www.bmluk.gv.at/themen/wasser/wasser-oesterreich/hydrographie/der-weg-zu-den-daten/Datenbestand_Bezug.html"}
     ],
     "public_notes": "This record ends in December 2023 because Austria publishes checked data only in its yearly hydrological yearbook, which runs a few years behind. The level is measured against a fixed mark, not the riverbed."
   },
   "seine-paris": {
     "measurement_history": [
-      {"date": "1876-01-01", "fact": "Station reference of the Austerlitz gauge valid since 1876: zero at 25.92 m (NGF-IGN69). All four station codes used here list the same zero.", "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000109"},
+      {"date": "1876-01-01", "fact": "The Austerlitz station opened on this date with its zero at 25.92 m (NGF-IGN69). All four station codes used here list a zero of 25.92 m.", "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000109"},
       {"date": "1900-1965", "fact": "Daily values come from readings by an observer at 7 am, more often during floods, so the daily maximum is often one reading.", "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000109"},
       {"date": "1949", "fact": "Pannecière reservoir on the Yonne in service; it influences flow at Paris.", "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000103"},
       {"date": "1966-01-01", "fact": "Seine reservoir lake in service; data from here kept under a separate station code (F700000110).", "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000110"},
@@ -114,7 +114,7 @@
       {"date": "2006-01-26", "fact": "Ultrasonic flow station F700000103 opened at the same site and became the reference; F700000102, used here, has been a backup with unvalidated data since 2020.", "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000102"},
       {"date": "ongoing", "fact": "Level is influenced by the Suresnes dam downstream (fully open near 3 to 3.3 m at Austerlitz) and by dams upstream.", "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000102"}
     ],
-    "public_notes": "Each value is the highest level of the day, in millimeters, and before 1966 it is usually one morning reading. Dams and upstream reservoirs built in 1949, 1966, 1974 and 1990 change how the river behaves, especially at low water, so early and recent years are not fully comparable. Since 2020 the readings come from a backup gauge and are mostly unvalidated."
+    "public_notes": "Each value is the highest level of the day, in millimeters, and before 1966 it is usually one morning reading. Dams and upstream reservoirs built in 1949, 1966, 1974 and 1990 change how the river behaves, so early and recent years are not fully comparable. Since 2020 the readings come from a backup gauge and are mostly unvalidated."
   },
   "seine-melun": {
     "measurement_history": [

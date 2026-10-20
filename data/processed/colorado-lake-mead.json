@@ -13,8 +13,8 @@
   "datum": "ft above sea level (the RISE series does not state a vertical datum; the RISE location record lists USGS 1912; see measurement_history)",
   "daily_stat": "single reading",
   "first_date": "1935-02-02",
-  "last_date": "2026-10-13",
-  "n_days": 33492,
+  "last_date": "2026-10-19",
+  "n_days": 33498,
   "coverage_by_decade": [
     {
       "decade": 1930,
@@ -82,18 +82,18 @@
     {
       "decade": 2020,
       "share_days": 1.0,
-      "share_measured": 0.8475,
+      "share_measured": 0.8454,
       "share_estimated": 0.0,
-      "share_provisional": 0.1525
+      "share_provisional": 0.1546
     }
   ],
   "license": "Public domain (US federal government work). Credit: U.S. Bureau of Reclamation.",
   "notes": [
     "Hoover Dam began storing water on 1935-02-01; the record starts 1935-02-02 while the lake was filling. Full pool is 1,229 ft.",
-    "RISE result types in the file: {'observed': 33492}; per-value status field: {'None': 33492}. Only 'observed' values kept.",
+    "RISE result types in the file: {'observed': 33498}; per-value status field: {'None': 33498}. Only 'observed' values kept.",
     "RISE disclaimer: \"Data are provisional and subject to revision unless otherwise noted. Data users are cautioned to consider carefully the provisional nature of the information before using it.\" No value carries its own approval flag, so values from 2025-10-01 on (the current water year, plus the previous one until six months after it ends) are marked provisional and earlier values measured. This is our rule, not a Reclamation flag.",
-    "33114 of 33492 values before 2025-10-01 carry a RISE update date. That looks like bulk reloads, so RISE metadata cannot show which past values were revised.",
-    "Each value is the daily instantaneous elevation (instant, daily), stamped at UTC times {'07:00': 33492}; dates are Mountain Standard Time days.",
+    "33114 of 33498 values before 2025-10-01 carry a RISE update date. That looks like bulk reloads, so RISE metadata cannot show which past values were revised.",
+    "Each value is the daily instantaneous elevation (instant, daily), stamped at UTC times {'07:00': 33498}; dates are Mountain Standard Time days.",
     "Dropped 0 fill or impossible values and 0 null values.",
     "RISE source system: lchdb2; location vertical datum field: USGS 1912 (this refers to the location point, not to the elevation series)."
   ],
@@ -110,7 +110,7 @@
     },
     {
       "date": "1941-07",
-      "fact": "The lake first rose to 1,220.4 ft in July 1941; spillway gates first passed water Aug. 6, 1941.",
+      "fact": "The lake rose to a maximum elevation of 1,220.4 ft in July 1941; spillway gates first passed water Aug. 6, 1941.",
       "source_url": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "date": "2001",
-      "fact": "Reclamation: the reservoir gauge is tied to the Hoover Dam powerhouse datum.",
+      "fact": "Reclamation's 2001 sedimentation survey tied all its elevation data to the Hoover Dam powerhouse datum.",
       "source_url": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
     },
     {
@@ -129,13 +129,13 @@
       "source_url": "https://databasin.org/datasets/7e8c7d93a10445cf96d410951c32b9d4"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "Reclamation's data catalog lists the Hoover Dam location's vertical datum as \"USGS 1912\"; how this relates to the 1935 datum not found.",
       "source_url": "https://data.usbr.gov/catalog/4574"
     },
     {
       "date": "1963-03",
-      "fact": "Glen Canyon Dam began storing water upstream, changing inflow to Lake Mead.",
+      "fact": "Glen Canyon Dam, upstream, began storing water.",
       "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
     },
     {
@@ -144,5 +144,5 @@
       "source_url": "https://data.usbr.gov/rise/api/catalog-item/6123"
     }
   ],
-  "public_notes": "Lake Mead began filling in 1935 and first came close to full in 1941, so the earliest readings show a lake still filling. Reclamation measures elevation against the dam's own 1935 survey, which sits about half a foot from the 1929 national reference and about 2 feet from the current one."
+  "public_notes": "Lake Mead began filling in 1935 and rose to a maximum of 1,220.4 feet in July 1941, so the earliest readings show a lake still filling. Reclamation measures elevation against the dam's own 1935 survey, which sits about half a foot from the 1929 national reference and about 2 feet from the current one."
 }

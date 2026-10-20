@@ -22,12 +22,12 @@
   "HYDAT lists Hope as regulated: its drainage area includes the Nechako River behind Kenney Dam, although no dam sits on the Fraser main stem (Environment and Climate Change Canada).",
   "The riverbed at Hope has built up and cut down over the century, so the rating has been redrawn many times (BC flood flows review).",
   "Approved daily means (HYDAT) run from 1912-03-01 to 2025-02-24. Discharge symbols: {'none': 39225, 'Ice Conditions': 830, 'Estimated': 691, 'Partial Day': 523}. Ice conditions (B) and estimated (E) are marked estimated; partial day (A) and other symbols stay measured. Skipped 4 HYDAT days with no discharge and 0 negative values (Environment and Climate Change Canada).",
-  "After HYDAT ends: 5-minute real-time readings (2025-03-17 to 2026-10-17 UTC) averaged into 570 daily means by local standard time day. A day needs readings in at least 20 of its 24 hours; 3 days left out. All real-time days are provisional, or estimated if any reading has symbol B or E. Approval of the readings: {'Provisional/Provisoire': 164549}; symbols: {'none': 164549} (Environment and Climate Change Canada).",
-  "No data from 2025-02-25 to the day before 2025-03-18: approved daily means are not yet published for that period and the real-time service keeps only about 18 months (Environment and Climate Change Canada).",
+  "After HYDAT ends: 5-minute real-time readings (2025-03-20 to 2026-10-20 UTC) averaged into 570 daily means by local standard time day. A day needs readings in at least 20 of its 24 hours; 3 days left out. All real-time days are provisional, or estimated if any reading has symbol B or E. Approval of the readings: {'Provisional/Provisoire': 164551}; symbols: {'none': 164551} (Environment and Climate Change Canada).",
+  "No data from 2025-02-25 to the day before 2025-03-21: approved daily means are not yet published for that period and the real-time service keeps only about 18 months (Environment and Climate Change Canada).",
   "Station status: Active (Environment and Climate Change Canada)."
  ],
  "first_date": "1912-03-01",
- "last_date": "2026-10-16",
+ "last_date": "2026-10-19",
  "n_days": 41839,
  "coverage_by_decade": [
   {
@@ -109,10 +109,10 @@
   },
   {
    "decade": 2020,
-   "share_days": 0.9883,
-   "share_measured": 0.7396,
+   "share_days": 0.9871,
+   "share_measured": 0.7387,
    "share_estimated": 0.0189,
-   "share_provisional": 0.2297
+   "share_provisional": 0.2295
   }
  ]
 }

@@ -158,7 +158,14 @@ def main():
                 f"median {diff.median():+.1f} cm, mean {diff.mean():+.1f} cm, "
                 f"5th-95th percentile {diff.quantile(.05):+.1f} to {diff.quantile(.95):+.1f} cm. "
                 f"A median near zero means the two share the same gauge zero.")
-        tel_ext = tel[tel["date"] > hist_last]
+        tel_ext = tel[tel["date"] > hist_last].copy()
+        # partial days: a telemetry day with fewer than 75% of the readings the gauge usually sends per day
+        # (median over the 61 days around it) is a mean of part of the day, often because readings arrive late
+        tel_ext = tel_ext.sort_values("date").reset_index(drop=True)
+        usual = tel_ext["count"].rolling(61, center=True, min_periods=1).median()
+        short = tel_ext["count"] < 0.75 * usual
+        short_days = sorted(str(d) for d in tel_ext.loc[short, "date"])
+        tel_ext = tel_ext[~short]
 
         recs = []
         n_est = n_doubt = n_dry = n_prov = 0
@@ -194,7 +201,9 @@ def main():
             f"Historic record ends {hist_last}. Days after that come from the ANA telemetry feed "
             f"(DadosHidrometeorologicos, mostly 15-minute readings), averaged to a daily mean "
             f"({len(tel_ext)} days, marked provisional). Telemetry days with fewer than 12 readings: "
-            f"{int((tel_ext['count'] < 12).sum())}.",
+            f"{int((tel_ext['count'] < 12).sum())}. Dropped as partial days (fewer than 75% of the readings "
+            f"the gauge usually sends per day, the median over the 61 days around it): {len(short_days)}"
+            + (f", most recent {', '.join(short_days[-5:])}" if short_days else "") + ".",
             "No fill values found in this series; ANA leaves missing days blank.",
         ]
         est_dec = share_by_decade(df["date"], df["quality"] == "estimated")

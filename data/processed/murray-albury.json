@@ -13,8 +13,8 @@
   "datum": "m above the local gauge zero (local gauge height; zero elevation not given by the API)",
   "daily_stat": "mean",
   "first_date": "1885-01-02",
-  "last_date": "2026-10-13",
-  "n_days": 51652,
+  "last_date": "2026-10-18",
+  "n_days": 51657,
   "coverage_by_decade": [
     {
       "decade": 1880,
@@ -117,17 +117,17 @@
     {
       "decade": 2020,
       "share_days": 1.0,
-      "share_measured": 0.9774,
+      "share_measured": 0.9754,
       "share_estimated": 0.0008,
-      "share_provisional": 0.0218
+      "share_provisional": 0.0238
     }
   ],
   "license": "Creative Commons Attribution 4.0 (CC BY 4.0), per BoM Water Data Online copyright notice. Credit: Bureau of Meteorology, Water Data Online, with data supplied by the station owner (see notes).",
   "notes": [
     "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 145590010, station_id 587621 (station 409001 MURRAY @ ALBURY). Data owner: NSW - Water NSW.",
     "Daily mean of the merged quality-controlled level record, aggregated by BoM to a 24-hour mean. The API does not say how many readings fed each early-year mean; where only one staff reading a day was taken, the 'mean' is that one reading.",
-    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate', 140: 'quality-E unknown'}): counts {10: 9888, 90: 3226, 110: 52, 140: 38486}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (76 days), where it marks recent unchecked readings.",
-    "Unknown-quality code E (140) share of days by decade: {1880: 1.0, 1890: 1.0, 1900: 1.0, 1910: 0.993, 1920: 0.994, 1930: 1.0, 1940: 1.0, 1950: 1.0, 1960: 1.0, 1970: 1.0, 1980: 1.0, 1990: 0.062, 2010: 0.005, 2020: 0.022}.",
+    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate', 140: 'quality-E unknown'}): counts {10: 9888, 90: 3226, 110: 52, 140: 38491}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (81 days), where it marks recent unchecked readings.",
+    "Unknown-quality code E (140) share of days by decade: {1880: 1.0, 1890: 1.0, 1900: 1.0, 1910: 0.993, 1920: 0.994, 1930: 1.0, 1940: 1.0, 1950: 1.0, 1960: 1.0, 1970: 1.0, 1980: 1.0, 1990: 0.062, 2010: 0.005, 2020: 0.024}.",
     "Compromised code B (90) share of days by decade: {1990: 0.434, 2000: 0.452}.",
     "133 empty timestamps (code -1) and 0 values coded F (210, missing or incorrect) were dropped."
   ],
@@ -149,7 +149,7 @@
     },
     {
       "date": "1919-1936; 1950-1961",
-      "fact": "Hume Dam, 16 km upstream of Albury, was built 1919-1936 and enlarged 1950-1961. Since then river levels at Albury mostly reflect dam releases.",
+      "fact": "Hume Dam, 16 km east of Albury-Wodonga, was built 1919-1936 and enlarged 1950-1961.",
       "source": "https://www.g-mwater.com.au/water-operations/storages/murray/humedam"
     },
     {
@@ -163,5 +163,5 @@
       "source": null
     }
   ],
-  "public_notes": "Albury's record starts in 1885, but Australia's weather bureau rates the quality of almost every value before 1990 as unknown. Hume Dam, finished in 1936 just upstream, controls the river here, so levels before and after the dam measure different things."
+  "public_notes": "Albury's record starts in 1885, but Australia's weather bureau rates the quality of almost every value before 1990 as unknown. Hume Dam was finished in 1936 about 16 km upstream, so levels before and after the dam may not be directly comparable."
 }

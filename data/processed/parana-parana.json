@@ -13,8 +13,8 @@
   "datum": "m above the local gauge zero (cero de escala); INA lists the zero at 9.432 m IGN (Argentine national vertical datum)",
   "daily_stat": "mixed (see notes)",
   "first_date": "1902-02-22",
-  "last_date": "2026-10-14",
-  "n_days": 44965,
+  "last_date": "2026-10-19",
+  "n_days": 44970,
   "coverage_by_decade": [
     {
       "decade": 1900,
@@ -102,8 +102,8 @@
     },
     {
       "decade": 2020,
-      "share_days": 0.9931,
-      "share_measured": 0.9931,
+      "share_days": 0.9932,
+      "share_measured": 0.9932,
       "share_estimated": 0.0,
       "share_provisional": 0.0
     }
@@ -112,7 +112,7 @@
   "notes": [
     "INA series 29 ('medición directa', variable 'Altura hidrométrica'), station Paraná (INA station 29, PNA code 230), owner PNA.",
     "INA publishes no per-value quality flag, so every value is marked measured. This includes the most recent days, which INA may still correct.",
-    "47031 raw observations. Days with more than one reading (averaged to a daily mean): 1376, from 2016-01-04 to 2026-07-01. Before that each day has a single reading.",
+    "47037 raw observations. Days with more than one reading (averaged to a daily mean): 1376, from 2016-01-04 to 2026-07-01. Before that each day has a single reading.",
     "Most common local timestamp by decade: {1900: '07:00', 1910: '07:00', 1920: '07:00', 1930: '07:00', 1940: '07:00', 1950: '07:00', 1960: '07:00', 1970: '07:00', 1980: '06:00', 1990: '06:00', 2000: '04:00', 2010: '04:00', 2020: '00:00'}. These are the times INA stored; the uniform 07:00 before 1980 looks like a loading convention, not a documented reading hour.",
     "No fill values found.",
     "INA alert thresholds for this gauge: alert 4.7 m, evacuation 5 m, low water 1.61 m."
@@ -130,7 +130,7 @@
     },
     {
       "date": "1900-2024",
-      "fact": "A second national-network gauge about 500 m away agrees closely day to day, apart from scattered single days up to 1.5 m off; after 2020 the two differ by less than 0.25 m.",
+      "fact": "A second national-network gauge about 500 m away reads about the same day to day, apart from scattered single days up to 1.5 m off; after 2020 the differences grow, reaching up to 0.25 m either way.",
       "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"
     },
     {

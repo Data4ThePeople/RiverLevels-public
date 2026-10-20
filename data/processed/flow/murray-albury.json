@@ -22,13 +22,13 @@
   "Discharge at the Albury gauge (409001) stops on March 16, 1952, so this series is the Murray at Doctors Point (409017), about 4 km downstream; the two are not joined (Bureau of Meteorology).",
   "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 184020010, station 409017 MURRAY @ DOCTORS PNT; data owner NSW - Water NSW (Bureau of Meteorology).",
   "Daily mean of the merged quality-controlled record, computed by BoM over 24 hours; the API does not say how many readings fed each early-year mean (Bureau of Meteorology).",
-  "Quality codes (10 quality-A best available Quality; 90 quality-B compromised; 110 quality-C estimate; 140 quality-E unknown): counts {10: 10267, 90: 3876, 110: 765, 140: 17754}. A and B (compromised) are measured, C (estimate) estimated, and E (unknown quality) measured before 1991 and provisional from 1991 on (6854 days), where it marks recent unchecked values (Bureau of Meteorology).",
-  "Share of days with code E (unknown quality) by decade: {1920: 0.1, 1930: 0.021, 1940: 0.014, 1950: 0.051, 1960: 0.853, 1970: 0.999, 1980: 1.0, 1990: 0.076, 2000: 0.289, 2010: 1.0, 2020: 0.865}; with code B (compromised): {1990: 0.437, 2000: 0.625} (Bureau of Meteorology).",
+  "Quality codes (10 quality-A best available Quality; 90 quality-B compromised; 110 quality-C estimate; 140 quality-E unknown): counts {10: 10267, 90: 3876, 110: 765, 140: 17757}. A and B (compromised) are measured, C (estimate) estimated, and E (unknown quality) measured before 1991 and provisional from 1991 on (6857 days), where it marks recent unchecked values (Bureau of Meteorology).",
+  "Share of days with code E (unknown quality) by decade: {1920: 0.1, 1930: 0.021, 1940: 0.014, 1950: 0.051, 1960: 0.853, 1970: 0.999, 1980: 1.0, 1990: 0.076, 2000: 0.289, 2010: 1.0, 2020: 0.866}; with code B (compromised): {1990: 0.437, 2000: 0.625} (Bureau of Meteorology).",
   "Dropped: 2752 empty timestamps, 0 values coded F (missing or incorrect) and 0 negative values (Bureau of Meteorology)."
  ],
  "first_date": "1929-11-02",
- "last_date": "2026-10-16",
- "n_days": 32662,
+ "last_date": "2026-10-19",
+ "n_days": 32665,
  "coverage_by_decade": [
   {
    "decade": 1920,
@@ -103,9 +103,9 @@
   {
    "decade": 2020,
    "share_days": 1.0,
-   "share_measured": 0.1342,
+   "share_measured": 0.1341,
    "share_estimated": 0.0004,
-   "share_provisional": 0.8654
+   "share_provisional": 0.8655
   }
  ]
 }

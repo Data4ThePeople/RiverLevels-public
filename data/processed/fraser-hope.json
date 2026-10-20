@@ -13,8 +13,8 @@
   "datum": "m above station datum (ASSUMED DATUM)",
   "daily_stat": "mean",
   "first_date": "1912-03-06",
-  "last_date": "2026-10-14",
-  "n_days": 39786,
+  "last_date": "2026-10-19",
+  "n_days": 39785,
   "coverage_by_decade": [
     {
       "decade": 1910,
@@ -95,10 +95,10 @@
     },
     {
       "decade": 2020,
-      "share_days": 0.9762,
-      "share_measured": 0.7503,
+      "share_days": 0.9738,
+      "share_measured": 0.7488,
       "share_estimated": 0.0,
-      "share_provisional": 0.2259
+      "share_provisional": 0.225
     }
   ],
   "license": "Open Government Licence - Canada. Contains information licensed under the Open Government Licence - Canada (Environment and Climate Change Canada).",
@@ -107,8 +107,8 @@
     "Channel change: 35 rating curves since 1912; the bed built up about 1920 to the 1940s, cut down from the 1950s to 1980s, then built up again (BC flood flows review), so equal levels do not always mean equal flow.",
     "Archived daily means (HYDAT): 1912-03-06 to 2025-02-24. Rows with no water level (discharge only or blank): 2047. Level symbols: {'none': 38703, 'Partial Day': 475, 'Estimated': 48}. Estimated (E) -> estimated. Ice (B), partial day (A) and other symbols keep 'measured' but are counted here; ice can raise winter levels.",
     "Datum check not possible: no day is in both HYDAT and the real-time record. We assume the real-time level uses the same station datum as HYDAT but have not verified it.",
-    "After HYDAT ends: 5-minute real-time readings (2025-03-15 to 2026-10-15 UTC; rows by source {'wateroffice': 161749}) averaged into 560 daily means by local standard time day. A day counts only with readings in at least 20 of its 24 hours; 5 days left out. Approval of the readings: {'Provisional/Provisoire': 161749}. A day whose readings are all 'Final' is 'measured', otherwise 'provisional'. Symbols: {'none': 161749}.",
-    "No data from the day after 2025-02-24 to the day before 2025-03-15: reviewed daily means are not yet published for that period, and the Water Office real-time service only keeps about 18 months.",
+    "After HYDAT ends: 5-minute real-time readings (2025-03-20 to 2026-10-20 UTC; rows by source {'wateroffice': 161751}) averaged into 559 daily means by local standard time day. A day counts only with readings in at least 20 of its 24 hours; 6 days left out. Approval of the readings: {'Provisional/Provisoire': 161751}. A day whose readings are all 'Final' is 'measured', otherwise 'provisional'. Symbols: {'none': 161751}.",
+    "No data from the day after 2025-02-24 to the day before 2025-03-21: reviewed daily means are not yet published for that period, and the Water Office real-time service only keeps about 18 months.",
     "Station: FRASER RIVER AT HOPE, status Active, vertical datum field: ASSUMED DATUM.",
     "Levels rounded to 0.001 m (the published precision); the API returns float noise such as 2.318000078201294."
   ],
@@ -134,8 +134,8 @@
       "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
     },
     {
-      "date": "not found",
-      "fact": "Levels use an assumed datum; add 27.926 m for Geodetic Survey of Canada datum or 28.180 m for CGVD2013.",
+      "date": "current",
+      "fact": "Levels use an assumed datum; add 27.926 m for Geodetic Survey of Canada datum.",
       "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
     },
     {
@@ -149,12 +149,12 @@
       "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "Flow measurements were once made from the bridge with a Price meter; now by boat with an acoustic profiler.",
       "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "Station is listed as regulated; drainage area includes 14,000 square km behind Kenney Dam.",
       "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
     }

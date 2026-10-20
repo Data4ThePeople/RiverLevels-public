@@ -3,7 +3,7 @@
     "measurement_history": [
       {"date": "1982-07", "fact": "ANA inventory: staff gauge readings start 1982-07-01 and continue. Operator SGB-CPRM.", "source": "https://telemetriaws1.ana.gov.br/ServiceANA.asmx/HidroInventario?codEstDE=10100000&codEstATE=&tpEst=&nmEst=&nmRio=&codSubBacia=&codBacia=&nmMunicipio=&nmEstado=&sgResp=&sgOper=&telemetrica="},
       {"date": "2000-08", "fact": "ANA inventory: telemetry starts 2000-08-01. No automatic level recorder is listed.", "source": "https://telemetriaws1.ana.gov.br/ServiceANA.asmx/HidroInventario?codEstDE=10100000&codEstATE=&tpEst=&nmEst=&nmRio=&codSubBacia=&codBacia=&nmMunicipio=&nmEstado=&sgResp=&sgOper=&telemetrica="},
-      {"date": "1990-1992", "fact": "Data check: several one-day jumps of 3 to 4 m in 1989-1992 (for example 990 cm on 1992-07-01 to 03, then 612 cm), in raw (level 1) and consistent (level 2) months. Kept as published.", "source": "derived from ANA HidroSerieHistorica, station 10100000"},
+      {"date": "1990-1992", "fact": "Data check: several one-day jumps of 3 to 4 m in 1989-1992 (for example 990 cm on 1992-07-01 to 03, then 612 cm) in raw (level 1) months. Kept as published.", "source": "derived from ANA HidroSerieHistorica, station 10100000"},
       {"date": "2017", "fact": "SGB: recent readings can be revised after field visits that include re-leveling of the staff gauges.", "source": "https://www.sgb.gov.br/sace/boletins/Amazonas/20170519_15-20170519 - 154457.pdf"},
       {"date": null, "fact": "Not found: number and hour of daily readings, gauge moves, gauge zero elevation, any publisher statement on early accuracy.", "source": null}
     ],
@@ -27,7 +27,7 @@
       {"date": "2017", "fact": "SGB: Manaus levels use a local, arbitrary reference tied to the port staff gauge; subtract 7.00 m from a reading to refer it to sea level.", "source": "https://www.sgb.gov.br/sace/boletins/Amazonas/20170519_15-20170519 - 154457.pdf"},
       {"date": null, "fact": "Not found: who reads the port gauge and at what hour, any documented gauge move or zero change, a CPRM note giving 6.83 m instead of 7.00 m (could not be opened).", "source": null}
     ],
-    "public_notes": "Manaus has one of the longest river records in the tropics, read daily at the port since 1902. Since 2015 the values come from an automatic sensor and have not yet been reviewed; we checked ten years where both exist and they agree to within about a centimeter on a typical day."
+    "public_notes": "The Manaus gauge has been read daily at the port since 1902. Since 2015 the values come from an automatic sensor and have not yet been reviewed; we checked ten years where both exist and they agree to within about a centimeter on a typical day."
   },
   "amazon-obidos": {
     "measurement_history": [
@@ -46,7 +46,7 @@
       {"date": "1996-04", "fact": "ANA inventory: recorder 1996-04-01 to 1998-11-01, telemetry from 1996-04-01. Operator SGB-CPRM.", "source": "https://telemetriaws1.ana.gov.br/ServiceANA.asmx/HidroInventario?codEstDE=66825000&codEstATE=&tpEst=&nmEst=&nmRio=&codSubBacia=&codBacia=&nmMunicipio=&nmEstado=&sgResp=&sgOper=&telemetrica="},
       {"date": null, "fact": "Not found: hour of the daily reading, gauge moves or zero changes, upstream dams affecting this site, any publisher statement on early accuracy.", "source": null}
     ],
-    "public_notes": "Brazil's Navy has read this gauge every day since 1900, and the record has almost no gaps. Values below zero are real low-water readings, not errors. Values after 2023 are not yet reviewed."
+    "public_notes": "Embrapa reports 95 years of uninterrupted daily readings here from 1900 to 1994, released daily by Brazil's Navy. Values below zero are real low-water readings, not errors. Values after 2023 are not yet reviewed."
   },
   "parana-posadas": {
     "measurement_history": [
@@ -56,13 +56,13 @@
       {"date": "2016", "fact": "INA: filling Yacyreta to 83 m caused a significant change in river behavior at Posadas.", "source": "https://repositorio.ina.gob.ar/bitstreams/00d7e25a-a60d-4cf6-989f-d3431002006a/download"},
       {"date": null, "fact": "Not found: early reading practice, gauge zero or zero changes, gauge moves, recorder or telemetry start, any accuracy statement.", "source": null}
     ],
-    "public_notes": "Since 1994 Posadas sits in the reservoir of the Yacyreta dam, which was raised in steps until 2011. Levels since then mostly reflect how the dam is run, so they cannot be compared directly with the river before the dam."
+    "public_notes": "Since 1994 Posadas sits in the reservoir of the Yacyreta dam, which was raised in steps until 2011. INA says filling the reservoir to its final level caused a significant change in how the river behaves at Posadas, so levels since then cannot be compared directly with the river before the dam."
   },
   "parana-corrientes": {
     "measurement_history": [
       {"date": "1901", "fact": "INA/UTN report: the Prefectura series in INA's database starts 01 Jan 1901, with 72 missing days to June 2024.", "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"},
-      {"date": "2013-2024", "fact": "The gauge zero is given differently across documents (41.95 m IGN, 42.01 m IGN, 42.39 m MOP; INA's database labels 42.39 as IGN). INA calls it uncertain.", "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"},
-      {"date": "2013; 2019-01-21", "fact": "An automatic level recorder was installed in 2013 and another automatic station on 21 Jan 2019. The INA series used here is the Prefectura staff gauge.", "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"},
+      {"date": "current", "fact": "INA's database lists this Prefectura gauge's zero as 42.39 m IGN. INA notes that 42.39 m is the zero, on the MOP reference, of the national-network gauge about 1 km away, and that the two networks' gauges do not share the same zero; it lists Corrientes among uncertain gauge zeros.", "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"},
+      {"date": "2013; 2019-01-21", "fact": "At the national-network gauge about 1 km away, not the Prefectura staff gauge used here, an automatic level recorder was installed in 2013 and an automatic station on 21 Jan 2019.", "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"},
       {"date": null, "fact": "Not found: early reading hours and readings per day, gauge move dates, any early accuracy statement.", "source": null}
     ],
     "public_notes": "This daily record from Argentina's Coast Guard gauge starts in 1901 and has very few missing days. The agency publishes no review flags, so recent values may still be corrected."
@@ -71,7 +71,7 @@
     "measurement_history": [
       {"date": "1902-12-31", "fact": "INA/UTN report: the Prefectura series for Parana starts 31 Dec 1902, with 543 missing days to June 2024.", "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"},
       {"date": "2018 survey", "fact": "Prefectura gauge zero is 9.432 m IGN (INA-IGN survey, 2018).", "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"},
-      {"date": "1900-2024", "fact": "A second national-network gauge about 500 m away agrees closely day to day, apart from scattered single days up to 1.5 m off; after 2020 the two differ by less than 0.25 m.", "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"},
+      {"date": "1900-2024", "fact": "A second national-network gauge about 500 m away reads about the same day to day, apart from scattered single days up to 1.5 m off; after 2020 the differences grow, reaching up to 0.25 m either way.", "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"},
       {"date": null, "fact": "Not found: early reading hours and readings per day, gauge moves, telemetry start, early accuracy statement.", "source": null}
     ],
     "public_notes": "This daily record starts in 1902; the first decade has about one day in ten missing. The agency publishes no review flags, so recent values may still be corrected."
@@ -79,11 +79,11 @@
   "parana-rosario": {
     "measurement_history": [
       {"date": "1884", "fact": "INA/UTN report: the Rosario gauge has records from 1884.", "source": "https://repositorio.ina.gob.ar/bitstreams/22a68d27-1090-446f-83cd-cf680f8da2d1/download"},
-      {"date": "2018 survey", "fact": "INA metadata: Prefectura staff gauge (not automatic), zero at 2.923 m IGN.", "source": "https://alerta.ina.gob.ar/a5/obs/puntual/estaciones?nombre=Rosario&format=json"},
-      {"date": "1875-1908", "fact": "Antico et al. (2020) rescued the early Rosario record, re-digitized it and corrected errors from a gradual sinking of the gauge. Whether INA's series includes that correction is not stated.", "source": "https://ri.conicet.gov.ar/handle/11336/145296?show=full"},
-      {"date": null, "fact": "Not found: reading hours and readings per day, gauge moves, telemetry start, whether the INA series includes the sinking correction.", "source": null}
+      {"date": "current", "fact": "INA metadata: Prefectura staff gauge (not automatic), zero at 2.923 m IGN.", "source": "https://alerta.ina.gob.ar/a5/obs/puntual/estaciones?nombre=Rosario&format=json"},
+      {"date": "1875-1883", "fact": "Antico et al. (2020) digitized typewritten daily Rosario levels for 1875 to 1883, tied them to the modern datum and corrected them for errors from a gradual sinking of the gauge. These years come before INA's series, which starts in 1884.", "source": "https://ri.conicet.gov.ar/handle/11336/145296?show=full"},
+      {"date": null, "fact": "Not found: reading hours and readings per day, gauge moves, telemetry start, whether the gauge sinking affected years after 1883.", "source": null}
     ],
-    "public_notes": "Rosario's record goes back to 1884, one of the longest in South America. Researchers found the gauge slowly sank in its early decades, and it is not clear whether this copy of the data was corrected for that, so the earliest years are less certain."
+    "public_notes": "Rosario's record in this file starts in 1884. Researchers describe Rosario's as the longest water level record on the Paraná; they corrected the earlier 1875 to 1883 readings, which are not in this file, for a slow sinking of the gauge."
   },
   "paraguay-asuncion": {
     "measurement_history": [
@@ -97,11 +97,11 @@
       {"date": "1885-1975", "fact": "Data check: one value a day through 1975, mostly timestamped 09:00 (08:00 in 1898-1907 and 1969-73), which fits a once-daily manual staff reading; BoM does not say so.", "source": "https://www.bom.gov.au/waterdata/services?service=kisters&type=queryServices&request=getTimeseriesValues&ts_id=145588010&format=json"},
       {"date": "1976", "fact": "Data check: several readings a day begin in 1976, which fits a continuous recorder; not stated by BoM.", "source": "https://www.bom.gov.au/waterdata/services?service=kisters&type=queryServices&request=getTimeseriesValues&ts_id=145588010&format=json"},
       {"date": "1885-1989", "fact": "Nearly all values carry BoM quality code E, 'unknown'. BoM maps NSW 'daily or spot data' to E. Codes A and B first appear in 1990-91.", "source": "https://www.bom.gov.au/water/hrs/qc_doc.shtml"},
-      {"date": "1919-1936; 1950-1961", "fact": "Hume Dam, 16 km upstream of Albury, was built 1919-1936 and enlarged 1950-1961. Since then river levels at Albury mostly reflect dam releases.", "source": "https://www.g-mwater.com.au/water-operations/storages/murray/humedam"},
+      {"date": "1919-1936; 1950-1961", "fact": "Hume Dam, 16 km east of Albury-Wodonga, was built 1919-1936 and enlarged 1950-1961.", "source": "https://www.g-mwater.com.au/water-operations/storages/murray/humedam"},
       {"date": "1973-1979", "fact": "Dartmouth Dam, upstream of Hume, was built 1973-1979.", "source": "https://www.g-mwater.com.au/water-operations/storages/murray/dartmouthdam"},
       {"date": null, "fact": "Not found: who read the gauge, gauge moves, gauge zero or datum changes, telemetry start.", "source": null}
     ],
-    "public_notes": "Albury's record starts in 1885, but Australia's weather bureau rates the quality of almost every value before 1990 as unknown. Hume Dam, finished in 1936 just upstream, controls the river here, so levels before and after the dam measure different things."
+    "public_notes": "Albury's record starts in 1885, but Australia's weather bureau rates the quality of almost every value before 1990 as unknown. Hume Dam was finished in 1936 about 16 km upstream, so levels before and after the dam may not be directly comparable."
   },
   "murray-swanhill": {
     "measurement_history": [
@@ -120,7 +120,7 @@
       {"date": "1976-1981", "fact": "Many values carry quality C (estimate); 32% of days in the 1970s are estimated.", "source": "https://www.bom.gov.au/waterdata/services?service=kisters&type=queryServices&request=getQualityCodes&format=json"},
       {"date": null, "fact": "Not found: whether the gauge is above or below the weir, the datum name, gauge move dates, telemetry start.", "source": null}
     ],
-    "public_notes": "Euston sits at a weir, so its level depends partly on how the weir is set. The numbers are heights above a sea-level reference, not above a local gauge, and about a third of days in the late 1970s were estimated."
+    "public_notes": "Euston sits at a weir, and parts of the weir are removed during floods, so we expect the level here to depend partly on how the weir is run. The numbers appear to be water surface elevations near the weir's 47.6 m full supply level, not heights above a local gauge; BoM does not name the datum. About a third of days in the late 1970s were estimated."
   },
   "darling-bourke": {
     "measurement_history": [

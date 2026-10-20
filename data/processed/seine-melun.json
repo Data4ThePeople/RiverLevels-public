@@ -13,8 +13,8 @@
   "datum": "mm above the station reference (36.01 m, altimetric system code 3, NGF-IGN69; reference valid from 2004-10-01)",
   "daily_stat": "max",
   "first_date": "1900-01-01",
-  "last_date": "2026-10-14",
-  "n_days": 38201,
+  "last_date": "2026-10-19",
+  "n_days": 38206,
   "coverage_by_decade": [
     {
       "decade": 1900,
@@ -103,16 +103,16 @@
     {
       "decade": 2020,
       "share_days": 1.0,
-      "share_measured": 0.5898,
+      "share_measured": 0.5886,
       "share_estimated": 0.0,
-      "share_provisional": 0.4102
+      "share_provisional": 0.4114
     }
   ],
   "license": "Not stated by Hub'Eau or HydroPortail (checked 2026-10-15). French public data usually fall under Licence Ouverte / Etalab 2.0, but that is unconfirmed for this API; clear before republishing. Credit: Hub'Eau / HydroPortail (Schapi, Ministere de la Transition ecologique)",
   "notes": [
     "Daily maximum water level (HIXnJ) in millimeters as published. Not converted.",
     "Quality: code_statut 16 (Donnee validee) with method Mesuree, Calculee or Expertisee (edited by a hydrologist) -> measured; validated with method Reconstituee, Interpolation, Estimee or Valeur forcee, or qualification Estimee -> estimated; any status below 16 (raw, corrected, pre-validated) -> provisional, because the publisher has not validated it. Qualification Douteuse (doubtful) values are kept and counted in these notes. Hub'Eau dates are UTC.",
-    "Flags in the data: statut: {'Donnée corrigée': 30641, 'Donnée validée': 6555, 'Donnée pré-validée': 734, 'Donnée brute': 271}; methode: {'Expertisée': 34897, 'Mesurée': 3089, 'Calculée': 215}; qualification: {'Bonne': 37887, 'Non qualifiée': 283, 'Douteuse': 31}",
+    "Flags in the data: statut: {'Donnée corrigée': 30641, 'Donnée validée': 6555, 'Donnée pré-validée': 734, 'Donnée brute': 276}; methode: {'Expertisée': 34897, 'Mesurée': 3094, 'Calculée': 215}; qualification: {'Bonne': 37887, 'Non qualifiée': 288, 'Douteuse': 31}",
     "Station metadata: strongly influenced by the Vives Eaux dam, so no flow is published; height data described as good quality. Daily observer readings in early years.",
     "The station reference record starts 2004-10-01; the API gives no earlier reference, so a pre-2004 datum change cannot be ruled out from metadata alone."
   ],

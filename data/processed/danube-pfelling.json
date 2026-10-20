@@ -13,8 +13,8 @@
   "datum": "cm above gauge zero (308.12 m NHN (DHHN2016))",
   "daily_stat": "mean",
   "first_date": "1927-04-04",
-  "last_date": "2026-10-14",
-  "n_days": 36354,
+  "last_date": "2026-10-19",
+  "n_days": 36359,
   "coverage_by_decade": [
     {
       "decade": 1920,
@@ -89,16 +89,16 @@
     {
       "decade": 2020,
       "share_days": 1.0,
-      "share_measured": 0.8842,
+      "share_measured": 0.8824,
       "share_estimated": 0.0,
-      "share_provisional": 0.1158
+      "share_provisional": 0.1176
     }
   ],
   "license": "CC BY 4.0. Required credit: Datenquelle: Bayerisches Landesamt für Umwelt, www.lfu.bayern.de",
   "notes": [
     "Daily mean (Tagesmittelwert) of the water level in cm above gauge zero, from the GKD download center (Gesamtzeitraum, Tageswerte).",
-    "Quality from the GKD Pruefstatus column: 'Geprueft' (checked) -> measured, 'Rohdaten' (raw) -> provisional. Counts in the file: {'Geprueft': 36067, 'Rohdaten': 287}.",
-    "Provisional (Rohdaten) days run from 2026-01-01 to 2026-10-14.",
+    "Quality from the GKD Pruefstatus column: 'Geprueft' (checked) -> measured, 'Rohdaten' (raw) -> provisional. Counts in the file: {'Geprueft': 36067, 'Rohdaten': 292}.",
+    "Provisional (Rohdaten) days run from 2026-01-01 to 2026-10-19.",
     "Rows with an empty daily mean dropped: 0. No fill values (such as -999) found.",
     "The current, unfinished day is published in its own file and is left out.",
     "Gauge zero as stated in the file header: 308.12 m NHN (DHHN2016). It is a single current value; the file does not list earlier gauge zeros, so a past datum change would not be visible here.",
@@ -114,7 +114,7 @@
     {
       "date": "current",
       "fact": "Gauge zero 308.12 m NHN (DHHN2016). Past gauge zeros are not listed.",
-      "source": "https://www.gkd.bayern.de/en/rivers/discharge/bayern/pfelling-10078000"
+      "source": "https://www.gkd.bayern.de/de/fluesse/wasserstand/kelheim/pfelling-10078000"
     },
     {
       "date": "not found",

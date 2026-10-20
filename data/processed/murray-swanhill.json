@@ -13,8 +13,8 @@
   "datum": "m above the local gauge zero (local gauge height; zero elevation not given by the API)",
   "daily_stat": "mean",
   "first_date": "1974-11-14",
-  "last_date": "2026-10-13",
-  "n_days": 18950,
+  "last_date": "2026-10-17",
+  "n_days": 18954,
   "coverage_by_decade": [
     {
       "decade": 1970,
@@ -54,8 +54,8 @@
     {
       "decade": 2020,
       "share_days": 1.0,
-      "share_measured": 0.9592,
-      "share_estimated": 0.0408,
+      "share_measured": 0.9593,
+      "share_estimated": 0.0407,
       "share_provisional": 0.0
     }
   ],
@@ -63,7 +63,7 @@
   "notes": [
     "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 266242010, station_id 2877698 (station 409204 MURRAY @ SWAN HILL). Data owner: VIC - Department of Energy, Environment and Climate Action.",
     "Daily mean of the merged quality-controlled level record, aggregated by BoM to a 24-hour mean. The API does not say how many readings fed each early-year mean; where only one staff reading a day was taken, the 'mean' is that one reading.",
-    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate'}): counts {10: 18182, 90: 49, 110: 719}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (0 days), where it marks recent unchecked readings.",
+    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate'}): counts {10: 18186, 90: 49, 110: 719}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (0 days), where it marks recent unchecked readings.",
     "Unknown-quality code E (140) share of days by decade: none.",
     "Compromised code B (90) share of days by decade: {2010: 0.001, 2020: 0.018}.",
     "14 empty timestamps (code -1) and 0 values coded F (210, missing or incorrect) were dropped."

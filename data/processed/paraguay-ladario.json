@@ -13,8 +13,8 @@
   "datum": "cm above the Ladario staff gauge zero, listed at 82.15 m altitude (Embrapa Pantanal Doc. 14, 1995, citing BRASIL 1974)",
   "daily_stat": "mean",
   "first_date": "1900-01-01",
-  "last_date": "2026-10-14",
-  "n_days": 46281,
+  "last_date": "2026-10-19",
+  "n_days": 46284,
   "coverage_by_decade": [
     {
       "decade": 1900,
@@ -102,19 +102,19 @@
     },
     {
       "decade": 2020,
-      "share_days": 1.0,
-      "share_measured": 0.5853,
+      "share_days": 0.9992,
+      "share_measured": 0.5841,
       "share_estimated": 0.0048,
-      "share_provisional": 0.4098
+      "share_provisional": 0.4102
     }
   ],
   "license": "No license on the HidroWeb service itself. The SNIRH metadata record for the national hydrometric network allows reproduction of the data provided the source is cited (https://metadados.snirh.gov.br/geonetwork/srv/api/records/f85dbf06-a869-414c-afc5-bb01869e9156). Credit: Agencia Nacional de Aguas e Saneamento Basico (ANA), HidroWeb.",
   "notes": [
-    "Datum check: 485 days where both the historic series and telemetry have a value (2025-01-01 to 2026-04-30); telemetry daily mean minus historic value: median +0.1 cm, mean +0.1 cm, 5th-95th percentile -1.5 to +1.5 cm. A median near zero means the two share the same gauge zero.",
-    "Historic series: ANA HidroSerieHistorica, tipoDados=1 (stage). Where a month exists at consistency level 2 (consistent, reviewed by ANA) we use it; otherwise level 1 (raw) and mark it provisional. Last level-2 date: 2023-12-31. Level-1 days used: 851.",
+    "Datum check: 516 days where both the historic series and telemetry have a value (2025-01-01 to 2026-05-31); telemetry daily mean minus historic value: median +0.1 cm, mean +0.1 cm, 5th-95th percentile -1.6 to +1.5 cm. A median near zero means the two share the same gauge zero.",
+    "Historic series: ANA HidroSerieHistorica, tipoDados=1 (stage). Where a month exists at consistency level 2 (consistent, reviewed by ANA) we use it; otherwise level 1 (raw) and mark it provisional. Last level-2 date: 2023-12-31. Level-1 days used: 882.",
     "Per-day status codes from ANA (CotaNNStatus): 25 days flagged 2 'estimated' are marked estimated; 0 days flagged 3 'doubtful' and 0 days flagged 4 'dry staff gauge' are kept as published with their consistency-level quality.",
-    "Daily value: ANA's daily-mean row where published (normally the mean of the 07:00 and 17:00 staff readings); otherwise the mean of the reading rows for that day. Days by source row: {'daily_mean_row': 46114}.",
-    "Historic record ends 2026-04-30. Days after that come from the ANA telemetry feed (DadosHidrometeorologicos, mostly 15-minute readings), averaged to a daily mean (168 days, marked provisional). Telemetry days with fewer than 12 readings: 0.",
+    "Daily value: ANA's daily-mean row where published (normally the mean of the 07:00 and 17:00 staff readings); otherwise the mean of the reading rows for that day. Days by source row: {'daily_mean_row': 46145}.",
+    "Historic record ends 2026-05-31. Days after that come from the ANA telemetry feed (DadosHidrometeorologicos, mostly 15-minute readings), averaged to a daily mean (139 days, marked provisional). Telemetry days with fewer than 12 readings: 0. Dropped as partial days (fewer than 75% of the readings the gauge usually sends per day, the median over the 61 days around it): 3, most recent 2026-07-15, 2026-07-16, 2026-10-20.",
     "No fill values found in this series; ANA leaves missing days blank.",
     "Share of days marked estimated by decade: {1950: 0.002, 1960: 0.0, 1970: 0.002, 2020: 0.005}.",
     "ANA inventory altitude for the station: 82 m (station altitude, not the gauge zero)."
@@ -141,5 +141,5 @@
       "source": null
     }
   ],
-  "public_notes": "Brazil's Navy has read this gauge every day since 1900, and the record has almost no gaps. Values below zero are real low-water readings, not errors. Values after 2023 are not yet reviewed."
+  "public_notes": "Embrapa reports 95 years of uninterrupted daily readings here from 1900 to 1994, released daily by Brazil's Navy. Values below zero are real low-water readings, not errors. Values after 2023 are not yet reviewed."
 }

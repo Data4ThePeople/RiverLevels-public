@@ -35,8 +35,10 @@ the date of its last real download in `data/raw/.downloaded/<script>.txt`,
 and any reading dated on or after that date is dropped, because a mean of
 that day's readings covers only part of the day. The rule applies to every
 gauge, including one-reading-a-day gauges, so the record always ends on a
-finished day. With the October 15, 2026 cache it removes October 15 at
-Manaus, Obidos, Tabatinga, Ladario, Asuncion and the four Mekong gauges.
+finished day. With the October 15, 2026 cache it removed October 15 at
+Manaus, Obidos, Tabatinga, Ladario, Asuncion and the four Mekong gauges;
+with the October 20 download it removes October 20 wherever a publisher had
+posted part of that day.
 Added October 17, 2026, from the live build, where Manaus and Rosario
 ended on a part-day mean.
 
@@ -74,7 +76,25 @@ the processed files stay as published.
   October 1, 1934; Chiang Saen December 15, 1993 (station moved, earlier
   readings adjusted); Louisville 1923 (low-water level steps up, cause not
   documented).
-- Kaub shows reference lines at 78 cm and 40 cm.
+- Kaub shows reference lines at 150 cm (about what a barge needs to load
+  fully, Reuters, August 24, 2026), 77 cm (the official equivalent low-water
+  level for 2023 to 2031, CCNR Resolution 2022-II-19) and 40 cm. Until
+  October 20, 2026 the page showed 78 cm (the 2012 value) labeled "barges
+  start to load lighter", which no source supported.
+
+**Ties.** When the lowest or highest daily value occurs on more than one day,
+the page shows the earliest of those days and does not say there are others.
+Added October 20, 2026, after the independent tie-out found ties at
+Wittenberge, Kienstock, Helena, Memphis, Louisville, Shelley, Albury, Euston
+and Salekhard.
+
+**Partial days from late readings.** Besides the download-date rule above,
+a day averaged from readings that arrive late is a partial day too. Brazil's
+telemetry days (ana.py) with fewer than 75% of the readings the gauge usually
+sends per day (the median over the 61 days around it) are dropped. Added
+October 20, 2026, after the independent tie-out found Manacapuru's October 11,
+13 and 14 built from morning readings only, and Manaus starting telemetry on
+December 31, 2014 with a single reading.
 
 **What the page shows for each gauge.** Latest reading and date; lowest and
 highest daily reading with dates over the whole shown record; the first

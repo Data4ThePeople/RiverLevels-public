@@ -43,7 +43,9 @@ def main():
         for a, b in CHUNKS:
             p = fetch_to(s, RAWDIR / f"obs_{sid}_{a}_{b}.json",
                          f"{API}/obs/puntual/series/{sid}/observaciones", args.refresh,
-                         params=dict(timestart=f"{a}-01-01T00:00:00Z", timeend=f"{b + 1}-01-01T00:00:00Z"),
+                         # the API keeps a value only if its own timeend falls inside the request, so a daily value
+                         # stamped Dec 31 (timeend Jan 1, 03:00 UTC) needs a day of overlap; repeats are dropped by id
+                         params=dict(timestart=f"{a}-01-01T00:00:00Z", timeend=f"{b + 1}-01-02T00:00:00Z"),
                          pause=1.0)
             recs += json.loads(p.read_text())
         d = pd.DataFrame(recs)

@@ -52,7 +52,7 @@
     "source_url": "https://pubs.usgs.gov/wdr/2005/wdr-il-05/data/disc2004/07010000.htm"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "NWS and USACE list gauge zero as 379.58 ft NAVD88; a document explaining the change from 379.94 NGVD29 was not found.",
     "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/St%20Louis-Mississippi?office=MVS"
    },
@@ -107,12 +107,12 @@
     "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
    },
    {
-    "date": "not found",
-    "fact": "USGS and USACE now list gauge zero as 184.03 ft NAVD88; date of that update not found.",
+    "date": "current",
+    "fact": "USGS lists gauge zero as 184.03 ft NAVD88; the date of that update was not found.",
     "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-07032000/"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "USGS says the gauge height is furnished by the USACE Memphis District; USGS uses it to publish discharge.",
     "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-07032000/"
    },
@@ -197,7 +197,7 @@
     "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "USGS: all these gauges use the same datum, but readings differ because the water surface slopes between them.",
     "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
    },
@@ -212,7 +212,7 @@
     "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "USACE lists gauge zero as 46.23 ft NGVD29; NWS lists no datum for this gauge.",
     "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/Vicksburg?office=MVK"
    }
@@ -257,12 +257,12 @@
     "source_url": "https://www.lrl.usace.army.mil/Missions/Civil-Works/Navigation/History/"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "Present gauge: water-stage recorder at the downstream end of the lock guide wall, in the lower pool of McAlpine Locks.",
     "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "Gauge zero 373.18 ft NGVD29, equal to 374.00 ft on the Ohio River datum.",
     "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
    },
@@ -272,7 +272,7 @@
     "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
    }
   ],
-  "public_notes": "This gauge sits just below McAlpine Dam, which replaced older dam works in the 1960s, so the river here has been managed by dams and a canal for most of the record. USGS says several different gauges near Louisville were combined in the early years, so readings before the 1940s are less comparable."
+  "public_notes": "This gauge sits in the lower pool of McAlpine Locks, so the river here is managed by locks and a dam (USGS). USGS says various combinations of gauges near Louisville were used before October 1939 and from 1943 to 1946, so readings from those years are less comparable."
  },
  "ohio-cairo": {
   "measurement_history": [
@@ -292,7 +292,7 @@
     "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "NWS: the Cairo gauge is on the Ohio River but strongly affected by backwater from the Mississippi.",
     "source_url": "https://www.weather.gov/pah/recordrivers"
    },
@@ -312,7 +312,7 @@
     "source_url": "https://www.lrd.usace.army.mil/Media/News/Article/3685126/louisville-district-announces-official-closure-of-lock-and-dam-53/"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "NWS lists gauge zero as 270.03 ft NAVD88 and 270.47 ft NGVD29.",
     "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
    },
@@ -347,7 +347,7 @@
     "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "Gauge zero 481.56 ft above sea level (USGS); NWS lists 481.5 ft NAVD88.",
     "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
    },
@@ -408,7 +408,7 @@
    },
    {
     "date": "1936-04-10",
-    "fact": "Apr. 1936 to Sept. 1937, mostly a wire-weight gauge 2,000 ft downstream at a datum 0.47 ft lower.",
+    "fact": "Apr. 10, 1936, to Sept. 30, 1937, all readings came from a site 2,000 ft downstream at a datum 0.47 ft lower: a wire-weight gauge, and a recorder from Apr. 5 to July 23, 1937.",
     "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
    },
    {
@@ -437,7 +437,7 @@
     "source_url": "https://pubs.usgs.gov/wdr/2004/wdr-nd-04-1/htdocs/Output/06342500.2004.sw.html"
    }
   ],
-  "public_notes": "Before October 1, 1934, the readings in this file were measured from a gauge zero 4.24 feet higher than today's, and USGS did not adjust them, so early low readings look about 4 feet lower than they would today. Since Garrison Dam began holding back water in 1953, the river here has been lower and steadier, and winter ice can push readings up."
+  "public_notes": "Before October 1, 1934, the readings in this file were measured from a gauge zero 4.24 feet higher than today's, and USGS did not adjust them, so early low readings look about 4 feet lower than they would today. Garrison Dam upstream has regulated the river here since November 1953 (USGS), and winter ice can push readings up."
  },
  "ohio-cincinnati": {
   "measurement_history": [
@@ -507,7 +507,7 @@
     "source_url": "https://www.weather.gov/iln/ohioriverhistory"
    }
   ],
-  "public_notes": "This file starts in 1987, when the U.S. Geological Survey record begins; the older Cincinnati record back to 1858 is kept by the National Weather Service and is not included. Since Markland Dam began operating in 1963, the river at Cincinnati is held at about 25 feet or higher, so very low readings cannot happen here."
+  "public_notes": "This file starts in 1987, when the U.S. Geological Survey record begins; the older Cincinnati record back to 1858 is kept by the National Weather Service and is not included. When Markland Dam began operating in 1963, the normal pool at Cincinnati was raised to 25.4 feet (NWS)."
  },
  "colorado-lake-powell": {
   "measurement_history": [
@@ -532,7 +532,7 @@
     "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "USGS lists Reclamation elevations for Lake Powell as NGVD29; the NAVD88 value is about 2.91 ft higher.",
     "source_url": "https://grandcanyon.usgs.gov/server/rest/services/LakePowell/LakePowellTierElevations/MapServer/1"
    },
@@ -558,7 +558,7 @@
    },
    {
     "date": "1941-07",
-    "fact": "The lake first rose to 1,220.4 ft in July 1941; spillway gates first passed water Aug. 6, 1941.",
+    "fact": "The lake rose to a maximum elevation of 1,220.4 ft in July 1941; spillway gates first passed water Aug. 6, 1941.",
     "source_url": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
    },
    {
@@ -568,7 +568,7 @@
    },
    {
     "date": "2001",
-    "fact": "Reclamation: the reservoir gauge is tied to the Hoover Dam powerhouse datum.",
+    "fact": "Reclamation's 2001 sedimentation survey tied all its elevation data to the Hoover Dam powerhouse datum.",
     "source_url": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
    },
    {
@@ -577,13 +577,13 @@
     "source_url": "https://databasin.org/datasets/7e8c7d93a10445cf96d410951c32b9d4"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "Reclamation's data catalog lists the Hoover Dam location's vertical datum as \"USGS 1912\"; how this relates to the 1935 datum not found.",
     "source_url": "https://data.usbr.gov/catalog/4574"
    },
    {
     "date": "1963-03",
-    "fact": "Glen Canyon Dam began storing water upstream, changing inflow to Lake Mead.",
+    "fact": "Glen Canyon Dam, upstream, began storing water.",
     "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
    },
    {
@@ -592,7 +592,7 @@
     "source_url": "https://data.usbr.gov/rise/api/catalog-item/6123"
    }
   ],
-  "public_notes": "Lake Mead began filling in 1935 and first came close to full in 1941, so the earliest readings show a lake still filling. Reclamation measures elevation against the dam's own 1935 survey, which sits about half a foot from the 1929 national reference and about 2 feet from the current one."
+  "public_notes": "Lake Mead began filling in 1935 and rose to a maximum of 1,220.4 feet in July 1941, so the earliest readings show a lake still filling. Reclamation measures elevation against the dam's own 1935 survey, which sits about half a foot from the 1929 national reference and about 2 feet from the current one."
  },
  "fraser-shelley": {
   "measurement_history": [
@@ -607,13 +607,13 @@
     "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "Levels use an assumed (local) datum; add 566.827 m for Geodetic Survey of Canada datum or 567.322 m for CGVD2013.",
     "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
    },
    {
-    "date": "not found",
-    "fact": "Station listed as not regulated, with a 32,430 square km drainage area.",
+    "date": "current",
+    "fact": "Drainage area 32,430 square km.",
     "source_url": "https://wateroffice.ec.gc.ca/report/historical_e.html?stn=08KB001"
    },
    {
@@ -652,8 +652,8 @@
     "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
    },
    {
-    "date": "not found",
-    "fact": "Levels use an assumed datum; add 27.926 m for Geodetic Survey of Canada datum or 28.180 m for CGVD2013.",
+    "date": "current",
+    "fact": "Levels use an assumed datum; add 27.926 m for Geodetic Survey of Canada datum.",
     "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
    },
    {
@@ -667,12 +667,12 @@
     "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "Flow measurements were once made from the bridge with a Price meter; now by boat with an acoustic profiler.",
     "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
    },
    {
-    "date": "not found",
+    "date": "current",
     "fact": "Station is listed as regulated; drainage area includes 14,000 square km behind Kenney Dam.",
     "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
    }
@@ -702,8 +702,8 @@
     "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
    },
    {
-    "date": "not found",
-    "fact": "Levels are tidally affected at all flows; discharge is not published below 3.0 m gauge height because of tides.",
+    "date": "current",
+    "fact": "Levels are tidally affected at all flows.",
     "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
    },
    {

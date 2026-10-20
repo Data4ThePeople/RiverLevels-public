@@ -18,15 +18,15 @@
  "credit": "Agencia Nacional de Aguas e Saneamento Basico (ANA), HidroWeb; station operated by SGB-CPRM",
  "flag_rule": "Consistency level 2 (consistido) is measured and level 1 (raw) provisional; day status 2 (estimated) is estimated at either level.",
  "notes": [
-  "ANA computes daily flow from the gauge's daily level with a rating curve (curva-chave) fitted to field flow measurements; the service's method field MetodoObtencaoVazoes is 1 on 698 of 698 month rows (other codes: none). We read code 1 as the rating curve, but ANA's code list was not found, so that reading is not confirmed (ANA HidroSerieHistorica).",
-  "Where a month exists at consistency level 2 (consistido, reviewed by ANA) we use it; otherwise level 1 (raw), marked provisional. Last level-2 day: 2023-12-31. Level-1 days used: 790. Days present at both levels, level 2 kept: 0 (ANA HidroSerieHistorica).",
-  "Per-day status codes on the days kept: {'0': 31, '1': 20556, '2': 118, 'blank': 153}. Status 2 (estimated) is marked estimated; status 3 (doubtful) is kept with its consistency-level quality (ANA).",
+  "ANA computes daily flow from the gauge's daily level with a rating curve (curva-chave) fitted to field flow measurements; the service's method field MetodoObtencaoVazoes is 1 on 701 of 701 month rows (other codes: none). We read code 1 as the rating curve, but ANA's code list was not found, so that reading is not confirmed (ANA HidroSerieHistorica).",
+  "Where a month exists at consistency level 2 (consistido, reviewed by ANA) we use it; otherwise level 1 (raw), marked provisional. Last level-2 day: 2023-12-31. Level-1 days used: 882. Days present at both levels, level 2 kept: 0 (ANA HidroSerieHistorica).",
+  "Per-day status codes on the days kept: {'0': 31, '1': 20648, '2': 118, 'blank': 153}. Status 2 (estimated) is marked estimated; status 3 (doubtful) is kept with its consistency-level quality (ANA).",
   "Days with a value but status 0 or blank: 184; kept with their consistency-level quality (ANA).",
   "Missing days are blank in ANA's rows and are not in this file; no fill values found (ANA)."
  ],
  "first_date": "1968-01-01",
- "last_date": "2026-02-28",
- "n_days": 20858,
+ "last_date": "2026-05-31",
+ "n_days": 20950,
  "coverage_by_decade": [
   {
    "decade": 1960,
@@ -73,9 +73,9 @@
   {
    "decade": 2020,
    "share_days": 1.0,
-   "share_measured": 0.649,
+   "share_measured": 0.6236,
    "share_estimated": 0.0004,
-   "share_provisional": 0.3505
+   "share_provisional": 0.376
   }
  ]
 }

@@ -13,8 +13,8 @@
   "datum": "ft above gauge zero (270.03 ft NAVD88)",
   "daily_stat": "single reading",
   "first_date": "1858-01-01",
-  "last_date": "2026-10-14",
-  "n_days": 58630,
+  "last_date": "2026-10-19",
+  "n_days": 58635,
   "coverage_by_decade": [
     {
       "decade": 1850,
@@ -137,10 +137,10 @@
     },
     {
       "decade": 2020,
-      "share_days": 0.956,
-      "share_measured": 0.9427,
+      "share_days": 0.9561,
+      "share_measured": 0.9408,
       "share_estimated": 0.0,
-      "share_provisional": 0.0133
+      "share_provisional": 0.0153
     }
   ],
   "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers, U.S. Geological Survey.",
@@ -149,7 +149,7 @@
     "Dropped 0 fill values (>= 9000, such as 99999) and 0 null values; 0 values flagged missing or rejected.",
     "111 days in 2024-03-10 to 2024-06-28 have a second reading (at 09:00) besides the 08:00 reading; kept the 08:00 reading and dropped the extra one.",
     "One instantaneous reading per day (not a daily mean). In the file's time zone (US/Central): 08:00 on 52019 days, 07:59 on 6566 days, 07:50 on 12 days; in UTC: 14:00 on 30530 days, 13:00 on 21489 days, 13:50 on 6578 days.",
-    "Extended 33 days (2026-09-12 to 2026-10-14) past the CWMS public lag with USGS 370000089094501 instantaneous gage height at 08:00 local, the CWMS reading hour. Same datum: over 44 overlapping days the median difference was +0.00 ft (largest 0.00 ft). USGS marks these values provisional, and so do we.",
+    "Extended 39 days (2026-09-12 to 2026-10-20) past the CWMS public lag with USGS 370000089094501 instantaneous gage height at 08:00 local, the CWMS reading hour. Same datum: over 39 overlapping days the median difference was +0.00 ft (largest 0.00 ft). USGS marks these values provisional, and so do we.",
     "Gauge zero 270.03 ft NAVD88 per the CWMS location record. Cairo stage also reflects Mississippi River backwater at the confluence.",
     "Levels are rounded to 0.01 ft: the API converts from stored meters and returns float noise such as 12.979999999999999."
   ],
@@ -170,7 +170,7 @@
       "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "NWS: the Cairo gauge is on the Ohio River but strongly affected by backwater from the Mississippi.",
       "source_url": "https://www.weather.gov/pah/recordrivers"
     },
@@ -190,7 +190,7 @@
       "source_url": "https://www.lrd.usace.army.mil/Media/News/Article/3685126/louisville-district-announces-official-closure-of-lock-and-dam-53/"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "NWS lists gauge zero as 270.03 ft NAVD88 and 270.47 ft NGVD29.",
       "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
     },

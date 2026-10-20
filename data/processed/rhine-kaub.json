@@ -13,8 +13,8 @@
   "datum": "cm above gauge zero (67.669 m NHN, DHHN2016)",
   "daily_stat": "mean",
   "first_date": "1969-11-01",
-  "last_date": "2026-10-14",
-  "n_days": 20767,
+  "last_date": "2026-10-19",
+  "n_days": 20772,
   "coverage_by_decade": [
     {
       "decade": 1960,
@@ -61,9 +61,9 @@
     {
       "decade": 2020,
       "share_days": 0.9859,
-      "share_measured": 0.8842,
+      "share_measured": 0.8824,
       "share_estimated": 0.0,
-      "share_provisional": 0.1017
+      "share_provisional": 0.1035
     }
   ],
   "license": "PEGELONLINE part: DL-DE->Zero-2.0 (WSV). hyd1d part: no data license stated by the BfG (see research/datasets/europe.md); clear before republishing.",
@@ -71,7 +71,7 @@
     "1969-11-01 to 2026-08-10: BfG hyd1d daily mean W (station KAUB), file https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS (Last-Modified Tue, 11 Aug 2026 04:43:04 GMT).",
     "hyd1d values through 2025 are marked measured (validated by the WSV/BfG); values from 2026 are means of PEGELONLINE raw data, not validated, and marked provisional (df.gauging_data help page). hyd1d has no per-value flag.",
     "Missing days inside the hyd1d span: 0; empty values dropped: 0.",
-    "After hyd1d: PEGELONLINE 15-minute raw W (WASSERSTAND ROHDATEN), daily mean over MEZ days (UTC+1), rounded to whole cm as hyd1d does, only days with at least 90 of 96 values; all marked provisional. 30 days from 2 saved pull(s): 25700100_W_20261015T1115Z.json, 25700100_W_20261015T1132Z.json.",
+    "After hyd1d: PEGELONLINE 15-minute raw W (WASSERSTAND ROHDATEN), daily mean over MEZ days (UTC+1), rounded to whole cm as hyd1d does, only days with at least 90 of 96 values; all marked provisional. 35 days from 3 saved pull(s): 25700100_W_20261015T1115Z.json, 25700100_W_20261015T1132Z.json, 25700100_W_20261020T1839Z.json.",
     "Gap left unfilled between the end of hyd1d (2026-08-10) and the first PEGELONLINE day (2026-09-15): 35 days.",
     "Gauge zero from PEGELONLINE station metadata: 67.669 m. ü. NHN (DHHN2016), valid from 2019-11-01. hyd1d levels are relative to the gauge zero in force at the time. The 2019-11-01 date, shared by most WSV gauges, marks the switch from DHHN92 to DHHN2016, not a physical change, and does not change W.",
     "Coordinates and river km from PEGELONLINE station metadata (km 546.23, agency STANDORT BINGEN)."
@@ -84,7 +84,7 @@
     },
     {
       "date": "1905-05-18",
-      "fact": "Gauge tower with a recording gauge opened; electric operation from 1951.",
+      "fact": "Gauge tower with a recording gauge opened; its gauge clock has run on electricity since 1951.",
       "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"
     },
     {
@@ -114,7 +114,7 @@
     },
     {
       "date": "2023-01-01",
-      "fact": "The official equivalent low-water level (GlW) at Kaub is 77 cm for 2023 to 2031; the earlier value (GlW 2012) was 78 cm, the figure the shipping trade still quotes.",
+      "fact": "The official equivalent low-water level (GlW) at Kaub is 77 cm for 2023 to 2031; the earlier value (GlW 2012) was 78 cm.",
       "source": "https://www.ccr-zkr.org/12030100-en.html"
     },
     {

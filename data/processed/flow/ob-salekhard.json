@@ -20,7 +20,7 @@
  "notes": [
   "Daily mean flow measured by Roshydromet at Salekhard (station 11801), published by ArcticGRO in Ob_Salekhard_Version_20260810.xlsx (ArcticGRO Discharge Dataset, Version 20260810).",
   "Flow at these Russian gauges is computed from the water level through stage-discharge relations (rating curves), with winter correction coefficients that depend on water level and ice thickness; this is how the Arctic and Antarctic Research Institute (AARI) estimates the provisional values (ArcticGRO discharge metadata). The metadata does not describe the method for certified values.",
-  "Winter ice changes the level for a given flow, so winter flows are the least certain; provisional winter values are usually revised after the ice goes out in June or July (ArcticGRO discharge metadata).",
+  "Winter flows depend on correction coefficients for ice, and provisional winter values are updated at the end of ice conditions in June or July (ArcticGRO discharge metadata).",
   "Flags on the days kept: {'A': 25202, 'blank': 6150, 'P': 1440}. Years by flag: {'blank': '2000 to 2021', 'A': '1936 to 2008', 'P': '2022 to 2025'} (ArcticGRO).",
   "\"A\" is certified by Roshydromet (measured here) and \"P\" provisional (ArcticGRO discharge metadata). A blank flag is not explained in the metadata, so we mark those days provisional.",
   "Dropped 60 of 32852 rows with no value ({'NA': 60}), by year: {'2000': 60}; by month: {'01': 31, '02': 24, '03': 5} (ArcticGRO).",

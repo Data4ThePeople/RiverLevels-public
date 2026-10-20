@@ -13,8 +13,8 @@
   "datum": "ft above gauge datum (428.05 ft NAVD88)",
   "daily_stat": "mean",
   "first_date": "1987-10-01",
-  "last_date": "2026-10-14",
-  "n_days": 13302,
+  "last_date": "2026-10-19",
+  "n_days": 13307,
   "coverage_by_decade": [
     {
       "decade": 1980,
@@ -46,17 +46,17 @@
     },
     {
       "decade": 2020,
-      "share_days": 0.9818,
-      "share_measured": 0.7447,
+      "share_days": 0.9819,
+      "share_measured": 0.7432,
       "share_estimated": 0.0,
-      "share_provisional": 0.2372
+      "share_provisional": 0.2387
     }
   ],
   "license": "Public domain (US federal government work). Credit: U.S. Geological Survey.",
   "notes": [
     "USGS daily gage height starts 1987-10-01. The older Cincinnati stage record (from 1858) is kept by the National Weather Service and the Army Corps and is not part of this file.",
     "Cincinnati lies in the pool of Markland Locks and Dam (operating from 1963, per the NWS), which holds normal pool at about 25.4 ft, so low-water stage is set by the dam for the whole of this file.",
-    "USGS approval codes in the file: {'A': 12714, 'P': 588}. A (approved) -> measured, P (provisional) -> provisional, any code with 'e' (estimated by USGS) -> estimated, even if approved.",
+    "USGS approval codes in the file: {'A': 12714, 'P': 593}. A (approved) -> measured, P (provisional) -> provisional, any code with 'e' (estimated by USGS) -> estimated, even if approved.",
     "Non-numeric value codes skipped (equipment, ice and similar): none. Dropped 0 fill values.",
     "Daily mean of the gauge's readings for the day, as computed by USGS. In early years the 'daily mean' may rest on one or two staff-gauge readings a day; see measurement_history.",
     "Legacy waterservices.usgs.gov endpoint; USGS plans to retire it in favor of api.waterdata.usgs.gov, so this URL may need to change.",
@@ -129,5 +129,5 @@
       "source_url": "https://www.weather.gov/iln/ohioriverhistory"
     }
   ],
-  "public_notes": "This file starts in 1987, when the U.S. Geological Survey record begins; the older Cincinnati record back to 1858 is kept by the National Weather Service and is not included. Since Markland Dam began operating in 1963, the river at Cincinnati is held at about 25 feet or higher, so very low readings cannot happen here."
+  "public_notes": "This file starts in 1987, when the U.S. Geological Survey record begins; the older Cincinnati record back to 1858 is kept by the National Weather Service and is not included. When Markland Dam began operating in 1963, the normal pool at Cincinnati was raised to 25.4 feet (NWS)."
 }

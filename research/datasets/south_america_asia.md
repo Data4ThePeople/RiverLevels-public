@@ -50,7 +50,8 @@ hourly readings; for these staff gauges the daily value is the mean of the
 07:00 and 17:00 readings. ANA does not say how it fills an estimated day.
 
 **Changes over time.** Manaus switches from the reviewed staff gauge series to
-telemetry on January 1, 2015. On 2,274 days in 2005 to 2014 that have both,
+telemetry on January 1, 2015 (the staff series ends December 30, 2014; December
+31 has a single telemetry reading and is dropped as a partial day). On 2,274 days in 2005 to 2014 that have both,
 telemetry minus staff gauge has a median of 0 cm, and every year's median is
 between -1.2 and 0 cm, so the join is continuous. Telemetry at the other four
 gauges agrees with the raw staff series to within 1 cm on a typical day. At
@@ -98,7 +99,15 @@ the Prefectura Naval Argentina (coast guard); INA hosts the series.
 **Where it comes from.** `https://alerta.ina.gob.ar/a5/obs/puntual/series/<id>/observaciones?timestart=...&timeend=...`,
 JSON, no token. Series metadata, coordinates and gauge zero from
 `/a5/obs/puntual/series?estacion_id=<id>&var_id=2`. We request 20-year
-chunks; a full gauge takes about 15 seconds.
+chunks; a full gauge takes about 15 seconds. Each chunk asks for one extra
+day, because the API keeps a value only if its own end time falls inside the
+request, so a daily value for December 31 (ending January 1 at 03:00 UTC)
+was lost at chunk boundaries until October 20, 2026 (flow at Corrientes,
+Parana and Rosario was missing December 31, 2019); repeats are dropped by id.
+Each reading is assigned to its local calendar date in Argentina, using the
+time zone America/Argentina/Buenos_Aires with its historical daylight saving
+rules; a fixed UTC-3 would move some days in 1974, 1988 to 1993 and 2007 to
+2009.
 
 **Version and vintage.** No version. Values update daily; the last value on
 October 15, 2026 was October 14.
@@ -164,8 +173,8 @@ script resumes where it stopped.
 as new values are added at the top; the script drops identical repeats and
 fails on a date with two different values.
 
-**Coverage.** January 1, 1904 to October 15, 2026: 2,988 pages with data (page 2,989 is
-empty), 44,815 days. Every decade has a value on more than 99% of days. No
+**Coverage.** January 1, 1904 to October 15, 2026: 2,988 pages with data at the
+October 15 download (pages shift by one row a day, so the count grows), 44,815 days. Every decade has a value on more than 99% of days. No
 quality flags; every value is `measured`.
 
 **Changes over time.** Not documented.

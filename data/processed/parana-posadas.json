@@ -13,8 +13,8 @@
   "datum": "m above the local gauge zero (cero de escala); INA does not list the zero's elevation",
   "daily_stat": "mixed (see notes)",
   "first_date": "1901-01-02",
-  "last_date": "2026-10-14",
-  "n_days": 45580,
+  "last_date": "2026-10-19",
+  "n_days": 45585,
   "coverage_by_decade": [
     {
       "decade": 1900,
@@ -112,7 +112,7 @@
   "notes": [
     "INA series 14 ('medición directa', variable 'Altura hidrométrica'), station Posadas (INA station 14, PNA code 80), owner PNA.",
     "INA publishes no per-value quality flag, so every value is marked measured. This includes the most recent days, which INA may still correct.",
-    "46574 raw observations. Days with more than one reading (averaged to a daily mean): 860, from 2014-12-12 to 2024-10-24. Before that each day has a single reading.",
+    "46580 raw observations. Days with more than one reading (averaged to a daily mean): 860, from 2014-12-12 to 2024-10-24. Before that each day has a single reading.",
     "Most common local timestamp by decade: {1900: '07:00', 1910: '07:00', 1920: '07:00', 1930: '07:00', 1940: '07:00', 1950: '07:00', 1960: '07:00', 1970: '07:00', 1980: '06:00', 1990: '06:00', 2000: '04:00', 2010: '04:00', 2020: '00:00'}. These are the times INA stored; the uniform 07:00 before 1980 looks like a loading convention, not a documented reading hour.",
     "No fill values found.",
     "INA alert thresholds for this gauge: alert 11 m, evacuation 12 m, low water 9.8 m."
@@ -144,5 +144,5 @@
       "source": null
     }
   ],
-  "public_notes": "Since 1994 Posadas sits in the reservoir of the Yacyreta dam, which was raised in steps until 2011. Levels since then mostly reflect how the dam is run, so they cannot be compared directly with the river before the dam."
+  "public_notes": "Since 1994 Posadas sits in the reservoir of the Yacyreta dam, which was raised in steps until 2011. INA says filling the reservoir to its final level caused a significant change in how the river behaves at Posadas, so levels since then cannot be compared directly with the river before the dam."
 }

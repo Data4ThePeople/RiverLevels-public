@@ -168,7 +168,7 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
         <p class="nodata-card">Each blue river on the map has at least one gauge with a long daily record of its water level. Click a river or choose one from the list. Where a river is drawn blue and green, at least one of its gauges also has a record of how much water flows past it, and the Flow switch above the chart shows it. Green rivers have no open water level record but do have a long daily flow record. Gray rivers are major rivers whose history is not openly published.</p>
         <div class="caveat">
           <p class="figtitle">Before you look: old readings are less certain</p>
-          <p>Most readings before the mid-1900s were taken by hand from a marked post in the river, often once a day. Since then, many gauges have moved, had their zero point reset, or been affected by new dams and by riverbeds that wore down over time. Some records have years with missing days, and a few have values the publisher filled in.</p>
+          <p>Many early readings were taken by hand from a marked post in the river, often once a day. Since then, many gauges have moved, had their zero point reset, or been affected by new dams and by riverbeds that wore down over time. Some records have years with missing days, and a few have values the publisher filled in.</p>
           <p>Flow is almost never measured every day. Publishers compute it from the water level with a rating curve that is checked a few times a year, so the highest and lowest flows are the least certain.</p>
           <p>For every gauge we show how complete the record is year by year, mark readings the publisher estimated or has not yet checked, and list what we know about how the gauge changed. Compare old and new readings with care.</p>
         </div>
@@ -648,7 +648,7 @@ async function selectGauge(id) {
   $("cTitle").textContent = (fo ? "Daily flow" : "Daily readings") + " and 12-month average, " + G.first_date.slice(0, 4) + " to " + G.last_date.slice(0, 4);
   setLegendColors($("qLegend"), fo ? flowColors() : levelColors()); showQualities($("qLegend"), S);
   $("stats").textContent = statsText({ ...G, isFlow: fo }, S, fo ? "flow" : "reading");
-  $("flag").textContent = flagText(G, S) + (fo ? "Flow is computed from level, so the highest and lowest flows are the least certain. See About this record, below." : "Older readings are less certain. See About this record, below.");
+  $("flag").textContent = flagText(G, S) + (fo ? "The publisher says provisional flows here are computed from level; it does not say how certified flows are made. See About this record, below." : "Older readings are less certain. See About this record, below.");
   $("gNotes").textContent = (G.public_notes || []).join(" ") + " Source: " + G.source + ".";
   fillHistory($("gHist"), G.history || []);
   $("breakNote").textContent = (G.breaks || []).map(b => "Gray line, " + fmtDate(Date.parse(b.date) / 864e5 - DAY0) + ": " + b.label + ".").join(" ");
@@ -676,13 +676,15 @@ async function selectGauge(id) {
     fillHistory($("fHist"), [{ text: "How flow is labeled: " + fm.flag_rule, url: "" }]);
     flowChart.set(F, { ...fm, colors: flowColors() });
   }
-  applyView();
+  applyView(true);
 }
 $("viewSw").addEventListener("click", () => {
   if (!S) return;
-  panelView = flowView() ? "level" : "flow"; applyView();
+  const atEnd = day >= T1;
+  panelView = flowView() ? "level" : "flow"; applyView(atEnd);
 });
-function applyView() {
+// toEnd: open on the shown record's own last day (a new gauge, or switching while at the end)
+function applyView(toEnd) {
   const fv = flowView();
   $("riverView").classList.toggle("flowview", !!fv);
   $("riverView").classList.toggle("fo", isFlowOnly());
@@ -690,7 +692,7 @@ function applyView() {
   // the slider runs only over the days the shown record has, first value to last
   const ser = fv ? F : S;
   T0 = ser.start + firstValid(ser); T1 = ser.start + lastValid(ser);
-  if (day < T0 || day > T1) day = T1;
+  if (toEnd || day < T0 || day > T1) day = T1;
   const sl = $("slider"); sl.max = T1 - T0; sl.value = day - T0;
   const [t, sub] = fv ? VT.flow : VT.level;
   $("xTitle").textContent = t; $("xSub").textContent = sub;

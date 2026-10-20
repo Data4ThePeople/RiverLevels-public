@@ -13,8 +13,8 @@
   "datum": "m, water surface elevation (values near the 47.6 m full supply level of Euston Weir; most likely m above the Australian Height Datum, but BoM does not say)",
   "daily_stat": "mean",
   "first_date": "1975-08-29",
-  "last_date": "2026-10-13",
-  "n_days": 18659,
+  "last_date": "2026-10-17",
+  "n_days": 18663,
   "coverage_by_decade": [
     {
       "decade": 1970,
@@ -54,8 +54,8 @@
     {
       "decade": 2020,
       "share_days": 1.0,
-      "share_measured": 0.9798,
-      "share_estimated": 0.0202,
+      "share_measured": 0.9799,
+      "share_estimated": 0.0201,
       "share_provisional": 0.0
     }
   ],
@@ -63,7 +63,7 @@
   "notes": [
     "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 267468010, station_id 2877981 (station 414203 MURRAY @ EUSTON). Data owner: VIC - Department of Energy, Environment and Climate Action.",
     "Daily mean of the merged quality-controlled level record, aggregated by BoM to a 24-hour mean. The API does not say how many readings fed each early-year mean; where only one staff reading a day was taken, the 'mean' is that one reading.",
-    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate'}): counts {10: 17717, 90: 45, 110: 897}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (0 days), where it marks recent unchecked readings.",
+    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate'}): counts {10: 17721, 90: 45, 110: 897}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (0 days), where it marks recent unchecked readings.",
     "Unknown-quality code E (140) share of days by decade: none.",
     "Compromised code B (90) share of days by decade: {1990: 0.003, 2000: 0.0, 2010: 0.002, 2020: 0.01}.",
     "17 empty timestamps (code -1) and 0 values coded F (210, missing or incorrect) were dropped."
@@ -95,5 +95,5 @@
       "source": null
     }
   ],
-  "public_notes": "Euston sits at a weir, so its level depends partly on how the weir is set. The numbers are heights above a sea-level reference, not above a local gauge, and about a third of days in the late 1970s were estimated."
+  "public_notes": "Euston sits at a weir, and parts of the weir are removed during floods, so we expect the level here to depend partly on how the weir is run. The numbers appear to be water surface elevations near the weir's 47.6 m full supply level, not heights above a local gauge; BoM does not name the datum. About a third of days in the late 1970s were estimated."
 }

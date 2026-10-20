@@ -20,12 +20,12 @@
  "notes": [
   "USGS computes daily discharge from the gauge's water level through a rating curve (stage-discharge relation), adjusted by shifts after each field measurement, and approves a year of data some months after it ends (USGS).",
   "There is no USGS daily flow at Cairo, so this is the Ohio River at Olmsted, about 17 river miles upstream, which starts in 2013 (USGS).",
-  "USGS approval codes: {'A': 3071, 'A:e': 1169, 'P': 720, 'P:e': 5}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
+  "USGS approval codes: {'A': 3071, 'A:e': 1169, 'P': 723, 'P:e': 5}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
   "Skipped 1 days with no number (codes such as Ice or Eqp: {'Eqp': 1}) and 0 negative values (USGS)."
  ],
  "first_date": "2013-03-01",
- "last_date": "2026-10-16",
- "n_days": 4965,
+ "last_date": "2026-10-19",
+ "n_days": 4968,
  "coverage_by_decade": [
   {
    "decade": 2010,
@@ -37,9 +37,9 @@
   {
    "decade": 2020,
    "share_days": 0.9948,
-   "share_measured": 0.416,
-   "share_estimated": 0.2886,
-   "share_provisional": 0.2902
+   "share_measured": 0.4155,
+   "share_estimated": 0.2882,
+   "share_provisional": 0.2911
   }
  ]
 }

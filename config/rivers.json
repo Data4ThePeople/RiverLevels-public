@@ -26,8 +26,16 @@
         "rhine-lobith"
       ],
       "about": [
-        "The Rhine runs about 770 miles from the Swiss Alps to the North Sea at Rotterdam. It is Europe's busiest inland waterway. Barges carry coal, chemicals, grain and fuel between the Dutch ports and cities in Germany, France and Switzerland.",
-        "Since 1868 a treaty called the Mannheim Act has kept the river open to ships of every nation. The shallowest stretch is the gorge near Kaub, so shippers watch the Kaub gauge to decide how much a barge can carry."
+        "The Rhine runs about 760 miles from the Swiss Alps to the North Sea in the Netherlands. The international commission that oversees Rhine shipping calls it the most active part of Europe's network of inland waterways. Barges carry fuel, chemicals and other industrial goods.",
+        "Since 1868 a treaty called the Mannheim Act has kept navigation on the river free to ships of every nation. Kaub sits on the shallowest part of the middle Rhine, so shippers watch the Kaub gauge to judge how much a barge can carry."
+      ],
+      "about_sources": [
+        "Length 1,230 km (760 mi); begins in the Swiss Alps and empties into the North Sea in the Netherlands: Wikipedia, 'Rhine,' https://en.wikipedia.org/wiki/Rhine",
+        "The Rhine \"remains the most active and the most highly evolved section\" of Europe's inland waterway network: CCNR history page, https://www.ccr-zkr.org/11010100-en.html",
+        "\"western Europe's most important river for the transport of fuel and other industrial goods\": Bloomberg via gCaptain, Aug. 15, 2022, https://gcaptain.com/rhine-river-shrinks-further-halting-some-barges",
+        "BASF, Evonik and Covestro use the Rhine to move methanol, butane, propane and ammonia: BC Insight, 'Berlin flags Rhine low-water freight issue,' Aug. 12, 2026, https://www.bcinsight.crugroup.com/2026/08/12/126462/",
+        "\"The navigation of the Rhine is free to the vessels of all nations\" (Revised Convention, Mannheim, Oct. 17, 1868): ECOLEX treaty summary, https://www.ecolex.org/details/treaty/revised-convention-on-the-navigation-of-the-rhine-tre-000561/",
+        "Kaub gauge \"located at the shallowest part of the Middle Rhine\"; \"The amount of cargo to be carried on the Rhine is limited by the draft of the ship being low enough to pass at Kaub\": Wikipedia, 'Kaub gauging station,' https://en.wikipedia.org/wiki/Kaub_gauging_station. Fairway between Budenheim and St. Goar 1.90 m, about 20 cm less than the adjoining stretches: eurotransport.de, Aug. 4, 2026, https://www.eurotransport.de/logistik/spedition-und-logistik/niedrigwasser-rhein-pegel-kaub-binnenschifffahrt/"
       ]
     },
     {
@@ -85,7 +93,7 @@
       ],
       "about": [
         "The Seine runs about 480 miles through Paris to the English Channel at Le Havre. Barges carry freight between the coast and the city, and the river supplies part of the city's drinking water.",
-        "The flood of January 1910 is still the benchmark Paris plans against. Since 1949, four large reservoirs upstream have held back water in winter and released it in summer."
+        "The flood of January 1910 is still the benchmark Paris plans against. Between 1949 and 1990, four large reservoirs were built upstream to hold back water in winter and release it in summer."
       ]
     },
     {
@@ -145,7 +153,7 @@
       ],
       "about": [
         "The Colorado River supplies water to about 40 million people and millions of acres of farmland in seven U.S. states and Mexico, including Las Vegas, Phoenix and Los Angeles.",
-        "Most of its water is stored in two large reservoirs: Lake Powell behind Glen Canyon Dam and Lake Mead behind Hoover Dam. A 1922 agreement divides the water among the states. The gauges here measure the water surface of the two lakes, not the river itself."
+        "Most of its water is stored in two large reservoirs: Lake Powell behind Glen Canyon Dam and Lake Mead behind Hoover Dam. A 1922 agreement divides the water between the upper and lower basin states. The gauges here measure the water surface of the two lakes, not the river itself."
       ]
     },
     {
@@ -254,7 +262,12 @@
       ],
       "about": [
         "The Paraguay River drains the Pantanal, the world's largest tropical wetland, then flows south past Asunción to join the Paraná.",
-        "For landlocked Paraguay it is the main route to the sea. Barges carry soy, fuel and iron ore. Very low water in 2024 left barges stuck for weeks."
+        "For landlocked Paraguay it is the main route to the sea. Barges carry soy and fuel, and iron ore from mines near Corumbá and Ladário in Brazil. Low water halted traffic on the waterway in September and October 2021, and in 2024 the river reached a record low at Asunción and barges sailed with lighter loads."
+      ],
+      "about_sources": [
+        "Iron ore exports from Ladário and Corumbá, where mining companies are based, reduced by low water: DataMarNews, Apr. 2, 2024, https://datamarnews.com/noticias/brazilian-state-sees-plunging-ore-exports-due-to-low-paraguay-river-water-level/",
+        "\"Activities in the waterway were halted between September and October 2021\": DataMarNews, Oct. 21, 2022, https://www.datamarnews.com/?p=34510",
+        "\"Water levels in the Paraguay River reached an all-time low in the capital of Asuncion today\"; \"barges are being loaded to about 80pc of capacity\": Argus, Sept. 9, 2024, https://www.argusmedia.com/de/news-and-insights/latest-market-news/2606462-paraguay-river-s-record-low-slows-fuel-imports"
       ]
     },
     {
@@ -280,7 +293,11 @@
       ],
       "about": [
         "The Murray and Darling rivers drain about one-seventh of Australia. The basin grows a large share of the country's irrigated food, and river towns depend on it for drinking water.",
-        "The Millennium Drought, from about 2001 to 2009, and mass fish deaths near Menindee on the Darling made river water a national issue. Albury on the Murray has one of the longest river records in the country."
+        "The Millennium Drought, from about 1997 to 2009, and mass fish deaths near Menindee on the Darling made river water a national issue. The record at Albury on the Murray starts in 1885."
+      ],
+      "about_sources": [
+        "Millennium Drought years: \"The lack of rain between 1997 and 2009 led to livestock losses, crop failures\": NASA Earth Observatory, 'Boom-and-Bust Water Supplies in Southeast Australia,' July 16, 2016, https://science.nasa.gov/earth/earth-observatory/boom-and-bust-water-supplies-in-southeast-australia-88292/",
+        "Albury record start: data/processed/murray-albury.csv (BoM Water Data Online)"
       ]
     },
     {
@@ -324,14 +341,14 @@
       "flow_only": true,
       "about": [
         "The Ob and its main branch, the Irtysh, drain a basin of about 1.1 million square miles. The river empties into a long bay, the Gulf of Ob, which opens to the Kara Sea in the Arctic Ocean. Russia publishes daily flow here but not water level.",
-        "Salekhard is on the lower Ob, just north of the Arctic Circle. The river thaws from south to north each year, and its highest flow at Salekhard came in May or June in 85 of the 89 full years on record. A dam at Novosibirsk, far upstream, is the only one on the main river."
+        "Salekhard is on the lower Ob, just north of the Arctic Circle. The river thaws from south to north each year, and its highest flow at Salekhard came in May or June in about 85 of the 89 full years on record. A dam at Novosibirsk, far upstream, is the only one on the main river."
       ],
       "about_sources": [
         "Irtysh as a main tributary; basin 2.95 million km2 (about 1.14 million sq mi); one dam on the main stem, at Novosibirsk: ArcticGRO rivers page, https://arcticgreatrivers.org/?p=19",
         "Gulf of Ob; thaws from south to north: NASA Earth Observatory, 'Ice Jams the Ob River,' July 11, 2007, https://science.nasa.gov/earth/earth-observatory/ice-jams-the-ob-river-7854",
         "Kara Sea: NASA Earth Observatory, 'River Outflow to the Kara Sea,' https://science.nasa.gov/earth/earth-observatory/river-outflow-to-the-kara-sea-78829/",
         "Salekhard at 66.63 N (Arctic Circle about 66.56 N): ArcticGRO discharge metadata PDF, Table 1 (updated February 27, 2023), saved as data/raw/flow_arcticgro/discharge_metadata.pdf",
-        "Peak month: computed from data/processed/flow/ob-salekhard.csv, years with at least 330 days (October 19, 2026)",
+        "Peak month: computed from data/processed/flow/ob-salekhard.csv, years with at least 330 days (October 19, 2026). 85 of 89 when a tied peak counts at its earliest date; 83 of 89 at its latest date (ties in 1972 and 2015).",
         "Flow published but not level: research/RIVER-DATA-REPORT.md"
       ]
     },
@@ -350,7 +367,7 @@
       "flow_only": true,
       "about": [
         "The Yenisei empties into the Kara Sea, part of the Arctic Ocean. It carries more water each year than any other river that drains to the Arctic.",
-        "Igarka lies north of the Arctic Circle. Several dams on the Yenisei and its branches hold back water. A 2004 study found that two large reservoirs upstream raised the river's winter flow by 45% to 85% and cut its summer flow by 10% to 50%."
+        "Igarka lies north of the Arctic Circle. Several dams on the Yenisei and its branches hold back water. A 2004 study found that two large reservoirs in the upper Yenisei raised winter flow there by 45% to 85% and cut summer flow by 10% to 50%."
       ],
       "about_sources": [
         "Kara Sea: NASA Earth Observatory, 'River Outflow to the Kara Sea,' https://science.nasa.gov/earth/earth-observatory/river-outflow-to-the-kara-sea-78829/",
@@ -420,7 +437,7 @@
           "rivernum": 45
         }
       ],
-      "note": "Kinshasa has a flow record from 1903, but it is not openly published. Satellite readings start about 2002."
+      "note": "Kinshasa has a flow record from 1903, but its daily values are not openly published. Satellite readings start about 2002."
     },
     {
       "id": "niger",
@@ -565,8 +582,8 @@
       },
       {
         "value": 40,
-        "label": "40 cm: commercial shipping largely stops",
-        "source": "freightperspectives, July 15, 2026: \"Around 40 cm, commercial shipping is typically suspended or operates in emergency mode.\" https://www.freightperspectives.com/p/rhine-water-levels-2026-kaub-forecast"
+        "label": "40 cm: many barges find it uneconomical to pass Kaub",
+        "source": "Bloomberg via gCaptain, Aug. 15, 2022: \"Many barges find it uneconomical to transit past Kaub when the water level there is at 40 centimeters or below.\" https://gcaptain.com/rhine-river-shrinks-further-halting-some-barges"
       }
     ]
   },
@@ -615,7 +632,7 @@
     }
   },
   "public_notes_override": {
-    "missouri-bismarck": "Readings before October 1, 1934, were taken from a gauge zero 4.24 feet higher than today's; we added 4.24 feet to them, following the USGS record of the change. For about 18 months in 1936 and 1937 a different gauge set 0.47 feet lower was mostly used, and we did not adjust for it. Since Garrison Dam began holding back water in 1953, the river here has been lower and steadier, and winter ice can push readings up.",
+    "missouri-bismarck": "Readings before October 1, 1934, were taken from a gauge zero 4.24 feet higher than today's; we added 4.24 feet to them, following the USGS record of the change. From April 10, 1936, to September 30, 1937, all readings came from a site 2,000 feet downstream with a gauge zero 0.47 feet lower, and we did not adjust for it. Garrison Dam upstream has regulated the river here since November 1953 (USGS), and winter ice can push readings up.",
     "mekong-chiangsaen": "The gauge moved in December 1993. We added 0.62 m to the readings before the move, the correction published researchers use, so the whole record is on today's zero point. Dams upstream in China have changed the river here since the 1990s."
   },
   "extra_notes": {
@@ -625,7 +642,7 @@
   "stats_from": {
     "colorado-lake-mead": {
       "date": "1941-07-01",
-      "label": "since the lake first filled in July 1941",
+      "label": "since July 1941, when the lake rose to a maximum of 1,220.4 ft",
       "shade": "Lake filling",
       "source": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
     },

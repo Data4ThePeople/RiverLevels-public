@@ -19,13 +19,13 @@
  "flag_rule": "USGS code A is measured and P provisional; any code with e (estimated) or an ice code is estimated.",
  "notes": [
   "USGS computes daily discharge from the gauge's water level through a rating curve (stage-discharge relation), adjusted by shifts after each field measurement, and approves a year of data some months after it ends (USGS).",
-  "How USGS built the earliest St. Louis flows (1861 to the 1930s) is not documented in the daily-values file; they rest on few field measurements (USGS).",
-  "USGS approval codes: {'A': 59903, 'A:e': 144, 'P': 139}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
+  "How USGS built the earliest St. Louis flows (1861 to the 1930s) is not documented in the daily-values file. A 2009 USGS study says the first discharge measurement there was made in 1866 and early daily flows were obtained from the daily stage through the rating in use at the time (USGS).",
+  "USGS approval codes: {'A': 59903, 'A:e': 144, 'P': 142}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
   "Skipped 0 days with no number (codes such as Ice or Eqp: none) and 0 negative values (USGS)."
  ],
  "first_date": "1861-01-01",
- "last_date": "2026-10-16",
- "n_days": 60186,
+ "last_date": "2026-10-19",
+ "n_days": 60189,
  "coverage_by_decade": [
   {
    "decade": 1860,
@@ -142,9 +142,9 @@
   {
    "decade": 2020,
    "share_days": 0.9988,
-   "share_measured": 0.9178,
+   "share_measured": 0.9167,
    "share_estimated": 0.025,
-   "share_provisional": 0.056
+   "share_provisional": 0.0572
   }
  ]
 }

@@ -13,8 +13,8 @@
   "datum": "m above station datum (ASSUMED DATUM)",
   "daily_stat": "mean",
   "first_date": "2011-01-01",
-  "last_date": "2026-10-14",
-  "n_days": 5433,
+  "last_date": "2026-10-19",
+  "n_days": 5438,
   "coverage_by_decade": [
     {
       "decade": 2010,
@@ -26,17 +26,17 @@
     {
       "decade": 2020,
       "share_days": 0.9734,
-      "share_measured": 0.8209,
+      "share_measured": 0.8192,
       "share_estimated": 0.0,
-      "share_provisional": 0.1525
+      "share_provisional": 0.1542
     }
   ],
   "license": "Open Government Licence - Canada. Contains information licensed under the Open Government Licence - Canada (Environment and Climate Change Canada).",
   "notes": [
     "Upper Fraser above Prince George; no dam on the Fraser main stem upstream.",
     "Archived daily means (HYDAT): 2011-01-01 to 2025-10-01. Rows with no water level (discharge only or blank): 22523. Level symbols: {'none': 4915, 'Partial Day': 140}. Estimated (E) -> estimated. Ice (B), partial day (A) and other symbols keep 'measured' but are counted here; ice can raise winter levels.",
-    "Datum check: on 201 days found in both HYDAT and the real-time record, our daily mean of the 5-minute readings minus the HYDAT daily mean was median +0.000 m (range -0.007 to +0.001).",
-    "After HYDAT ends: 5-minute real-time readings (2025-03-15 to 2026-10-15 UTC; rows by source {'wateroffice': 166664}) averaged into 378 daily means by local standard time day. A day counts only with readings in at least 20 of its 24 hours; 1 days left out. Approval of the readings: {'Provisional/Provisoire': 108864, 'Final/Finales': 57800}. A day whose readings are all 'Final' is 'measured', otherwise 'provisional'. Symbols: {'none': 166664}.",
+    "Datum check: on 195 days found in both HYDAT and the real-time record, our daily mean of the 5-minute readings minus the HYDAT daily mean was median +0.000 m (range -0.002 to +0.001).",
+    "After HYDAT ends: 5-minute real-time readings (2025-03-20 to 2026-10-20 UTC; rows by source {'wateroffice': 166663}) averaged into 383 daily means by local standard time day. A day counts only with readings in at least 20 of its 24 hours; 1 days left out. Approval of the readings: {'Provisional/Provisoire': 110388, 'Final/Finales': 56275}. A day whose readings are all 'Final' is 'measured', otherwise 'provisional'. Symbols: {'none': 166663}.",
     "Station: FRASER RIVER AT SHELLEY, status Active, vertical datum field: ASSUMED DATUM.",
     "Levels rounded to 0.001 m (the published precision); the API returns float noise such as 2.318000078201294."
   ],
@@ -52,13 +52,13 @@
       "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "Levels use an assumed (local) datum; add 566.827 m for Geodetic Survey of Canada datum or 567.322 m for CGVD2013.",
       "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
     },
     {
-      "date": "not found",
-      "fact": "Station listed as not regulated, with a 32,430 square km drainage area.",
+      "date": "current",
+      "fact": "Drainage area 32,430 square km.",
       "source_url": "https://wateroffice.ec.gc.ca/report/historical_e.html?stn=08KB001"
     },
     {

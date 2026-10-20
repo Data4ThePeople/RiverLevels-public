@@ -34,8 +34,7 @@ GAUGES = [
              RELEASE,
              "Glen Canyon Dam closed its diversion tunnels in March 1963, so the release record "
              "starts while the lake was filling (Bureau of Reclamation).",
-             "Reclamation reports release as a daily average computed from powerplant and outlet "
-             "records; RISE does not say how it is measured. USGS gauge 09380000 at Lees Ferry, "
+             "RISE does not say how release is measured. USGS gauge 09380000 at Lees Ferry, "
              "below the dam, measures the released water independently (Bureau of Reclamation, "
              "USGS).",
          ]),

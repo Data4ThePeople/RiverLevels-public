@@ -39225,12 +39225,6 @@ date,level,quality
 2025-02-22,3.0,measured
 2025-02-23,3.278,measured
 2025-02-24,3.211,measured
-2025-03-15,3.392,provisional
-2025-03-16,3.347,provisional
-2025-03-17,3.32,provisional
-2025-03-18,3.289,provisional
-2025-03-19,3.253,provisional
-2025-03-20,3.224,provisional
 2025-03-21,3.212,provisional
 2025-03-22,3.196,provisional
 2025-03-23,3.192,provisional
@@ -39785,3 +39779,8 @@ date,level,quality
 2026-10-12,4.312,provisional
 2026-10-13,4.902,provisional
 2026-10-14,4.726,provisional
+2026-10-15,4.41,provisional
+2026-10-16,4.186,provisional
+2026-10-17,4.117,provisional
+2026-10-18,4.168,provisional
+2026-10-19,4.076,provisional

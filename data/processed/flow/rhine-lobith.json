@@ -21,16 +21,16 @@
   "Flow at Lobith is computed from the water level through a rating relation that Rijkswaterstaat updates from flow measurements. Series through 2003 are labeled 'Debiet uit afvoerkromme (Q/H- of Q/HH-relatie)', discharge from a stage-discharge curve; from 2003 'Debiet uit Q-f relatie', with a new relation labeled '(2018)' used from 2017 (Rijkswaterstaat).",
   "Instrument and method periods, first and last year seen: other:Vlotterniveaumeter / Debiet uit afvoerkromme (Q/H- of Q/HH-relatie): 1901 to 1988; NVT / Debiet uit afvoerkromme (Q/H- of Q/HH-relatie): 1989 to 2003; NVT / Debiet uit Q-f relatie: 2003 to 2016; NVT / Debiet uit Q-f relatie (2018): 2017 to 2026 (Rijkswaterstaat).",
   "The discharge record starts in 1901; the API returns nothing for 1866 to 1900, so flow starts 35 years after the level record (Rijkswaterstaat).",
-  "Status counts in the raw readings: {'Ongecontroleerd': 850775, 'Gecontroleerd': 507064}. 'Ongecontroleerd' (unchecked) makes a day provisional. Days marked checked: 6394, all between 2003-05-01 and 2025-10-27; every earlier day, back to 1901, is labeled unchecked, so the status does not show which old values were checked (Rijkswaterstaat).",
-  "Quality code counts in the raw readings: {'00': 1348457, '99': 8770, '25': 612} (Rijkswaterstaat).",
+  "Status counts in the raw readings: {'Ongecontroleerd': 851186, 'Gecontroleerd': 507064}. 'Ongecontroleerd' (unchecked) makes a day provisional. Days marked checked: 6394, all between 2003-05-01 and 2025-10-27; every earlier day, back to 1901, is labeled unchecked, so the status does not show which old values were checked (Rijkswaterstaat).",
+  "Quality code counts in the raw readings: {'00': 1348868, '99': 8770, '25': 612} (Rijkswaterstaat).",
   "Readings per day by era (median, first year of each change): 1901: about 1 per day; 1997: about 24 per day; 2013: about 144 per day; 2014: about 140 per day; 2015: about 144 per day. Days with one reading use that reading; days with several use their plain mean, in UTC+1 (Rijkswaterstaat).",
-  "Series used, by period (rating code / processing / sampling kind / cadence: first day, last day, days): other:F006 / NVT / SB / daily: 1901-01-01 to 1988-12-31, 32142; other:F006 / GEM24H / NVT / daily: 1989-01-01 to 2003-04-03, 3029; other:F006 / NVT / NVT / subdaily: 1996-10-25 to 2003-04-30, 2204; other:F216 / NVT / NVT / subdaily: 2003-05-01 to 2016-12-31, 4942; other:F216 / GEM24H / NVT / daily: 2014-03-04 to 2016-10-07, 52; other:F230 / NVT / NVT / subdaily: 2017-01-01 to 2024-12-30, 2917; other:F230 / GEM24H / NVT / daily: 2023-01-13 to 2023-09-15, 3; other:F230 / NVT / SB / subdaily: 2024-12-31 to 2026-10-17, 654. Where several series cover a day, the newest rating relation is used, then raw readings over a single reading over RWS's own 24-hour mean (GEM24H), then the live series (sampling kind SB). Status is not used to choose, because in late 2025 a series marked checked reads about 20% of the live series and of what the level implies. Days that use RWS's GEM24H daily mean, because no readings are published: 3084 (Rijkswaterstaat API, our processing).",
-  "Raw readings: 1357839. Dropped as fill or gap (empty, 999999999, or code 50 or 99): 8770. Dropped as negative: 0. Identical repeated readings dropped: 119. Days where two series overlap: 10430. Days dropped because no series had at least 90% of its usual readings: 3 (Rijkswaterstaat API, our processing).",
+  "Series used, by period (rating code / processing / sampling kind / cadence: first day, last day, days): other:F006 / NVT / SB / daily: 1901-01-01 to 1988-12-31, 32142; other:F006 / GEM24H / NVT / daily: 1989-01-01 to 2003-04-03, 3029; other:F006 / NVT / NVT / subdaily: 1996-10-25 to 2003-04-30, 2204; other:F216 / NVT / NVT / subdaily: 2003-05-01 to 2016-12-31, 4942; other:F216 / GEM24H / NVT / daily: 2014-03-04 to 2016-10-07, 52; other:F230 / NVT / NVT / subdaily: 2017-01-01 to 2024-12-30, 2917; other:F230 / GEM24H / NVT / daily: 2023-01-13 to 2023-09-15, 3; other:F230 / NVT / SB / subdaily: 2024-12-31 to 2026-10-19, 656. Where several series cover a day, the newest rating relation is used, then raw readings over a single reading over RWS's own 24-hour mean (GEM24H), then the live series (sampling kind SB). Status is not used to choose, because in late 2025 a series marked checked reads about 20% of the live series and of what the level implies. Days that use RWS's GEM24H daily mean, because no readings are published: 3084 (Rijkswaterstaat API, our processing).",
+  "Raw readings: 1358250. Dropped as fill or gap (empty, 999999999, or code 50 or 99): 8770. Dropped as negative: 0. Identical repeated readings dropped: 119. Days where two series overlap: 10430. Days dropped because no series had at least 90% of its usual readings: 4 (Rijkswaterstaat API, our processing).",
   "Flood peaks are above most flows ever measured at Lobith, so the rating is extended there and peaks are the least certain values (Rijkswaterstaat)."
  ],
  "first_date": "1901-01-01",
- "last_date": "2026-10-16",
- "n_days": 45942,
+ "last_date": "2026-10-19",
+ "n_days": 45945,
  "coverage_by_decade": [
   {
    "decade": 1900,
@@ -119,9 +119,9 @@
   {
    "decade": 2020,
    "share_days": 0.9988,
-   "share_measured": 0.5647,
+   "share_measured": 0.564,
    "share_estimated": 0.0,
-   "share_provisional": 0.4341
+   "share_provisional": 0.4348
   }
  ]
 }

@@ -84,7 +84,7 @@ def expected_flow_only(gid):
     m, df, unit, rec, stats = flow_texts(gid)
     last = df.iloc[-1]
     return {"stats": stats, "roVal": fmt_flow(last.flow, unit), "roDate": fmt_date(last.d),
-            "flag": rec + "Flow is computed from level, so the highest and lowest flows are the least certain. See About this record, below."}
+            "flag": rec + "The publisher says provisional flows here are computed from level; it does not say how certified flows are made. See About this record, below."}
 
 
 def expected_flow_beside(gid):

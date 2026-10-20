@@ -13,8 +13,8 @@
   "datum": "ft above gauge zero (46.23 ft NGVD29)",
   "daily_stat": "single reading",
   "first_date": "1901-01-01",
-  "last_date": "2026-10-14",
-  "n_days": 45938,
+  "last_date": "2026-10-19",
+  "n_days": 45943,
   "coverage_by_decade": [
     {
       "decade": 1900,
@@ -110,9 +110,9 @@
   ],
   "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers.",
   "notes": [
-    "CWMS quality codes in the file: {-2147480957: 7, -2147474557: 41, 0: 45890}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 48 days.",
+    "CWMS quality codes in the file: {-2147480957: 7, -2147474557: 41, 0: 45896}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 48 days.",
     "Dropped 0 fill values (>= 9000, such as 99999) and 5 null values; 0 values flagged missing or rejected.",
-    "One instantaneous reading per day (not a daily mean). In the file's time zone (CST6CDT): 06:00 on 24342 days, 07:00 on 21596 days; in UTC: 12:00 on 45938 days.",
+    "One instantaneous reading per day (not a daily mean). In the file's time zone (CST6CDT): 06:00 on 24342 days, 07:00 on 21602 days; in UTC: 12:00 on 45944 days.",
     "USGS 07289000 returned no recent gage height; no extension.",
     "USGS lists at least six gauge sites at Vicksburg since 1871, all on the same datum but on a sloping water surface; in 1927 the Corps canal gauge read about 2 ft above the bridge gauge. The median level drops about 10 ft from the 1920s to the 1930s and 1940s; site changes and channel changes may both play a part, and the file does not say which gauge each year uses.",
     "Gauge zero 46.23 ft NGVD29 per the CWMS MVK location record (USGS 07289000 lists 46.22 ft NGVD29).",
@@ -155,7 +155,7 @@
       "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "USGS: all these gauges use the same datum, but readings differ because the water surface slopes between them.",
       "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
     },
@@ -170,7 +170,7 @@
       "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "USACE lists gauge zero as 46.23 ft NGVD29; NWS lists no datum for this gauge.",
       "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/Vicksburg?office=MVK"
     }

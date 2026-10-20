@@ -134,7 +134,7 @@
     "CWMS quality codes in the file: {0: 55286}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 0 days.",
     "Dropped 0 fill values (>= 9000, such as 99999) and 133 null values; 0 values flagged missing or rejected.",
     "One instantaneous reading per day (not a daily mean). In the file's time zone (UTC): 12:00 on 55286 days; in UTC: 12:00 on 55286 days.",
-    "USGS 03294500 differs from CWMS by a median +0.06 ft over 97 overlapping days at 12:00; not the same datum or a different reading method, so no extension.",
+    "USGS 03294500 differs from CWMS by a median +0.06 ft over 93 overlapping days at 12:00; not the same datum or a different reading method, so no extension.",
     "Series is the McAlpine Locks and Dam lower (tailwater) gauge as kept by the Louisville District LPMS. The LRL location record for this series (McAlpine-MLPK2) has no coordinates; lat/lon and gauge zero come from the LRL record McAlpineLWR (Ohio River at Louisville, KY), which matches USGS 03294500.",
     "Gauge zero 373.18 ft NGVD29 (374.00 ft on the Ohio River datum, per USGS). The gauge sits below McAlpine Locks and Dam (Locks and Dam 41 until 1960; the present dam was built in the 1960s). USGS says various combinations of gauges near Louisville were used before October 1939 and in 1943 to 1946.",
     "Observed in the data, cause not documented: the yearly minimum rises from about 3 to 5 ft before 1923 to about 9 ft from 1923 on. Do not compare low-water readings across 1923 without checking.",
@@ -177,12 +177,12 @@
       "source_url": "https://www.lrl.usace.army.mil/Missions/Civil-Works/Navigation/History/"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "Present gauge: water-stage recorder at the downstream end of the lock guide wall, in the lower pool of McAlpine Locks.",
       "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "Gauge zero 373.18 ft NGVD29, equal to 374.00 ft on the Ohio River datum.",
       "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
     },
@@ -192,5 +192,5 @@
       "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
     }
   ],
-  "public_notes": "This gauge sits just below McAlpine Dam, which replaced older dam works in the 1960s, so the river here has been managed by dams and a canal for most of the record. USGS says several different gauges near Louisville were combined in the early years, so readings before the 1940s are less comparable."
+  "public_notes": "This gauge sits in the lower pool of McAlpine Locks, so the river here is managed by locks and a dam (USGS). USGS says various combinations of gauges near Louisville were used before October 1939 and from 1943 to 1946, so readings from those years are less comparable."
 }

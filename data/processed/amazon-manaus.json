@@ -13,8 +13,8 @@
   "datum": "cm above the Manaus port staff gauge zero, a local arbitrary reference; SGB says to subtract 7.00 m from a reading to refer it to sea level (SGB Amazonas bulletin, 19 May 2017)",
   "daily_stat": "mean",
   "first_date": "1902-09-15",
-  "last_date": "2026-10-14",
-  "n_days": 45315,
+  "last_date": "2026-10-19",
+  "n_days": 45264,
   "coverage_by_decade": [
     {
       "decade": 1900,
@@ -95,17 +95,17 @@
     },
     {
       "decade": 2010,
-      "share_days": 0.9984,
+      "share_days": 0.9904,
       "share_measured": 0.4496,
       "share_estimated": 0.0485,
-      "share_provisional": 0.5003
+      "share_provisional": 0.4923
     },
     {
       "decade": 2020,
-      "share_days": 1.0,
+      "share_days": 0.9891,
       "share_measured": 0.0,
       "share_estimated": 0.0,
-      "share_provisional": 1.0
+      "share_provisional": 0.9891
     }
   ],
   "license": "No license on the HidroWeb service itself. The SNIRH metadata record for the national hydrometric network allows reproduction of the data provided the source is cited (https://metadados.snirh.gov.br/geonetwork/srv/api/records/f85dbf06-a869-414c-afc5-bb01869e9156). Credit: Agencia Nacional de Aguas e Saneamento Basico (ANA), HidroWeb.",
@@ -114,7 +114,7 @@
     "Historic series: ANA HidroSerieHistorica, tipoDados=1 (stage). Where a month exists at consistency level 2 (consistent, reviewed by ANA) we use it; otherwise level 1 (raw) and mark it provisional. Last level-2 date: 2014-12-30. Level-1 days used: 0.",
     "Per-day status codes from ANA (CotaNNStatus): 251 days flagged 2 'estimated' are marked estimated; 0 days flagged 3 'doubtful' and 0 days flagged 4 'dry staff gauge' are kept as published with their consistency-level quality.",
     "Daily value: ANA's daily-mean row where published (normally the mean of the 07:00 and 17:00 staff readings); otherwise the mean of the reading rows for that day. Days by source row: {'daily_mean_row': 41009}.",
-    "Historic record ends 2014-12-30. Days after that come from the ANA telemetry feed (DadosHidrometeorologicos, mostly 15-minute readings), averaged to a daily mean (4307 days, marked provisional). Telemetry days with fewer than 12 readings: 205.",
+    "Historic record ends 2014-12-30. Days after that come from the ANA telemetry feed (DadosHidrometeorologicos, mostly 15-minute readings), averaged to a daily mean (4255 days, marked provisional). Telemetry days with fewer than 12 readings: 172. Dropped as partial days (fewer than 75% of the readings the gauge usually sends per day, the median over the 61 days around it): 57, most recent 2026-02-21, 2026-02-22, 2026-02-23, 2026-02-24, 2026-10-20.",
     "No fill values found in this series; ANA leaves missing days blank.",
     "Share of days marked estimated by decade: {1900: 0.016, 1910: 0.002, 1920: 0.002, 1930: 0.001, 1940: 0.001, 1960: 0.001, 1990: 0.0, 2000: 0.001, 2010: 0.049}."
   ],
@@ -150,5 +150,5 @@
       "source": null
     }
   ],
-  "public_notes": "Manaus has one of the longest river records in the tropics, read daily at the port since 1902. Since 2015 the values come from an automatic sensor and have not yet been reviewed; we checked ten years where both exist and they agree to within about a centimeter on a typical day."
+  "public_notes": "The Manaus gauge has been read daily at the port since 1902. Since 2015 the values come from an automatic sensor and have not yet been reviewed; we checked ten years where both exist and they agree to within about a centimeter on a typical day."
 }

@@ -2,4 +2,10 @@
 name = "riverlevels"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = ["requests", "pandas", "pyreadr", "openpyxl"]
+dependencies = [
+    "requests",
+    "pandas",
+    "pyreadr",
+    "openpyxl",
+    "matplotlib>=3.11.2",
+]

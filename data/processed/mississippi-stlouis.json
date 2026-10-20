@@ -13,8 +13,8 @@
   "datum": "ft above gauge zero (379.58 ft NAVD88)",
   "daily_stat": "single reading",
   "first_date": "1861-01-01",
-  "last_date": "2026-10-14",
-  "n_days": 60152,
+  "last_date": "2026-10-19",
+  "n_days": 60157,
   "coverage_by_decade": [
     {
       "decade": 1860,
@@ -130,10 +130,10 @@
     },
     {
       "decade": 2020,
-      "share_days": 0.9484,
-      "share_measured": 0.9351,
+      "share_days": 0.9485,
+      "share_measured": 0.9332,
       "share_estimated": 0.0,
-      "share_provisional": 0.0133
+      "share_provisional": 0.0153
     }
   ],
   "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers, U.S. Geological Survey.",
@@ -142,7 +142,7 @@
     "Dropped 0 fill values (>= 9000, such as 99999) and 0 null values; 0 values flagged missing or rejected.",
     "11 days in 2024-03-10 to 2024-03-20 have a second reading (at 09:00) besides the 08:00 reading; kept the 08:00 reading and dropped the extra one.",
     "One instantaneous reading per day (not a daily mean). In the file's time zone (US/Central): 08:00 on 51750 days, 07:59 on 8357 days, 07:50 on 12 days; in UTC: 14:00 on 30281 days, 13:00 on 21469 days, 13:50 on 8369 days.",
-    "Extended 33 days (2026-09-12 to 2026-10-14) past the CWMS public lag with USGS 07010000 instantaneous gage height at 08:00 local, the CWMS reading hour. Same datum: over 39 overlapping days the median difference was +0.00 ft (largest 0.06 ft). USGS marks these values provisional, and so do we.",
+    "Extended 39 days (2026-09-12 to 2026-10-20) past the CWMS public lag with USGS 07010000 instantaneous gage height at 08:00 local, the CWMS reading hour. Same datum: over 34 overlapping days the median difference was +0.00 ft (largest 0.00 ft). USGS marks these values provisional, and so do we.",
     "Gauge at the foot of Market Street, river mile 179.6 above the Ohio. Gauge zero 379.58 ft NAVD88 per the CWMS location record and the USGS site record for 07010000.",
     "A second CWMS series (datman-rev) holds the same gauge; MVDhist-rev was used because it is the Mississippi Valley Division historical file.",
     "Levels are rounded to 0.01 ft: the API converts from stored meters and returns float noise such as 12.979999999999999."
@@ -199,7 +199,7 @@
       "source_url": "https://pubs.usgs.gov/wdr/2005/wdr-il-05/data/disc2004/07010000.htm"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "NWS and USACE list gauge zero as 379.58 ft NAVD88; a document explaining the change from 379.94 NGVD29 was not found.",
       "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/St%20Louis-Mississippi?office=MVS"
     },

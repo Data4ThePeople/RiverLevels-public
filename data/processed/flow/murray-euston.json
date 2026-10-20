@@ -21,13 +21,13 @@
   "BoM publishes discharge that the station owner computes from the water level through a rating curve, checked by field flow measurements (Bureau of Meteorology).",
   "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 286878010, station 414203 MURRAY @ EUSTON; data owner VIC - Department of Energy, Environment and Climate Action (Bureau of Meteorology).",
   "Daily mean of the merged quality-controlled record, computed by BoM over 24 hours; the API does not say how many readings fed each early-year mean (Bureau of Meteorology).",
-  "Quality codes (10 quality-A best available Quality; 90 quality-B compromised; 110 quality-C estimate; 140 quality-E unknown): counts {10: 17379, 90: 46, 110: 983, 140: 267}. A and B (compromised) are measured, C (estimate) estimated, and E (unknown quality) measured before 1991 and provisional from 1991 on (267 days), where it marks recent unchecked values (Bureau of Meteorology).",
-  "Share of days with code E (unknown quality) by decade: {2010: 0.021, 2020: 0.077}; with code B (compromised): {1990: 0.004, 2000: 0.0, 2010: 0.002, 2020: 0.01} (Bureau of Meteorology).",
+  "Quality codes (10 quality-A best available Quality; 90 quality-B compromised; 110 quality-C estimate; 140 quality-E unknown): counts {10: 17382, 90: 46, 110: 983, 140: 267}. A and B (compromised) are measured, C (estimate) estimated, and E (unknown quality) measured before 1991 and provisional from 1991 on (267 days), where it marks recent unchecked values (Bureau of Meteorology).",
+  "Share of days with code E (unknown quality) by decade: {2010: 0.021, 2020: 0.076}; with code B (compromised): {1990: 0.004, 2000: 0.0, 2010: 0.002, 2020: 0.01} (Bureau of Meteorology).",
   "Dropped: 4 empty timestamps, 0 values coded F (missing or incorrect) and 0 negative values (Bureau of Meteorology)."
  ],
  "first_date": "1975-08-29",
- "last_date": "2026-10-16",
- "n_days": 18675,
+ "last_date": "2026-10-19",
+ "n_days": 18678,
  "coverage_by_decade": [
   {
    "decade": 1970,
@@ -67,9 +67,9 @@
   {
    "decade": 2020,
    "share_days": 1.0,
-   "share_measured": 0.9017,
-   "share_estimated": 0.0218,
-   "share_provisional": 0.0766
+   "share_measured": 0.9018,
+   "share_estimated": 0.0217,
+   "share_provisional": 0.0765
   }
  ]
 }

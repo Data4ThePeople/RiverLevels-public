@@ -13,8 +13,8 @@
   "datum": "ft above gauge zero (481.56 ft NGVD29)",
   "daily_stat": "single reading",
   "first_date": "1922-01-01",
-  "last_date": "2026-10-14",
-  "n_days": 36161,
+  "last_date": "2026-10-19",
+  "n_days": 36163,
   "coverage_by_decade": [
     {
       "decade": 1920,
@@ -88,10 +88,10 @@
     },
     {
       "decade": 2020,
-      "share_days": 0.9835,
-      "share_measured": 0.9802,
+      "share_days": 0.9823,
+      "share_measured": 0.9783,
       "share_estimated": 0.0,
-      "share_provisional": 0.0032
+      "share_provisional": 0.004
     }
   ],
   "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers, U.S. Geological Survey.",
@@ -99,7 +99,7 @@
     "CWMS quality codes in the file: {-2147480957: 5, 0: 36148}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 5 days.",
     "Dropped 0 fill values (>= 9000, such as 99999) and 0 null values; 0 values flagged missing or rejected.",
     "One instantaneous reading per day (not a daily mean). In the file's time zone (US/Central): 08:00 on 36153 days; in UTC: 13:00 on 19907 days, 14:00 on 16246 days.",
-    "Extended 8 days (2026-10-04 to 2026-10-14) past the CWMS public lag with USGS 06934500 instantaneous gage height at 08:00 local, the CWMS reading hour. Same datum: over 77 overlapping days the median difference was +0.00 ft (largest 0.00 ft). USGS marks these values provisional, and so do we.",
+    "Extended 11 days (2026-10-04 to 2026-10-20) past the CWMS public lag with USGS 06934500 instantaneous gage height at 08:00 local, the CWMS reading hour. Same datum: over 73 overlapping days the median difference was +0.00 ft (largest 0.00 ft). USGS marks these values provisional, and so do we.",
     "Series is datman-rev (MVS data management, 1922 to present). The MVDhist-rev copy of this gauge stops in December 2020.",
     "Gauge zero 481.56 ft NGVD29 per the CWMS location record; USGS 06934500 lists 481.50 ft NAVD88 for the same zero.",
     "Flow at Hermann is regulated by the six Missouri River mainstem dams upstream (Fort Peck closed 1937, Garrison 1953, Gavins Point 1955).",
@@ -128,7 +128,7 @@
       "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
     },
     {
-      "date": "not found",
+      "date": "current",
       "fact": "Gauge zero 481.56 ft above sea level (USGS); NWS lists 481.5 ft NAVD88.",
       "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
     },

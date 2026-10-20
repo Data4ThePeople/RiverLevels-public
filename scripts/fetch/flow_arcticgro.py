@@ -103,9 +103,8 @@ def main():
             "(rating curves), with winter correction coefficients that depend on water level and ice thickness; "
             "this is how the Arctic and Antarctic Research Institute (AARI) estimates the provisional values "
             "(ArcticGRO discharge metadata). The metadata does not describe the method for certified values.",
-            "Winter ice changes the level for a given flow, so winter flows are the least certain; provisional "
-            "winter values are usually revised after the ice goes out in June or July (ArcticGRO discharge "
-            "metadata).",
+            "Winter flows depend on correction coefficients for ice, and provisional winter values are updated "
+            "at the end of ice conditions in June or July (ArcticGRO discharge metadata).",
             f"Flags on the days kept: {counts}. Years by flag: "
             f"{ {('blank' if k == '' else k): v for k, v in yrs.items()} } (ArcticGRO).",
             "\"A\" is certified by Roshydromet (measured here) and \"P\" provisional (ArcticGRO discharge metadata)."

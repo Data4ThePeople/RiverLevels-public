@@ -13,8 +13,8 @@
   "datum": "m above the local gauge zero (local gauge height; zero elevation not given by the API)",
   "daily_stat": "mean",
   "first_date": "1895-02-02",
-  "last_date": "2026-10-13",
-  "n_days": 19946,
+  "last_date": "2026-10-18",
+  "n_days": 19951,
   "coverage_by_decade": [
     {
       "decade": 1890,
@@ -110,17 +110,17 @@
     {
       "decade": 2020,
       "share_days": 1.0,
-      "share_measured": 0.9487,
+      "share_measured": 0.9468,
       "share_estimated": 0.002,
-      "share_provisional": 0.0492
+      "share_provisional": 0.0511
     }
   ],
   "license": "Creative Commons Attribution 4.0 (CC BY 4.0), per BoM Water Data Online copyright notice. Credit: Bureau of Meteorology, Water Data Online, with data supplied by the station owner (see notes).",
   "notes": [
     "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 169534010, station_id 590760 (station 425003 DARLING@BOURKE TOWN). Data owner: NSW - Water NSW.",
     "Daily mean of the merged quality-controlled level record, aggregated by BoM to a 24-hour mean. The API does not say how many readings fed each early-year mean; where only one staff reading a day was taken, the 'mean' is that one reading.",
-    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate', 140: 'quality-E unknown'}): counts {10: 10036, 90: 4007, 110: 144, 140: 5759}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (190 days), where it marks recent unchecked readings.",
-    "Unknown-quality code E (140) share of days by decade: {1970: 1.0, 1980: 0.818, 1990: 0.018, 2010: 0.001, 2020: 0.049}.",
+    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate', 140: 'quality-E unknown'}): counts {10: 10036, 90: 4007, 110: 144, 140: 5764}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (195 days), where it marks recent unchecked readings.",
+    "Unknown-quality code E (140) share of days by decade: {1970: 1.0, 1980: 0.818, 1990: 0.018, 2010: 0.001, 2020: 0.051}.",
     "Compromised code B (90) share of days by decade: {1890: 1.0, 1990: 0.48, 2000: 0.435, 2010: 0.072, 2020: 0.031}.",
     "28156 empty timestamps (code -1) and 0 values coded F (210, missing or incorrect) were dropped."
   ],

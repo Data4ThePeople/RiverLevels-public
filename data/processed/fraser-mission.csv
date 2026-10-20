@@ -18418,12 +18418,6 @@ date,level,quality
 2025-03-02,0.935,measured
 2025-03-03,0.911,measured
 2025-03-04,0.943,measured
-2025-03-15,1.18,measured
-2025-03-16,1.135,measured
-2025-03-17,1.03,measured
-2025-03-18,0.859,measured
-2025-03-19,0.837,measured
-2025-03-20,0.982,measured
 2025-03-21,1.022,measured
 2025-03-22,0.916,measured
 2025-03-23,0.948,measured
@@ -18997,3 +18991,8 @@ date,level,quality
 2026-10-12,1.11,provisional
 2026-10-13,1.398,provisional
 2026-10-14,1.398,provisional
+2026-10-15,1.206,provisional
+2026-10-16,1.113,provisional
+2026-10-17,1.056,provisional
+2026-10-18,1.013,provisional
+2026-10-19,1.013,provisional

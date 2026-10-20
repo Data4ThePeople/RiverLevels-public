@@ -21,25 +21,25 @@
   "INA series 26631, variable 'Caudal medio diario' (daily mean flow), station Rosario (INA station 34, Prefectura Naval Argentina code 280) (INA a5 API).",
   "INA labels this daily series 'medición directa' and gives no per-reading series here; on the Parana INA's flow series elsewhere are labeled as computed from a rating curve ('Curva de gasto'), and we did not find how this one is computed (INA a5 API).",
   "INA publishes no per-value quality flag, so every value is marked measured, including the most recent days, which INA may still correct (INA a5 API).",
-  "2941 values with an id; rows repeated across download chunks: 0. Dropped 0 empty values and 0 negative values; the API also returns 1164 empty placeholder rows for missing days, which are not in this file. Days stored twice with the same value, kept once: 0. Most common local timestamps: {'00:00': 2941} (INA a5 API).",
+  "2945 values with an id; rows repeated across download chunks: 0. Dropped 0 empty values and 0 negative values; the API also returns 1164 empty placeholder rows for missing days, which are not in this file. Days stored twice with the same value, kept once: 0. Most common local timestamps: {'00:00': 2945} (INA a5 API).",
   "INA's daily flow series for Rosario starts only in July 2015 (INA a5 API).",
   "Gaps longer than 30 days with no value: 2022-07-01 to 2022-09-03; 2022-09-07 to 2023-02-20; 2023-02-22 to 2023-04-03; 2023-04-05 to 2023-08-27; 2023-08-31 to 2023-10-27; 2023-11-17 to 2024-01-02; 2024-01-30 to 2024-03-19; 2024-03-28 to 2024-05-08; 2024-05-10 to 2024-09-30 (INA a5 API)."
  ],
  "first_date": "2015-07-21",
- "last_date": "2026-10-16",
- "n_days": 2941,
+ "last_date": "2026-10-19",
+ "n_days": 2945,
  "coverage_by_decade": [
   {
    "decade": 2010,
-   "share_days": 0.9938,
-   "share_measured": 0.9938,
+   "share_days": 0.9945,
+   "share_measured": 0.9945,
    "share_estimated": 0.0,
    "share_provisional": 0.0
   },
   {
    "decade": 2020,
-   "share_days": 0.5345,
-   "share_measured": 0.5345,
+   "share_days": 0.535,
+   "share_measured": 0.535,
    "share_estimated": 0.0,
    "share_provisional": 0.0
   }

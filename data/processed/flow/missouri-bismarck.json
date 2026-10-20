@@ -21,12 +21,12 @@
   "USGS computes daily discharge from the gauge's water level through a rating curve (stage-discharge relation), adjusted by shifts after each field measurement, and approves a year of data some months after it ends (USGS).",
   "River ice in winter changes the level for a given flow, so USGS estimates winter flow by other means; those days are marked estimated (USGS).",
   "Flow has been regulated by Garrison Dam, about 75 miles upstream, since November 1953 (USGS).",
-  "USGS approval codes: {'A': 31929, 'A:e': 3757, 'P': 240, 'P:e': 98}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
+  "USGS approval codes: {'A': 31929, 'A:e': 3757, 'P': 243, 'P:e': 98}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
   "Skipped 0 days with no number (codes such as Ice or Eqp: none) and 0 negative values (USGS)."
  ],
  "first_date": "1927-10-01",
- "last_date": "2026-10-16",
- "n_days": 36024,
+ "last_date": "2026-10-19",
+ "n_days": 36027,
  "coverage_by_decade": [
   {
    "decade": 1920,
@@ -101,9 +101,9 @@
   {
    "decade": 2020,
    "share_days": 1.0,
-   "share_measured": 0.6421,
-   "share_estimated": 0.2612,
-   "share_provisional": 0.0967
+   "share_measured": 0.6413,
+   "share_estimated": 0.2609,
+   "share_provisional": 0.0978
   }
  ]
 }
