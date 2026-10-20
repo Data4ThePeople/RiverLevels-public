@@ -105,10 +105,17 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
 .dialread .date, .dialread .q { font-size: 12px; color: var(--muted); }
 .flowbox:not(.compact) .dialread { display: none; }
 .flowbox:not(.compact) .dialrow { justify-content: center; }
-.viewsw { display: inline-flex; align-self: flex-start; border: 1px solid var(--axis); border-radius: 6px; overflow: hidden; }
-.viewsw button { font-size: 12px; padding: 4px 12px; border: 0; border-radius: 0; background: var(--surface); color: var(--ink-2); }
-.viewsw button + button { border-left: 1px solid var(--axis); }
-.viewsw button[aria-pressed="true"] { background: var(--ink); color: var(--page); font-weight: 600; }
+#gaugeBtns { margin-top: 6px; }
+.vswitch { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; margin: 12px 0 10px; padding: 2px 0;
+  background: none; border: 0; font-size: 13px; color: var(--muted); cursor: pointer; }
+.vswitch .track { position: relative; width: 38px; height: 22px; border-radius: 999px; background: var(--river); transition: background .2s; flex: none; }
+.vswitch .knob { position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3); transition: transform .2s; }
+.vswitch[aria-checked="true"] .track { background: var(--flow); }
+.vswitch[aria-checked="true"] .knob { transform: translateX(16px); }
+.vswitch[aria-checked="false"] #vLevel, .vswitch[aria-checked="true"] #vFlow { color: var(--ink); font-weight: 600; }
+.vswitch:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+@media (prefers-reduced-motion: reduce) { .vswitch .track, .vswitch .knob { transition: none; } }
 #riverView.flowview .lv { display: none !important; }
 #riverView:not(.flowview):not(.fo) .fv { display: none !important; }
 .sect { border-top: 1px solid var(--grid); padding-top: 8px; margin-top: 4px; }
@@ -166,10 +173,9 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
       </div>
       <div id="riverView" class="hidden">
         <div class="gauges" id="gaugeBtns" role="group" aria-label="Gauges"></div>
-        <div class="viewsw hidden" id="viewSw" role="group" aria-label="Show water level or flow">
-          <button type="button" data-v="level" aria-pressed="true" id="vLevel">Water level</button>
-          <button type="button" data-v="flow" aria-pressed="false" id="vFlow">Flow</button>
-        </div>
+        <button type="button" class="vswitch hidden" id="viewSw" role="switch" aria-checked="false" aria-label="Show flow instead of water level">
+          <span id="vLevel">Water level</span><span class="track"><span class="knob"></span></span><span id="vFlow">Flow</span>
+        </button>
         <div>
           <p class="figtitle" id="xTitle"></p>
           <p class="figsub" id="xSub"></p>
@@ -559,6 +565,7 @@ function fmtFlow(v, unit) {
   return v.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec }) + " " + (unit === "m3/s" ? "m³/s" : unit);
 }
 const fmtFor = (ser, meta) => v => meta.isFlow ? fmtFlow(v, meta.unit) : fmtVal(v, meta);
+function firstValid(ser) { let i = 0; while (i < ser.n - 1 && Number.isNaN(ser.v[i])) i++; return i; }
 function lastValid(ser) { let i = ser.n - 1; while (i > 0 && Number.isNaN(ser.v[i])) i--; return i; }
 function nearestValid(ser, i) {
   for (let d = 0; d < 400; d++) {
@@ -605,9 +612,7 @@ async function selectGauge(id) {
   if (selGauge !== id) return;
   S = s; F = f;
   buildCoverage(S); if (F) buildCoverage(F);
-  T0 = Math.min(S.start, F ? F.start : Infinity); T1 = Math.max(S.start + S.n - 1, F ? F.start + F.n - 1 : -Infinity);
   day = S.start + lastValid(S);
-  const sl = $("slider"); sl.max = T1 - T0; sl.value = day - T0;
   const fo = isFlowOnly(), isRes = G.kind === "reservoir";
   // main series
   VT = { level: [fo ? "Flow at " + G.name + ", " + G.country : (isRes ? "Water surface of " : "Water level at ") + G.name + (isRes ? "" : ", " + G.country),
@@ -636,6 +641,7 @@ async function selectGauge(id) {
         : ", computed from water level with a rating curve.") + " The dial runs from the lowest to the highest daily value on record."];
     $("vLevel").textContent = isRes ? "Water surface" : "Water level";
     $("vFlow").textContent = rel ? "Dam release" : "Flow";
+    $("viewSw").setAttribute("aria-label", "Show " + (rel ? "dam release" : "flow") + " instead of " + (isRes ? "water surface" : "water level"));
     $("fcTitle").textContent = (rel ? "Daily release" : "Daily flow") + " and 12-month average, " + fm.first_date.slice(0, 4) + " to " + fm.last_date.slice(0, 4) + " (" + (fm.unit === "m3/s" ? "m³/s" : fm.unit) + ")";
     $("fFlag").textContent = flagText(fm, F) + (rel ? "The release is set by the dam's operators." : "Flow is computed from level, so the highest and lowest flows are the least certain.");
     $("fStats").textContent = statsText(fm, F, rel ? "release" : "flow");
@@ -646,15 +652,20 @@ async function selectGauge(id) {
   }
   applyView();
 }
-$("viewSw").addEventListener("click", e => {
-  const b = e.target.closest("button[data-v]"); if (!b || !S) return;
-  panelView = b.dataset.v; applyView();
+$("viewSw").addEventListener("click", () => {
+  if (!S) return;
+  panelView = flowView() ? "level" : "flow"; applyView();
 });
 function applyView() {
   const fv = flowView();
   $("riverView").classList.toggle("flowview", !!fv);
   $("riverView").classList.toggle("fo", isFlowOnly());
-  for (const b of $("viewSw").children) b.setAttribute("aria-pressed", b.dataset.v === (fv ? "flow" : "level") ? "true" : "false");
+  $("viewSw").setAttribute("aria-checked", fv ? "true" : "false");
+  // the slider runs only over the days the shown record has, first value to last
+  const ser = fv ? F : S;
+  T0 = ser.start + firstValid(ser); T1 = ser.start + lastValid(ser);
+  if (day < T0 || day > T1) day = T1;
+  const sl = $("slider"); sl.max = T1 - T0; sl.value = day - T0;
   const [t, sub] = fv ? VT.flow : VT.level;
   $("xTitle").textContent = t; $("xSub").textContent = sub;
   drawCharts(); update();
