@@ -554,14 +554,19 @@
   "thresholds": {
     "rhine-kaub": [
       {
-        "value": 78,
-        "label": "78 cm: barges start to load lighter",
-        "source": "Central Commission for the Navigation of the Rhine reference low water (GlW 2012); widely used by shippers"
+        "value": 150,
+        "label": "150 cm: about what a barge needs to load fully",
+        "source": "Reuters via Baird Maritime, Aug. 24, 2026: \"The navigable gauge normally required at Kaub to fully load vessels is about 1.50 metres.\" https://www.bairdmaritime.com/shipping/inland-shipping/ships-load-more-freight-as-rhine-water-levels-rise"
+      },
+      {
+        "value": 77,
+        "label": "77 cm: official low-water mark; below it the 1.90 m channel depth is not guaranteed",
+        "source": "CCNR Resolution 2022-II-19 (equivalent low water level 2022, valid Jan. 1, 2023 to Dec. 31, 2031, lists Kaub 77), https://ccr-zkr.org/files/infovoiedeau/Resolution2022-II-19_de.pdf; wetter.net, Oct. 4, 2026: \"Garantierte 1,90 Meter Fahrrinnentiefe gibt es erst ab 77 Zentimetern am Pegel.\" Replaces 78 cm (GlW 2012), Oct. 20, 2026."
       },
       {
         "value": 40,
-        "label": "40 cm: many barges stop running",
-        "source": "Kuehne+Nagel; Bloomberg (2022)"
+        "label": "40 cm: commercial shipping largely stops",
+        "source": "freightperspectives, July 15, 2026: \"Around 40 cm, commercial shipping is typically suspended or operates in emergency mode.\" https://www.freightperspectives.com/p/rhine-water-levels-2026-kaub-forecast"
       }
     ]
   },

@@ -207,6 +207,9 @@ def main():
     payload = json.dumps({"geo": geo, "rivers": rivers, "no_data": no_data, "gauges": gauges},
                          separators=(",", ":"), ensure_ascii=False).replace("</", "<\\/")
     html = (ROOT / "viz/template.html").read_text().replace("/*DATA*/", payload)
+    for key, name in (("LOGO_DARK", "d4tp-text-dark.svg"), ("LOGO_LIGHT", "d4tp-text-light.svg")):
+        svg = base64.b64encode((ROOT / "viz/logo" / name).read_bytes()).decode()
+        html = html.replace(f"/*{key}*/", "data:image/svg+xml;base64," + svg)
     out = args.out
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)

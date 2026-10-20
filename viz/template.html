@@ -84,7 +84,13 @@ button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px s
 .stats { font-size: 12px; color: var(--ink-2); margin: 0; }
 .notes { font-size: 12px; color: var(--muted); margin: 0; }
 .legend { display: flex; gap: 4px 12px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); }
-footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top: 1px solid var(--grid); display: flex; gap: 12px; flex-wrap: wrap; justify-content: space-between; }
+.brand { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); text-decoration: none; }
+.brand img { height: 18px; width: auto; display: block; }
+.brand .logo-lt { display: none; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .brand .logo-dk { display: none; } :root:not([data-theme="light"]) .brand .logo-lt { display: block; } }
+:root[data-theme="dark"] .brand .logo-dk { display: none; }
+:root[data-theme="dark"] .brand .logo-lt { display: block; }
+footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top: 1px solid var(--grid); display: flex; gap: 12px; flex-wrap: wrap; justify-content: space-between; align-items: center; }
 .nodata-card { color: var(--ink-2); font-size: 13px; }
 .hidden { display: none !important; }
 .caveat { margin-top: 12px; padding: 10px 12px; border: 1px solid var(--grid); border-radius: 8px; background: var(--page); }
@@ -260,7 +266,7 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
   </div>
   <footer>
     <span id="srcLine">Sources: national water agencies, listed per gauge. Map: Natural Earth.</span>
-    <span>Built by Data 4 The People</span>
+    <a class="brand" href="https://www.data4thepeople.com" target="_blank" rel="noopener" aria-label="Built by Data 4 The People"><span>Built by</span><img class="logo-dk" src="/*LOGO_DARK*/" alt="Data 4 The People"><img class="logo-lt" src="/*LOGO_LIGHT*/" alt="Data 4 The People"></a>
   </footer>
 </div>
 <script id="payload" type="application/json">/*DATA*/</script>
