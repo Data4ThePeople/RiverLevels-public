@@ -7,6 +7,7 @@ record highs and lows are found in the browser from the same daily values.
 """
 import argparse
 import base64
+import shutil
 import re
 import gzip
 import json
@@ -210,9 +211,14 @@ def main():
     for key, name in (("LOGO_DARK", "d4tp-text-dark.svg"), ("LOGO_LIGHT", "d4tp-text-light.svg")):
         svg = base64.b64encode((ROOT / "viz/logo" / name).read_bytes()).decode()
         html = html.replace(f"/*{key}*/", "data:image/svg+xml;base64," + svg)
+    # shaded relief, made by scripts/relief.py: a separate file next to the page, so the map draws
+    # first and the relief (about 2 MB) arrives after it
+    html = html.replace("/*RELIEF*/", "relief.jpg")
+    html = html.replace("/*RELIEF_META*/null", (ROOT / "viz/relief.json").read_text())
     out = args.out
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
+    shutil.copyfile(ROOT / "viz/relief.jpg", out.parent / "relief.jpg")
     nflow = sum(1 for g in gauges.values() if g["flow"] or g["flow_only"])
     print(f"wrote {out}: {out.stat().st_size/1e6:.2f} MB, {len(rivers)} rivers, {len(gauges)} gauges, {nflow} with flow")
     if missing:

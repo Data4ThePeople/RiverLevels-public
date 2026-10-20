@@ -15,6 +15,7 @@
   --water: #3987e5; --water-wash: rgba(42,120,214,0.18); --bank: #d9d3c4; --bank-edge: #b8b0a0;
   --prov: #86b6ef; --est: #b0306a; --thresh: #d03b3b; --accent: #2a78d6;
   --flow: #c96a00; --flow-prov: #efb36b; --flow-dim: #f1cfa3;
+  --relief: 0.75;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -26,6 +27,7 @@
     --water: #3987e5; --water-wash: rgba(57,135,229,0.22); --bank: #3d3a33; --bank-edge: #57524a;
     --prov: #6da7ec; --est: #cf3f7c; --thresh: #e66767; --accent: #3987e5;
     --flow: #e08a1e; --flow-prov: #f5bf7a; --flow-dim: #6b4310;
+    --relief: 0.55;
   }
 }
 :root[data-theme="dark"] {
@@ -37,6 +39,7 @@
   --water: #3987e5; --water-wash: rgba(57,135,229,0.22); --bank: #3d3a33; --bank-edge: #57524a;
   --prov: #6da7ec; --est: #cf3f7c; --thresh: #e66767; --accent: #3987e5;
   --flow: #e08a1e; --flow-prov: #f5bf7a; --flow-dim: #6b4310;
+    --relief: 0.55;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; }
@@ -267,7 +270,7 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
     </aside>
   </div>
   <footer>
-    <span id="srcLine">Sources: national water agencies, listed per gauge. Map: Natural Earth.</span>
+    <span id="srcLine">Sources: national water agencies, listed per gauge. Map and shaded relief: Natural Earth.</span>
     <a class="brand" href="https://www.data4thepeople.com" target="_blank" rel="noopener" aria-label="Built by Data 4 The People"><span>Built by</span><img class="logo-dk" src="/*LOGO_DARK*/" alt="Data 4 The People"><img class="logo-lt" src="/*LOGO_LIGHT*/" alt="Data 4 The People"></a>
   </footer>
 </div>
@@ -345,6 +348,15 @@ async function series(id) {
 
 // ---------- map ----------
 const map = $("map"), mctx = map.getContext("2d");
+// shaded relief (Natural Earth SR_50M, reprojected to Equal Earth by scripts/relief.py): a gray image
+// drawn on land only with a hard-light blend, so mid-gray changes nothing
+const RELIEF_META = /*RELIEF_META*/null;
+let RELIEF = null;
+(function loadRelief() {
+  const img = new Image();
+  img.onload = () => { RELIEF = img; drawMap(); };
+  img.src = "/*RELIEF*/";
+})();
 let view = { cx: 0, cy: 0, k: 1 }, target = null, W = 0, H = 0, dpr = 1;
 let selRiver = null, selGauge = null, hoverRiver = null, hoverGauge = null;
 function worldView() {
@@ -399,6 +411,14 @@ function riverPts(id) {
 function drawMap() {
   const c = mctx; c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, W, H);
   path(c, LAND, true); c.fillStyle = css("--land"); c.fill("evenodd");
+  if (RELIEF) {
+    // full strength at world view, fading to about 60% as you zoom in, so it never competes with the rivers
+    const fade = Math.max(0.6, Math.min(1, 1.1 - 0.15 * Math.log2(view.k / worldView().k)));
+    c.save(); c.clip("evenodd"); c.globalCompositeOperation = "hard-light"; c.globalAlpha = (parseFloat(css("--relief")) || 0.85) * fade; c.imageSmoothingQuality = "high";
+    const [x0, y0] = toScreen([RELIEF_META.x0, RELIEF_META.y0]), [x1, y1] = toScreen([RELIEF_META.x1, RELIEF_META.y1]);
+    c.drawImage(RELIEF, x0, y0, x1 - x0, y1 - y0); c.restore();
+    path(c, LAND, true);
+  }
   c.strokeStyle = css("--land-edge"); c.lineWidth = 0.7; c.stroke();
   path(c, LAKES, true); c.fillStyle = css("--lake"); c.fill();
   const zoomed = view.k > worldView().k * 1.5;
@@ -412,7 +432,7 @@ function drawMap() {
   for (const r of RIVERS) {
     const on = r.id === selRiver, hov = r.id === hoverRiver;
     const lw = (on ? 4 : hov ? 3.5 : 2) * boost;
-    if (world) { path(c, RGEO[r.id]); c.strokeStyle = css("--land"); c.lineWidth = lw + 3; c.stroke(); }
+    path(c, RGEO[r.id]); c.strokeStyle = css("--land"); c.lineWidth = lw + (world ? 3 : 4); c.stroke(); // pale casing keeps the line clear over relief
     const dim = selRiver && !on, blue = css(dim ? "--river-dim" : "--river"), green = css(dim ? "--flow-dim" : "--flow");
     if (r.has_flow) { // level and flow: a thin solid blue line beside a dashed orange one
       const half = Math.max(1.2, lw * 0.6);
