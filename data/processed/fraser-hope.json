@@ -1,0 +1,163 @@
+{
+  "id": "fraser-hope",
+  "river": "fraser",
+  "name": "Hope",
+  "country": "Canada",
+  "lat": 49.38596,
+  "lon": -121.454239,
+  "kind": "river",
+  "source": "Environment and Climate Change Canada, Water Survey of Canada (HYDAT + real-time)",
+  "source_url": "https://wateroffice.ec.gc.ca/report/historical_e.html?stn=08MF005",
+  "station_code": "08MF005",
+  "unit": "m",
+  "datum": "m above station datum (ASSUMED DATUM)",
+  "daily_stat": "mean",
+  "first_date": "1912-03-06",
+  "last_date": "2026-10-14",
+  "n_days": 39786,
+  "coverage_by_decade": [
+    {
+      "decade": 1910,
+      "share_days": 0.9814,
+      "share_measured": 0.9814,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 0.9904,
+      "share_measured": 0.9904,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 0.9491,
+      "share_measured": 0.9491,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 0.9056,
+      "share_measured": 0.9056,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 0.9441,
+      "share_measured": 0.9441,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 0.9817,
+      "share_measured": 0.9817,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 0.9754,
+      "share_measured": 0.9633,
+      "share_estimated": 0.012,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 0.9937,
+      "share_measured": 0.9929,
+      "share_estimated": 0.0008,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.7525,
+      "share_measured": 0.7525,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 0.9729,
+      "share_measured": 0.9726,
+      "share_estimated": 0.0003,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9973,
+      "share_measured": 0.9973,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9762,
+      "share_measured": 0.7503,
+      "share_estimated": 0.0,
+      "share_provisional": 0.2259
+    }
+  ],
+  "license": "Open Government Licence - Canada. Contains information licensed under the Open Government Licence - Canada (Environment and Climate Change Canada).",
+  "notes": [
+    "No dam on the Fraser main stem, but HYDAT lists the station as regulated: the drainage area includes about 14,000 square km behind Kenney Dam on the Nechako.",
+    "Channel change: 35 rating curves since 1912; the bed built up about 1920 to the 1940s, cut down from the 1950s to 1980s, then built up again (BC flood flows review), so equal levels do not always mean equal flow.",
+    "Archived daily means (HYDAT): 1912-03-06 to 2025-02-24. Rows with no water level (discharge only or blank): 2047. Level symbols: {'none': 38703, 'Partial Day': 475, 'Estimated': 48}. Estimated (E) -> estimated. Ice (B), partial day (A) and other symbols keep 'measured' but are counted here; ice can raise winter levels.",
+    "Datum check not possible: no day is in both HYDAT and the real-time record. We assume the real-time level uses the same station datum as HYDAT but have not verified it.",
+    "After HYDAT ends: 5-minute real-time readings (2025-03-15 to 2026-10-15 UTC; rows by source {'wateroffice': 161749}) averaged into 560 daily means by local standard time day. A day counts only with readings in at least 20 of its 24 hours; 5 days left out. Approval of the readings: {'Provisional/Provisoire': 161749}. A day whose readings are all 'Final' is 'measured', otherwise 'provisional'. Symbols: {'none': 161749}.",
+    "No data from the day after 2025-02-24 to the day before 2025-03-15: reviewed daily means are not yet published for that period, and the Water Office real-time service only keeps about 18 months.",
+    "Station: FRASER RIVER AT HOPE, status Active, vertical datum field: ASSUMED DATUM.",
+    "Levels rounded to 0.001 m (the published precision); the API returns float noise such as 2.318000078201294."
+  ],
+  "measurement_history": [
+    {
+      "date": "1912-03",
+      "fact": "Water level and flow records begin in 1912 and are near continuous since.",
+      "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+    },
+    {
+      "date": "1912",
+      "fact": "HYDAT lists flow collection as manual from 1912 to 1949 and by recorder from 1950.",
+      "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+    },
+    {
+      "date": "1940",
+      "fact": "HYDAT has daily levels for only 92 days in 1940.",
+      "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+    },
+    {
+      "date": "1994",
+      "fact": "HYDAT has no daily water levels for 1994 or 1995.",
+      "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+    },
+    {
+      "date": "not found",
+      "fact": "Levels use an assumed datum; add 27.926 m for Geodetic Survey of Canada datum or 28.180 m for CGVD2013.",
+      "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+    },
+    {
+      "date": "1934",
+      "fact": "The 1894 flood mark at Hope was set in 1934 from anecdotes, about 40 years after the flood.",
+      "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+    },
+    {
+      "date": "1912-2008",
+      "fact": "Since 1912, 35 rating curves have been used; the channel built up about 1920 to 1940s, cut down 1950s to 1980s, then built up.",
+      "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+    },
+    {
+      "date": "not found",
+      "fact": "Flow measurements were once made from the bridge with a Price meter; now by boat with an acoustic profiler.",
+      "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+    },
+    {
+      "date": "not found",
+      "fact": "Station is listed as regulated; drainage area includes 14,000 square km behind Kenney Dam.",
+      "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+    }
+  ],
+  "public_notes": "Hope has daily water levels from 1912, with 1994 and 1995 missing and only part of 1940. Levels are measured from a local gauge zero, and the riverbed here has risen and fallen over the decades, so the same water level does not always mean the same amount of water."
+}

@@ -1,0 +1,123 @@
+{
+  "id": "fraser-mission",
+  "river": "fraser",
+  "name": "Mission",
+  "country": "Canada",
+  "lat": 49.127739,
+  "lon": -122.30294,
+  "kind": "river",
+  "source": "Environment and Climate Change Canada, Water Survey of Canada (HYDAT + real-time)",
+  "source_url": "https://wateroffice.ec.gc.ca/report/historical_e.html?stn=08MH024",
+  "station_code": "08MH024",
+  "unit": "m",
+  "datum": "m above station datum (ASSUMED DATUM)",
+  "daily_stat": "mean",
+  "first_date": "1969-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 18998,
+  "coverage_by_decade": [
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 0.9469,
+      "share_measured": 0.9469,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 0.9537,
+      "share_measured": 0.9403,
+      "share_estimated": 0.0134,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.5843,
+      "share_measured": 0.5843,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 0.9603,
+      "share_measured": 0.9584,
+      "share_estimated": 0.0019,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9923,
+      "share_measured": 0.9923,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9782,
+      "share_measured": 0.8963,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0819
+    }
+  ],
+  "license": "Open Government Licence - Canada. Contains information licensed under the Open Government Licence - Canada (Environment and Climate Change Canada).",
+  "notes": [
+    "Tidal at all flows (WSC), so daily means mix river flow and tide, and low flow readings depend on the tide cycle.",
+    "The BC flood flows review gives a geodetic conversion of +0.073 m before 1987 and +0.043 m after, which suggests a 0.03 m change in the station datum in 1987; whether HYDAT adjusted earlier values is not stated.",
+    "Archived daily means (HYDAT): 1969-01-01 to 2025-03-04. Rows with no water level (discharge only or blank): 1912. Level symbols: {'none': 18199, 'Partial Day': 164, 'Estimated': 56}. Estimated (E) -> estimated. Ice (B), partial day (A) and other symbols keep 'measured' but are counted here; ice can raise winter levels.",
+    "Datum check not possible: no day is in both HYDAT and the real-time record. We assume the real-time level uses the same station datum as HYDAT but have not verified it.",
+    "After HYDAT ends: 5-minute real-time readings (2025-03-15 to 2026-10-15 UTC; rows by source {'wateroffice': 166695}) averaged into 579 daily means by local standard time day. A day counts only with readings in at least 20 of its 24 hours; 1 days left out. Approval of the readings: {'Final/Finales': 108224, 'Provisional/Provisoire': 58471}. A day whose readings are all 'Final' is 'measured', otherwise 'provisional'. Symbols: {'none': 166695}.",
+    "No data from the day after 2025-03-04 to the day before 2025-03-15: reviewed daily means are not yet published for that period, and the Water Office real-time service only keeps about 18 months.",
+    "Station: FRASER RIVER AT MISSION, status Active, vertical datum field: ASSUMED DATUM.",
+    "Levels rounded to 0.001 m (the published precision); the API returns float noise such as 2.318000078201294."
+  ],
+  "measurement_history": [
+    {
+      "date": "1876",
+      "fact": "Yearly maximum levels reported for 1876, 1882, and every year since 1894; 1876 to 1932 data are not continuous.",
+      "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+    },
+    {
+      "date": "1876",
+      "fact": "The Department of Public Works collected levels from 1876 to 1932.",
+      "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+    },
+    {
+      "date": "1876",
+      "fact": "HYDAT lists level collection as manual and seasonal 1876 to 1935, then by continuous recorder from 1936.",
+      "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+    },
+    {
+      "date": "1969",
+      "fact": "HYDAT has daily water levels only from 1969; none for 1993 to 1996.",
+      "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+    },
+    {
+      "date": "not found",
+      "fact": "Levels are tidally affected at all flows; discharge is not published below 3.0 m gauge height because of tides.",
+      "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+    },
+    {
+      "date": "1987",
+      "fact": "To convert to Geodetic Survey of Canada datum, add 0.073 m before 1987 and 0.043 m after.",
+      "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+    },
+    {
+      "date": "1894-06-05",
+      "fact": "Highest recorded level is 7.92 m (geodetic) on June 5, 1894.",
+      "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+    },
+    {
+      "date": "2021-12-26",
+      "fact": "Water level not available for several periods in 2021 to 2023 because of equipment malfunction.",
+      "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+    }
+  ],
+  "public_notes": "The river at Mission rises and falls with the ocean tides, so daily levels mix river flow with tide. Daily levels in the national database start only in 1969, with 1993 to 1996 missing; older years survive mainly as yearly highs."
+}

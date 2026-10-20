@@ -1,0 +1,131 @@
+{
+  "id": "danube-pfelling",
+  "river": "danube",
+  "name": "Pfelling",
+  "country": "Germany",
+  "lat": 48.879766,
+  "lon": 12.747221,
+  "kind": "river",
+  "source": "Bayerisches Landesamt für Umwelt, Gewässerkundlicher Dienst Bayern (GKD)",
+  "source_url": "https://www.gkd.bayern.de/de/fluesse/wasserstand/kelheim/pfelling-10078000",
+  "station_code": "10078000",
+  "unit": "cm",
+  "datum": "cm above gauge zero (308.12 m NHN (DHHN2016))",
+  "daily_stat": "mean",
+  "first_date": "1927-04-04",
+  "last_date": "2026-10-14",
+  "n_days": 36354,
+  "coverage_by_decade": [
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.8842,
+      "share_estimated": 0.0,
+      "share_provisional": 0.1158
+    }
+  ],
+  "license": "CC BY 4.0. Required credit: Datenquelle: Bayerisches Landesamt für Umwelt, www.lfu.bayern.de",
+  "notes": [
+    "Daily mean (Tagesmittelwert) of the water level in cm above gauge zero, from the GKD download center (Gesamtzeitraum, Tageswerte).",
+    "Quality from the GKD Pruefstatus column: 'Geprueft' (checked) -> measured, 'Rohdaten' (raw) -> provisional. Counts in the file: {'Geprueft': 36067, 'Rohdaten': 287}.",
+    "Provisional (Rohdaten) days run from 2026-01-01 to 2026-10-14.",
+    "Rows with an empty daily mean dropped: 0. No fill values (such as -999) found.",
+    "The current, unfinished day is published in its own file and is left out.",
+    "Gauge zero as stated in the file header: 308.12 m NHN (DHHN2016). It is a single current value; the file does not list earlier gauge zeros, so a past datum change would not be visible here.",
+    "Coordinates converted from ETRS89 / UTM 32N (774714 E, 5420862 N) in the file header.",
+    "GKD database query time printed in the file: 01.10.2026 00:00."
+  ],
+  "measurement_history": [
+    {
+      "date": "1927-04-04",
+      "fact": "The GKD daily record starts on this date.",
+      "source": "https://www.gkd.bayern.de/de/fluesse/wasserstand/kelheim/pfelling-10078000/download"
+    },
+    {
+      "date": "current",
+      "fact": "Gauge zero 308.12 m NHN (DHHN2016). Past gauge zeros are not listed.",
+      "source": "https://www.gkd.bayern.de/en/rivers/discharge/bayern/pfelling-10078000"
+    },
+    {
+      "date": "not found",
+      "fact": "Commissioning dates of the Straubing and Geisling barrages upstream and any backwater effect at Pfelling: not found.",
+      "source": "https://www.gkd.bayern.de/de/fluesse/wasserstand/kelheim/pfelling-10078000"
+    },
+    {
+      "date": "1964-1966",
+      "fact": "Our comparison with Hofkirchen shows the gap between the two gauges changing by about 20 cm over 1964 to 1966 at similar flows; cause not found.",
+      "source": "scripts/fetch/gkd_bayern.py output (data/processed/danube-hofkirchen.csv vs danube-pfelling.csv)"
+    }
+  ],
+  "public_notes": "The level is measured against a fixed mark below the riverbed, not the depth of the water. Values from January 2026 on are raw readings that the Bavarian agency has not checked yet."
+}

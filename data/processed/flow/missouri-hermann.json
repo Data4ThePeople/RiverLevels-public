@@ -1,0 +1,107 @@
+{
+ "id": "missouri-hermann",
+ "river": "missouri",
+ "name": "Hermann",
+ "station_name": "Missouri River at Hermann, MO",
+ "station_code": "USGS 06934500",
+ "country": "United States",
+ "lat": 38.70980556,
+ "lon": -91.4385,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "cfs",
+ "daily_stat": "mean",
+ "source": "U.S. Geological Survey, NWIS daily values (00060, statistic 00003)",
+ "source_url": "https://waterservices.usgs.gov/nwis/dv/",
+ "license": "Public domain (U.S. federal government work)",
+ "credit": "U.S. Geological Survey",
+ "flag_rule": "USGS code A is measured and P provisional; any code with e (estimated) or an ice code is estimated.",
+ "notes": [
+  "USGS computes daily discharge from the gauge's water level through a rating curve (stage-discharge relation), adjusted by shifts after each field measurement, and approves a year of data some months after it ends (USGS).",
+  "USGS approval codes: {'A': 35066, 'A:e': 691, 'P': 48, 'P:e': 1}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
+  "Skipped 0 days with no number (codes such as Ice or Eqp: none) and 0 negative values (USGS)."
+ ],
+ "first_date": "1928-10-01",
+ "last_date": "2026-10-16",
+ "n_days": 35806,
+ "coverage_by_decade": [
+  {
+   "decade": 1920,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1930,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 0.9663,
+   "share_estimated": 0.0337,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 0.997,
+   "share_estimated": 0.003,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.9847,
+   "share_estimated": 0.0153,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 0.9984,
+   "share_measured": 0.7767,
+   "share_estimated": 0.2023,
+   "share_provisional": 0.0193
+  }
+ ]
+}

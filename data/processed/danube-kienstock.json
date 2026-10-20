@@ -1,0 +1,120 @@
+{
+  "id": "danube-kienstock",
+  "river": "danube",
+  "name": "Kienstock",
+  "country": "Austria",
+  "lat": 48.382282,
+  "lon": 15.462576,
+  "kind": "river",
+  "source": "eHYD, Hydrographischer Dienst Österreich (BML); station operator via donau",
+  "source_url": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=2",
+  "station_code": "HZB 207357",
+  "unit": "cm",
+  "datum": "cm above gauge zero (194.00 m above Adriatic (m ü.A.) from 01.01.1974)",
+  "daily_stat": "mean",
+  "first_date": "1976-01-01",
+  "last_date": "2023-12-31",
+  "n_days": 17532,
+  "coverage_by_decade": [
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    }
+  ],
+  "license": "CC BY 4.0 (Open Government Data Austria, per the INSPIRE metadata record; not shown on ehyd.gv.at itself). Required credit: Datenquelle: ehyd.gv.at (linked to https://ehyd.gv.at)",
+  "notes": [
+    "Daily mean water level (W-Tagesmittel) from the eHYD yearbook export, period 01.01.1976 00:00,01.01.2024 00:00. eHYD publishes only checked yearbook (Hydrographisches Jahrbuch) data, so the series ends with the last published yearbook year.",
+    "eHYD gives no per-value quality flag; every value is marked measured.",
+    "Gap markers ('Lücke') skipped: 1. Fill values dropped: 0.",
+    "Station master data list these level methods (start, end, method): 01.01.1974 to now: Pegellatte-händische Messung; 01.01.1976 to 01.01.1997: Schwimmer (analog)-Schreibstreifen manuell; 01.01.1997 to now: Schwimmer (analog)-digitalisiert; 13.03.2002 to now: Drucksonde (direkt)-Datensammler; 29.01.2009 to now: Drucksonde (direkt)-Fernübertragung (DFÜ); 17.07.2008 to now: Pneumatic (direkt)-Datensammler; 17.07.2008 to now: Pneumatic (direkt)-Fernübertragung (DFÜ).",
+    "Footnotes on discharge and water temperature say that in some months they were computed from supplemented (filled) water levels, for example: 1996: Im Okt,Nov,Dez nach ergänzten Wasserständen ermittelt; 1996: Im Jän,Feb,Mrz,Apr,Mai,Jul,Sep,Okt nach ergänzten Wasserständen ermittelt; 1997: Im Jun,Aug,Okt nach ergänzten Wasserständen ermittelt; 1998: Im Jul,Aug,Sep,Okt nach ergänzten Wasserständen ermittelt; 1999: Im Aug,Okt,Dez nach ergänzten Wasserständen ermittelt; 2000: Im Jän,Nov,Dez nach ergänzten Wasserständen ermittelt (32 such footnotes in all). The level series itself carries no flag for these days, so they stay marked measured.",
+    "Footnotes on the level series: 01.01.2018: JB 2018: Neuberechnung des Flusskilometers.",
+    "Coordinates from the eHYD PegelAktuell map layer (WGS84)."
+  ],
+  "measurement_history": [
+    {
+      "date": "1974-01-01",
+      "fact": "Gauge zero set at 194.00 m above the Adriatic datum; no later change is listed.",
+      "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"
+    },
+    {
+      "date": "1974-01-01",
+      "fact": "Staff gauge read by hand.",
+      "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"
+    },
+    {
+      "date": "1976",
+      "fact": "Altenwoerth hydropower plant, downstream of Kienstock, commissioned; Melk plant upstream followed in 1982. Their effect on the Kienstock level was not found.",
+      "source": "https://www.parlament.gv.at/dokument/XIX/AB/615/imfname_396165.pdf"
+    },
+    {
+      "date": "1976-01-01",
+      "fact": "Float recorder with a paper chart, read by hand, until 1997; the daily record starts here.",
+      "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"
+    },
+    {
+      "date": "1997-01-01",
+      "fact": "Float recorder output digitized.",
+      "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"
+    },
+    {
+      "date": "2002-03-13",
+      "fact": "Pressure sensor with data logger added; remote transmission from 2009-01-29.",
+      "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"
+    },
+    {
+      "date": "2010-01-01",
+      "fact": "Station coordinates updated, a shift of about 115 m on the national grid.",
+      "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"
+    },
+    {
+      "date": "1996-2023",
+      "fact": "Footnotes say discharge in many months was computed from filled-in water levels; the level series has no per-day flag for these.",
+      "source": "https://ehyd.gv.at/services/MessstellenExtraData/owf?id=207357&file=1"
+    },
+    {
+      "date": "2023-12-31",
+      "fact": "The record ends with the last published hydrological yearbook; eHYD holds history only up to the current yearbook.",
+      "source": "https://www.bmluk.gv.at/themen/wasser/wasser-oesterreich/hydrographie/der-weg-zu-den-daten/Datenbestand_Bezug.html"
+    }
+  ],
+  "public_notes": "This record ends in December 2023 because Austria publishes checked data only in its yearly hydrological yearbook, which runs a few years behind. The level is measured against a fixed mark, not the riverbed."
+}

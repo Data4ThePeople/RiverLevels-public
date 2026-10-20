@@ -1,0 +1,196 @@
+{
+  "id": "ohio-louisville",
+  "river": "ohio",
+  "name": "Louisville (McAlpine Dam tailwater)",
+  "country": "United States",
+  "lat": 38.280347,
+  "lon": -85.799131,
+  "kind": "river",
+  "source": "USACE CWMS Data API",
+  "source_url": "https://cwms-data.usace.army.mil/cwms-data/timeseries?office=LRL&name=McAlpine-MLPK2.Stage-Tailwater.Inst.1Day.0.LPMS-comp",
+  "station_code": "LRL:McAlpine-MLPK2.Stage-Tailwater.Inst.1Day.0.LPMS-comp",
+  "unit": "ft",
+  "datum": "ft above gauge zero (373.18 ft NGVD29)",
+  "daily_stat": "single reading",
+  "first_date": "1875-01-01",
+  "last_date": "2026-09-24",
+  "n_days": 55286,
+  "coverage_by_decade": [
+    {
+      "decade": 1870,
+      "share_days": 0.983,
+      "share_measured": 0.983,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1880,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1890,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1900,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.9833,
+      "share_measured": 0.9833,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 0.9945,
+      "share_measured": 0.9945,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9975,
+      "share_measured": 0.9975,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9951,
+      "share_measured": 0.9951,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers.",
+  "notes": [
+    "CWMS quality codes in the file: {0: 55286}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 0 days.",
+    "Dropped 0 fill values (>= 9000, such as 99999) and 133 null values; 0 values flagged missing or rejected.",
+    "One instantaneous reading per day (not a daily mean). In the file's time zone (UTC): 12:00 on 55286 days; in UTC: 12:00 on 55286 days.",
+    "USGS 03294500 differs from CWMS by a median +0.06 ft over 97 overlapping days at 12:00; not the same datum or a different reading method, so no extension.",
+    "Series is the McAlpine Locks and Dam lower (tailwater) gauge as kept by the Louisville District LPMS. The LRL location record for this series (McAlpine-MLPK2) has no coordinates; lat/lon and gauge zero come from the LRL record McAlpineLWR (Ohio River at Louisville, KY), which matches USGS 03294500.",
+    "Gauge zero 373.18 ft NGVD29 (374.00 ft on the Ohio River datum, per USGS). The gauge sits below McAlpine Locks and Dam (Locks and Dam 41 until 1960; the present dam was built in the 1960s). USGS says various combinations of gauges near Louisville were used before October 1939 and in 1943 to 1946.",
+    "Observed in the data, cause not documented: the yearly minimum rises from about 3 to 5 ft before 1923 to about 9 ft from 1923 on. Do not compare low-water readings across 1923 without checking.",
+    "Levels are rounded to 0.01 ft: the API converts from stored meters and returns float noise such as 12.979999999999999."
+  ],
+  "measurement_history": [
+    {
+      "date": "1830-12-22",
+      "fact": "USACE: the Louisville and Portland Canal opened when the first boat passed through on Dec. 22, 1830.",
+      "source_url": "https://www.lrl.usace.army.mil/Missions/Civil-Works/Navigation/History/"
+    },
+    {
+      "date": "1832-02-21",
+      "fact": "Earliest crest in the NWS historic crest list for the McAlpine lower gauge is Feb. 21, 1832.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/MLPK2"
+    },
+    {
+      "date": "1871",
+      "fact": "USGS: gauge-height records near Louisville since 1871 are published in NWS reports.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+    },
+    {
+      "date": "1914",
+      "fact": "USACE: the Louisville project became Locks and Dam 41 when lock numbering began around 1914.",
+      "source_url": "https://www.lrl.usace.army.mil/Missions/Civil-Works/Navigation/History/"
+    },
+    {
+      "date": "1939-10-01",
+      "fact": "USGS: before Oct. 1939 and in 1943 to 1946, various combinations of gauges near Louisville were used.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+    },
+    {
+      "date": "1946-10-01",
+      "fact": "USGS used a nonrecording gauge 0.3 mile upstream at the same datum from Oct. 1946 to Sept. 1961.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+    },
+    {
+      "date": "1960-05-24",
+      "fact": "USACE renamed Locks and Dam 41 as McAlpine Locks and Dam; in the 1960s the canal was widened and the present dam built.",
+      "source_url": "https://www.lrl.usace.army.mil/Missions/Civil-Works/Navigation/History/"
+    },
+    {
+      "date": "not found",
+      "fact": "Present gauge: water-stage recorder at the downstream end of the lock guide wall, in the lower pool of McAlpine Locks.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+    },
+    {
+      "date": "not found",
+      "fact": "Gauge zero 373.18 ft NGVD29, equal to 374.00 ft on the Ohio River datum.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+    },
+    {
+      "date": "not found",
+      "fact": "Date the present recorder or telemetry began: not found in USGS NWC page or NWS gauge data.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+    }
+  ],
+  "public_notes": "This gauge sits just below McAlpine Dam, which replaced older dam works in the 1960s, so the river here has been managed by dams and a canal for most of the record. USGS says several different gauges near Louisville were combined in the early years, so readings before the 1940s are less comparable."
+}

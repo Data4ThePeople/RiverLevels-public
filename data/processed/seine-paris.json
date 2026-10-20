@@ -1,0 +1,169 @@
+{
+  "id": "seine-paris",
+  "river": "seine",
+  "name": "Paris-Austerlitz",
+  "country": "France",
+  "lat": 48.84469,
+  "lon": 2.365511,
+  "kind": "river",
+  "source": "Hub'Eau hydrometrie API (Schapi / DRIEAT, HydroPortail)",
+  "source_url": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/obs_elab?code_entite=F700000102&grandeur_hydro_elab=HIXnJ",
+  "station_code": "F700000109 (1900-1965), F700000110 (1966-1973), F700000111 (1974-1989), F700000102 (1990-)",
+  "unit": "mm",
+  "datum": "mm above the station reference (25.92 m, altimetric system code 3, NGF-IGN69)",
+  "daily_stat": "max",
+  "first_date": "1900-01-02",
+  "last_date": "2026-10-14",
+  "n_days": 46244,
+  "coverage_by_decade": [
+    {
+      "decade": 1900,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 0.9995,
+      "share_measured": 0.9995,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 0.9995,
+      "share_measured": 0.9995,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 0.9997,
+      "share_measured": 0.9997,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.9964,
+      "share_measured": 0.9964,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 0.9997,
+      "share_measured": 0.9997,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9896,
+      "share_measured": 0.9896,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9976,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.9976
+    }
+  ],
+  "license": "Not stated by Hub'Eau or HydroPortail (checked 2026-10-15). French public data usually fall under Licence Ouverte / Etalab 2.0, but that is unconfirmed for this API; clear before republishing. Credit: Hub'Eau / HydroPortail (Schapi, Ministere de la Transition ecologique)",
+  "notes": [
+    "Daily maximum water level (HIXnJ) in millimeters as published. Not converted.",
+    "Stitched from four Hub'Eau station codes at the same site (code_site F7000001), each used only inside its operating window, with no overlap and no offset applied.",
+    "Reference check: all Paris-Austerlitz codes list the same station reference altitude (25.92 m; altimetric system code 3 = NGF-IGN69, except F700000111 which records code 0 (unknown) with the same altitude). Reference start dates: F700000109 1876-01-01, F700000110 1966-01-01, F700000111 1974-01-01, F700000102 1876-01-01, F700000103 1876-01-01.",
+    "Overlap check: F700000102 vs F700000103 (2006 on, not used in the series) share 7501 days; median difference 0 mm, 90% of differences within 8 mm.",
+    "Boundary check (no shared days, so this compares neighboring months only): F700000109 last 30 days median 3654 mm, F700000110 first 30 days median 3961 mm; F700000110 last 30 days median 1406 mm, F700000111 first 30 days median 1314 mm; F700000111 last 30 days median 1059 mm, F700000102 first 30 days median 1050 mm.",
+    "Pre-1966 values come from observer readings (about 7 am, more often in floods), so the 'daily maximum' then is often a single reading.",
+    "Quality: code_statut 16 (Donnee validee) with method Mesuree, Calculee or Expertisee (edited by a hydrologist) -> measured; validated with method Reconstituee, Interpolation, Estimee or Valeur forcee, or qualification Estimee -> estimated; any status below 16 (raw, corrected, pre-validated) -> provisional, because the publisher has not validated it. Qualification Douteuse (doubtful) values are kept and counted in these notes. Hub'Eau dates are UTC.",
+    "The level is influenced by the Suresnes dam downstream and upstream reservoirs (station metadata).",
+    "F700000109 (La Seine à Paris - Austerlitz - historique - avant 1966): 24104 days used 1900-01-02 to 1965-12-30, 0 outside its window dropped. statut: {'Donnée validée': 24104}; methode: {'Calculée': 16217, 'Mesurée': 7887}; qualification: {'Bonne': 24104}",
+    "F700000110 (La Seine à Paris - Austerlitz - historique - de 1966 à 1973): 2920 days used 1966-01-02 to 1973-12-30, 0 outside its window dropped. statut: {'Donnée validée': 2920}; methode: {'Calculée': 2089, 'Mesurée': 831}; qualification: {'Bonne': 2920}",
+    "F700000111 (La Seine à Paris - Austerlitz - historique - de 1974 à 1989): 5842 days used 1974-01-02 to 1989-12-30, 0 outside its window dropped. statut: {'Donnée validée': 5842}; methode: {'Calculée': 4118, 'Mesurée': 1724}; qualification: {'Bonne': 5842}",
+    "F700000102 (La Seine à Paris - Austerlitz - station limni - secours CT): 13378 days used 1990-01-02 to 2026-10-14, 0 outside its window dropped. statut: {'Donnée validée': 10905, 'Donnée brute': 1715, 'Donnée pré-validée': 758}; methode: {'Expertisée': 11350, 'Mesurée': 2001, 'Calculée': 27}; qualification: {'Bonne': 11581, 'Non qualifiée': 1780, 'Douteuse': 17}"
+  ],
+  "measurement_history": [
+    {
+      "date": "1876-01-01",
+      "fact": "Station reference of the Austerlitz gauge valid since 1876: zero at 25.92 m (NGF-IGN69). All four station codes used here list the same zero.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000109"
+    },
+    {
+      "date": "1900-1965",
+      "fact": "Daily values come from readings by an observer at 7 am, more often during floods, so the daily maximum is often one reading.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000109"
+    },
+    {
+      "date": "1949",
+      "fact": "Pannecière reservoir on the Yonne in service; it influences flow at Paris.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000103"
+    },
+    {
+      "date": "1966-01-01",
+      "fact": "Seine reservoir lake in service; data from here kept under a separate station code (F700000110).",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000110"
+    },
+    {
+      "date": "1974-01-01",
+      "fact": "Marne reservoir lake in service; new station code F700000111.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000111"
+    },
+    {
+      "date": "1990-01-01",
+      "fact": "Aube reservoir lake in service; water-level station F700000102 opened.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000102"
+    },
+    {
+      "date": "2006-01-26",
+      "fact": "Ultrasonic flow station F700000103 opened at the same site and became the reference; F700000102, used here, has been a backup with unvalidated data since 2020.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000102"
+    },
+    {
+      "date": "ongoing",
+      "fact": "Level is influenced by the Suresnes dam downstream (fully open near 3 to 3.3 m at Austerlitz) and by dams upstream.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F700000102"
+    }
+  ],
+  "public_notes": "Each value is the highest level of the day, in millimeters, and before 1966 it is usually one morning reading. Dams and upstream reservoirs built in 1949, 1966, 1974 and 1990 change how the river behaves, especially at low water, so early and recent years are not fully comparable. Since 2020 the readings come from a backup gauge and are mostly unvalidated."
+}

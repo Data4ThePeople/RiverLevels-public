@@ -1,0 +1,94 @@
+{
+  "id": "amazon-tabatinga",
+  "river": "amazon",
+  "name": "Tabatinga",
+  "country": "Brazil",
+  "lat": -4.2347,
+  "lon": -69.9447,
+  "kind": "river",
+  "source": "Agencia Nacional de Aguas e Saneamento Basico (ANA), HidroWeb web service",
+  "source_url": "https://www.snirh.gov.br/hidroweb/serieshistoricas (station 10100000); https://telemetriaws1.ana.gov.br/ServiceANA.asmx",
+  "station_code": "10100000",
+  "unit": "cm",
+  "datum": "cm above the local staff gauge zero (ANA does not publish the zero's elevation in this service)",
+  "daily_stat": "mean",
+  "first_date": "1982-07-05",
+  "last_date": "2026-10-14",
+  "n_days": 15818,
+  "coverage_by_decade": [
+    {
+      "decade": 1980,
+      "share_days": 0.9693,
+      "share_measured": 0.9693,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.9318,
+      "share_measured": 0.9192,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0126
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 0.9299,
+      "share_estimated": 0.0701,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.994,
+      "share_measured": 0.9715,
+      "share_estimated": 0.0225,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.5894,
+      "share_estimated": 0.0008,
+      "share_provisional": 0.4098
+    }
+  ],
+  "license": "No license on the HidroWeb service itself. The SNIRH metadata record for the national hydrometric network allows reproduction of the data provided the source is cited (https://metadados.snirh.gov.br/geonetwork/srv/api/records/f85dbf06-a869-414c-afc5-bb01869e9156). Credit: Agencia Nacional de Aguas e Saneamento Basico (ANA), HidroWeb.",
+  "notes": [
+    "Datum check: 516 days where both the historic series and telemetry have a value (2025-01-01 to 2026-05-31); telemetry daily mean minus historic value: median +0.0 cm, mean -0.0 cm, 5th-95th percentile -1.0 to +1.0 cm. A median near zero means the two share the same gauge zero.",
+    "Historic series: ANA HidroSerieHistorica, tipoDados=1 (stage). Where a month exists at consistency level 2 (consistent, reviewed by ANA) we use it; otherwise level 1 (raw) and mark it provisional. Last level-2 date: 2023-12-31. Level-1 days used: 928.",
+    "Per-day status codes from ANA (CotaNNStatus): 340 days flagged 2 'estimated' are marked estimated; 0 days flagged 3 'doubtful' and 0 days flagged 4 'dry staff gauge' are kept as published with their consistency-level quality.",
+    "Daily value: ANA's daily-mean row where published (normally the mean of the 07:00 and 17:00 staff readings); otherwise the mean of the reading rows for that day. Days by source row: {'daily_mean_row': 15682}.",
+    "Historic record ends 2026-05-31. Days after that come from the ANA telemetry feed (DadosHidrometeorologicos, mostly 15-minute readings), averaged to a daily mean (137 days, marked provisional). Telemetry days with fewer than 12 readings: 137.",
+    "No fill values found in this series; ANA leaves missing days blank.",
+    "Share of days marked estimated by decade: {2000: 0.07, 2010: 0.023, 2020: 0.001}.",
+    "ANA inventory altitude for the station: 78 m (station altitude, not the gauge zero)."
+  ],
+  "measurement_history": [
+    {
+      "date": "1982-07",
+      "fact": "ANA inventory: staff gauge readings start 1982-07-01 and continue. Operator SGB-CPRM.",
+      "source": "https://telemetriaws1.ana.gov.br/ServiceANA.asmx/HidroInventario?codEstDE=10100000&codEstATE=&tpEst=&nmEst=&nmRio=&codSubBacia=&codBacia=&nmMunicipio=&nmEstado=&sgResp=&sgOper=&telemetrica="
+    },
+    {
+      "date": "2000-08",
+      "fact": "ANA inventory: telemetry starts 2000-08-01. No automatic level recorder is listed.",
+      "source": "https://telemetriaws1.ana.gov.br/ServiceANA.asmx/HidroInventario?codEstDE=10100000&codEstATE=&tpEst=&nmEst=&nmRio=&codSubBacia=&codBacia=&nmMunicipio=&nmEstado=&sgResp=&sgOper=&telemetrica="
+    },
+    {
+      "date": "1990-1992",
+      "fact": "Data check: several one-day jumps of 3 to 4 m in 1989-1992 (for example 990 cm on 1992-07-01 to 03, then 612 cm), in raw (level 1) and consistent (level 2) months. Kept as published.",
+      "source": "derived from ANA HidroSerieHistorica, station 10100000"
+    },
+    {
+      "date": "2017",
+      "fact": "SGB: recent readings can be revised after field visits that include re-leveling of the staff gauges.",
+      "source": "https://www.sgb.gov.br/sace/boletins/Amazonas/20170519_15-20170519 - 154457.pdf"
+    },
+    {
+      "date": null,
+      "fact": "Not found: number and hour of daily readings, gauge moves, gauge zero elevation, any publisher statement on early accuracy.",
+      "source": null
+    }
+  ],
+  "public_notes": "This gauge starts in 1982, so it covers only about 44 years. Values after 2023 have not yet been reviewed by Brazil's water agency, and a few days in 1989 to 1992 show jumps that look like recording errors."
+}

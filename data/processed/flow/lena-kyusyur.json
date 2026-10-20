@@ -1,0 +1,106 @@
+{
+ "id": "lena-kyusyur",
+ "river": "lena",
+ "name": "Kyusyur",
+ "station_name": "Lena at Kyusyur",
+ "station_code": "3821",
+ "country": "Russia",
+ "lat": 70.68,
+ "lon": 127.39,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "m3/s",
+ "daily_stat": "mean",
+ "source": "Arctic Great Rivers Observatory (ArcticGRO), Discharge Dataset, Version 20260810; data from Roshydromet",
+ "source_url": "https://arcticgreatrivers.org/discharge/",
+ "license": "Free to use: \"ArcticGRO data are free to use by anyone for any purpose. We only ask that you credit ArcticGRO.\" (https://arcticgreatrivers.org/data/)",
+ "credit": "The Arctic Great Rivers Observatory. 2026. Discharge Dataset, Version 20260810. Data from Roshydromet.",
+ "flag_rule": "ArcticGRO flag A (certified) is measured, P is provisional, and a blank flag, which the metadata does not explain, is provisional.",
+ "notes": [
+  "Daily mean flow measured by Roshydromet at Kyusyur (station 3821), published by ArcticGRO in Lena_Kyusyur_Version_20260810.xlsx (ArcticGRO Discharge Dataset, Version 20260810).",
+  "Flow at these Russian gauges is computed from the water level through stage-discharge relations (rating curves), with winter correction coefficients that depend on water level and ice thickness; this is how the Arctic and Antarctic Research Institute (AARI) estimates the provisional values (ArcticGRO discharge metadata). The metadata does not describe the method for certified values.",
+  "Winter ice changes the level for a given flow, so winter flows are the least certain; provisional winter values are usually revised after the ice goes out in June or July (ArcticGRO discharge metadata).",
+  "Flags on the days kept: {'A': 29641, 'P': 3060}. Years by flag: {'A': '1936 to 2021', 'P': '2012 to 2026'} (ArcticGRO).",
+  "\"A\" is certified by Roshydromet (measured here) and \"P\" provisional (ArcticGRO discharge metadata).",
+  "Dropped 189 of 32890 rows with no value ({'(blank)': 146, 'NA': 43}), by year: {'1962': 43, '2024': 12, '2025': 134}; by month: {'01': 31, '02': 28, '03': 31, '04': 30, '05': 14, '10': 13, '11': 30, '12': 12} (ArcticGRO).",
+  "Values are published to about three significant figures (ArcticGRO).",
+  "Provisional days in years up to the last certified year (2021), by year: {'2012': 366, '2013': 365, '2015': 365, '2016': 126, '2017': 118, '2018': 128, '2019': 126, '2020': 134}. In years that mix both flags (2016, 2017, 2018, 2019, 2020), the provisional days fall mostly in months ['06', '07', '08', '09', '10'] (ArcticGRO).",
+  "The ArcticGRO sampling site on the Lena is not at Kyusyur; ArcticGRO gives discharge for the station closest to it (ArcticGRO discharge metadata)."
+ ],
+ "first_date": "1936-01-01",
+ "last_date": "2026-01-17",
+ "n_days": 32701,
+ "coverage_by_decade": [
+  {
+   "decade": 1930,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 0.9882,
+   "share_measured": 0.9882,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.5635,
+   "share_estimated": 0.0,
+   "share_provisional": 0.4365
+  },
+  {
+   "decade": 2020,
+   "share_days": 0.9339,
+   "share_measured": 0.2703,
+   "share_estimated": 0.0,
+   "share_provisional": 0.6636
+  }
+ ]
+}

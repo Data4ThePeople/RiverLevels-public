@@ -1,0 +1,47 @@
+{
+ "id": "parana-parana",
+ "river": "parana",
+ "name": "Parana",
+ "station_name": "Paraná",
+ "station_code": "INA series 26626 / PNA 230",
+ "country": "Argentina",
+ "lat": -31.718238,
+ "lon": -60.52257,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "m3/s",
+ "daily_stat": "mean",
+ "source": "Instituto Nacional del Agua (INA) alert system a5 API, variable 40 (Caudal medio diario)",
+ "source_url": "https://alerta.ina.gob.ar/a5/obs/puntual/series/26626/observaciones",
+ "license": "No license is stated on the INA API or site (alerta.ina.gob.ar); clear reuse terms with INA before publishing.",
+ "credit": "Instituto Nacional del Agua (INA); gauge read by Prefectura Naval Argentina",
+ "flag_rule": "INA publishes no quality flags, so every value is marked measured.",
+ "notes": [
+  "INA series 26626, variable 'Caudal medio diario' (daily mean flow), station Paraná (INA station 29, Prefectura Naval Argentina code 230) (INA a5 API).",
+  "INA labels this daily series 'medición directa' and gives no per-reading series here; on the Parana INA's flow series elsewhere are labeled as computed from a rating curve ('Curva de gasto'), and we did not find how this one is computed (INA a5 API).",
+  "INA publishes no per-value quality flag, so every value is marked measured, including the most recent days, which INA may still correct (INA a5 API).",
+  "2926 values with an id; rows repeated across download chunks: 0. Dropped 0 empty values and 0 negative values; the API also returns 1179 empty placeholder rows for missing days, which are not in this file. Days stored twice with the same value, kept once: 0. Most common local timestamps: {'00:00': 2926} (INA a5 API).",
+  "INA's daily flow series for Parana starts only in July 2015 (INA a5 API).",
+  "Gaps longer than 30 days with no value: 2022-07-01 to 2022-09-03; 2022-09-07 to 2023-02-20; 2023-02-22 to 2023-04-03; 2023-04-05 to 2023-08-27; 2023-08-31 to 2023-10-27; 2024-01-30 to 2024-03-19; 2024-03-28 to 2024-05-08; 2024-05-10 to 2024-09-30; 2024-11-09 to 2024-12-17 (INA a5 API)."
+ ],
+ "first_date": "2015-07-21",
+ "last_date": "2026-10-16",
+ "n_days": 2926,
+ "coverage_by_decade": [
+  {
+   "decade": 2010,
+   "share_days": 0.9957,
+   "share_measured": 0.9957,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 0.5272,
+   "share_measured": 0.5272,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  }
+ ]
+}

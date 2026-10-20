@@ -1,0 +1,157 @@
+{
+  "id": "missouri-hermann",
+  "river": "missouri",
+  "name": "Hermann",
+  "country": "United States",
+  "lat": 38.710662,
+  "lon": -91.439192,
+  "kind": "river",
+  "source": "USACE CWMS Data API + USGS NWIS (provisional extension)",
+  "source_url": "https://cwms-data.usace.army.mil/cwms-data/timeseries?office=MVS&name=Hermann-Missouri.Stage.Inst.~1Day.0.datman-rev",
+  "station_code": "MVS:Hermann-Missouri.Stage.Inst.~1Day.0.datman-rev",
+  "unit": "ft",
+  "datum": "ft above gauge zero (481.56 ft NGVD29)",
+  "daily_stat": "single reading",
+  "first_date": "1922-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 36161,
+  "coverage_by_decade": [
+    {
+      "decade": 1920,
+      "share_days": 0.3747,
+      "share_measured": 0.3747,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 0.9989,
+      "share_measured": 0.9989,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 0.9482,
+      "share_measured": 0.9482,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 0.9989,
+      "share_measured": 0.9989,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 0.997,
+      "share_measured": 0.9956,
+      "share_estimated": 0.0014,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9901,
+      "share_measured": 0.9901,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9835,
+      "share_measured": 0.9802,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0032
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers, U.S. Geological Survey.",
+  "notes": [
+    "CWMS quality codes in the file: {-2147480957: 5, 0: 36148}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 5 days.",
+    "Dropped 0 fill values (>= 9000, such as 99999) and 0 null values; 0 values flagged missing or rejected.",
+    "One instantaneous reading per day (not a daily mean). In the file's time zone (US/Central): 08:00 on 36153 days; in UTC: 13:00 on 19907 days, 14:00 on 16246 days.",
+    "Extended 8 days (2026-10-04 to 2026-10-14) past the CWMS public lag with USGS 06934500 instantaneous gage height at 08:00 local, the CWMS reading hour. Same datum: over 77 overlapping days the median difference was +0.00 ft (largest 0.00 ft). USGS marks these values provisional, and so do we.",
+    "Series is datman-rev (MVS data management, 1922 to present). The MVDhist-rev copy of this gauge stops in December 2020.",
+    "Gauge zero 481.56 ft NGVD29 per the CWMS location record; USGS 06934500 lists 481.50 ft NAVD88 for the same zero.",
+    "Flow at Hermann is regulated by the six Missouri River mainstem dams upstream (Fort Peck closed 1937, Garrison 1953, Gavins Point 1955).",
+    "USGS: before September 26, 1930 readings came from a nonrecording gauge 480 ft downstream at a datum 0.07 ft lower; not adjusted here.",
+    "Levels are rounded to 0.01 ft: the API converts from stored meters and returns float noise such as 12.979999999999999."
+  ],
+  "measurement_history": [
+    {
+      "date": "1873",
+      "fact": "Missouri River Commission gauge-height records 1873 to 1899 were taken at a site 480 ft downstream.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+    },
+    {
+      "date": "1900",
+      "fact": "Gauge-height records since 1900 are in NWS reports.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+    },
+    {
+      "date": "1930-09-26",
+      "fact": "Before Sept. 26, 1930, a nonrecording gauge 480 ft downstream at a datum 0.07 ft lower was used.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+    },
+    {
+      "date": "1932-03-28",
+      "fact": "A water-stage recorder ran Mar. 28, 1932 to June 12, 1945; nonrecording gauge in 1945 to 1946 and in 1978.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+    },
+    {
+      "date": "not found",
+      "fact": "Gauge zero 481.56 ft above sea level (USGS); NWS lists 481.5 ft NAVD88.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+    },
+    {
+      "date": "1937",
+      "fact": "USACE: Fort Peck, first of six Missouri River mainstem dams, closed in 1937; Garrison in 1953 and Gavins Point in 1955.",
+      "source_url": "https://www.nwd-mr.usace.army.mil/rcc/reports/pdfs/System_Description_Final_Approved_April2020.pdf"
+    },
+    {
+      "date": "1877",
+      "fact": "NWS flags 26 listed crests from 1877 to 1967 as measured on an older datum.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/HRNM7"
+    },
+    {
+      "date": "2022-12-31",
+      "fact": "NWS lists the record low as -0.98 ft on Dec. 31, 2022, just below -0.9 ft in December 1878.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/HRNM7"
+    },
+    {
+      "date": "not found",
+      "fact": "Telemetry start date and daily reading hour: not found in USGS NWC page or NWS gauge data.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+    }
+  ],
+  "public_notes": "Readings at Hermann go back to 1873, first at a spot 480 feet downstream, and since the 1930s mostly from an automatic recorder. Six large dams upstream, built from 1937 to the 1960s, now control much of the river's flow, so low and high readings before and after them reflect different conditions."
+}

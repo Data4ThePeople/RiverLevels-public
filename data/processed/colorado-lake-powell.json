@@ -1,0 +1,112 @@
+{
+  "id": "colorado-lake-powell",
+  "river": "colorado",
+  "name": "Lake Powell (Glen Canyon Dam)",
+  "country": "United States",
+  "lat": 37.05778,
+  "lon": -111.30332,
+  "kind": "reservoir",
+  "source": "Bureau of Reclamation RISE",
+  "source_url": "https://data.usbr.gov/rise/api/result?itemId=508",
+  "station_code": "RISE item 508 (uchdb2 site 919)",
+  "unit": "ft",
+  "datum": "ft above sea level (the RISE series does not state a vertical datum; the RISE location record lists EGM96; see measurement_history)",
+  "daily_stat": "single reading",
+  "first_date": "1963-12-28",
+  "last_date": "2026-10-13",
+  "n_days": 22936,
+  "coverage_by_decade": [
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.8475,
+      "share_estimated": 0.0,
+      "share_provisional": 0.1525
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Bureau of Reclamation.",
+  "notes": [
+    "Glen Canyon Dam closed its diversion tunnels in March 1963; the record starts 1963-12-28 while the lake was filling. Full pool is 3,700 ft.",
+    "RISE result types in the file: {'observed': 22936}; per-value status field: {'None': 22936}. Only 'observed' values kept.",
+    "RISE disclaimer: \"Data are provisional and subject to revision unless otherwise noted. Data users are cautioned to consider carefully the provisional nature of the information before using it.\" No value carries its own approval flag, so values from 2025-10-01 on (the current water year, plus the previous one until six months after it ends) are marked provisional and earlier values measured. This is our rule, not a Reclamation flag.",
+    "22558 of 22936 values before 2025-10-01 carry a RISE update date. That looks like bulk reloads, so RISE metadata cannot show which past values were revised.",
+    "Each value is the daily instantaneous elevation (instant, daily), stamped at UTC times {'07:00': 22936}; dates are Mountain Standard Time days.",
+    "Dropped 0 fill or impossible values and 0 null values.",
+    "RISE source system: uchdb2; location vertical datum field: EGM96 (this refers to the location point, not to the elevation series)."
+  ],
+  "measurement_history": [
+    {
+      "date": "1956-10-15",
+      "fact": "Glen Canyon Dam construction began with the first blast on Oct. 15, 1956.",
+      "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
+    },
+    {
+      "date": "1963-03-13",
+      "fact": "Lake Powell began storing water when the diversion tunnels were closed.",
+      "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
+    },
+    {
+      "date": "1963-12-28",
+      "fact": "Reclamation RISE daily elevation record begins Dec. 28, 1963; values are daily instantaneous readings and provisional unless noted.",
+      "source_url": "https://data.usbr.gov/rise/api/catalog-item/508"
+    },
+    {
+      "date": "1980-06-22",
+      "fact": "Lake Powell first reached full pool, 3,700 ft, about 17 years after filling began.",
+      "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
+    },
+    {
+      "date": "not found",
+      "fact": "USGS lists Reclamation elevations for Lake Powell as NGVD29; the NAVD88 value is about 2.91 ft higher.",
+      "source_url": "https://grandcanyon.usgs.gov/server/rest/services/LakePowell/LakePowellTierElevations/MapServer/1"
+    },
+    {
+      "date": "not found",
+      "fact": "How Reclamation measures the elevation (gauge type, location): not found in RISE metadata or Reclamation Glen Canyon page.",
+      "source_url": "https://data.usbr.gov/rise/api/catalog-item/508"
+    }
+  ],
+  "public_notes": "Lake Powell did not exist before 1963 and took until 1980 to fill, so early readings show a reservoir still filling, not a normal year. Reclamation reports elevation in feet above sea level on an older national reference (NGVD29), which reads about 3 feet lower than the newer one (NAVD88)."
+}

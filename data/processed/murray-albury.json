@@ -1,0 +1,167 @@
+{
+  "id": "murray-albury",
+  "river": "murray-darling",
+  "name": "Albury",
+  "country": "Australia",
+  "lat": -36.09163611,
+  "lon": 146.90711667,
+  "kind": "river",
+  "source": "Bureau of Meteorology, Water Data Online (KiWIS API)",
+  "source_url": "http://www.bom.gov.au/waterdata/ (station 409001); https://www.bom.gov.au/waterdata/services",
+  "station_code": "409001",
+  "unit": "m",
+  "datum": "m above the local gauge zero (local gauge height; zero elevation not given by the API)",
+  "daily_stat": "mean",
+  "first_date": "1885-01-02",
+  "last_date": "2026-10-13",
+  "n_days": 51652,
+  "coverage_by_decade": [
+    {
+      "decade": 1880,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1890,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1900,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 0.9953,
+      "share_measured": 0.9882,
+      "share_estimated": 0.0071,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 0.9937,
+      "share_estimated": 0.0063,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 0.9811,
+      "share_measured": 0.9811,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 0.9921,
+      "share_measured": 0.9921,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.9992,
+      "share_measured": 0.9986,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0005
+    },
+    {
+      "decade": 2000,
+      "share_days": 0.9962,
+      "share_measured": 0.9959,
+      "share_estimated": 0.0003,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 0.9945,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0055
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.9774,
+      "share_estimated": 0.0008,
+      "share_provisional": 0.0218
+    }
+  ],
+  "license": "Creative Commons Attribution 4.0 (CC BY 4.0), per BoM Water Data Online copyright notice. Credit: Bureau of Meteorology, Water Data Online, with data supplied by the station owner (see notes).",
+  "notes": [
+    "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 145590010, station_id 587621 (station 409001 MURRAY @ ALBURY). Data owner: NSW - Water NSW.",
+    "Daily mean of the merged quality-controlled level record, aggregated by BoM to a 24-hour mean. The API does not say how many readings fed each early-year mean; where only one staff reading a day was taken, the 'mean' is that one reading.",
+    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate', 140: 'quality-E unknown'}): counts {10: 9888, 90: 3226, 110: 52, 140: 38486}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (76 days), where it marks recent unchecked readings.",
+    "Unknown-quality code E (140) share of days by decade: {1880: 1.0, 1890: 1.0, 1900: 1.0, 1910: 0.993, 1920: 0.994, 1930: 1.0, 1940: 1.0, 1950: 1.0, 1960: 1.0, 1970: 1.0, 1980: 1.0, 1990: 0.062, 2010: 0.005, 2020: 0.022}.",
+    "Compromised code B (90) share of days by decade: {1990: 0.434, 2000: 0.452}.",
+    "133 empty timestamps (code -1) and 0 values coded F (210, missing or incorrect) were dropped."
+  ],
+  "measurement_history": [
+    {
+      "date": "1885-1975",
+      "fact": "Data check: one value a day through 1975, mostly timestamped 09:00 (08:00 in 1898-1907 and 1969-73), which fits a once-daily manual staff reading; BoM does not say so.",
+      "source": "https://www.bom.gov.au/waterdata/services?service=kisters&type=queryServices&request=getTimeseriesValues&ts_id=145588010&format=json"
+    },
+    {
+      "date": "1976",
+      "fact": "Data check: several readings a day begin in 1976, which fits a continuous recorder; not stated by BoM.",
+      "source": "https://www.bom.gov.au/waterdata/services?service=kisters&type=queryServices&request=getTimeseriesValues&ts_id=145588010&format=json"
+    },
+    {
+      "date": "1885-1989",
+      "fact": "Nearly all values carry BoM quality code E, 'unknown'. BoM maps NSW 'daily or spot data' to E. Codes A and B first appear in 1990-91.",
+      "source": "https://www.bom.gov.au/water/hrs/qc_doc.shtml"
+    },
+    {
+      "date": "1919-1936; 1950-1961",
+      "fact": "Hume Dam, 16 km upstream of Albury, was built 1919-1936 and enlarged 1950-1961. Since then river levels at Albury mostly reflect dam releases.",
+      "source": "https://www.g-mwater.com.au/water-operations/storages/murray/humedam"
+    },
+    {
+      "date": "1973-1979",
+      "fact": "Dartmouth Dam, upstream of Hume, was built 1973-1979.",
+      "source": "https://www.g-mwater.com.au/water-operations/storages/murray/dartmouthdam"
+    },
+    {
+      "date": null,
+      "fact": "Not found: who read the gauge, gauge moves, gauge zero or datum changes, telemetry start.",
+      "source": null
+    }
+  ],
+  "public_notes": "Albury's record starts in 1885, but Australia's weather bureau rates the quality of almost every value before 1990 as unknown. Hume Dam, finished in 1936 just upstream, controls the river here, so levels before and after the dam measure different things."
+}

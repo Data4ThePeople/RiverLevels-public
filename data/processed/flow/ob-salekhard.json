@@ -1,0 +1,104 @@
+{
+ "id": "ob-salekhard",
+ "river": "ob",
+ "name": "Salekhard",
+ "station_name": "Ob at Salekhard",
+ "station_code": "11801",
+ "country": "Russia",
+ "lat": 66.63,
+ "lon": 66.6,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "m3/s",
+ "daily_stat": "mean",
+ "source": "Arctic Great Rivers Observatory (ArcticGRO), Discharge Dataset, Version 20260810; data from Roshydromet",
+ "source_url": "https://arcticgreatrivers.org/discharge/",
+ "license": "Free to use: \"ArcticGRO data are free to use by anyone for any purpose. We only ask that you credit ArcticGRO.\" (https://arcticgreatrivers.org/data/)",
+ "credit": "The Arctic Great Rivers Observatory. 2026. Discharge Dataset, Version 20260810. Data from Roshydromet.",
+ "flag_rule": "ArcticGRO flag A (certified) is measured, P is provisional, and a blank flag, which the metadata does not explain, is provisional.",
+ "notes": [
+  "Daily mean flow measured by Roshydromet at Salekhard (station 11801), published by ArcticGRO in Ob_Salekhard_Version_20260810.xlsx (ArcticGRO Discharge Dataset, Version 20260810).",
+  "Flow at these Russian gauges is computed from the water level through stage-discharge relations (rating curves), with winter correction coefficients that depend on water level and ice thickness; this is how the Arctic and Antarctic Research Institute (AARI) estimates the provisional values (ArcticGRO discharge metadata). The metadata does not describe the method for certified values.",
+  "Winter ice changes the level for a given flow, so winter flows are the least certain; provisional winter values are usually revised after the ice goes out in June or July (ArcticGRO discharge metadata).",
+  "Flags on the days kept: {'A': 25202, 'blank': 6150, 'P': 1440}. Years by flag: {'blank': '2000 to 2021', 'A': '1936 to 2008', 'P': '2022 to 2025'} (ArcticGRO).",
+  "\"A\" is certified by Roshydromet (measured here) and \"P\" provisional (ArcticGRO discharge metadata). A blank flag is not explained in the metadata, so we mark those days provisional.",
+  "Dropped 60 of 32852 rows with no value ({'NA': 60}), by year: {'2000': 60}; by month: {'01': 31, '02': 24, '03': 5} (ArcticGRO).",
+  "Values are published to about three significant figures (ArcticGRO)."
+ ],
+ "first_date": "1936-01-01",
+ "last_date": "2025-12-10",
+ "n_days": 32792,
+ "coverage_by_decade": [
+  {
+   "decade": 1930,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 0.9836,
+   "share_measured": 0.4999,
+   "share_estimated": 0.0,
+   "share_provisional": 0.4837
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 1.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 1.0,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 1.0
+  }
+ ]
+}

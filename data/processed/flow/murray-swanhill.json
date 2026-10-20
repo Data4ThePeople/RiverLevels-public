@@ -1,0 +1,75 @@
+{
+ "id": "murray-swanhill",
+ "river": "murray-darling",
+ "name": "Swan Hill",
+ "station_name": "MURRAY @ SWAN HILL",
+ "station_code": "409204",
+ "country": "Australia",
+ "lat": -35.32763381,
+ "lon": 143.5641798,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "m3/s",
+ "daily_stat": "mean",
+ "source": "Bureau of Meteorology, Water Data Online (KiWIS API)",
+ "source_url": "https://www.bom.gov.au/waterdata/services",
+ "license": "CC BY 4.0 (BoM Water Data Online copyright notice)",
+ "credit": "Bureau of Meteorology; data from VIC - Department of Energy, Environment and Climate Action",
+ "flag_rule": "BoM codes A and B are measured, C estimated, E measured before 1991 and provisional from 1991 on; F dropped.",
+ "notes": [
+  "BoM publishes discharge that the station owner computes from the water level through a rating curve, checked by field flow measurements (Bureau of Meteorology).",
+  "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 286638010, station 409204 MURRAY @ SWAN HILL; data owner VIC - Department of Energy, Environment and Climate Action (Bureau of Meteorology).",
+  "Daily mean of the merged quality-controlled record, computed by BoM over 24 hours; the API does not say how many readings fed each early-year mean (Bureau of Meteorology).",
+  "Quality codes (10 quality-A best available Quality; 90 quality-B compromised; 110 quality-C estimate; 140 quality-E unknown): counts {10: 17730, 90: 49, 110: 808, 140: 378}. A and B (compromised) are measured, C (estimate) estimated, and E (unknown quality) measured before 1991 and provisional from 1991 on (378 days), where it marks recent unchecked values (Bureau of Meteorology).",
+  "Share of days with code E (unknown quality) by decade: {2000: 0.008, 2010: 0.072, 2020: 0.034}; with code B (compromised): {2010: 0.001, 2020: 0.018} (Bureau of Meteorology).",
+  "Dropped: 2 empty timestamps, 0 values coded F (missing or incorrect) and 0 negative values (Bureau of Meteorology)."
+ ],
+ "first_date": "1974-11-14",
+ "last_date": "2026-10-16",
+ "n_days": 18965,
+ "coverage_by_decade": [
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 0.7257,
+   "share_estimated": 0.2743,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 0.9956,
+   "share_estimated": 0.0044,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 0.9907,
+   "share_estimated": 0.0093,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 0.9921,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0079
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.8902,
+   "share_estimated": 0.0375,
+   "share_provisional": 0.0723
+  },
+  {
+   "decade": 2020,
+   "share_days": 1.0,
+   "share_measured": 0.9226,
+   "share_estimated": 0.0431,
+   "share_provisional": 0.0343
+  }
+ ]
+}

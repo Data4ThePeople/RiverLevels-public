@@ -1,0 +1,130 @@
+{
+  "id": "paraguay-asuncion",
+  "river": "paraguay",
+  "name": "Asuncion",
+  "country": "Paraguay",
+  "lat": -25.27207,
+  "lon": -57.64869,
+  "kind": "river",
+  "source": "Direccion de Meteorologia e Hidrologia (DMH-DINAC), Paraguay, web table",
+  "source_url": "https://www.meteorologia.gov.py/nivel-rio/vermas_convencional.php?code=2000086218",
+  "station_code": "2000086218",
+  "unit": "m",
+  "datum": "m above the local gauge zero at the Port of Asuncion (zero elevation not published)",
+  "daily_stat": "single reading",
+  "first_date": "1904-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 44814,
+  "coverage_by_decade": [
+    {
+      "decade": 1900,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 0.9989,
+      "share_measured": 0.9989,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9921,
+      "share_measured": 0.9921,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9996,
+      "share_measured": 0.9996,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    }
+  ],
+  "license": "Paraguay DMH-DINAC public web page; no license stated. Credit Direccion de Meteorologia e Hidrologia (DMH-DINAC). Clear reuse terms before publishing.",
+  "notes": [
+    "Scraped from 2989 cached HTML pages of the DMH table (44815 distinct rows, 1904-01-01 to 2026-10-15).",
+    "DMH publishes one 'nivel del dia' per day with no quality flag, so every value is marked measured.",
+    "No non-numeric or fill values found."
+  ],
+  "measurement_history": [
+    {
+      "date": "1904",
+      "fact": "News report citing Paraguay's hydrology office: Asuncion records go back to 1904; in September 2024 the level fell to -1.02 m, below the gauge zero.",
+      "source": "https://www.abc.com.py/nacionales/2024/09/13/el-rio-paraguay-en-asuncion-registra-su-nivel-mas-bajo-en-120-anos/"
+    },
+    {
+      "date": null,
+      "fact": "Not found: gauge zero elevation, who read the gauge in early years and how often, gauge moves, recorder or telemetry start, any accuracy statement.",
+      "source": null
+    }
+  ],
+  "public_notes": "Paraguay's weather service posts this record as a web table with no review flags and no published gauge zero. Values below zero are real low-water readings."
+}

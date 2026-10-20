@@ -1,0 +1,109 @@
+{
+ "id": "danube-pfelling",
+ "river": "danube",
+ "name": "Pfelling",
+ "station_name": "Pfelling",
+ "station_code": "10078000",
+ "country": "Germany",
+ "lat": 48.879766,
+ "lon": 12.747221,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "m3/s",
+ "daily_stat": "mean",
+ "source": "Bayerisches Landesamt für Umwelt, Gewässerkundlicher Dienst Bayern (GKD), download center, Abfluss Tagesmittelwerte",
+ "source_url": "https://www.gkd.bayern.de/de/downloadcenter/enqueue_download",
+ "license": "CC BY 4.0",
+ "credit": "Datenquelle: Bayerisches Landesamt für Umwelt, www.lfu.bayern.de",
+ "flag_rule": "GKD Pruefstatus 'Geprueft' (checked) is measured and 'Rohdaten' (raw) is provisional. An empty Pruefstatus is provisional. GKD has no estimated flag.",
+ "notes": [
+  "Discharge at Pfelling is computed by GKD from the water level through a rating curve (Abflusskurve) that GKD updates from field measurements; ratings are revised as the riverbed changes, and the highest flood values lie beyond measured flows (GKD Bayern).",
+  "Pruefstatus counts in the file: {'Geprueft': 36586, 'Rohdaten': 288, '(empty)': 1}; raw (provisional) days run 2026-01-01 to 2026-10-17 (GKD Bayern). Days with an empty Pruefstatus, marked provisional because GKD has not marked them checked: 1 (2026-07-30).",
+  "Rows in the file: 36875. Rows with an empty daily mean dropped: 0. Negative values dropped: 0. The current, unfinished day is published in its own file and left out (GKD Bayern).",
+  "The file also gives these daily columns, not used here: Maximum, Minimum (GKD Bayern).",
+  "Coordinates converted from ETRS89 / UTM 32N (774714 E, 5420862 N) in the file header; database query time printed in the file: 01.10.2026 00:00 (GKD Bayern)."
+ ],
+ "first_date": "1925-11-01",
+ "last_date": "2026-10-16",
+ "n_days": 36874,
+ "coverage_by_decade": [
+  {
+   "decade": 1920,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1930,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 0.9996,
+   "share_measured": 0.8835,
+   "share_estimated": 0.0,
+   "share_provisional": 0.1161
+  }
+ ]
+}

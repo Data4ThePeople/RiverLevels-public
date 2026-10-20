@@ -1,0 +1,92 @@
+{
+  "id": "elbe-wittenberge",
+  "river": "elbe",
+  "name": "Wittenberge",
+  "country": "Germany",
+  "lat": 52.985529,
+  "lon": 11.759443,
+  "kind": "river",
+  "source": "BfG hyd1d + PEGELONLINE (WSV)",
+  "source_url": "https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS ; https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/503050/W/measurements.json",
+  "station_code": "PEGELONLINE 503050 (uuid cbf3cd49-91bd-49cc-8926-ccc6c0e7eca4); hyd1d WITTENBERGE",
+  "unit": "cm",
+  "datum": "cm above gauge zero (16.707 m NHN, DHHN2016)",
+  "daily_stat": "mean",
+  "first_date": "1960-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 24359,
+  "coverage_by_decade": [
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9859,
+      "share_measured": 0.8842,
+      "share_estimated": 0.0,
+      "share_provisional": 0.1017
+    }
+  ],
+  "license": "PEGELONLINE part: DL-DE->Zero-2.0 (WSV). hyd1d part: no data license stated by the BfG (see research/datasets/europe.md); clear before republishing.",
+  "notes": [
+    "1960-01-01 to 2026-08-10: BfG hyd1d daily mean W (station WITTENBERGE), file https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS (Last-Modified Tue, 11 Aug 2026 04:43:04 GMT).",
+    "hyd1d values through 2025 are marked measured (validated by the WSV/BfG); values from 2026 are means of PEGELONLINE raw data, not validated, and marked provisional (df.gauging_data help page). hyd1d has no per-value flag.",
+    "Missing days inside the hyd1d span: 0; empty values dropped: 0.",
+    "After hyd1d: PEGELONLINE 15-minute raw W (WASSERSTAND ROHDATEN), daily mean over MEZ days (UTC+1), rounded to whole cm as hyd1d does, only days with at least 90 of 96 values; all marked provisional. 30 days from 2 saved pull(s): 503050_W_20261015T1115Z.json, 503050_W_20261015T1132Z.json.",
+    "Gap left unfilled between the end of hyd1d (2026-08-10) and the first PEGELONLINE day (2026-09-15): 35 days.",
+    "Gauge zero from PEGELONLINE station metadata: 16.707 m. ü. NHN (DHHN2016), valid from 2019-11-01. hyd1d levels are relative to the gauge zero in force at the time. The 2019-11-01 date, shared by most WSV gauges, marks the switch from DHHN92 to DHHN2016, not a physical change, and does not change W.",
+    "Coordinates and river km from PEGELONLINE station metadata (km 453.98, agency STANDORT MAGDEBURG)."
+  ],
+  "measurement_history": [
+    {
+      "date": "not found",
+      "fact": "Start of readings, early reading method and gauge-zero history: not found. The hyd1d record used here starts 1960-01-01.",
+      "source": "https://hyd1d.bafg.de/reference/df.gauging_data.html"
+    },
+    {
+      "date": "1960-2026",
+      "fact": "Neighbor comparison (hyd1d_stepscan.py) found no gauge-zero step.",
+      "source": "scripts/fetch/hyd1d_stepscan.py"
+    }
+  ],
+  "public_notes": "The level is measured against a fixed mark, not the riverbed, so it is not the water depth. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
+}

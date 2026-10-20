@@ -1,0 +1,727 @@
+{
+ "mississippi-stlouis": {
+  "measurement_history": [
+   {
+    "date": "1861-01",
+    "fact": "Mississippi River Commission daily stage record at St. Louis begins in January 1861; NWS reports carry it from January 1890.",
+    "source_url": "https://pubs.usgs.gov/wdr/2005/wdr-il-05/data/disc2004/07010000.htm"
+   },
+   {
+    "date": "1861",
+    "fact": "Daily stage was read by hand from a staff gauge at the foot of Market Street, river mile 179.6.",
+    "source_url": "https://pubs.usgs.gov/sir/2009/5232/pdf/sir2009-5232.pdf"
+   },
+   {
+    "date": "1933-03",
+    "fact": "USGS began running the gauge as a continuous stage and discharge station in March 1933, with a gauge house on the Eads Bridge.",
+    "source_url": "https://pubs.usgs.gov/sir/2009/5232/pdf/sir2009-5232.pdf"
+   },
+   {
+    "date": "1933-03",
+    "fact": "Trade press reports the Corps took over gauge reading from the St. Louis harbormaster in March 1933 (not a publisher source).",
+    "source_url": "https://waterwaysjournal.net/?p=25941"
+   },
+   {
+    "date": "1934-05-05",
+    "fact": "Before May 5, 1934, readings came from a nonrecording gauge 0.4 mile downstream; then a recorder 20 ft downstream until Dec. 9, 1952, at the present datum.",
+    "source_url": "https://pubs.usgs.gov/wdr/2005/wdr-il-05/data/disc2004/07010000.htm"
+   },
+   {
+    "date": "1933",
+    "fact": "USGS says the Market Street staff gauge and the Eads Bridge gauge share the same datum and readings transfer between them.",
+    "source_url": "https://pubs.usgs.gov/sir/2009/5232/pdf/sir2009-5232.pdf"
+   },
+   {
+    "date": "1968",
+    "fact": "Trade press: welded hash marks were added to the Market Street gauge after it was found to be off by a few tenths of a foot.",
+    "source_url": "https://waterwaysjournal.net/?p=25941"
+   },
+   {
+    "date": "1990s",
+    "fact": "Trade press: an electronic platform sending readings by satellite every 15 minutes began replacing daily morning hand readings in the 1990s.",
+    "source_url": "https://waterwaysjournal.net/?p=25941"
+   },
+   {
+    "date": "not found",
+    "fact": "Official hour of the historical daily reading: not found in USGS reports, the USGS 2009 study, or USACE CWMS metadata.",
+    "source_url": "https://pubs.usgs.gov/sir/2009/5232/pdf/sir2009-5232.pdf"
+   },
+   {
+    "date": "2004",
+    "fact": "USGS 2004 report lists gauge zero as 379.94 ft above NGVD29.",
+    "source_url": "https://pubs.usgs.gov/wdr/2005/wdr-il-05/data/disc2004/07010000.htm"
+   },
+   {
+    "date": "not found",
+    "fact": "NWS and USACE list gauge zero as 379.58 ft NAVD88; a document explaining the change from 379.94 NGVD29 was not found.",
+    "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/St%20Louis-Mississippi?office=MVS"
+   },
+   {
+    "date": "1861-2008",
+    "fact": "USGS found stage for a given low flow has dropped over time, likely from channel dikes and less sediment; levees raised high-flow stages.",
+    "source_url": "https://pubs.usgs.gov/sir/2009/5232/pdf/sir2009-5232.pdf"
+   },
+   {
+    "date": "1844-06-27",
+    "fact": "NWS flags three listed crests (1844, 1943, 1951) as measured on an older datum.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/EADM7"
+   }
+  ],
+  "public_notes": "Daily readings go back to 1861, first read by hand from a staff gauge and since 1933 also by a recorder at Eads Bridge, both set to the same gauge zero (the fixed point the river is measured from). USGS found that the same low flow now reads lower on the gauge than it did decades ago, so a low reading today is not directly comparable to one from the 1800s."
+ },
+ "mississippi-memphis": {
+  "measurement_history": [
+   {
+    "date": "1871-11",
+    "fact": "Mississippi River Commission stage record at the Beale Street gauge begins in November 1871.",
+    "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+   },
+   {
+    "date": "1885",
+    "fact": "USACE Rivergages daily history for the Weather Bureau gauge starts in 1885; its daily value is the 8:00 a.m. Central reading.",
+    "source_url": "https://rivergages.mvr.usace.army.mil/WaterControl/stationinfo2.cfm?sid=MS126&dt=S"
+   },
+   {
+    "date": "1890-12",
+    "fact": "Weather Bureau published Beale Street gauge readings from December 1890 to August 1932.",
+    "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+   },
+   {
+    "date": "1932-09",
+    "fact": "From September 1932 to December 1934, readings came from a staff gauge 1,000 ft downstream of the present site.",
+    "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+   },
+   {
+    "date": "1934-12-22",
+    "fact": "A water-stage recorder began at the present site, 50 ft below Harahan Bridge, about 1.3 miles below Beale Street; earlier gauge was at the same datum.",
+    "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+   },
+   {
+    "date": "1950",
+    "fact": "USGS said to add 0.3 ft per 10 ft of stage at the present site to match old Beale Street readings.",
+    "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+   },
+   {
+    "date": "1950",
+    "fact": "USGS listed gauge zero as 183.91 ft (1929 datum), 184.21 ft mean Gulf level (1912), and 190.86 ft Memphis datum (1881).",
+    "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+   },
+   {
+    "date": "not found",
+    "fact": "USGS and USACE now list gauge zero as 184.03 ft NAVD88; date of that update not found.",
+    "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-07032000/"
+   },
+   {
+    "date": "not found",
+    "fact": "USGS says the gauge height is furnished by the USACE Memphis District; USGS uses it to publish discharge.",
+    "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-07032000/"
+   },
+   {
+    "date": "2023-10-17",
+    "fact": "NWS lists the record low as -12.06 ft on Oct. 17, 2023, after -10.81 ft (2022) and -10.70 ft (1988).",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/MEMT1"
+   },
+   {
+    "date": "not found",
+    "fact": "Riverbed lowering at Memphis: not found in USGS, NWS, or USACE pages checked (USGS site page, NWS gauge data, Rivergages).",
+    "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-07032000/"
+   }
+  ],
+  "public_notes": "Readings began at the Beale Street gauge in 1871 and moved about 1.3 miles downstream in the 1930s, where high-water readings run slightly lower. Gauge zero is a fixed reference point, not the river bottom, so readings below zero are normal in low water; the publishers checked here do not say how much riverbed change has added to recent record lows."
+ },
+ "mississippi-helena": {
+  "measurement_history": [
+   {
+    "date": "1871",
+    "fact": "USACE Rivergages daily history at Helena starts in 1871; its daily value is the 8:00 a.m. Central reading.",
+    "source_url": "https://rivergages.mvr.usace.army.mil/WaterControl/stationinfo2.cfm?sid=MS133&dt=S"
+   },
+   {
+    "date": "1872-04-26",
+    "fact": "Earliest crest in the NWS historic crest list for Helena is April 26, 1872.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/HEEA4"
+   },
+   {
+    "date": "1888-01-05",
+    "fact": "NWS low-water list for Helena begins in 1888; the lowest listed is -5.14 ft on Oct. 18, 2023.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/HEEA4"
+   },
+   {
+    "date": "2024-07-30",
+    "fact": "USACE updated gauge zero from 141.70 ft NGVD29 to 141.51 ft NAVD88 on July 30, 2024; NWS still lists 141.70 NGVD29.",
+    "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/Helena?office=MVK"
+   },
+   {
+    "date": "not found",
+    "fact": "How early readings were taken, recorder or telemetry start, and gauge moves: not found in Rivergages, NWS, CWMS, or USGS Water-Supply Paper 1311.",
+    "source_url": "https://rivergages.mvr.usace.army.mil/WaterControl/stationinfo2.cfm?sid=MS133&dt=S"
+   }
+  ],
+  "public_notes": "USACE has daily readings at Helena from 1871, using the 8 a.m. reading for each day. The publishers checked here do not describe how the early readings were taken or whether the gauge moved, so early years carry more unknowns."
+ },
+ "mississippi-vicksburg": {
+  "measurement_history": [
+   {
+    "date": "1871-12-10",
+    "fact": "Mississippi River Commission staff gauge at the mouth of the Yazoo diversion canal, 1.5 miles above the bridge, used Dec. 1871 to Sept. 1929.",
+    "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+   },
+   {
+    "date": "1873-05-18",
+    "fact": "Weather Bureau staff gauge half a mile upstream of the bridge site, used May 1873 to Oct. 1919.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+   },
+   {
+    "date": "1919-10-30",
+    "fact": "Weather Bureau gauge moved to the mouth of the Yazoo canal, then to an inclined gauge on the canal from Dec. 1, 1922 to Aug. 31, 1934.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+   },
+   {
+    "date": "1934-09-01",
+    "fact": "Weather Bureau readings moved to a wire-weight gauge at the Vicksburg bridge; nonrecording until Dec. 31, 1962.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+   },
+   {
+    "date": "1963-01-01",
+    "fact": "Water-stage recorder on the left bank near the bridge, 1963 to 1967.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+   },
+   {
+    "date": "1968-01-01",
+    "fact": "Gauge moved 1.1 miles upstream for 1968 to 1976.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+   },
+   {
+    "date": "1977-01-01",
+    "fact": "Gauge moved to the left bank at the downstream side of the Interstate 20 bridge, its present site.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+   },
+   {
+    "date": "not found",
+    "fact": "USGS: all these gauges use the same datum, but readings differ because the water surface slopes between them.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+   },
+   {
+    "date": "1927-05-04",
+    "fact": "The 1927 crest read 58.4 ft on the Corps canal gauge and about 56.0 ft on the USGS bridge gauge.",
+    "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+   },
+   {
+    "date": "1950",
+    "fact": "Gauge zero 46.225 ft above 1929 datum (1941 adjustment, Corps bench mark), or 46.16 ft above mean Gulf level.",
+    "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+   },
+   {
+    "date": "not found",
+    "fact": "USACE lists gauge zero as 46.23 ft NGVD29; NWS lists no datum for this gauge.",
+    "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/Vicksburg?office=MVK"
+   }
+  ],
+  "public_notes": "The Vicksburg record joins readings from at least six gauge locations, all set to the same gauge zero but on a sloping river, so the same water can read differently from one site to the next. In 1927 the canal gauge read about 2 feet higher than the bridge gauge; the Army Corps file does not say which gauge it used in each year."
+ },
+ "ohio-louisville": {
+  "measurement_history": [
+   {
+    "date": "1830-12-22",
+    "fact": "USACE: the Louisville and Portland Canal opened when the first boat passed through on Dec. 22, 1830.",
+    "source_url": "https://www.lrl.usace.army.mil/Missions/Civil-Works/Navigation/History/"
+   },
+   {
+    "date": "1832-02-21",
+    "fact": "Earliest crest in the NWS historic crest list for the McAlpine lower gauge is Feb. 21, 1832.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/MLPK2"
+   },
+   {
+    "date": "1871",
+    "fact": "USGS: gauge-height records near Louisville since 1871 are published in NWS reports.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+   },
+   {
+    "date": "1914",
+    "fact": "USACE: the Louisville project became Locks and Dam 41 when lock numbering began around 1914.",
+    "source_url": "https://www.lrl.usace.army.mil/Missions/Civil-Works/Navigation/History/"
+   },
+   {
+    "date": "1939-10-01",
+    "fact": "USGS: before Oct. 1939 and in 1943 to 1946, various combinations of gauges near Louisville were used.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+   },
+   {
+    "date": "1946-10-01",
+    "fact": "USGS used a nonrecording gauge 0.3 mile upstream at the same datum from Oct. 1946 to Sept. 1961.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+   },
+   {
+    "date": "1960-05-24",
+    "fact": "USACE renamed Locks and Dam 41 as McAlpine Locks and Dam; in the 1960s the canal was widened and the present dam built.",
+    "source_url": "https://www.lrl.usace.army.mil/Missions/Civil-Works/Navigation/History/"
+   },
+   {
+    "date": "not found",
+    "fact": "Present gauge: water-stage recorder at the downstream end of the lock guide wall, in the lower pool of McAlpine Locks.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+   },
+   {
+    "date": "not found",
+    "fact": "Gauge zero 373.18 ft NGVD29, equal to 374.00 ft on the Ohio River datum.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+   },
+   {
+    "date": "not found",
+    "fact": "Date the present recorder or telemetry began: not found in USGS NWC page or NWS gauge data.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S03294500.html"
+   }
+  ],
+  "public_notes": "This gauge sits just below McAlpine Dam, which replaced older dam works in the 1960s, so the river here has been managed by dams and a canal for most of the record. USGS says several different gauges near Louisville were combined in the early years, so readings before the 1940s are less comparable."
+ },
+ "ohio-cairo": {
+  "measurement_history": [
+   {
+    "date": "not found",
+    "fact": "A record start in 1858 at Cairo: not found in NWS, USACE CWMS, or USGS pages checked.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
+   },
+   {
+    "date": "1871-12-24",
+    "fact": "NWS low-water list for Cairo begins Dec. 24, 1871, with -1.0 ft, still the lowest listed.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
+   },
+   {
+    "date": "1882-02-25",
+    "fact": "Earliest crest in the NWS historic crest list for Cairo is Feb. 25, 1882.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
+   },
+   {
+    "date": "not found",
+    "fact": "NWS: the Cairo gauge is on the Ohio River but strongly affected by backwater from the Mississippi.",
+    "source_url": "https://www.weather.gov/pah/recordrivers"
+   },
+   {
+    "date": "1929",
+    "fact": "USACE: Ohio River Locks and Dams 52 and 53, upstream of Cairo, were completed in 1929.",
+    "source_url": "https://www.dvidshub.net/news/printable/291004"
+   },
+   {
+    "date": "2018-09-04",
+    "fact": "USACE: Olmsted Locks and Dam opened Sept. 4, 2018; Lock and Dam 53 ended operations Aug. 15, 2018.",
+    "source_url": "https://www.lrd.usace.army.mil/Media/News/Article/3685126/louisville-district-announces-official-closure-of-lock-and-dam-53/"
+   },
+   {
+    "date": "2024-01-16",
+    "fact": "USACE announced official closure of the Lock and Dam 53 project.",
+    "source_url": "https://www.lrd.usace.army.mil/Media/News/Article/3685126/louisville-district-announces-official-closure-of-lock-and-dam-53/"
+   },
+   {
+    "date": "not found",
+    "fact": "NWS lists gauge zero as 270.03 ft NAVD88 and 270.47 ft NGVD29.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
+   },
+   {
+    "date": "not found",
+    "fact": "How early readings were taken, recorder start, and gauge moves: not found in NWS, CWMS, or USGS pages checked.",
+    "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/Cairo-Ohio?office=MVS"
+   }
+  ],
+  "public_notes": "The Cairo gauge is on the Ohio River just above where it meets the Mississippi, so the Mississippi's level backs up and raises readings here. Publishers checked here do not describe how early readings were taken or whether the gauge moved."
+ },
+ "missouri-hermann": {
+  "measurement_history": [
+   {
+    "date": "1873",
+    "fact": "Missouri River Commission gauge-height records 1873 to 1899 were taken at a site 480 ft downstream.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+   },
+   {
+    "date": "1900",
+    "fact": "Gauge-height records since 1900 are in NWS reports.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+   },
+   {
+    "date": "1930-09-26",
+    "fact": "Before Sept. 26, 1930, a nonrecording gauge 480 ft downstream at a datum 0.07 ft lower was used.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+   },
+   {
+    "date": "1932-03-28",
+    "fact": "A water-stage recorder ran Mar. 28, 1932 to June 12, 1945; nonrecording gauge in 1945 to 1946 and in 1978.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+   },
+   {
+    "date": "not found",
+    "fact": "Gauge zero 481.56 ft above sea level (USGS); NWS lists 481.5 ft NAVD88.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+   },
+   {
+    "date": "1937",
+    "fact": "USACE: Fort Peck, first of six Missouri River mainstem dams, closed in 1937; Garrison in 1953 and Gavins Point in 1955.",
+    "source_url": "https://www.nwd-mr.usace.army.mil/rcc/reports/pdfs/System_Description_Final_Approved_April2020.pdf"
+   },
+   {
+    "date": "1877",
+    "fact": "NWS flags 26 listed crests from 1877 to 1967 as measured on an older datum.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/HRNM7"
+   },
+   {
+    "date": "2022-12-31",
+    "fact": "NWS lists the record low as -0.98 ft on Dec. 31, 2022, just below -0.9 ft in December 1878.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/HRNM7"
+   },
+   {
+    "date": "not found",
+    "fact": "Telemetry start date and daily reading hour: not found in USGS NWC page or NWS gauge data.",
+    "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S06934500.html"
+   }
+  ],
+  "public_notes": "Readings at Hermann go back to 1873, first at a spot 480 feet downstream, and since the 1930s mostly from an automatic recorder. Six large dams upstream, built from 1937 to the 1960s, now control much of the river's flow, so low and high readings before and after them reflect different conditions."
+ },
+ "missouri-bismarck": {
+  "measurement_history": [
+   {
+    "date": "1880s",
+    "fact": "Missouri River Commission gauge heights near Bismarck exist for part of the 1880s and May 1886 to December 1899 (exact first dates unclear in scan).",
+    "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+   },
+   {
+    "date": "1881-03-31",
+    "fact": "Highest known stage, 31.6 ft at present site and datum, Mar. 31, 1881, from an ice jam.",
+    "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+   },
+   {
+    "date": "1891-06",
+    "fact": "Weather Bureau gauge-height records near Bismarck begin in June 1891.",
+    "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+   },
+   {
+    "date": "1927",
+    "fact": "USGS says the Bismarck gaging station was established in 1927.",
+    "source_url": "https://www.usgs.gov/centers/dakota-water-science-center/science/missouri-river-stream-flow-gaging-station"
+   },
+   {
+    "date": "1928-10-17",
+    "fact": "Before Oct. 17, 1928, a chain gauge 2,100 ft upstream at a datum 4.24 ft higher; then a recorder at the present site.",
+    "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+   },
+   {
+    "date": "1934-10-01",
+    "fact": "Recorder datum lowered 4.24 ft to the present datum on Oct. 1, 1934.",
+    "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+   },
+   {
+    "date": "1936-04-10",
+    "fact": "Apr. 1936 to Sept. 1937, mostly a wire-weight gauge 2,000 ft downstream at a datum 0.47 ft lower.",
+    "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+   },
+   {
+    "date": "1953-11",
+    "fact": "USGS: flow regulated by Lake Sakakawea (Garrison Dam), 75 miles upstream, since November 1953.",
+    "source_url": "https://pubs.usgs.gov/wdr/2004/wdr-nd-04-1/htdocs/Output/06342500.2004.sw.html"
+   },
+   {
+    "date": "1952-04-06",
+    "fact": "Highest stage before Garrison Dam was 27.90 ft; highest since was 14.58 ft in Dec. 1979, from ice backwater.",
+    "source_url": "https://pubs.usgs.gov/wdr/2004/wdr-nd-04-1/htdocs/Output/06342500.2004.sw.html"
+   },
+   {
+    "date": "2004",
+    "fact": "Gauge zero 1,618.28 ft above NGVD29 (revised); 1950 report gave 1,618.38 ft. NWS now lists 1,619.46 ft NAVD88.",
+    "source_url": "https://pubs.usgs.gov/wdr/2004/wdr-nd-04-1/htdocs/Output/06342500.2004.sw.html"
+   },
+   {
+    "date": "2023-02-07",
+    "fact": "USACE sets Garrison releases low before the river freezes at Bismarck, then raises them, to manage ice.",
+    "source_url": "https://www.dvidshub.net/news/printable/438004"
+   },
+   {
+    "date": "not found",
+    "fact": "Lake Oahe backwater effect on the Bismarck gauge: not found in USGS reports or NWS gauge data checked.",
+    "source_url": "https://pubs.usgs.gov/wdr/2004/wdr-nd-04-1/htdocs/Output/06342500.2004.sw.html"
+   }
+  ],
+  "public_notes": "Before October 1, 1934, the readings in this file were measured from a gauge zero 4.24 feet higher than today's, and USGS did not adjust them, so early low readings look about 4 feet lower than they would today. Since Garrison Dam began holding back water in 1953, the river here has been lower and steadier, and winter ice can push readings up."
+ },
+ "ohio-cincinnati": {
+  "measurement_history": [
+   {
+    "date": "1858-06-01",
+    "fact": "NWS: continuous record since June 1, 1858; earlier flood heights are not tied to any specific gauge.",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "1858-06-01",
+    "fact": "Gauge at the Old Water Works, gauge zero 430.06 ft on the Corps 1912 datum, until Oct. 7, 1908.",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "1874-11-01",
+    "fact": "Records Nov. 1874 to 1889 were kept by the Army Signal Corps; Weather Bureau and NWS daily stages run to 2000.",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "1908-10-08",
+    "fact": "Gauge moved to the foot of Broadway, gauge zero 429.763 ft (1912 Corps datum).",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "1935-01-01",
+    "fact": "Gauge moved to the West End Power Plant, gauge zero 428.80 ft (1912 Corps datum).",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "1947-01-01",
+    "fact": "Gauge moved to the Suspension Bridge, gauge zero 429.613 ft (1912 Corps datum).",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "1963-01-01",
+    "fact": "Markland Dam began operating; normal pool at Cincinnati was raised to 25.4 ft.",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "2000",
+    "fact": "USGS records are the source from 2000 onward.",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "2009",
+    "fact": "Gauge zero restated as 428.88 ft NGVD29, at the Suspension Bridge.",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "2021",
+    "fact": "Gauge zero restated as 428.05 ft NAVD88.",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "1858-06-16",
+    "fact": "NWS flags 102 listed crests from 1858 to 1946 as measured on an older datum.",
+    "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CCNO1"
+   },
+   {
+    "date": "2007-02",
+    "fact": "NWS notes the gauge was frozen in February 2007 and the exact stage is unknown.",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   },
+   {
+    "date": "not found",
+    "fact": "Recorder or telemetry start dates and reading hour: not found on the NWS Cincinnati history page or NWS gauge data.",
+    "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+   }
+  ],
+  "public_notes": "This file starts in 1987, when the U.S. Geological Survey record begins; the older Cincinnati record back to 1858 is kept by the National Weather Service and is not included. Since Markland Dam began operating in 1963, the river at Cincinnati is held at about 25 feet or higher, so very low readings cannot happen here."
+ },
+ "colorado-lake-powell": {
+  "measurement_history": [
+   {
+    "date": "1956-10-15",
+    "fact": "Glen Canyon Dam construction began with the first blast on Oct. 15, 1956.",
+    "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
+   },
+   {
+    "date": "1963-03-13",
+    "fact": "Lake Powell began storing water when the diversion tunnels were closed.",
+    "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
+   },
+   {
+    "date": "1963-12-28",
+    "fact": "Reclamation RISE daily elevation record begins Dec. 28, 1963; values are daily instantaneous readings and provisional unless noted.",
+    "source_url": "https://data.usbr.gov/rise/api/catalog-item/508"
+   },
+   {
+    "date": "1980-06-22",
+    "fact": "Lake Powell first reached full pool, 3,700 ft, about 17 years after filling began.",
+    "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
+   },
+   {
+    "date": "not found",
+    "fact": "USGS lists Reclamation elevations for Lake Powell as NGVD29; the NAVD88 value is about 2.91 ft higher.",
+    "source_url": "https://grandcanyon.usgs.gov/server/rest/services/LakePowell/LakePowellTierElevations/MapServer/1"
+   },
+   {
+    "date": "not found",
+    "fact": "How Reclamation measures the elevation (gauge type, location): not found in RISE metadata or Reclamation Glen Canyon page.",
+    "source_url": "https://data.usbr.gov/rise/api/catalog-item/508"
+   }
+  ],
+  "public_notes": "Lake Powell did not exist before 1963 and took until 1980 to fill, so early readings show a reservoir still filling, not a normal year. Reclamation reports elevation in feet above sea level on an older national reference (NGVD29), which reads about 3 feet lower than the newer one (NAVD88)."
+ },
+ "colorado-lake-mead": {
+  "measurement_history": [
+   {
+    "date": "1935-02-01",
+    "fact": "Hoover Dam began storing water on Feb. 1, 1935, when a gate closed the Arizona diversion tunnel.",
+    "source_url": "https://www.usbr.gov/history/hoover.html"
+   },
+   {
+    "date": "1935-02-02",
+    "fact": "Reclamation RISE daily elevation record begins Feb. 2, 1935, from the Lower Colorado Hydrologic Database; provisional unless noted.",
+    "source_url": "https://data.usbr.gov/rise/api/catalog-item/6123"
+   },
+   {
+    "date": "1941-07",
+    "fact": "The lake first rose to 1,220.4 ft in July 1941; spillway gates first passed water Aug. 6, 1941.",
+    "source_url": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
+   },
+   {
+    "date": "1935",
+    "fact": "Reclamation: Lake Mead elevations are based on the dam's 1935 construction survey datum; add 0.55 ft to convert to NGVD29.",
+    "source_url": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
+   },
+   {
+    "date": "2001",
+    "fact": "Reclamation: the reservoir gauge is tied to the Hoover Dam powerhouse datum.",
+    "source_url": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
+   },
+   {
+    "date": "2009",
+    "fact": "Reclamation and NPS note NAVD88 differs from the Hoover Dam powerhouse datum by about 2 ft.",
+    "source_url": "https://databasin.org/datasets/7e8c7d93a10445cf96d410951c32b9d4"
+   },
+   {
+    "date": "not found",
+    "fact": "Reclamation's data catalog lists the Hoover Dam location's vertical datum as \"USGS 1912\"; how this relates to the 1935 datum not found.",
+    "source_url": "https://data.usbr.gov/catalog/4574"
+   },
+   {
+    "date": "1963-03",
+    "fact": "Glen Canyon Dam began storing water upstream, changing inflow to Lake Mead.",
+    "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
+   },
+   {
+    "date": "not found",
+    "fact": "Gauge type, reading hour, and recorder history: not found in RISE metadata or the 2001 sedimentation survey.",
+    "source_url": "https://data.usbr.gov/rise/api/catalog-item/6123"
+   }
+  ],
+  "public_notes": "Lake Mead began filling in 1935 and first came close to full in 1941, so the earliest readings show a lake still filling. Reclamation measures elevation against the dam's own 1935 survey, which sits about half a foot from the 1929 national reference and about 2 feet from the current one."
+ },
+ "fraser-shelley": {
+  "measurement_history": [
+   {
+    "date": "1950",
+    "fact": "Water Survey of Canada flow record starts 1950: manual in 1950, recorder from 1951.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "2011",
+    "fact": "HYDAT has daily water levels for Shelley only from 2011 onward; earlier years publish flow only.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "not found",
+    "fact": "Levels use an assumed (local) datum; add 566.827 m for Geodetic Survey of Canada datum or 567.322 m for CGVD2013.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "not found",
+    "fact": "Station listed as not regulated, with a 32,430 square km drainage area.",
+    "source_url": "https://wateroffice.ec.gc.ca/report/historical_e.html?stn=08KB001"
+   },
+   {
+    "date": "2024-01-18",
+    "fact": "Water level not available Jan. 18 to 23, 2024, because of equipment malfunction.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "not found",
+    "fact": "Gauge relocations or datum changes: not found in HYDAT tables or Water Survey of Canada station metadata.",
+    "source_url": "https://api.weather.gc.ca/collections/hydrometric-stations/items?STATION_NUMBER=08KB001"
+   }
+  ],
+  "public_notes": "Water Survey of Canada publishes daily water levels at Shelley only from 2011; the longer record back to 1950 is river flow, not level. Levels are measured from a local gauge zero (an assumed reference), not from sea level."
+ },
+ "fraser-hope": {
+  "measurement_history": [
+   {
+    "date": "1912-03",
+    "fact": "Water level and flow records begin in 1912 and are near continuous since.",
+    "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+   },
+   {
+    "date": "1912",
+    "fact": "HYDAT lists flow collection as manual from 1912 to 1949 and by recorder from 1950.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "1940",
+    "fact": "HYDAT has daily levels for only 92 days in 1940.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "1994",
+    "fact": "HYDAT has no daily water levels for 1994 or 1995.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "not found",
+    "fact": "Levels use an assumed datum; add 27.926 m for Geodetic Survey of Canada datum or 28.180 m for CGVD2013.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "1934",
+    "fact": "The 1894 flood mark at Hope was set in 1934 from anecdotes, about 40 years after the flood.",
+    "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+   },
+   {
+    "date": "1912-2008",
+    "fact": "Since 1912, 35 rating curves have been used; the channel built up about 1920 to 1940s, cut down 1950s to 1980s, then built up.",
+    "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+   },
+   {
+    "date": "not found",
+    "fact": "Flow measurements were once made from the bridge with a Price meter; now by boat with an acoustic profiler.",
+    "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+   },
+   {
+    "date": "not found",
+    "fact": "Station is listed as regulated; drainage area includes 14,000 square km behind Kenney Dam.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   }
+  ],
+  "public_notes": "Hope has daily water levels from 1912, with 1994 and 1995 missing and only part of 1940. Levels are measured from a local gauge zero, and the riverbed here has risen and fallen over the decades, so the same water level does not always mean the same amount of water."
+ },
+ "fraser-mission": {
+  "measurement_history": [
+   {
+    "date": "1876",
+    "fact": "Yearly maximum levels reported for 1876, 1882, and every year since 1894; 1876 to 1932 data are not continuous.",
+    "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+   },
+   {
+    "date": "1876",
+    "fact": "The Department of Public Works collected levels from 1876 to 1932.",
+    "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+   },
+   {
+    "date": "1876",
+    "fact": "HYDAT lists level collection as manual and seasonal 1876 to 1935, then by continuous recorder from 1936.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "1969",
+    "fact": "HYDAT has daily water levels only from 1969; none for 1993 to 1996.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "not found",
+    "fact": "Levels are tidally affected at all flows; discharge is not published below 3.0 m gauge height because of tides.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   },
+   {
+    "date": "1987",
+    "fact": "To convert to Geodetic Survey of Canada datum, add 0.073 m before 1987 and 0.043 m after.",
+    "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+   },
+   {
+    "date": "1894-06-05",
+    "fact": "Highest recorded level is 7.92 m (geodetic) on June 5, 1894.",
+    "source_url": "https://www.env.gov.bc.ca/wsd/public_safety/flood/pdfs_word/review_fraser_flood_flows_hope.pdf"
+   },
+   {
+    "date": "2021-12-26",
+    "fact": "Water level not available for several periods in 2021 to 2023 because of equipment malfunction.",
+    "source_url": "https://collaboration.cmc.ec.gc.ca/cmc/hydrometrics/www/"
+   }
+  ],
+  "public_notes": "The river at Mission rises and falls with the ocean tides, so daily levels mix river flow with tide. Daily levels in the national database start only in 1969, with 1993 to 1996 missing; older years survive mainly as yearly highs."
+ }
+}

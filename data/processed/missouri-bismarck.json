@@ -1,0 +1,191 @@
+{
+  "id": "missouri-bismarck",
+  "river": "missouri",
+  "name": "Bismarck",
+  "country": "United States",
+  "lat": 46.814167,
+  "lon": -100.821389,
+  "kind": "river",
+  "source": "USGS NWIS daily values",
+  "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-06342500/",
+  "station_code": "USGS 06342500",
+  "unit": "ft",
+  "datum": "ft above gauge datum (1619.64 ft NAVD88)",
+  "daily_stat": "mean",
+  "first_date": "1897-04-05",
+  "last_date": "2026-10-14",
+  "n_days": 45755,
+  "coverage_by_decade": [
+    {
+      "decade": 1890,
+      "share_days": 0.9411,
+      "share_measured": 0.9411,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1900,
+      "share_days": 0.9995,
+      "share_measured": 0.9986,
+      "share_estimated": 0.0008,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 0.9899,
+      "share_measured": 0.9899,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 0.7432,
+      "share_measured": 0.743,
+      "share_estimated": 0.0003,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 0.9962,
+      "share_measured": 0.9962,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 0.9959,
+      "share_measured": 0.9959,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 0.9932,
+      "share_measured": 0.9932,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 0.9956,
+      "share_measured": 0.9956,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 0.9838,
+      "share_measured": 0.9838,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 0.9302,
+      "share_measured": 0.9302,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.986,
+      "share_measured": 0.986,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 0.9836,
+      "share_measured": 0.9808,
+      "share_estimated": 0.0027,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.994,
+      "share_measured": 0.994,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9996,
+      "share_measured": 0.8645,
+      "share_estimated": 0.0,
+      "share_provisional": 0.1351
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Geological Survey.",
+  "notes": [
+    "DATUM BREAK: USGS Water-Supply Paper 1309 says the recorder datum was lowered 4.24 ft to the present datum on 1934-10-01; before that (chain gauge to 1928-10-17, then the recorder) readings were on a datum 4.24 ft higher. The daily values are not adjusted: yearly minimums jump from -2.9 ft in 1934 to +2.4 ft in 1935. Also April 1936 to September 1937 used mostly a wire-weight gauge at a datum 0.47 ft lower. Do not compare levels across 1934 without adding 4.24 ft to the earlier values (we leave them as published).",
+    "Flow has been regulated by Garrison Dam (Lake Sakakawea), about 75 miles upstream, since November 1953. Lake Oahe begins downstream; whether its backwater reaches the gauge was not found in USGS reports.",
+    "USGS approval codes in the file: {'A': 45406, 'P': 335, 'A:e': 14}. A (approved) -> measured, P (provisional) -> provisional, any code with 'e' (estimated by USGS) -> estimated, even if approved.",
+    "Non-numeric value codes skipped (equipment, ice and similar): none. Dropped 0 fill values.",
+    "Daily mean of the gauge's readings for the day, as computed by USGS. In early years the 'daily mean' may rest on one or two staff-gauge readings a day; see measurement_history.",
+    "Legacy waterservices.usgs.gov endpoint; USGS plans to retire it in favor of api.waterdata.usgs.gov, so this URL may need to change.",
+    "USGS station name: MISSOURI RIVER AT BISMARCK, ND."
+  ],
+  "measurement_history": [
+    {
+      "date": "1880s",
+      "fact": "Missouri River Commission gauge heights near Bismarck exist for part of the 1880s and May 1886 to December 1899 (exact first dates unclear in scan).",
+      "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+    },
+    {
+      "date": "1881-03-31",
+      "fact": "Highest known stage, 31.6 ft at present site and datum, Mar. 31, 1881, from an ice jam.",
+      "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+    },
+    {
+      "date": "1891-06",
+      "fact": "Weather Bureau gauge-height records near Bismarck begin in June 1891.",
+      "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+    },
+    {
+      "date": "1927",
+      "fact": "USGS says the Bismarck gaging station was established in 1927.",
+      "source_url": "https://www.usgs.gov/centers/dakota-water-science-center/science/missouri-river-stream-flow-gaging-station"
+    },
+    {
+      "date": "1928-10-17",
+      "fact": "Before Oct. 17, 1928, a chain gauge 2,100 ft upstream at a datum 4.24 ft higher; then a recorder at the present site.",
+      "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+    },
+    {
+      "date": "1934-10-01",
+      "fact": "Recorder datum lowered 4.24 ft to the present datum on Oct. 1, 1934.",
+      "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+    },
+    {
+      "date": "1936-04-10",
+      "fact": "Apr. 1936 to Sept. 1937, mostly a wire-weight gauge 2,000 ft downstream at a datum 0.47 ft lower.",
+      "source_url": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+    },
+    {
+      "date": "1953-11",
+      "fact": "USGS: flow regulated by Lake Sakakawea (Garrison Dam), 75 miles upstream, since November 1953.",
+      "source_url": "https://pubs.usgs.gov/wdr/2004/wdr-nd-04-1/htdocs/Output/06342500.2004.sw.html"
+    },
+    {
+      "date": "1952-04-06",
+      "fact": "Highest stage before Garrison Dam was 27.90 ft; highest since was 14.58 ft in Dec. 1979, from ice backwater.",
+      "source_url": "https://pubs.usgs.gov/wdr/2004/wdr-nd-04-1/htdocs/Output/06342500.2004.sw.html"
+    },
+    {
+      "date": "2004",
+      "fact": "Gauge zero 1,618.28 ft above NGVD29 (revised); 1950 report gave 1,618.38 ft. NWS now lists 1,619.46 ft NAVD88.",
+      "source_url": "https://pubs.usgs.gov/wdr/2004/wdr-nd-04-1/htdocs/Output/06342500.2004.sw.html"
+    },
+    {
+      "date": "2023-02-07",
+      "fact": "USACE sets Garrison releases low before the river freezes at Bismarck, then raises them, to manage ice.",
+      "source_url": "https://www.dvidshub.net/news/printable/438004"
+    },
+    {
+      "date": "not found",
+      "fact": "Lake Oahe backwater effect on the Bismarck gauge: not found in USGS reports or NWS gauge data checked.",
+      "source_url": "https://pubs.usgs.gov/wdr/2004/wdr-nd-04-1/htdocs/Output/06342500.2004.sw.html"
+    }
+  ],
+  "public_notes": "Before October 1, 1934, the readings in this file were measured from a gauge zero 4.24 feet higher than today's, and USGS did not adjust them, so early low readings look about 4 feet lower than they would today. Since Garrison Dam began holding back water in 1953, the river here has been lower and steadier, and winter ice can push readings up."
+}

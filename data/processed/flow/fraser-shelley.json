@@ -1,0 +1,90 @@
+{
+ "id": "fraser-shelley",
+ "river": "fraser",
+ "name": "Shelley",
+ "station_name": "FRASER RIVER AT SHELLEY",
+ "station_code": "08KB001",
+ "country": "Canada",
+ "lat": 54.00367,
+ "lon": -122.624748,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "m3/s",
+ "daily_stat": "mean",
+ "source": "Environment and Climate Change Canada, Water Survey of Canada (HYDAT daily means + real-time)",
+ "source_url": "https://api.weather.gc.ca/collections/hydrometric-daily-mean/items",
+ "license": "Open Government Licence - Canada",
+ "credit": "Contains information licensed under the Open Government Licence - Canada (Environment and Climate Change Canada)",
+ "flag_rule": "HYDAT (approved) days are measured, except symbols B (ice) and E (estimated), which are estimated; real-time days are provisional.",
+ "notes": [
+  "Water Survey of Canada computes discharge from the water level through a stage-discharge rating curve, checked against periodic field measurements (Environment and Climate Change Canada).",
+  "River ice in winter changes the level for a given flow, so winter days marked with the ice symbol (B) are estimated by other means; they are marked estimated here (Environment and Climate Change Canada).",
+  "Discharge at Shelley starts in 1950, decades before the level record shown here, which starts in 2011 (Environment and Climate Change Canada).",
+  "Approved daily means (HYDAT) run from 1950-05-01 to 2025-10-01. Discharge symbols: {'none': 16155, 'Ice Conditions': 10891, 'Estimated': 287, 'Partial Day': 209}. Ice conditions (B) and estimated (E) are marked estimated; partial day (A) and other symbols stay measured. Skipped 36 HYDAT days with no discharge and 0 negative values (Environment and Climate Change Canada).",
+  "Check: on 198 days in both HYDAT and the real-time record, our daily mean of the 5-minute readings differed from the approved HYDAT value by a median of -0.0% (range -0.5% to +0.5%), so real-time values may shift when approved (Environment and Climate Change Canada).",
+  "After HYDAT ends: 5-minute real-time readings (2025-03-17 to 2026-10-17 UTC) averaged into 380 daily means by local standard time day. A day needs readings in at least 20 of its 24 hours; 1 days left out. All real-time days are provisional, or estimated if any reading has symbol B or E. Approval of the readings: {'Provisional/Provisoire': 109573, 'Final/Finales': 57092}; symbols: {'none': 166665} (Environment and Climate Change Canada).",
+  "Station status: Active (Environment and Climate Change Canada)."
+ ],
+ "first_date": "1950-05-01",
+ "last_date": "2026-10-16",
+ "n_days": 27922,
+ "coverage_by_decade": [
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 0.5971,
+   "share_estimated": 0.4029,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 1.0,
+   "share_measured": 0.6189,
+   "share_estimated": 0.3811,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 0.5545,
+   "share_estimated": 0.4455,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 0.5743,
+   "share_estimated": 0.4257,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 0.5876,
+   "share_estimated": 0.4124,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 0.5782,
+   "share_estimated": 0.4218,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.6016,
+   "share_estimated": 0.3984,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 0.9976,
+   "share_measured": 0.5707,
+   "share_estimated": 0.2737,
+   "share_provisional": 0.1532
+  }
+ ]
+}

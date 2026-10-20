@@ -1,0 +1,73 @@
+{
+ "id": "mississippi-helena",
+ "river": "mississippi",
+ "name": "Helena",
+ "station_name": "MISSISSIPPI RIVER AT HELENA, AR",
+ "station_code": "USGS 07047970",
+ "country": "United States",
+ "lat": 34.52400003,
+ "lon": -90.58399367,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "cfs",
+ "daily_stat": "mean",
+ "source": "U.S. Geological Survey, NWIS daily values (00060, statistic 00003)",
+ "source_url": "https://waterservices.usgs.gov/nwis/dv/",
+ "license": "Public domain (U.S. federal government work)",
+ "credit": "U.S. Geological Survey",
+ "flag_rule": "USGS code A is measured and P provisional; any code with e (estimated) or an ice code is estimated.",
+ "notes": [
+  "USGS computes daily discharge from the gauge's water level through a rating curve (stage-discharge relation), adjusted by shifts after each field measurement, and approves a year of data some months after it ends (USGS).",
+  "USGS stopped publishing flow at Helena in 1977; this record ends then (USGS).",
+  "USGS approval codes: {'A': 18170}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
+  "Skipped 0 days with no number (codes such as Ice or Eqp: none) and 0 negative values (USGS)."
+ ],
+ "first_date": "1928-01-01",
+ "last_date": "1977-09-29",
+ "n_days": 18170,
+ "coverage_by_decade": [
+  {
+   "decade": 1920,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1930,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  }
+ ]
+}

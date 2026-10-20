@@ -1,0 +1,170 @@
+{
+  "id": "mississippi-helena",
+  "river": "mississippi",
+  "name": "Helena",
+  "country": "United States",
+  "lat": 34.51667,
+  "lon": -90.58417,
+  "kind": "river",
+  "source": "USACE CWMS Data API",
+  "source_url": "https://cwms-data.usace.army.mil/cwms-data/timeseries?office=MVS&name=Helena-Mississippi.Stage.Inst.~1Day.0.MVDhist-rev",
+  "station_code": "MVS:Helena-Mississippi.Stage.Inst.~1Day.0.MVDhist-rev",
+  "unit": "ft",
+  "datum": "ft above gauge zero (141.51 ft NAVD88)",
+  "daily_stat": "single reading",
+  "first_date": "1871-11-23",
+  "last_date": "2026-09-11",
+  "n_days": 56285,
+  "coverage_by_decade": [
+    {
+      "decade": 1870,
+      "share_days": 0.9649,
+      "share_measured": 0.9649,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1880,
+      "share_days": 0.9995,
+      "share_measured": 0.9995,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1890,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1900,
+      "share_days": 0.9995,
+      "share_measured": 0.9995,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 0.9899,
+      "share_measured": 0.9899,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9986,
+      "share_measured": 0.9986,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9567,
+      "share_measured": 0.9567,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers.",
+  "notes": [
+    "CWMS quality codes in the file: {0: 56285}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 0 days.",
+    "Dropped 1 fill values (>= 9000, such as 99999) and 0 null values; 0 values flagged missing or rejected.",
+    "One instantaneous reading per day (not a daily mean). In the file's time zone (US/Central): 08:00 on 52012 days, 08:09 on 4273 days; in UTC: 14:00 on 34800 days, 13:00 on 21485 days.",
+    "The MVS location record for Helena-Mississippi has no coordinates (0, 0). Lat/lon and the gauge zero (141.51 ft NAVD88) come from the MVK location record for the same gauge. The Corps changed the listed zero from 141.70 ft NGVD29 to 141.51 ft NAVD88 on 2024-07-30; the NWS still lists 141.70 ft NGVD29.",
+    "Reading times: 4,273 days are stamped 08:09 instead of 08:00.",
+    "No USGS gage-height series at Helena, so the record ends at the CWMS public lag.",
+    "Levels are rounded to 0.01 ft: the API converts from stored meters and returns float noise such as 12.979999999999999."
+  ],
+  "measurement_history": [
+    {
+      "date": "1871",
+      "fact": "USACE Rivergages daily history at Helena starts in 1871; its daily value is the 8:00 a.m. Central reading.",
+      "source_url": "https://rivergages.mvr.usace.army.mil/WaterControl/stationinfo2.cfm?sid=MS133&dt=S"
+    },
+    {
+      "date": "1872-04-26",
+      "fact": "Earliest crest in the NWS historic crest list for Helena is April 26, 1872.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/HEEA4"
+    },
+    {
+      "date": "1888-01-05",
+      "fact": "NWS low-water list for Helena begins in 1888; the lowest listed is -5.14 ft on Oct. 18, 2023.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/HEEA4"
+    },
+    {
+      "date": "2024-07-30",
+      "fact": "USACE updated gauge zero from 141.70 ft NGVD29 to 141.51 ft NAVD88 on July 30, 2024; NWS still lists 141.70 NGVD29.",
+      "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/Helena?office=MVK"
+    },
+    {
+      "date": "not found",
+      "fact": "How early readings were taken, recorder or telemetry start, and gauge moves: not found in Rivergages, NWS, CWMS, or USGS Water-Supply Paper 1311.",
+      "source_url": "https://rivergages.mvr.usace.army.mil/WaterControl/stationinfo2.cfm?sid=MS133&dt=S"
+    }
+  ],
+  "public_notes": "USACE has daily readings at Helena from 1871, using the 8 a.m. reading for each day. The publishers checked here do not describe how the early readings were taken or whether the gauge moved, so early years carry more unknowns."
+}

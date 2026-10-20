@@ -1,0 +1,74 @@
+{
+ "id": "ohio-cincinnati",
+ "river": "ohio",
+ "name": "Cincinnati",
+ "station_name": "OHIO RIVER AT MARKLAND DAM NEAR WARSAW, KY",
+ "station_code": "USGS 03277200",
+ "country": "United States",
+ "lat": 38.77525,
+ "lon": -84.97238889,
+ "same_station": false,
+ "offset_note": "Markland Dam, about 61 river miles downstream",
+ "kind": "river flow",
+ "unit": "cfs",
+ "daily_stat": "mean",
+ "source": "U.S. Geological Survey, NWIS daily values (00060, statistic 00003)",
+ "source_url": "https://waterservices.usgs.gov/nwis/dv/",
+ "license": "Public domain (U.S. federal government work)",
+ "credit": "U.S. Geological Survey",
+ "flag_rule": "USGS code A is measured and P provisional; any code with e (estimated) or an ice code is estimated.",
+ "notes": [
+  "USGS computes daily discharge from the gauge's water level through a rating curve (stage-discharge relation), adjusted by shifts after each field measurement, and approves a year of data some months after it ends (USGS).",
+  "USGS has only 15-minute flow at Cincinnati itself, from October 2024, so this is the Ohio River at Markland Dam, about 61 river miles downstream, from 1970 (USGS).",
+  "Markland is just below a lock and dam; flow passing it is set partly by how the U.S. Army Corps of Engineers operates the dam (USGS, USACE).",
+  "USGS approval codes: {'A': 19643, 'A:e': 373, 'P': 313, 'A:R': 289}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
+  "Skipped 0 days with no number (codes such as Ice or Eqp: none) and 0 negative values (USGS)."
+ ],
+ "first_date": "1970-05-01",
+ "last_date": "2026-10-16",
+ "n_days": 20618,
+ "coverage_by_decade": [
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.9502,
+   "share_estimated": 0.0498,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 0.998,
+   "share_measured": 0.7948,
+   "share_estimated": 0.077,
+   "share_provisional": 0.1262
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "rhine-ruhrort",
+  "river": "rhine",
+  "name": "Duisburg-Ruhrort",
+  "country": "Germany",
+  "lat": 51.455345,
+  "lon": 6.727927,
+  "kind": "river",
+  "source": "BfG hyd1d + PEGELONLINE (WSV)",
+  "source_url": "https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS ; https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/2770010/W/measurements.json",
+  "station_code": "PEGELONLINE 2770010 (uuid c0f51e35-d0e8-4318-afaf-c5fcbc29f4c1); hyd1d RUHRORT",
+  "unit": "cm",
+  "datum": "cm above gauge zero (16.106 m NHN, DHHN2016)",
+  "daily_stat": "mean",
+  "first_date": "1960-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 24359,
+  "coverage_by_decade": [
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9859,
+      "share_measured": 0.8842,
+      "share_estimated": 0.0,
+      "share_provisional": 0.1017
+    }
+  ],
+  "license": "PEGELONLINE part: DL-DE->Zero-2.0 (WSV). hyd1d part: no data license stated by the BfG (see research/datasets/europe.md); clear before republishing.",
+  "notes": [
+    "1960-01-01 to 2026-08-10: BfG hyd1d daily mean W (station RUHRORT), file https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS (Last-Modified Tue, 11 Aug 2026 04:43:04 GMT).",
+    "hyd1d values through 2025 are marked measured (validated by the WSV/BfG); values from 2026 are means of PEGELONLINE raw data, not validated, and marked provisional (df.gauging_data help page). hyd1d has no per-value flag.",
+    "Missing days inside the hyd1d span: 0; empty values dropped: 0.",
+    "After hyd1d: PEGELONLINE 15-minute raw W (WASSERSTAND ROHDATEN), daily mean over MEZ days (UTC+1), rounded to whole cm as hyd1d does, only days with at least 90 of 96 values; all marked provisional. 30 days from 2 saved pull(s): 2770010_W_20261015T1115Z.json, 2770010_W_20261015T1132Z.json.",
+    "Gap left unfilled between the end of hyd1d (2026-08-10) and the first PEGELONLINE day (2026-09-15): 35 days.",
+    "Gauge zero from PEGELONLINE station metadata: 16.106 m. ü. NHN (DHHN2016), valid from 2019-11-01. hyd1d levels are relative to the gauge zero in force at the time. The 2019-11-01 date, shared by most WSV gauges, marks the switch from DHHN92 to DHHN2016, not a physical change, and does not change W.",
+    "Coordinates and river km from PEGELONLINE station metadata (km 780.8, agency STANDORT DUISBURG). Station remark: Abflussermittlung unter W = 120cm aktuell nicht möglich"
+  ],
+  "measurement_history": [
+    {
+      "date": "not found",
+      "fact": "Start of readings, early reading method and any past gauge-zero changes: not found. The hyd1d record used here starts 1960-01-01.",
+      "source": "https://hyd1d.bafg.de/reference/df.gauging_data.html"
+    },
+    {
+      "date": "1926-1975 and later",
+      "fact": "The gauge lies in an area where coal and salt mining made the ground sink; the riverbed between Ruhrort and Emmerich dropped over the 20th century.",
+      "source": "https://izw.baw.de/publikationen/kolloquien/0/vortrag_luellau.pdf"
+    },
+    {
+      "date": "2012-2022",
+      "fact": "The official equivalent low-water level fell from 233 cm (2012) to 227 cm (2022); this mixes riverbed change with flow statistics.",
+      "source": "https://www.ccr-zkr.org/12030100-en.html"
+    },
+    {
+      "date": "1960-2026",
+      "fact": "Neighbor comparison (hyd1d_stepscan.py) found no gauge-zero step. Nearby Koeln, Bonn and Rees each jump about 100 cm in November 1979; Ruhrort does not.",
+      "source": "scripts/fetch/hyd1d_stepscan.py"
+    },
+    {
+      "date": "current",
+      "fact": "PEGELONLINE notes that discharge cannot currently be computed below 120 cm.",
+      "source": "https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/2770010.json"
+    }
+  ],
+  "public_notes": "The level is measured against a fixed mark, not the riverbed. The riverbed here has sunk over the decades from erosion and mining, so the same flow now reads lower than it did in the 1960s. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
+}

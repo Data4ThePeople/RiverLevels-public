@@ -1,0 +1,125 @@
+{
+ "id": "mississippi-vicksburg",
+ "river": "mississippi",
+ "name": "Vicksburg",
+ "station_name": "Mississippi River @ Vicksburg, MS",
+ "station_code": "MVK:Vicksburg.Flow.Inst.1Day.0.DCP-rev",
+ "country": "United States",
+ "lat": 32.311832,
+ "lon": -90.902332,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "cfs",
+ "daily_stat": "one reading",
+ "source": "U.S. Army Corps of Engineers, CWMS Data API",
+ "source_url": "https://cwms-data.usace.army.mil/cwms-data/timeseries",
+ "license": "Public domain (U.S. federal government work)",
+ "credit": "U.S. Army Corps of Engineers, Vicksburg District",
+ "flag_rule": "CWMS quality 0 (not screened, nearly every value) is measured; values flagged as replaced are estimated; missing or rejected values are dropped.",
+ "notes": [
+  "Flow is computed from the Vicksburg water level through a rating curve; the Corps file does not describe the rating or how it changed (USACE).",
+  "USGS lists at least six gauge sites at Vicksburg since 1871, and the file does not say which site each year uses (USGS).",
+  "On the lower Mississippi the same level can carry different flows on a rising and a falling river, so single-rating flows are least certain in floods (USGS).",
+  "One reading a day, not a daily mean, stamped at UTC {'12:00': 45940}; dates are days in the file's time zone (CST6CDT) (USACE).",
+  "CWMS quality codes: {0: 45940}. Code 0 means the value was never screened, so the Corps file gives no approved or provisional status; those values are marked measured (USACE).",
+  "Dropped 5 empty values, 0 flagged missing or rejected, and 0 negative values (USACE).",
+  "Flows are rounded to whole cfs: the API converts from stored metric values and returns float noise such as 545725.0657 (USACE)."
+ ],
+ "first_date": "1901-01-02",
+ "last_date": "2026-10-16",
+ "n_days": 45939,
+ "coverage_by_decade": [
+  {
+   "decade": 1900,
+   "share_days": 0.9991,
+   "share_measured": 0.9991,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1910,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1920,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1930,
+   "share_days": 0.9997,
+   "share_measured": 0.9997,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 0.9997,
+   "share_measured": 0.9997,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  }
+ ]
+}

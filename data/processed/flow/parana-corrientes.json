@@ -1,0 +1,123 @@
+{
+ "id": "parana-corrientes",
+ "river": "parana",
+ "name": "Corrientes",
+ "station_name": "Corrientes",
+ "station_code": "INA series 26616 / PNA 130",
+ "country": "Argentina",
+ "lat": -27.463643,
+ "lon": -58.83887,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "m3/s",
+ "daily_stat": "mean",
+ "source": "Instituto Nacional del Agua (INA) alert system a5 API, variable 40 (Caudal medio diario)",
+ "source_url": "https://alerta.ina.gob.ar/a5/obs/puntual/series/26616/observaciones",
+ "license": "No license is stated on the INA API or site (alerta.ina.gob.ar); clear reuse terms with INA before publishing.",
+ "credit": "Instituto Nacional del Agua (INA); gauge read by Prefectura Naval Argentina",
+ "flag_rule": "INA publishes no quality flags, so every value is marked measured.",
+ "notes": [
+  "INA series 26616, variable 'Caudal medio diario' (daily mean flow), station Corrientes (INA station 19, Prefectura Naval Argentina code 130) (INA a5 API).",
+  "INA's per-reading flow series at this station (series 868, variable 'Caudal') is labeled as computed from a rating curve ('Curva de gasto'), so these daily means rest on the gauge level put through a rating curve. The daily series itself is labeled 'medición directa', which looks like a default label (INA a5 API).",
+  "INA publishes no per-value quality flag, so every value is marked measured, including the most recent days, which INA may still correct (INA a5 API).",
+  "43684 values with an id; rows repeated across download chunks: 0. Dropped 0 empty values and 0 negative values; the API also returns 1160 empty placeholder rows for missing days, which are not in this file. Days stored twice with the same value, kept once: 0. Most common local timestamps: {'00:00': 43684} (INA a5 API).",
+  "Gaps longer than 30 days with no value: 2010-01-02 to 2010-01-31; 2021-08-19 to 2024-08-09 (INA a5 API)."
+ ],
+ "first_date": "1904-01-01",
+ "last_date": "2026-10-16",
+ "n_days": 43684,
+ "coverage_by_decade": [
+  {
+   "decade": 1900,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1910,
+   "share_days": 0.9997,
+   "share_measured": 0.9997,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1920,
+   "share_days": 0.9997,
+   "share_measured": 0.9997,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1930,
+   "share_days": 0.997,
+   "share_measured": 0.997,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 0.9989,
+   "share_measured": 0.9989,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 0.9997,
+   "share_measured": 0.9997,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 0.9981,
+   "share_measured": 0.9981,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 0.9995,
+   "share_measured": 0.9995,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 0.9995,
+   "share_measured": 0.9995,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 0.9978,
+   "share_measured": 0.9978,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 0.9986,
+   "share_measured": 0.9986,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 0.9899,
+   "share_measured": 0.9899,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 0.5619,
+   "share_measured": 0.5619,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  }
+ ]
+}

@@ -1,0 +1,191 @@
+{
+  "id": "rhine-lobith",
+  "river": "rhine",
+  "name": "Lobith",
+  "country": "Netherlands",
+  "lat": 51.8495,
+  "lon": 6.1024,
+  "kind": "river",
+  "source": "Rijkswaterstaat Waterwebservices (DDL API)",
+  "source_url": "https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen (Locatie.Code lobith.bovenrijn.tolkamer, Grootheid WATHTE, ProcesType meting)",
+  "station_code": "lobith.bovenrijn.tolkamer",
+  "unit": "cm",
+  "datum": "cm relative to NAP (Normaal Amsterdams Peil), an absolute national datum, not a local gauge zero",
+  "daily_stat": "mixed (see notes)",
+  "first_date": "1866-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 58726,
+  "coverage_by_decade": [
+    {
+      "decade": 1860,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1870,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1880,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1890,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1900,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 0.8511,
+      "share_estimated": 0.0,
+      "share_provisional": 0.1489
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 0.9981,
+      "share_estimated": 0.0019,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 0.9693,
+      "share_estimated": 0.0027,
+      "share_provisional": 0.0279
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.7374,
+      "share_estimated": 0.0,
+      "share_provisional": 0.2626
+    }
+  ],
+  "license": "Rijkswaterstaat open data, CC0 1.0 (public domain dedication). Credit: Rijkswaterstaat",
+  "notes": [
+    "Single-reading days: 43829; days averaged from several readings: 14897.",
+    "daily_stat is mixed: in the early record there is one staff-gauge reading per day, so the daily value is that reading; later readings are hourly and then every 10 minutes, and the daily value is their mean. Usual clock time of the single daily reading, by decade: 1860s 08:40; 1870s 08:40; 1880s 08:40; 1890s 08:40; 1900s 08:40; 1910s 08:40; 1920s 08:40; 1930s 08:40; 1940s 08:40; 1950s 08:00; 1960s 08:00; 1970s 08:00; 1980s 08:00.",
+    "Readings per day by era (median, first year of each change): 1866: about 1 per day; 1986: about 24 per day; 2011: about 144 per day.",
+    "Days are calendar days in UTC+1 (the offset the API returns), for all years.",
+    "Raw readings: 1164903. Dropped as fill or gap (value 999999999, empty, or quality code 99): 10.",
+    "Identical repeated readings dropped: 4324. On 2192 days two series overlap (1979 to 1987: unchecked hourly values read from recorder charts, and the checked once-a-day staff reading); the checked series is used, and otherwise the more frequent one. Unchecked readings dropped because the same series had a checked reading that day: 2.",
+    "Dropped 1 days with fewer than 90% of the usual readings of any series (partial days), for example 2026-10-15.",
+    "Kwaliteitswaardecode counts in the raw readings: {'00': 1157596, '25': 7297, '99': 10}. Codes 10, 20 and 25 mark values interpolated in space and/or time; a day is marked estimated when more than half its readings carry one of them. Codes 50 (implausible) and 99 (gap) are dropped.",
+    "Statuswaarde counts: {'Gecontroleerd': 780530, 'Definitief': 206111, 'Ongecontroleerd': 178262}. 'Ongecontroleerd' (not yet checked) makes the day provisional; provisional days run 1986-01-01 to 2026-10-14.",
+    "Instrument and method periods (first and last year seen): Peilschaal / Indompeling gedurende 1 minuut: 1866 to 1934; other:Vlotterniveaumeter / Visuele aflezing van blad: 1935 to 1987; other:Vlotterniveaumeter - type DNM / Rekenkundig gemiddelde waarde over vorige 10 minuten: 1987 to 1993; other:Vlotterniveaumeter - type DNM / Rekenkundig gemiddelde waarde over vorige 5 en volgende 5 minuten: 1993 to 2026.",
+    "The API also returns two readings from January 30 and 31, 1865; the series here starts with the continuous daily record in 1866."
+  ],
+  "measurement_history": [
+    {
+      "date": "1866",
+      "fact": "Water levels at Lobith have been measured since 1866.",
+      "source": "https://edepot.wur.nl/505109"
+    },
+    {
+      "date": "1866-1934",
+      "fact": "One staff-gauge reading a day, usually at 08:40; the data list the method as a staff gauge read during a 1-minute immersion.",
+      "source": "https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen"
+    },
+    {
+      "date": "1935-1987",
+      "fact": "Float gauge with a chart, read by eye once a day (usually 08:40, then 08:00 from the 1950s).",
+      "source": "https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen"
+    },
+    {
+      "date": "1979-1987",
+      "fact": "Hourly values read from recorder charts also exist but were never checked; we use the checked daily reading where both exist (1986 has only the hourly values).",
+      "source": "https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen"
+    },
+    {
+      "date": "1987",
+      "fact": "Automatic float gauge with 10-minute averages; hourly values until about 2010, every 10 minutes after that.",
+      "source": "https://ddapi20-waterwebservices.rijkswaterstaat.nl/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen"
+    },
+    {
+      "date": "1875 onward",
+      "fact": "Levels are relative to NAP, the national datum, which Rijkswaterstaat checks with precise leveling every 25 to 40 years.",
+      "source": "https://www.rijkswaterstaat.nl/zakelijk/open-data/normaal-amsterdams-peil/geschiedenis-nap"
+    },
+    {
+      "date": "not found",
+      "fact": "Gauge relocations and any NAP correction at Lobith: not found.",
+      "source": "https://rijkswaterstaatdata.nl/waterdata/"
+    }
+  ],
+  "public_notes": "Before 1986 each day is a single reading taken around 8 in the morning, so short peaks and dips inside a day are missed; later days are averages of hourly or 10-minute readings. Recent months are not yet checked by Rijkswaterstaat."
+}

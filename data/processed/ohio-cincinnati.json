@@ -1,0 +1,133 @@
+{
+  "id": "ohio-cincinnati",
+  "river": "ohio",
+  "name": "Cincinnati",
+  "country": "United States",
+  "lat": 39.0945044,
+  "lon": -84.5104983,
+  "kind": "river",
+  "source": "USGS NWIS daily values",
+  "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-03255000/",
+  "station_code": "USGS 03255000",
+  "unit": "ft",
+  "datum": "ft above gauge datum (428.05 ft NAVD88)",
+  "daily_stat": "mean",
+  "first_date": "1987-10-01",
+  "last_date": "2026-10-14",
+  "n_days": 13302,
+  "coverage_by_decade": [
+    {
+      "decade": 1980,
+      "share_days": 0.8967,
+      "share_measured": 0.8967,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.8349,
+      "share_measured": 0.8349,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 0.9655,
+      "share_measured": 0.9655,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9732,
+      "share_measured": 0.9732,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9818,
+      "share_measured": 0.7447,
+      "share_estimated": 0.0,
+      "share_provisional": 0.2372
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Geological Survey.",
+  "notes": [
+    "USGS daily gage height starts 1987-10-01. The older Cincinnati stage record (from 1858) is kept by the National Weather Service and the Army Corps and is not part of this file.",
+    "Cincinnati lies in the pool of Markland Locks and Dam (operating from 1963, per the NWS), which holds normal pool at about 25.4 ft, so low-water stage is set by the dam for the whole of this file.",
+    "USGS approval codes in the file: {'A': 12714, 'P': 588}. A (approved) -> measured, P (provisional) -> provisional, any code with 'e' (estimated by USGS) -> estimated, even if approved.",
+    "Non-numeric value codes skipped (equipment, ice and similar): none. Dropped 0 fill values.",
+    "Daily mean of the gauge's readings for the day, as computed by USGS. In early years the 'daily mean' may rest on one or two staff-gauge readings a day; see measurement_history.",
+    "Legacy waterservices.usgs.gov endpoint; USGS plans to retire it in favor of api.waterdata.usgs.gov, so this URL may need to change.",
+    "USGS station name: OHIO RIVER AT CINCINNATI, OH."
+  ],
+  "measurement_history": [
+    {
+      "date": "1858-06-01",
+      "fact": "NWS: continuous record since June 1, 1858; earlier flood heights are not tied to any specific gauge.",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "1858-06-01",
+      "fact": "Gauge at the Old Water Works, gauge zero 430.06 ft on the Corps 1912 datum, until Oct. 7, 1908.",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "1874-11-01",
+      "fact": "Records Nov. 1874 to 1889 were kept by the Army Signal Corps; Weather Bureau and NWS daily stages run to 2000.",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "1908-10-08",
+      "fact": "Gauge moved to the foot of Broadway, gauge zero 429.763 ft (1912 Corps datum).",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "1935-01-01",
+      "fact": "Gauge moved to the West End Power Plant, gauge zero 428.80 ft (1912 Corps datum).",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "1947-01-01",
+      "fact": "Gauge moved to the Suspension Bridge, gauge zero 429.613 ft (1912 Corps datum).",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "1963-01-01",
+      "fact": "Markland Dam began operating; normal pool at Cincinnati was raised to 25.4 ft.",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "2000",
+      "fact": "USGS records are the source from 2000 onward.",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "2009",
+      "fact": "Gauge zero restated as 428.88 ft NGVD29, at the Suspension Bridge.",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "2021",
+      "fact": "Gauge zero restated as 428.05 ft NAVD88.",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "1858-06-16",
+      "fact": "NWS flags 102 listed crests from 1858 to 1946 as measured on an older datum.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CCNO1"
+    },
+    {
+      "date": "2007-02",
+      "fact": "NWS notes the gauge was frozen in February 2007 and the exact stage is unknown.",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    },
+    {
+      "date": "not found",
+      "fact": "Recorder or telemetry start dates and reading hour: not found on the NWS Cincinnati history page or NWS gauge data.",
+      "source_url": "https://www.weather.gov/iln/ohioriverhistory"
+    }
+  ],
+  "public_notes": "This file starts in 1987, when the U.S. Geological Survey record begins; the older Cincinnati record back to 1858 is kept by the National Weather Service and is not included. Since Markland Dam began operating in 1963, the river at Cincinnati is held at about 25 feet or higher, so very low readings cannot happen here."
+}

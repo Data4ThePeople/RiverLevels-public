@@ -1,0 +1,195 @@
+{
+  "id": "mississippi-memphis",
+  "river": "mississippi",
+  "name": "Memphis",
+  "country": "United States",
+  "lat": 35.123061,
+  "lon": -90.076669,
+  "kind": "river",
+  "source": "USACE CWMS Data API",
+  "source_url": "https://cwms-data.usace.army.mil/cwms-data/timeseries?office=MVS&name=Memphis-Mississippi.Stage.Inst.~1Day.0.MVDhist-rev",
+  "station_code": "MVS:Memphis-Mississippi.Stage.Inst.~1Day.0.MVDhist-rev",
+  "unit": "ft",
+  "datum": "ft above gauge zero (183.91 ft NGVD29)",
+  "daily_stat": "single reading",
+  "first_date": "1885-01-01",
+  "last_date": "2026-09-11",
+  "n_days": 51619,
+  "coverage_by_decade": [
+    {
+      "decade": 1880,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1890,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1900,
+      "share_days": 0.9997,
+      "share_measured": 0.9997,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9992,
+      "share_measured": 0.9992,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9469,
+      "share_measured": 0.9469,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers.",
+  "notes": [
+    "CWMS quality codes in the file: {0: 51726}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 0 days.",
+    "Dropped 0 fill values (>= 9000, such as 99999) and 0 null values; 0 values flagged missing or rejected.",
+    "107 days in 2024-03-10 to 2024-06-28 have a second reading (at 09:00) besides the 08:00 reading; kept the 08:00 reading and dropped the extra one.",
+    "One instantaneous reading per day (not a daily mean). In the file's time zone (US/Central): 08:00 on 51615 days, 09:00 on 4 days; in UTC: 14:00 on 30155 days, 13:00 on 21464 days.",
+    "USGS 07032000 returned no recent gage height; no extension.",
+    "Record low in this file: -11.97 ft on 2023-10-17 (08:00 reading). The National Weather Service lists -12.06 ft that day, which is likely the lowest instantaneous value rather than the morning reading.",
+    "USGS: staff gauge 1,000 ft downstream from September 1932 to December 1934, then a recorder below Harahan Bridge from 1934-12-22, about 1.3 miles below the old Beale Street gauge, at the same datum.",
+    "The MVS location record for Memphis-Mississippi has no coordinates (0, 0). Lat/lon and the gauge zero (183.91 ft NGVD29) come from the MVK (Vicksburg District) location record for the same gauge. USGS 07032000 lists 184.03 ft NAVD88 for the same zero.",
+    "Levels are rounded to 0.01 ft: the API converts from stored meters and returns float noise such as 12.979999999999999."
+  ],
+  "measurement_history": [
+    {
+      "date": "1871-11",
+      "fact": "Mississippi River Commission stage record at the Beale Street gauge begins in November 1871.",
+      "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+    },
+    {
+      "date": "1885",
+      "fact": "USACE Rivergages daily history for the Weather Bureau gauge starts in 1885; its daily value is the 8:00 a.m. Central reading.",
+      "source_url": "https://rivergages.mvr.usace.army.mil/WaterControl/stationinfo2.cfm?sid=MS126&dt=S"
+    },
+    {
+      "date": "1890-12",
+      "fact": "Weather Bureau published Beale Street gauge readings from December 1890 to August 1932.",
+      "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+    },
+    {
+      "date": "1932-09",
+      "fact": "From September 1932 to December 1934, readings came from a staff gauge 1,000 ft downstream of the present site.",
+      "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+    },
+    {
+      "date": "1934-12-22",
+      "fact": "A water-stage recorder began at the present site, 50 ft below Harahan Bridge, about 1.3 miles below Beale Street; earlier gauge was at the same datum.",
+      "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+    },
+    {
+      "date": "1950",
+      "fact": "USGS said to add 0.3 ft per 10 ft of stage at the present site to match old Beale Street readings.",
+      "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+    },
+    {
+      "date": "1950",
+      "fact": "USGS listed gauge zero as 183.91 ft (1929 datum), 184.21 ft mean Gulf level (1912), and 190.86 ft Memphis datum (1881).",
+      "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+    },
+    {
+      "date": "not found",
+      "fact": "USGS and USACE now list gauge zero as 184.03 ft NAVD88; date of that update not found.",
+      "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-07032000/"
+    },
+    {
+      "date": "not found",
+      "fact": "USGS says the gauge height is furnished by the USACE Memphis District; USGS uses it to publish discharge.",
+      "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-07032000/"
+    },
+    {
+      "date": "2023-10-17",
+      "fact": "NWS lists the record low as -12.06 ft on Oct. 17, 2023, after -10.81 ft (2022) and -10.70 ft (1988).",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/MEMT1"
+    },
+    {
+      "date": "not found",
+      "fact": "Riverbed lowering at Memphis: not found in USGS, NWS, or USACE pages checked (USGS site page, NWS gauge data, Rivergages).",
+      "source_url": "https://waterdata.usgs.gov/monitoring-location/USGS-07032000/"
+    }
+  ],
+  "public_notes": "Readings began at the Beale Street gauge in 1871 and moved about 1.3 miles downstream in the 1930s, where high-water readings run slightly lower. Gauge zero is a fixed reference point, not the river bottom, so readings below zero are normal in low water; the publishers checked here do not say how much riverbed change has added to recent record lows."
+}

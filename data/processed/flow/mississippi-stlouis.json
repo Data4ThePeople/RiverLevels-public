@@ -1,0 +1,150 @@
+{
+ "id": "mississippi-stlouis",
+ "river": "mississippi",
+ "name": "St. Louis",
+ "station_name": "Mississippi River at St. Louis, MO",
+ "station_code": "USGS 07010000",
+ "country": "United States",
+ "lat": 38.629,
+ "lon": -90.1797778,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "cfs",
+ "daily_stat": "mean",
+ "source": "U.S. Geological Survey, NWIS daily values (00060, statistic 00003)",
+ "source_url": "https://waterservices.usgs.gov/nwis/dv/",
+ "license": "Public domain (U.S. federal government work)",
+ "credit": "U.S. Geological Survey",
+ "flag_rule": "USGS code A is measured and P provisional; any code with e (estimated) or an ice code is estimated.",
+ "notes": [
+  "USGS computes daily discharge from the gauge's water level through a rating curve (stage-discharge relation), adjusted by shifts after each field measurement, and approves a year of data some months after it ends (USGS).",
+  "How USGS built the earliest St. Louis flows (1861 to the 1930s) is not documented in the daily-values file; they rest on few field measurements (USGS).",
+  "USGS approval codes: {'A': 59903, 'A:e': 144, 'P': 139}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
+  "Skipped 0 days with no number (codes such as Ice or Eqp: none) and 0 negative values (USGS)."
+ ],
+ "first_date": "1861-01-01",
+ "last_date": "2026-10-16",
+ "n_days": 60186,
+ "coverage_by_decade": [
+  {
+   "decade": 1860,
+   "share_days": 0.889,
+   "share_measured": 0.8887,
+   "share_estimated": 0.0003,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1870,
+   "share_days": 1.0,
+   "share_measured": 0.9984,
+   "share_estimated": 0.0016,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1880,
+   "share_days": 1.0,
+   "share_measured": 0.9992,
+   "share_estimated": 0.0008,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1890,
+   "share_days": 1.0,
+   "share_measured": 0.9978,
+   "share_estimated": 0.0022,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1900,
+   "share_days": 1.0,
+   "share_measured": 0.9989,
+   "share_estimated": 0.0011,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1910,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1920,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1930,
+   "share_days": 1.0,
+   "share_measured": 0.9997,
+   "share_estimated": 0.0003,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 0.9929,
+   "share_estimated": 0.0071,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.991,
+   "share_estimated": 0.009,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 0.9988,
+   "share_measured": 0.9178,
+   "share_estimated": 0.025,
+   "share_provisional": 0.056
+  }
+ ]
+}

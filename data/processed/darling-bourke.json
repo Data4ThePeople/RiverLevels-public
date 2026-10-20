@@ -1,0 +1,155 @@
+{
+  "id": "darling-bourke",
+  "river": "murray-darling",
+  "name": "Bourke",
+  "country": "Australia",
+  "lat": -30.087894,
+  "lon": 145.936761,
+  "kind": "river",
+  "source": "Bureau of Meteorology, Water Data Online (KiWIS API)",
+  "source_url": "http://www.bom.gov.au/waterdata/ (station 425003); https://www.bom.gov.au/waterdata/services",
+  "station_code": "425003",
+  "unit": "m",
+  "datum": "m above the local gauge zero (local gauge height; zero elevation not given by the API)",
+  "daily_stat": "mean",
+  "first_date": "1895-02-02",
+  "last_date": "2026-10-13",
+  "n_days": 19946,
+  "coverage_by_decade": [
+    {
+      "decade": 1890,
+      "share_days": 0.1851,
+      "share_measured": 0.1851,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1900,
+      "share_days": 0.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 0.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 0.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 0.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 0.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 0.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 0.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 0.7527,
+      "share_measured": 0.7527,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 0.9436,
+      "share_measured": 0.9198,
+      "share_estimated": 0.0238,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.9953,
+      "share_measured": 0.9702,
+      "share_estimated": 0.0077,
+      "share_provisional": 0.0175
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 0.9973,
+      "share_estimated": 0.0027,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 0.9951,
+      "share_estimated": 0.0038,
+      "share_provisional": 0.0011
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.9487,
+      "share_estimated": 0.002,
+      "share_provisional": 0.0492
+    }
+  ],
+  "license": "Creative Commons Attribution 4.0 (CC BY 4.0), per BoM Water Data Online copyright notice. Credit: Bureau of Meteorology, Water Data Online, with data supplied by the station owner (see notes).",
+  "notes": [
+    "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 169534010, station_id 590760 (station 425003 DARLING@BOURKE TOWN). Data owner: NSW - Water NSW.",
+    "Daily mean of the merged quality-controlled level record, aggregated by BoM to a 24-hour mean. The API does not say how many readings fed each early-year mean; where only one staff reading a day was taken, the 'mean' is that one reading.",
+    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate', 140: 'quality-E unknown'}): counts {10: 10036, 90: 4007, 110: 144, 140: 5759}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (190 days), where it marks recent unchecked readings.",
+    "Unknown-quality code E (140) share of days by decade: {1970: 1.0, 1980: 0.818, 1990: 0.018, 2010: 0.001, 2020: 0.049}.",
+    "Compromised code B (90) share of days by decade: {1890: 1.0, 1990: 0.48, 2000: 0.435, 2010: 0.072, 2020: 0.031}.",
+    "28156 empty timestamps (code -1) and 0 values coded F (210, missing or incorrect) were dropped."
+  ],
+  "measurement_history": [
+    {
+      "date": "1895",
+      "fact": "The series starts 1895-02-01 with daily 08:00 readings for that year, all quality B (compromised).",
+      "source": "https://www.bom.gov.au/waterdata/services?service=kisters&type=queryServices&request=getTimeseriesValues&ts_id=169532010&format=json"
+    },
+    {
+      "date": "1896-1972",
+      "fact": "No values between 1895-12-31 and 1972-06-21.",
+      "source": "https://www.bom.gov.au/waterdata/services?service=kisters&type=queryServices&request=getTimeseriesValues&ts_id=169532010&format=json"
+    },
+    {
+      "date": "1972-06-21",
+      "fact": "Record resumes with several readings a day; quality E (unknown) until 1988.",
+      "source": "https://www.bom.gov.au/waterdata/services?service=kisters&type=queryServices&request=getTimeseriesValues&ts_id=169532010&format=json"
+    },
+    {
+      "date": "1897; 1941",
+      "fact": "The Bourke lock and weir, about 7 km from town, was built in 1897 and rebuilt as a concrete weir in 1941. Whether the town gauge sits in the weir pool is not stated.",
+      "source": "https://www.visitnsw.com/destinations/outback-nsw/bourke-area/bourke/attractions/bourke-lock-and-weir"
+    },
+    {
+      "date": null,
+      "fact": "Not found: why 1896-1972 is missing, gauge moves and datum history.",
+      "source": null
+    }
+  ],
+  "public_notes": "The usable record at Bourke starts in mid-1972; there is one year from 1895 and then nothing for 76 years. Quality is rated unknown until 1988."
+}

@@ -1,0 +1,645 @@
+{
+  "_note": "River text, map segments (Natural Earth rivernum) and gauge order, upstream to downstream. Gauge numbers are never written here; the build computes them from data/processed.",
+  "rivers": [
+    {
+      "id": "rhine",
+      "name": "Rhine",
+      "region": "Europe",
+      "geometry": [
+        {
+          "rivernum": 105
+        },
+        {
+          "rivernum": 140
+        },
+        {
+          "rivernum": 150
+        },
+        {
+          "rivernum": 151
+        }
+      ],
+      "gauges": [
+        "rhine-maxau",
+        "rhine-kaub",
+        "rhine-ruhrort",
+        "rhine-lobith"
+      ],
+      "about": [
+        "The Rhine runs about 770 miles from the Swiss Alps to the North Sea at Rotterdam. It is Europe's busiest inland waterway. Barges carry coal, chemicals, grain and fuel between the Dutch ports and cities in Germany, France and Switzerland.",
+        "Since 1868 a treaty called the Mannheim Act has kept the river open to ships of every nation. The shallowest stretch is the gorge near Kaub, so shippers watch the Kaub gauge to decide how much a barge can carry."
+      ]
+    },
+    {
+      "id": "danube",
+      "name": "Danube",
+      "region": "Europe",
+      "geometry": [
+        {
+          "rivernum": 38
+        },
+        {
+          "rivernum": 25
+        }
+      ],
+      "gauges": [
+        "danube-pfelling",
+        "danube-hofkirchen",
+        "danube-kienstock"
+      ],
+      "about": [
+        "The Danube flows about 1,770 miles from Germany's Black Forest to the Black Sea and passes through ten countries. It links Vienna, Bratislava, Budapest and Belgrade.",
+        "A canal joins it to the Rhine, so a barge can travel from the North Sea to the Black Sea. Dams along its course, including the Iron Gates between Serbia and Romania, make electricity. The stretch in Bavaria shown here is one of the shallowest for shipping."
+      ]
+    },
+    {
+      "id": "elbe",
+      "name": "Elbe",
+      "region": "Europe",
+      "geometry": [
+        {
+          "rivernum": 160
+        }
+      ],
+      "gauges": [
+        "elbe-dresden",
+        "elbe-magdeburg",
+        "elbe-wittenberge"
+      ],
+      "about": [
+        "The Elbe runs about 680 miles from the mountains of the Czech Republic to the North Sea, passing Dresden, Magdeburg and the port of Hamburg.",
+        "Barges use it to move goods between Hamburg and the Czech Republic, but low water often limits how much they can carry. The floods of 2002 and 2013 caused billions of euros in damage along its banks."
+      ]
+    },
+    {
+      "id": "seine",
+      "name": "Seine",
+      "region": "Europe",
+      "geometry": [
+        {
+          "rivernum": 129
+        }
+      ],
+      "gauges": [
+        "seine-paris"
+      ],
+      "about": [
+        "The Seine runs about 480 miles through Paris to the English Channel at Le Havre. Barges carry freight between the coast and the city, and the river supplies part of the city's drinking water.",
+        "The flood of January 1910 is still the benchmark Paris plans against. Since 1949, four large reservoirs upstream have held back water in winter and released it in summer."
+      ]
+    },
+    {
+      "id": "mississippi",
+      "name": "Mississippi",
+      "region": "North America",
+      "geometry": [
+        {
+          "rivernum": 156
+        },
+        {
+          "rivernum": 3
+        }
+      ],
+      "gauges": [
+        "mississippi-stlouis",
+        "mississippi-memphis",
+        "mississippi-helena",
+        "mississippi-vicksburg"
+      ],
+      "about": [
+        "The Mississippi runs about 2,340 miles from Minnesota to the Gulf of Mexico. Barges on it carry a large share of U.S. grain exports to ports near New Orleans.",
+        "When the river runs low, barges must carry lighter loads and shipping costs rise. In the falls of 2022 and 2023, low water also let salt water from the Gulf push upriver toward drinking water intakes in Louisiana."
+      ]
+    },
+    {
+      "id": "ohio",
+      "name": "Ohio",
+      "region": "North America",
+      "geometry": [
+        {
+          "rivernum": 92
+        }
+      ],
+      "gauges": [
+        "ohio-cincinnati",
+        "ohio-louisville",
+        "ohio-cairo"
+      ],
+      "about": [
+        "The Ohio flows about 980 miles from Pittsburgh to Cairo, Illinois, where it joins the Mississippi. A chain of locks and dams keeps it deep enough for barges carrying coal, petroleum and other bulk goods.",
+        "The river supplies drinking water to millions of people. The flood of January 1937 is the largest in its recorded history."
+      ]
+    },
+    {
+      "id": "colorado",
+      "name": "Colorado",
+      "region": "North America",
+      "geometry": [
+        {
+          "rivernum": 163
+        }
+      ],
+      "gauges": [
+        "colorado-lake-powell",
+        "colorado-lake-mead"
+      ],
+      "about": [
+        "The Colorado River supplies water to about 40 million people and millions of acres of farmland in seven U.S. states and Mexico, including Las Vegas, Phoenix and Los Angeles.",
+        "Most of its water is stored in two large reservoirs: Lake Powell behind Glen Canyon Dam and Lake Mead behind Hoover Dam. A 1922 agreement divides the water among the states. The gauges here measure the water surface of the two lakes, not the river itself."
+      ]
+    },
+    {
+      "id": "missouri",
+      "name": "Missouri",
+      "region": "North America",
+      "geometry": [
+        {
+          "rivernum": 8
+        }
+      ],
+      "gauges": [
+        "missouri-bismarck",
+        "missouri-hermann"
+      ],
+      "about": [
+        "The Missouri is the longest river in the United States, about 2,340 miles from Montana to just above St. Louis.",
+        "Six large dams store its water for irrigation, power and flood control. Water released from those dams helps keep the lower Missouri and the middle Mississippi deep enough for barges."
+      ]
+    },
+    {
+      "id": "fraser",
+      "name": "Fraser",
+      "region": "North America",
+      "geometry": [
+        {
+          "rivernum": 187
+        }
+      ],
+      "gauges": [
+        "fraser-shelley",
+        "fraser-hope",
+        "fraser-mission"
+      ],
+      "about": [
+        "The Fraser runs about 850 miles through British Columbia to the Pacific Ocean at Vancouver. It has no dams on its main stem and is one of the most important salmon rivers in the world.",
+        "Floods in 1894 and 1948 shaped how the Vancouver region builds its dikes. The lower river also carries logs and freight to the port."
+      ]
+    },
+    {
+      "id": "amazon",
+      "name": "Amazon",
+      "region": "South America",
+      "geometry": [
+        {
+          "rivernum": 2
+        },
+        {
+          "rivernum": 78
+        }
+      ],
+      "gauges": [
+        "amazon-tabatinga",
+        "amazon-manacapuru",
+        "amazon-manaus",
+        "amazon-obidos"
+      ],
+      "about": [
+        "The Amazon carries more water than any other river, about one-fifth of all the river water that reaches the oceans. Across the rainforest it is the main road: boats carry people, fuel and food, and ocean ships reach Manaus, about 900 miles inland.",
+        "In 2023 and 2024, drought left parts of the river too shallow for boats, cutting off towns that depend on it. The Manaus gauge sits on the Rio Negro, just above where it joins the Amazon."
+      ]
+    },
+    {
+      "id": "parana",
+      "name": "Paraná",
+      "region": "South America",
+      "geometry": [
+        {
+          "rivernum": 99
+        },
+        {
+          "rivernum": 36,
+          "clip": {
+            "lat": -27.25,
+            "keep": "south"
+          }
+        }
+      ],
+      "gauges": [
+        "parana-posadas",
+        "parana-corrientes",
+        "parana-parana",
+        "parana-rosario"
+      ],
+      "about": [
+        "The Paraná runs about 3,000 miles from Brazil through Paraguay and Argentina to the Río de la Plata. Ports around Rosario load most of Argentina's soy and grain exports onto ocean ships.",
+        "The Itaipú and Yacyretá dams on the river supply electricity to Brazil, Paraguay and Argentina. During the low water of 2021, ships leaving Rosario had to sail with lighter loads."
+      ]
+    },
+    {
+      "id": "paraguay",
+      "name": "Paraguay",
+      "region": "South America",
+      "geometry": [
+        {
+          "rivernum": 36,
+          "clip": {
+            "lat": -27.25,
+            "keep": "north"
+          }
+        }
+      ],
+      "gauges": [
+        "paraguay-ladario",
+        "paraguay-asuncion"
+      ],
+      "about": [
+        "The Paraguay River drains the Pantanal, the world's largest tropical wetland, then flows south past Asunción to join the Paraná.",
+        "For landlocked Paraguay it is the main route to the sea. Barges carry soy, fuel and iron ore. Very low water in 2024 left barges stuck for weeks."
+      ]
+    },
+    {
+      "id": "murray-darling",
+      "name": "Murray–Darling",
+      "region": "Australia",
+      "geometry": [
+        {
+          "rivernum": 97
+        },
+        {
+          "rivernum": 54
+        },
+        {
+          "rivernum": 86
+        }
+      ],
+      "gauges": [
+        "murray-albury",
+        "murray-swanhill",
+        "murray-euston",
+        "darling-bourke"
+      ],
+      "about": [
+        "The Murray and Darling rivers drain about one-seventh of Australia. The basin grows a large share of the country's irrigated food, and river towns depend on it for drinking water.",
+        "The Millennium Drought, from about 2001 to 2009, and mass fish deaths near Menindee on the Darling made river water a national issue. Albury on the Murray has one of the longest river records in the country."
+      ]
+    },
+    {
+      "id": "mekong",
+      "name": "Mekong",
+      "region": "Asia",
+      "geometry": [
+        {
+          "rivernum": 40
+        },
+        {
+          "rivernum": 46
+        }
+      ],
+      "gauges": [
+        "mekong-chiangsaen",
+        "mekong-vientiane",
+        "mekong-pakse",
+        "mekong-kratie"
+      ],
+      "about": [
+        "The Mekong runs about 3,000 miles from the Tibetan Plateau through China, Myanmar, Laos, Thailand, Cambodia and Vietnam to the South China Sea.",
+        "Its yearly flood feeds one of the world's largest inland fisheries and the rice fields of the Mekong Delta. Since the 1990s, a growing chain of dams upstream has changed when the river rises and falls."
+      ]
+    },
+    {
+      "id": "ob",
+      "name": "Ob",
+      "region": "Asia",
+      "geometry": [
+        {
+          "rivernum": 114
+        },
+        {
+          "rivernum": 24
+        }
+      ],
+      "gauges": [
+        "ob-salekhard"
+      ],
+      "flow_only": true,
+      "about": [
+        "The Ob and its main branch, the Irtysh, drain a basin of about 1.1 million square miles. The river empties into a long bay, the Gulf of Ob, which opens to the Kara Sea in the Arctic Ocean. Russia publishes daily flow here but not water level.",
+        "Salekhard is on the lower Ob, just north of the Arctic Circle. The river thaws from south to north each year, and its highest flow at Salekhard came in May or June in 85 of the 89 full years on record. A dam at Novosibirsk, far upstream, is the only one on the main river."
+      ],
+      "about_sources": [
+        "Irtysh as a main tributary; basin 2.95 million km2 (about 1.14 million sq mi); one dam on the main stem, at Novosibirsk: ArcticGRO rivers page, https://arcticgreatrivers.org/?p=19",
+        "Gulf of Ob; thaws from south to north: NASA Earth Observatory, 'Ice Jams the Ob River,' July 11, 2007, https://science.nasa.gov/earth/earth-observatory/ice-jams-the-ob-river-7854",
+        "Kara Sea: NASA Earth Observatory, 'River Outflow to the Kara Sea,' https://science.nasa.gov/earth/earth-observatory/river-outflow-to-the-kara-sea-78829/",
+        "Salekhard at 66.63 N (Arctic Circle about 66.56 N): ArcticGRO discharge metadata PDF, Table 1 (updated February 27, 2023), saved as data/raw/flow_arcticgro/discharge_metadata.pdf",
+        "Peak month: computed from data/processed/flow/ob-salekhard.csv, years with at least 330 days (October 19, 2026)",
+        "Flow published but not level: research/RIVER-DATA-REPORT.md"
+      ]
+    },
+    {
+      "id": "yenisei",
+      "name": "Yenisei",
+      "region": "Asia",
+      "geometry": [
+        {
+          "rivernum": 113
+        }
+      ],
+      "gauges": [
+        "yenisei-igarka"
+      ],
+      "flow_only": true,
+      "about": [
+        "The Yenisei empties into the Kara Sea, part of the Arctic Ocean. It carries more water each year than any other river that drains to the Arctic.",
+        "Igarka lies north of the Arctic Circle. Several dams on the Yenisei and its branches hold back water. A 2004 study found that two large reservoirs upstream raised the river's winter flow by 45% to 85% and cut its summer flow by 10% to 50%."
+      ],
+      "about_sources": [
+        "Kara Sea: NASA Earth Observatory, 'River Outflow to the Kara Sea,' https://science.nasa.gov/earth/earth-observatory/river-outflow-to-the-kara-sea-78829/",
+        "Largest Arctic river by annual discharge; multiple dams on the main stem and tributaries: ArcticGRO rivers page, https://arcticgreatrivers.org/?p=19",
+        "Igarka at 67.43 N: ArcticGRO discharge metadata PDF, Table 1 (updated February 27, 2023), saved as data/raw/flow_arcticgro/discharge_metadata.pdf",
+        "Reservoir effects: Yang, Ye and Kane (2004), 'Streamflow changes over Siberian Yenisei River Basin,' Journal of Hydrology 296: 59-80 (abstract via https://repository.geologyscience.ru/handle/123456789/38987). Consistent with data/processed/flow/yenisei-igarka.csv: Jan-Mar mean 4,529 m3/s in 1936-1955 vs. 8,768 in 1975-2005; Jun-Aug 41,276 vs. 39,313."
+      ]
+    },
+    {
+      "id": "lena",
+      "name": "Lena",
+      "region": "Asia",
+      "geometry": [
+        {
+          "rivernum": 12
+        }
+      ],
+      "gauges": [
+        "lena-kyusyur"
+      ],
+      "flow_only": true,
+      "about": [
+        "The Lena flows about 2,640 miles from south to north through Siberia and into the Laptev Sea. More than three-quarters of its basin sits on permanently frozen ground.",
+        "There are no dams on the main river, though one of its main branches, the Viluy, has a dam. Kyusyur is on the lower Lena, far north of the Arctic Circle. Nearly every year in late spring, ice piles up at the river's mouth and causes floods."
+      ],
+      "about_sources": [
+        "Length, direction, Laptev Sea; late-spring ice jams at the mouth: NASA Earth Observatory, 'Flooding in Siberia,' June 5, 2002, https://science.nasa.gov/earth/earth-observatory/flooding-in-siberia-9681",
+        "77% of the basin on continuous permafrost; no dams on the main stem, dam on the Viluy: ArcticGRO rivers page, https://arcticgreatrivers.org/?p=19",
+        "Kyusyur at 70.68 N: ArcticGRO discharge metadata PDF, Table 1 (updated February 27, 2023), saved as data/raw/flow_arcticgro/discharge_metadata.pdf"
+      ]
+    }
+  ],
+  "no_data": [
+    {
+      "id": "nile",
+      "name": "Nile",
+      "geometry": [
+        {
+          "rivernum": 4
+        },
+        {
+          "rivernum": 16
+        },
+        {
+          "rivernum": 17
+        },
+        {
+          "rivernum": 73
+        },
+        {
+          "rivernum": 85
+        }
+      ],
+      "note": "Egypt and Sudan do not publish gauge readings. Flow records in the global archive stop in 1984 and cannot be republished. Satellites have measured Lake Nasser since 1992."
+    },
+    {
+      "id": "congo",
+      "name": "Congo",
+      "geometry": [
+        {
+          "rivernum": 41
+        },
+        {
+          "rivernum": 43
+        },
+        {
+          "rivernum": 45
+        }
+      ],
+      "note": "Kinshasa has a flow record from 1903, but it is not openly published. Satellite readings start about 2002."
+    },
+    {
+      "id": "niger",
+      "name": "Niger",
+      "geometry": [
+        {
+          "rivernum": 59
+        }
+      ],
+      "note": "Flow records exist in a global archive that cannot be republished. An open water level sensor at Niamey starts in 2020."
+    },
+    {
+      "id": "zambezi",
+      "name": "Zambezi",
+      "geometry": [
+        {
+          "rivernum": 70
+        }
+      ],
+      "note": "The dam operator posts only the last two weeks of Lake Kariba levels. Satellites have measured the lake since 1992."
+    },
+    {
+      "id": "yangtze",
+      "name": "Yangtze",
+      "geometry": [
+        {
+          "rivernum": 15
+        },
+        {
+          "rivernum": 18
+        },
+        {
+          "rivernum": 1
+        }
+      ],
+      "note": "China publishes current readings only. The Hankou gauge dates to 1865, but its history is not openly available."
+    },
+    {
+      "id": "yellow",
+      "name": "Yellow",
+      "geometry": [
+        {
+          "rivernum": 66
+        },
+        {
+          "rivernum": 95
+        }
+      ],
+      "note": "No open history. Satellite readings start about 2016."
+    },
+    {
+      "id": "ganges",
+      "name": "Ganges",
+      "geometry": [
+        {
+          "rivernum": 55
+        }
+      ],
+      "note": "India restricts gauge data for rivers it shares with other countries. Bangladesh requires registration. Satellite readings start about 2016."
+    },
+    {
+      "id": "brahmaputra",
+      "name": "Brahmaputra",
+      "geometry": [
+        {
+          "rivernum": 42
+        },
+        {
+          "rivernum": 51
+        }
+      ],
+      "note": "Gauge data is restricted in India and requires registration in Bangladesh."
+    },
+    {
+      "id": "indus",
+      "name": "Indus",
+      "geometry": [
+        {
+          "rivernum": 56
+        }
+      ],
+      "note": "No open gauge history found. Satellite readings start about 2016."
+    },
+    {
+      "id": "volga",
+      "name": "Volga",
+      "geometry": [
+        {
+          "rivernum": 68
+        }
+      ],
+      "note": "Russia does not openly publish gauge history."
+    },
+    {
+      "id": "tigris",
+      "name": "Tigris",
+      "geometry": [
+        {
+          "rivernum": 135
+        }
+      ],
+      "note": "No open gauge history found. Satellite readings start about 2016."
+    },
+    {
+      "id": "euphrates",
+      "name": "Euphrates",
+      "geometry": [
+        {
+          "rivernum": 62
+        }
+      ],
+      "note": "No open gauge history found. Satellite readings start about 2019."
+    },
+    {
+      "id": "amur",
+      "name": "Amur",
+      "geometry": [
+        {
+          "rivernum": 72
+        },
+        {
+          "rivernum": 93
+        }
+      ],
+      "note": "Only current readings are free. Satellite readings start about 2019."
+    }
+  ],
+  "excluded": {
+    "mekong": "Not shown. The Mekong River Commission's Non-commercial Data Use Licence (version C, 2005) allows no redistribution of data or derived products without MRC's written permission. Decision October 19, 2026: leave out anything that clearly needs permission to publish. The fetch scripts and processed files stay so the river can return if MRC grants permission."
+  },
+  "thresholds": {
+    "rhine-kaub": [
+      {
+        "value": 78,
+        "label": "78 cm: barges start to load lighter",
+        "source": "Central Commission for the Navigation of the Rhine reference low water (GlW 2012); widely used by shippers"
+      },
+      {
+        "value": 40,
+        "label": "40 cm: many barges stop running",
+        "source": "Kuehne+Nagel; Bloomberg (2022)"
+      }
+    ]
+  },
+  "adjustments": {
+    "missouri-bismarck": [
+      {
+        "before": "1934-10-01",
+        "add": 4.24,
+        "note": "Readings before October 1, 1934, were measured from a gauge zero 4.24 feet higher than today's. We added 4.24 feet to them so the whole record uses today's zero.",
+        "source": "https://pubs.usgs.gov/wsp/1309/report.pdf"
+      }
+    ],
+    "mekong-chiangsaen": [
+      {
+        "before": "1993-12-16",
+        "add": 0.62,
+        "note": "The gauge moved on December 15, 1993, and readings jumped 0.62 m overnight. Published research gives the same 0.62 m correction, so we added 0.62 m to every reading before the move to put the whole record on today's zero.",
+        "source": "https://hess.copernicus.org/articles/18/4529/2014/hess-18-4529-2014.pdf"
+      }
+    ]
+  },
+  "breaks": {
+    "missouri-bismarck": [
+      {
+        "date": "1934-10-01",
+        "label": "Gauge zero lowered 4.24 ft (earlier readings adjusted)"
+      }
+    ],
+    "mekong-chiangsaen": [
+      {
+        "date": "1993-12-15",
+        "label": "Station moved; earlier readings adjusted by 0.62 m"
+      }
+    ],
+    "ohio-louisville": [
+      {
+        "date": "1923-01-01",
+        "label": "Low-water level steps up; cause not documented"
+      }
+    ]
+  },
+  "display_from": {
+    "darling-bourke": {
+      "date": "1972-01-01",
+      "note": "The record also has readings for part of 1895, then none until 1972. The chart starts in 1972."
+    }
+  },
+  "public_notes_override": {
+    "missouri-bismarck": "Readings before October 1, 1934, were taken from a gauge zero 4.24 feet higher than today's; we added 4.24 feet to them, following the USGS record of the change. For about 18 months in 1936 and 1937 a different gauge set 0.47 feet lower was mostly used, and we did not adjust for it. Since Garrison Dam began holding back water in 1953, the river here has been lower and steadier, and winter ice can push readings up.",
+    "mekong-chiangsaen": "The gauge moved in December 1993. We added 0.62 m to the readings before the move, the correction published researchers use, so the whole record is on today's zero point. Dams upstream in China have changed the river here since the 1990s."
+  },
+  "extra_notes": {
+    "mekong-chiangsaen": "A published reading of 0.00 m on May 28, 1993 (0.62 m after our adjustment) sits in a sharp four-day dip: 0.92, 0.23, 0.05, 0.00, 0.01, then 1.08 m. It may be a recording error.",
+    "seine-paris": "The reading of -1.25 m on September 15, 1946, is the low point of a three-day dip. The French water agency marks it as good data, so we show it as published."
+  },
+  "stats_from": {
+    "colorado-lake-mead": {
+      "date": "1941-07-01",
+      "label": "since the lake first filled in July 1941",
+      "shade": "Lake filling",
+      "source": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
+    },
+    "colorado-lake-powell": {
+      "date": "1980-06-22",
+      "label": "since the lake first filled on June 22, 1980",
+      "shade": "Lake filling",
+      "source": "https://www.usbr.gov/uc/rm/crsp/gc/"
+    }
+  },
+  "flow_names": {
+    "ob-salekhard": "Salekhard",
+    "yenisei-igarka": "Igarka",
+    "lena-kyusyur": "Kyusyur"
+  },
+  "flow_countries": {
+    "ob-salekhard": "Russia",
+    "yenisei-igarka": "Russia",
+    "lena-kyusyur": "Russia"
+  },
+  "_note_flow": "flow_only rivers have no open water-level record; their gauges show flow (data/processed/flow). About text for ob, yenisei, lena checked against the sources in about_sources on October 19, 2026."
+}

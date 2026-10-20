@@ -1,0 +1,148 @@
+{
+  "id": "colorado-lake-mead",
+  "river": "colorado",
+  "name": "Lake Mead (Hoover Dam)",
+  "country": "United States",
+  "lat": 36.0163,
+  "lon": -114.7374,
+  "kind": "reservoir",
+  "source": "Bureau of Reclamation RISE",
+  "source_url": "https://data.usbr.gov/rise/api/result?itemId=6123",
+  "station_code": "RISE item 6123 (lchdb2 site 921)",
+  "unit": "ft",
+  "datum": "ft above sea level (the RISE series does not state a vertical datum; the RISE location record lists USGS 1912; see measurement_history)",
+  "daily_stat": "single reading",
+  "first_date": "1935-02-02",
+  "last_date": "2026-10-13",
+  "n_days": 33492,
+  "coverage_by_decade": [
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.8475,
+      "share_estimated": 0.0,
+      "share_provisional": 0.1525
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Bureau of Reclamation.",
+  "notes": [
+    "Hoover Dam began storing water on 1935-02-01; the record starts 1935-02-02 while the lake was filling. Full pool is 1,229 ft.",
+    "RISE result types in the file: {'observed': 33492}; per-value status field: {'None': 33492}. Only 'observed' values kept.",
+    "RISE disclaimer: \"Data are provisional and subject to revision unless otherwise noted. Data users are cautioned to consider carefully the provisional nature of the information before using it.\" No value carries its own approval flag, so values from 2025-10-01 on (the current water year, plus the previous one until six months after it ends) are marked provisional and earlier values measured. This is our rule, not a Reclamation flag.",
+    "33114 of 33492 values before 2025-10-01 carry a RISE update date. That looks like bulk reloads, so RISE metadata cannot show which past values were revised.",
+    "Each value is the daily instantaneous elevation (instant, daily), stamped at UTC times {'07:00': 33492}; dates are Mountain Standard Time days.",
+    "Dropped 0 fill or impossible values and 0 null values.",
+    "RISE source system: lchdb2; location vertical datum field: USGS 1912 (this refers to the location point, not to the elevation series)."
+  ],
+  "measurement_history": [
+    {
+      "date": "1935-02-01",
+      "fact": "Hoover Dam began storing water on Feb. 1, 1935, when a gate closed the Arizona diversion tunnel.",
+      "source_url": "https://www.usbr.gov/history/hoover.html"
+    },
+    {
+      "date": "1935-02-02",
+      "fact": "Reclamation RISE daily elevation record begins Feb. 2, 1935, from the Lower Colorado Hydrologic Database; provisional unless noted.",
+      "source_url": "https://data.usbr.gov/rise/api/catalog-item/6123"
+    },
+    {
+      "date": "1941-07",
+      "fact": "The lake first rose to 1,220.4 ft in July 1941; spillway gates first passed water Aug. 6, 1941.",
+      "source_url": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
+    },
+    {
+      "date": "1935",
+      "fact": "Reclamation: Lake Mead elevations are based on the dam's 1935 construction survey datum; add 0.55 ft to convert to NGVD29.",
+      "source_url": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
+    },
+    {
+      "date": "2001",
+      "fact": "Reclamation: the reservoir gauge is tied to the Hoover Dam powerhouse datum.",
+      "source_url": "https://www.usbr.gov/lc/region/g2000/LakeMeadSedimentationSurvey2001.pdf"
+    },
+    {
+      "date": "2009",
+      "fact": "Reclamation and NPS note NAVD88 differs from the Hoover Dam powerhouse datum by about 2 ft.",
+      "source_url": "https://databasin.org/datasets/7e8c7d93a10445cf96d410951c32b9d4"
+    },
+    {
+      "date": "not found",
+      "fact": "Reclamation's data catalog lists the Hoover Dam location's vertical datum as \"USGS 1912\"; how this relates to the 1935 datum not found.",
+      "source_url": "https://data.usbr.gov/catalog/4574"
+    },
+    {
+      "date": "1963-03",
+      "fact": "Glen Canyon Dam began storing water upstream, changing inflow to Lake Mead.",
+      "source_url": "https://www.usbr.gov/uc/rm/crsp/gc/"
+    },
+    {
+      "date": "not found",
+      "fact": "Gauge type, reading hour, and recorder history: not found in RISE metadata or the 2001 sedimentation survey.",
+      "source_url": "https://data.usbr.gov/rise/api/catalog-item/6123"
+    }
+  ],
+  "public_notes": "Lake Mead began filling in 1935 and first came close to full in 1941, so the earliest readings show a lake still filling. Reclamation measures elevation against the dam's own 1935 survey, which sits about half a foot from the 1929 national reference and about 2 feet from the current one."
+}

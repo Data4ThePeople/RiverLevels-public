@@ -1,0 +1,132 @@
+{
+ "id": "seine-paris",
+ "river": "seine",
+ "name": "Paris-Austerlitz",
+ "station_name": "La Seine à Paris - Austerlitz",
+ "station_code": "F700000109 (1900-1965), F700000110 (1966-1973), F700000111 (1974-1989), F700000102 (1990-)",
+ "country": "France",
+ "lat": 48.84469,
+ "lon": 2.365511,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "L/s",
+ "daily_stat": "mixed",
+ "source": "Hub'Eau hydrometrie API, obs_elab QmnJ (Schapi / DRIEAT, HydroPortail)",
+ "source_url": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/obs_elab",
+ "license": "Not stated by Hub'Eau or HydroPortail (checked 2026-10-15). French public data usually fall under Licence Ouverte / Etalab 2.0, but that is unconfirmed for this API; clear before republishing.",
+ "credit": "Hub'Eau / HydroPortail (Schapi, Ministère de la Transition écologique)",
+ "flag_rule": "Status validated is measured, unless the method is reconstructed, interpolated, estimated or forced, or the qualification is estimated, which is estimated; raw, corrected and pre-validated are provisional. Doubtful values keep their class and are counted in notes.",
+ "notes": [
+  "Flow at Paris-Austerlitz is computed from the water level through a rating curve kept by the regional hydrometry service; Hub'Eau labels these values method 'Calculée' (computed) (Hub'Eau, HydroPortail).",
+  "Hub'Eau publishes a daily mean flow (QmnJ). Before 1966 the level was read by an observer about once a day (more often in floods), so the early 'daily mean' often rests on one reading (Hub'Eau station history, as in the level series).",
+  "Flow is in liters per second as published (100,000 L/s is 100 m³/s); not converted (Hub'Eau).",
+  "The same four station codes as the level series are used, each only inside its window, with no offset. The flow station F700000103 (2006 on) is a separate station and is not joined (Hub'Eau).",
+  "Days published by more than one chain station: 0 (Hub'Eau).",
+  "Days qualified 'Douteuse' (doubtful) by Hub'Eau: 25285, by decade {'1900s': 2864, '1910s': 2193, '1920s': 2677, '1930s': 2788, '1940s': 3070, '1950s': 3029, '1960s': 3007, '1970s': 3008, '1980s': 2631, '2010s': 18}. They are kept and keep their status class, because the publisher validated them; the flag says the value may be off, not that it was estimated (Hub'Eau).",
+  "Provisional (not yet validated) days: 477, 2019-12-31 to 2026-03-16 (Hub'Eau).",
+  "Paris flow is affected by four large reservoir lakes upstream, run by Seine Grands Lacs, which hold back winter high water and release it in summer and fall, so recent flows differ from natural flows (Seine Grands Lacs).",
+  "From 2006 on, F700000102 has flow on only 1393 days, because Hub'Eau publishes Paris flow from then on mainly under the separate flow station F700000103, which is not joined here (Hub'Eau).",
+  "Rows in window: 40744. Empty values dropped: 752 (by year {'2024': 178, '2025': 313, '2026': 261}; these rows carry no status either). Negative values dropped: 0 (Hub'Eau).",
+  "F700000109 (La Seine à Paris - Austerlitz - historique - avant 1966): 23993 days used, 1900-01-02 to 1965-12-30; 0 days outside its window dropped; 18498 days qualified doubtful. Flags: statut: {'Donnée validée': 23993}; methode: {'Calculée': 23993}; qualification: {'Douteuse': 18498, 'Bonne': 5495} (Hub'Eau).",
+  "F700000110 (La Seine à Paris - Austerlitz - historique - de 1966 à 1973): 2920 days used, 1966-01-02 to 1973-12-30; 0 days outside its window dropped; 2452 days qualified doubtful. Flags: statut: {'Donnée validée': 2920}; methode: {'Calculée': 2920}; qualification: {'Douteuse': 2452, 'Bonne': 468} (Hub'Eau).",
+  "F700000111 (La Seine à Paris - Austerlitz - historique - de 1974 à 1989): 5842 days used, 1974-01-02 to 1989-12-30; 0 days outside its window dropped; 4317 days qualified doubtful. Flags: statut: {'Donnée validée': 5842}; methode: {'Calculée': 5842}; qualification: {'Douteuse': 4317, 'Bonne': 1525} (Hub'Eau).",
+  "F700000102 (La Seine à Paris - Austerlitz - station limni - secours CT): 7989 days used, 1990-01-01 to 2026-10-16; 0 days outside its window dropped; 18 days qualified doubtful. Flags: statut: {'Donnée validée': 6760, 'Donnée brute': 355, 'Donnée pré-validée': 122}; methode: {'Expertisée': 6882, 'Calculée': 355}; qualification: {'Bonne': 6864, 'Non qualifiée': 355, 'Douteuse': 18} (Hub'Eau)."
+ ],
+ "first_date": "1900-01-02",
+ "last_date": "2026-03-16",
+ "n_days": 39992,
+ "coverage_by_decade": [
+  {
+   "decade": 1900,
+   "share_days": 0.9844,
+   "share_measured": 0.9844,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1910,
+   "share_days": 0.9945,
+   "share_measured": 0.9945,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1920,
+   "share_days": 0.9973,
+   "share_measured": 0.9973,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1930,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 0.9934,
+   "share_measured": 0.9934,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 0.9995,
+   "share_measured": 0.9995,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 0.9995,
+   "share_measured": 0.9995,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 0.9997,
+   "share_measured": 0.9997,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 0.651,
+   "share_measured": 0.651,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 0.2002,
+   "share_measured": 0.1999,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0003
+  },
+  {
+   "decade": 2020,
+   "share_days": 0.21,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.21
+  }
+ ]
+}

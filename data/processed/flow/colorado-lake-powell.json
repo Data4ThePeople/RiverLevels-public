@@ -1,0 +1,82 @@
+{
+ "id": "colorado-lake-powell",
+ "river": "colorado",
+ "name": "Lake Powell (Glen Canyon Dam)",
+ "station_name": "Lake Powell Glen Canyon Dam and Powerplant Daily Lake/Reservoir Release - Total-cfs Time Series Data",
+ "station_code": "RISE item 4315 (uchdb2 site 919)",
+ "country": "United States",
+ "lat": 37.05778,
+ "lon": -111.30332,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "dam release",
+ "unit": "cfs",
+ "daily_stat": "mean",
+ "source": "U.S. Bureau of Reclamation, RISE (Reclamation Information Sharing Environment)",
+ "source_url": "https://data.usbr.gov/rise/api/result",
+ "license": "Public domain (U.S. federal government work)",
+ "credit": "U.S. Bureau of Reclamation, Upper Colorado Basin Region",
+ "flag_rule": "RISE has no per-value flags; values from 2025-10-01 (the current water year, plus the previous one until six months after it ends) are provisional, earlier values measured.",
+ "notes": [
+  "This is water released through the dam (turbines, plus bypass tubes and spillways when used), not river flow at a gauge. Dam operators set it under the river's operating rules, so it reflects management decisions as much as weather (Bureau of Reclamation).",
+  "Glen Canyon Dam closed its diversion tunnels in March 1963, so the release record starts while the lake was filling (Bureau of Reclamation).",
+  "Reclamation reports release as a daily average computed from powerplant and outlet records; RISE does not say how it is measured. USGS gauge 09380000 at Lees Ferry, below the dam, measures the released water independently (Bureau of Reclamation, USGS).",
+  "RISE disclaimer: \"Data are provisional and subject to revision unless otherwise noted. Data users are cautioned to consider carefully the provisional nature of the information before using it.\" No value carries its own approval flag, so values from 2025-10-01 on are marked provisional and earlier values measured. This is our rule, the same as for the lake level, not a Reclamation flag (Bureau of Reclamation).",
+  "Each value is the daily average release, stamped at UTC {'07:00': 23228}; dates are Mountain Standard Time days (Bureau of Reclamation).",
+  "RISE result types: {'observed': 23228}; only observed values kept. Dropped 0 empty and 0 negative or fill values; 0 days with zero release are kept (Bureau of Reclamation)."
+ ],
+ "first_date": "1963-03-14",
+ "last_date": "2026-10-16",
+ "n_days": 23228,
+ "coverage_by_decade": [
+  {
+   "decade": 1960,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 1.0,
+   "share_measured": 0.8464,
+   "share_estimated": 0.0,
+   "share_provisional": 0.1536
+  }
+ ]
+}

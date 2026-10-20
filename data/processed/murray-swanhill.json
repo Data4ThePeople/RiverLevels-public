@@ -1,0 +1,94 @@
+{
+  "id": "murray-swanhill",
+  "river": "murray-darling",
+  "name": "Swan Hill",
+  "country": "Australia",
+  "lat": -35.32763381,
+  "lon": 143.5641798,
+  "kind": "river",
+  "source": "Bureau of Meteorology, Water Data Online (KiWIS API)",
+  "source_url": "http://www.bom.gov.au/waterdata/ (station 409204); https://www.bom.gov.au/waterdata/services",
+  "station_code": "409204",
+  "unit": "m",
+  "datum": "m above the local gauge zero (local gauge height; zero elevation not given by the API)",
+  "daily_stat": "mean",
+  "first_date": "1974-11-14",
+  "last_date": "2026-10-13",
+  "n_days": 18950,
+  "coverage_by_decade": [
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 0.7257,
+      "share_estimated": 0.2743,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 0.9956,
+      "share_estimated": 0.0044,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.9967,
+      "share_measured": 0.9926,
+      "share_estimated": 0.0041,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 0.98,
+      "share_estimated": 0.02,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.9592,
+      "share_estimated": 0.0408,
+      "share_provisional": 0.0
+    }
+  ],
+  "license": "Creative Commons Attribution 4.0 (CC BY 4.0), per BoM Water Data Online copyright notice. Credit: Bureau of Meteorology, Water Data Online, with data supplied by the station owner (see notes).",
+  "notes": [
+    "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 266242010, station_id 2877698 (station 409204 MURRAY @ SWAN HILL). Data owner: VIC - Department of Energy, Environment and Climate Action.",
+    "Daily mean of the merged quality-controlled level record, aggregated by BoM to a 24-hour mean. The API does not say how many readings fed each early-year mean; where only one staff reading a day was taken, the 'mean' is that one reading.",
+    "Quality codes ({10: 'quality-A best available Quality', 90: 'quality-B compromised', 110: 'quality-C estimate'}): counts {10: 18182, 90: 49, 110: 719}. Mapping: A (10) and B (90, compromised) -> measured; C (110, estimate) -> estimated; E (140, unknown quality) -> measured before 1991 and provisional from 1991 on (0 days), where it marks recent unchecked readings.",
+    "Unknown-quality code E (140) share of days by decade: none.",
+    "Compromised code B (90) share of days by decade: {2010: 0.001, 2020: 0.018}.",
+    "14 empty timestamps (code -1) and 0 values coded F (210, missing or incorrect) were dropped."
+  ],
+  "measurement_history": [
+    {
+      "date": "1974-11-13",
+      "fact": "Data check: record starts with several readings a day, which fits a continuous recorder.",
+      "source": "https://www.bom.gov.au/waterdata/services?service=kisters&type=queryServices&request=getTimeseriesValues&ts_id=266240010&format=json"
+    },
+    {
+      "date": "1975-1979",
+      "fact": "Many values in 1975-79 carry quality C (estimate); 27% of days in the 1970s are estimated.",
+      "source": "https://www.bom.gov.au/waterdata/services?service=kisters&type=queryServices&request=getQualityCodes&format=json"
+    },
+    {
+      "date": "1924",
+      "fact": "Torrumbarry Weir (Lock 26), the nearest Murray weir upstream, was finished in 1924.",
+      "source": "https://www.mdba.gov.au/water-management/infrastructure/weirs-and-locks"
+    },
+    {
+      "date": null,
+      "fact": "Not found: gauge moves, datum or zero changes, telemetry start, publisher accuracy statement.",
+      "source": null
+    }
+  ],
+  "public_notes": "This record starts in late 1974. About a quarter of the days in the late 1970s were estimated by the data owner rather than measured."
+}

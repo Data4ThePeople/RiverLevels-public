@@ -1,0 +1,111 @@
+{
+ "id": "murray-albury",
+ "river": "murray-darling",
+ "name": "Albury",
+ "station_name": "MURRAY @ DOCTORS PNT",
+ "station_code": "409017",
+ "country": "Australia",
+ "lat": -36.11256944,
+ "lon": 146.93990833,
+ "same_station": false,
+ "offset_note": "Doctors Point, 4 km downstream",
+ "kind": "river flow",
+ "unit": "m3/s",
+ "daily_stat": "mean",
+ "source": "Bureau of Meteorology, Water Data Online (KiWIS API)",
+ "source_url": "https://www.bom.gov.au/waterdata/services",
+ "license": "CC BY 4.0 (BoM Water Data Online copyright notice)",
+ "credit": "Bureau of Meteorology; data from NSW - Water NSW",
+ "flag_rule": "BoM codes A and B are measured, C estimated, E measured before 1991 and provisional from 1991 on; F dropped.",
+ "notes": [
+  "BoM publishes discharge that the station owner computes from the water level through a rating curve, checked by field flow measurements (Bureau of Meteorology).",
+  "Discharge at the Albury gauge (409001) stops on March 16, 1952, so this series is the Murray at Doctors Point (409017), about 4 km downstream; the two are not joined (Bureau of Meteorology).",
+  "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 184020010, station 409017 MURRAY @ DOCTORS PNT; data owner NSW - Water NSW (Bureau of Meteorology).",
+  "Daily mean of the merged quality-controlled record, computed by BoM over 24 hours; the API does not say how many readings fed each early-year mean (Bureau of Meteorology).",
+  "Quality codes (10 quality-A best available Quality; 90 quality-B compromised; 110 quality-C estimate; 140 quality-E unknown): counts {10: 10267, 90: 3876, 110: 765, 140: 17754}. A and B (compromised) are measured, C (estimate) estimated, and E (unknown quality) measured before 1991 and provisional from 1991 on (6854 days), where it marks recent unchecked values (Bureau of Meteorology).",
+  "Share of days with code E (unknown quality) by decade: {1920: 0.1, 1930: 0.021, 1940: 0.014, 1950: 0.051, 1960: 0.853, 1970: 0.999, 1980: 1.0, 1990: 0.076, 2000: 0.289, 2010: 1.0, 2020: 0.865}; with code B (compromised): {1990: 0.437, 2000: 0.625} (Bureau of Meteorology).",
+  "Dropped: 2752 empty timestamps, 0 values coded F (missing or incorrect) and 0 negative values (Bureau of Meteorology)."
+ ],
+ "first_date": "1929-11-02",
+ "last_date": "2026-10-16",
+ "n_days": 32662,
+ "coverage_by_decade": [
+  {
+   "decade": 1920,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1930,
+   "share_days": 0.5422,
+   "share_measured": 0.5356,
+   "share_estimated": 0.0066,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 0.9376,
+   "share_measured": 0.9302,
+   "share_estimated": 0.0074,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 0.7782,
+   "share_measured": 0.7741,
+   "share_estimated": 0.0041,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 0.9899,
+   "share_measured": 0.9795,
+   "share_estimated": 0.0104,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 0.9986,
+   "share_estimated": 0.0014,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 0.9069,
+   "share_estimated": 0.0931,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 0.9989,
+   "share_measured": 0.6239,
+   "share_estimated": 0.0862,
+   "share_provisional": 0.2888
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 1.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 1.0,
+   "share_measured": 0.1342,
+   "share_estimated": 0.0004,
+   "share_provisional": 0.8654
+  }
+ ]
+}

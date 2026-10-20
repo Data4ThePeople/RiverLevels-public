@@ -1,0 +1,127 @@
+{
+  "id": "rhine-kaub",
+  "river": "rhine",
+  "name": "Kaub",
+  "country": "Germany",
+  "lat": 50.085438,
+  "lon": 7.764962,
+  "kind": "river",
+  "source": "BfG hyd1d + PEGELONLINE (WSV)",
+  "source_url": "https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS ; https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/25700100/W/measurements.json",
+  "station_code": "PEGELONLINE 25700100 (uuid 1d26e504-7f9e-480a-b52c-5932be6549ab); hyd1d KAUB",
+  "unit": "cm",
+  "datum": "cm above gauge zero (67.669 m NHN, DHHN2016)",
+  "daily_stat": "mean",
+  "first_date": "1969-11-01",
+  "last_date": "2026-10-14",
+  "n_days": 20767,
+  "coverage_by_decade": [
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9859,
+      "share_measured": 0.8842,
+      "share_estimated": 0.0,
+      "share_provisional": 0.1017
+    }
+  ],
+  "license": "PEGELONLINE part: DL-DE->Zero-2.0 (WSV). hyd1d part: no data license stated by the BfG (see research/datasets/europe.md); clear before republishing.",
+  "notes": [
+    "1969-11-01 to 2026-08-10: BfG hyd1d daily mean W (station KAUB), file https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS (Last-Modified Tue, 11 Aug 2026 04:43:04 GMT).",
+    "hyd1d values through 2025 are marked measured (validated by the WSV/BfG); values from 2026 are means of PEGELONLINE raw data, not validated, and marked provisional (df.gauging_data help page). hyd1d has no per-value flag.",
+    "Missing days inside the hyd1d span: 0; empty values dropped: 0.",
+    "After hyd1d: PEGELONLINE 15-minute raw W (WASSERSTAND ROHDATEN), daily mean over MEZ days (UTC+1), rounded to whole cm as hyd1d does, only days with at least 90 of 96 values; all marked provisional. 30 days from 2 saved pull(s): 25700100_W_20261015T1115Z.json, 25700100_W_20261015T1132Z.json.",
+    "Gap left unfilled between the end of hyd1d (2026-08-10) and the first PEGELONLINE day (2026-09-15): 35 days.",
+    "Gauge zero from PEGELONLINE station metadata: 67.669 m. ü. NHN (DHHN2016), valid from 2019-11-01. hyd1d levels are relative to the gauge zero in force at the time. The 2019-11-01 date, shared by most WSV gauges, marks the switch from DHHN92 to DHHN2016, not a physical change, and does not change W.",
+    "Coordinates and river km from PEGELONLINE station metadata (km 546.23, agency STANDORT BINGEN)."
+  ],
+  "measurement_history": [
+    {
+      "date": "1856",
+      "fact": "First staff-gauge readings at Kaub, in Nassau decimal feet.",
+      "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"
+    },
+    {
+      "date": "1905-05-18",
+      "fact": "Gauge tower with a recording gauge opened; electric operation from 1951.",
+      "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"
+    },
+    {
+      "date": "1951-01-01",
+      "fact": "Gauge zero 67.66 m above sea level (NN) since this date; 67.669 m NHN in the current height system (from 2019-11-01).",
+      "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"
+    },
+    {
+      "date": "1967-1973",
+      "fact": "Remote reporting from 1967, a phone announcer from 1968, a punched-tape recorder from 1973.",
+      "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"
+    },
+    {
+      "date": "1969-11-01",
+      "fact": "The hyd1d daily record for Kaub starts here, later than the 1960 start of most other gauges.",
+      "source": "https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS"
+    },
+    {
+      "date": "1930s-2014",
+      "fact": "A federal waterway working group found the low-water level at Kaub fell about 45 cm since the 1930s at the same flow, although the bed there is largely rock.",
+      "source": "https://izw.baw.de/publikationen/vzb_dokumente_oeffentlich/0/Frei-fliessende-Rhein_2014.pdf"
+    },
+    {
+      "date": "2011",
+      "fact": "Paper recording ended; a second, redundant gauge was added.",
+      "source": "https://de.wikipedia.org/wiki/Pegel_Kaub"
+    },
+    {
+      "date": "2023-01-01",
+      "fact": "The official equivalent low-water level (GlW) at Kaub is 77 cm for 2023 to 2031; the earlier value (GlW 2012) was 78 cm, the figure the shipping trade still quotes.",
+      "source": "https://www.ccr-zkr.org/12030100-en.html"
+    },
+    {
+      "date": "1969-2026",
+      "fact": "Neighbor comparison (hyd1d_stepscan.py) found no gauge-zero step.",
+      "source": "scripts/fetch/hyd1d_stepscan.py"
+    }
+  ],
+  "public_notes": "The Kaub reading is measured against a fixed mark, not the riverbed, so it is not the depth of the river, and it can go below zero. The river's low-water level here has dropped about 45 cm since the 1930s at the same flow, so old and new lows are not exactly equal conditions. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
+}

@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>World River Levels</title>
+<meta name="description" content="Pick a river and watch its water level rise and fall at gauges with records going back as far as 1858. Built by Data 4 The People.">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
+  --land: #f4f1e8; --land-edge: #cfc9b8; --sea: #cfe3f5; --lake: #b7d3f0;
+  --river: #2a78d6; --river-dim: #9ec5f4; --nodata: #b9b7ae;
+  --water: #3987e5; --water-wash: rgba(42,120,214,0.18); --bank: #d9d3c4; --bank-edge: #b8b0a0;
+  --prov: #86b6ef; --est: #eb6834; --thresh: #d03b3b; --accent: #2a78d6;
+  --flow: #1baf7a; --flow-prov: #8fd9bd; --flow-dim: #a9dfc9;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --land: #2a2925; --land-edge: #45433d; --sea: #12202f; --lake: #1a3350;
+    --river: #3987e5; --river-dim: #184f95; --nodata: #5a5955;
+    --water: #3987e5; --water-wash: rgba(57,135,229,0.22); --bank: #3d3a33; --bank-edge: #57524a;
+    --prov: #6da7ec; --est: #d95926; --thresh: #e66767; --accent: #3987e5;
+    --flow: #199e70; --flow-prov: #5cc39d; --flow-dim: #125f45;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+  --land: #2a2925; --land-edge: #45433d; --sea: #12202f; --lake: #1a3350;
+  --river: #3987e5; --river-dim: #184f95; --nodata: #5a5955;
+  --water: #3987e5; --water-wash: rgba(57,135,229,0.22); --bank: #3d3a33; --bank-edge: #57524a;
+  --prov: #6da7ec; --est: #d95926; --thresh: #e66767; --accent: #3987e5;
+  --flow: #199e70; --flow-prov: #5cc39d; --flow-dim: #125f45;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--page); color: var(--ink); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.app { container-type: inline-size; height: 100%; min-height: 560px; display: flex; flex-direction: column; background: var(--surface); }
+body.framed .app { height: 780px; }
+header { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--grid); flex-wrap: wrap; }
+header h1 { font-size: 18px; margin: 0; font-weight: 650; letter-spacing: -0.01em; }
+header .sub { color: var(--ink-2); font-size: 13px; flex: 1 1 260px; }
+select, button { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--axis); border-radius: 6px; padding: 5px 8px; }
+button { cursor: pointer; }
+button:hover, select:hover { border-color: var(--muted); }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.main { flex: 1; display: flex; min-height: 0; }
+.mapwrap { position: relative; flex: 1; min-width: 0; background: var(--sea); }
+#map { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+.maptools { position: absolute; left: 12px; top: 12px; display: flex; gap: 6px; }
+.maplegend { position: absolute; left: 12px; bottom: 10px; font-size: 12px; color: var(--ink-2); background: color-mix(in srgb, var(--surface) 85%, transparent); padding: 4px 8px; border-radius: 6px; display: flex; gap: 12px; flex-wrap: wrap; }
+.key { display: inline-flex; align-items: center; gap: 5px; }
+.key i { display: inline-block; width: 16px; height: 0; border-top: 2px solid; }
+.key b { display: inline-block; width: 9px; height: 9px; border-radius: 50%; }
+.rivercard { position: absolute; right: 12px; top: 12px; width: min(330px, 45%); background: color-mix(in srgb, var(--surface) 92%, transparent); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+.rivercard h2 { margin: 0 0 4px; font-size: 18px; }
+.region { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+.panel { width: 420px; flex: none; border-left: 1px solid var(--grid); overflow-y: auto; padding: 12px 16px 10px; display: flex; flex-direction: column; gap: 8px; }
+.panel h2 { margin: 0; font-size: 20px; font-weight: 650; }
+.panel .region { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+.about p { margin: 0 0 6px; color: var(--ink-2); font-size: 13px; }
+.gauges { display: flex; flex-wrap: wrap; gap: 6px; }
+.gauges button { font-size: 12px; padding: 3px 9px; border-radius: 999px; }
+.gauges button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.figtitle { font-weight: 600; font-size: 13px; margin: 2px 0 0; }
+.figsub { color: var(--muted); font-size: 12px; margin: 0; }
+.readout { display: flex; align-items: baseline; gap: 10px; }
+.readout .val { font-size: 26px; font-weight: 650; }
+.readout .date { color: var(--ink-2); }
+.readout .q { font-size: 12px; color: var(--muted); }
+#xsec { width: 100%; height: 150px; display: block; }
+.controls { display: flex; align-items: center; gap: 8px; }
+.controls input[type=range] { flex: 1; accent-color: var(--accent); }
+.chartwrap { position: relative; }
+#rec { width: 100%; height: 110px; display: block; cursor: crosshair; }
+.tip { position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.12); border-radius: 6px; padding: 4px 8px; font-size: 12px; white-space: nowrap; display: none; z-index: 5; }
+.tip strong { font-size: 13px; }
+.stats { font-size: 12px; color: var(--ink-2); margin: 0; }
+.notes { font-size: 12px; color: var(--muted); margin: 0; }
+.legend { display: flex; gap: 4px 12px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); }
+footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top: 1px solid var(--grid); display: flex; gap: 12px; flex-wrap: wrap; justify-content: space-between; }
+.nodata-card { color: var(--ink-2); font-size: 13px; }
+.hidden { display: none !important; }
+.caveat { margin-top: 12px; padding: 10px 12px; border: 1px solid var(--grid); border-radius: 8px; background: var(--page); }
+.caveat p { margin: 0 0 6px; font-size: 13px; color: var(--ink-2); }
+.caveat p.figtitle { color: var(--ink); }
+.flag { font-size: 12px; color: var(--ink-2); margin: 0; padding: 6px 10px; border-left: 3px solid var(--axis); background: var(--page); }
+#cov { width: 100%; height: 34px; display: block; cursor: crosshair; }
+.history { font-size: 12px; color: var(--ink-2); }
+.history ul { margin: 4px 0 0; padding-left: 18px; }
+.history li { margin-bottom: 3px; }
+.history a { color: var(--ink-2); }
+#frec { width: 100%; height: 100px; display: block; cursor: crosshair; }
+#fcov { width: 100%; height: 34px; display: block; cursor: crosshair; }
+.flowbox { display: flex; flex-direction: column; gap: 2px; }
+.dialrow { display: flex; align-items: center; gap: 12px; }
+.dialrow svg { flex: none; }
+.dialread .val { font-size: 20px; font-weight: 650; }
+.dialread .date, .dialread .q { font-size: 12px; color: var(--muted); }
+.flowbox:not(.compact) .dialread { display: none; }
+.flowbox:not(.compact) .dialrow { justify-content: center; }
+.sect { border-top: 1px solid var(--grid); padding-top: 8px; margin-top: 4px; }
+@container (max-width: 820px) {
+  .main { flex-direction: column; overflow-y: auto; }
+  .mapwrap { flex: none; height: 340px; }
+  .panel { width: auto; border-left: 0; border-top: 1px solid var(--grid); overflow: visible; }
+  .rivercard { position: static; width: auto; border-radius: 0; box-shadow: none; border-width: 1px 0 0; }
+  .mapwrap { display: flex; flex-direction: column; height: auto; }
+  #map { position: relative; height: 340px; }
+  .maplegend { position: static; border-radius: 0; background: var(--surface); padding: 6px 12px; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>World River Levels</h1>
+    <div class="sub">Pick a river, then a gauge, and press play to watch the water rise and fall.</div>
+    <label><span class="hidden">River</span><select id="riverSel" aria-label="Choose a river"></select></label>
+  </header>
+  <div class="main">
+    <div class="mapwrap">
+      <canvas id="map" aria-label="World map of rivers. Blue rivers have long water level records; gray rivers do not." role="img"></canvas>
+      <div class="maptools"><button id="worldBtn" type="button">World view</button></div>
+      <div class="maplegend">
+        <span class="key"><i style="border-color:var(--river)"></i>Long public water level record</span>
+        <span class="key"><i style="border-color:var(--flow)"></i>Flow record only</span>
+        <span class="key"><i style="border-color:var(--nodata)"></i>No public water level record</span>
+        <span class="key"><b style="background:var(--river)"></b>Gauge (zoom in to see)</span>
+        <span class="key"><b style="border:2px solid var(--flow);width:9px;height:9px"></b>Flow-only gauge</span>
+      </div>
+      <div class="rivercard hidden" id="riverCard">
+        <div class="region" id="rRegion"></div>
+        <h2 id="rName"></h2>
+        <div class="about" id="rAbout"></div>
+      </div>
+      <div class="tip" id="mapTip"></div>
+    </div>
+    <aside class="panel" id="panel" aria-live="polite">
+      <div id="intro">
+        <h2 id="introTitle"></h2>
+        <p class="nodata-card">Each blue river on the map has at least one gauge with a long daily record of its water level. Click a river or choose one from the list. Where a gauge also has a record of how much water flows past it, a dial and a second chart show the flow. Green rivers have no open water level record but do have a long daily flow record. Gray rivers are major rivers whose history is not openly published.</p>
+        <div class="caveat">
+          <p class="figtitle">Before you look: old readings are less certain</p>
+          <p>Most readings before the mid-1900s were taken by hand from a marked post in the river, often once a day. Since then, many gauges have moved, had their zero point reset, or been affected by new dams and by riverbeds that wore down over time. Some records have years with missing days, and a few have values the publisher filled in.</p>
+          <p>Flow is almost never measured every day. Publishers compute it from the water level with a rating curve that is checked a few times a year, so the highest and lowest flows are the least certain.</p>
+          <p>For every gauge we show how complete the record is year by year, mark readings the publisher estimated or has not yet checked, and list what we know about how the gauge changed. Compare old and new readings with care.</p>
+        </div>
+      </div>
+      <div id="nodata" class="hidden">
+        <div class="region">No public record</div>
+        <h2 id="ndName"></h2>
+        <p class="nodata-card" id="ndNote"></p>
+      </div>
+      <div id="riverView" class="hidden">
+        <div class="gauges" id="gaugeBtns" role="group" aria-label="Gauges"></div>
+        <div>
+          <p class="figtitle" id="xTitle"></p>
+          <p class="figsub" id="xSub"></p>
+        </div>
+        <p class="flag" id="flag"></p>
+        <div class="readout"><span class="val" id="roVal"></span><span class="date" id="roDate"></span><span class="q" id="roQ"></span></div>
+        <svg id="xsec" role="img" aria-label="Cross-section of the river at the gauge"></svg>
+        <p class="figsub" id="thNote"></p>
+        <div class="flowbox hidden" id="flowBox">
+          <p class="figtitle" id="fTitle"></p>
+          <p class="figsub" id="fSub"></p>
+          <div class="dialrow">
+            <svg id="dial" role="img" aria-label="Flow dial"></svg>
+            <div class="dialread"><div class="val" id="fVal"></div><div class="q" id="fQ"></div><div class="date" id="fDate"></div></div>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="playBtn" type="button" aria-label="Play">Play</button>
+          <input id="slider" type="range" min="0" max="0" value="0" aria-label="Date">
+          <select id="speedSel" aria-label="Speed">
+            <option value="30">1 month per second</option>
+            <option value="365" selected>1 year per second</option>
+            <option value="1826">5 years per second</option>
+          </select>
+        </div>
+        <p class="figtitle" id="cTitle"></p>
+        <div class="chartwrap">
+          <canvas id="rec" aria-label="Full daily record for this gauge"></canvas>
+          <div class="tip" id="recTip"></div>
+        </div>
+        <p class="figsub" id="covTitle">How complete is the record? Share of days with a reading, by year</p>
+        <div class="chartwrap">
+          <canvas id="cov" aria-label="Share of days with a reading, by year"></canvas>
+          <div class="tip" id="covTip"></div>
+        </div>
+        <p class="figsub" id="breakNote"></p>
+        <div class="legend" id="avgLegend">
+          <span class="key"><i style="border-color:var(--ink)"></i>12-month average (drawn only when 300 of the past 365 days have a reading)</span>
+        </div>
+        <div class="legend" id="qLegend">
+          <span class="key" data-q="0"><i style="border-color:var(--river)"></i>Daily, measured</span>
+          <span class="key" data-q="1"><i style="border-color:var(--prov)"></i>Daily, provisional (not yet checked)</span>
+          <span class="key" data-q="2"><i style="border-color:var(--est)"></i>Daily, estimated by the publisher</span>
+        </div>
+        <p class="stats" id="stats"></p>
+        <div id="flowCharts" class="hidden sect">
+          <p class="figtitle" id="fcTitle"></p>
+          <p class="flag" id="fFlag"></p>
+          <div class="chartwrap">
+            <canvas id="frec" aria-label="Full daily flow record"></canvas>
+            <div class="tip" id="frecTip"></div>
+          </div>
+          <p class="figsub">How complete is the flow record? Share of days with a value, by year</p>
+          <div class="chartwrap">
+            <canvas id="fcov" aria-label="Share of days with a flow value, by year"></canvas>
+            <div class="tip" id="fcovTip"></div>
+          </div>
+          <div class="legend" id="fqLegend">
+            <span class="key" data-q="0"><i style="border-color:var(--flow)"></i>Daily flow, measured</span>
+            <span class="key" data-q="1"><i style="border-color:var(--flow-prov)"></i>Daily flow, provisional</span>
+            <span class="key" data-q="2"><i style="border-color:var(--est)"></i>Daily flow, estimated</span>
+            <span class="key"><i style="border-color:var(--ink)"></i>12-month average</span>
+          </div>
+          <p class="stats" id="fStats"></p>
+        </div>
+        <div class="history">
+          <p class="figtitle">About this record</p>
+          <p class="notes" id="gNotes"></p>
+          <ul id="gHist"></ul>
+          <div id="flowAbout" class="hidden">
+            <p class="figtitle">About the flow record</p>
+            <p class="notes" id="fNotes"></p>
+            <ul id="fHist"></ul>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <span id="srcLine">Sources: national water agencies, listed per gauge. Map: Natural Earth.</span>
+    <span>Built by Data 4 The People</span>
+  </footer>
+</div>
+<script id="payload" type="application/json">/*DATA*/</script>
+<script>
+"use strict";
+const D = JSON.parse(document.getElementById("payload").textContent);
+if (window.self !== window.top) { document.body.classList.add("framed"); document.documentElement.dataset.theme = "light"; }
+const $ = id => document.getElementById(id);
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const MONTHS = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
+const DAY0 = Date.UTC(1800, 0, 1) / 864e5; // day numbers in the payload count from 1800-01-01
+
+function dayToDate(n) { return new Date((n + DAY0) * 864e5); }
+function fmtDate(n) { const d = dayToDate(n); return MONTHS[d.getUTCMonth()] + " " + d.getUTCDate() + ", " + d.getUTCFullYear(); }
+function fmtVal(v, g) {
+  const dec = g.unit === "cm" ? 0 : g.unit === "ft" ? 1 : 2;
+  return v.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec }) + " " + g.unit;
+}
+
+// ---------- projection (Equal Earth) ----------
+const A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796, M = Math.sqrt(3) / 2;
+function proj(lon, lat) {
+  const l = lon * Math.PI / 180, p = lat * Math.PI / 180;
+  const t = Math.asin(M * Math.sin(p)), t2 = t * t, t6 = t2 * t2 * t2;
+  return [l * Math.cos(t) / (M * (A1 + 3 * A2 * t2 + t6 * (7 * A3 + 9 * A4 * t2))),
+          -t * (A1 + A2 * t2 + t6 * (A3 + A4 * t2))];
+}
+const P = rings => rings.map(r => r.map(([x, y]) => proj(x, y)));
+const LAND = P(D.geo.land), LAKES = P(D.geo.lakes);
+const RGEO = {}; for (const k in D.geo.rivers) RGEO[k] = P(D.geo.rivers[k]);
+const RIVERS = D.rivers, NODATA = D.no_data, GAUGES = D.gauges;
+const RIVER_BY_ID = Object.fromEntries([...RIVERS, ...NODATA].map(r => [r.id, r]));
+for (const id in GAUGES) GAUGES[id].xy = proj(GAUGES[id].lon, GAUGES[id].lat);
+
+// ---------- decode gauge series (gzip of int32 deltas, base64) ----------
+const GAP = -2147483648;
+const WINDOW = 365, MIN_DAYS = 300;
+const cache = {};
+async function series(id) {
+  if (cache[id]) return cache[id];
+  const isFlow = id.endsWith(":flow"), g = isFlow ? GAUGES[id.slice(0, -5)].flow : GAUGES[id];
+  const bin = Uint8Array.from(atob(g.data), c => c.charCodeAt(0));
+  const buf = await new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream("gzip"))).arrayBuffer();
+  const d = new Int32Array(buf), v = new Float64Array(d.length);
+  let run = 0;
+  for (let i = 0; i < d.length; i++) {
+    if (d[i] === GAP) { v[i] = NaN; continue; }
+    run += d[i]; v[i] = run / g.scale;
+  }
+  const q = new Uint8Array(d.length); // 0 measured, 1 provisional, 2 estimated
+  for (const [a, b, code] of g.qruns) q.fill(code, a, b + 1);
+  // records count from stats_from when set (reservoirs: from when the lake first filled)
+  const statsI = !isFlow && g.stats_from ? Math.max(0, Date.parse(g.stats_from.date) / 864e5 - DAY0 - g.start) : 0;
+  let lo = Infinity, hi = -Infinity, loI = -1, hiI = -1;
+  for (let i = statsI; i < v.length; i++) {
+    if (Number.isNaN(v[i])) continue;
+    if (v[i] < lo) { lo = v[i]; loI = i; }
+    if (v[i] > hi) { hi = v[i]; hiI = i; }
+  }
+  // trailing 365-day mean, shown only when at least MIN_DAYS of those days have a reading
+  const avg = new Float64Array(v.length).fill(NaN);
+  let sum = 0, cnt = 0;
+  for (let i = 0; i < v.length; i++) {
+    if (!Number.isNaN(v[i])) { sum += v[i]; cnt++; }
+    const j = i - WINDOW;
+    if (j >= 0 && !Number.isNaN(v[j])) { sum -= v[j]; cnt--; }
+    if (i >= WINDOW - 1 && cnt >= MIN_DAYS) avg[i] = sum / cnt;
+  }
+  let allLo = Infinity, allHi = -Infinity; // full range, for the chart's scale
+  for (let i = 0; i < v.length; i++) if (!Number.isNaN(v[i])) { if (v[i] < allLo) allLo = v[i]; if (v[i] > allHi) allHi = v[i]; }
+  return (cache[id] = { v, q, avg, lo, hi, loI, hiI, statsI, allLo, allHi, start: g.start, n: v.length });
+}
+
+// ---------- map ----------
+const map = $("map"), mctx = map.getContext("2d");
+let view = { cx: 0, cy: 0, k: 1 }, target = null, W = 0, H = 0, dpr = 1;
+let selRiver = null, selGauge = null, hoverRiver = null, hoverGauge = null;
+function worldView() {
+  const [x0] = proj(-180, 0), [, y0] = proj(0, 84), [, y1] = proj(0, -58);
+  const k = Math.min(W / (2 * Math.abs(x0)) * 0.98, H / (y1 - y0) * 0.95);
+  return { cx: 0, cy: (y0 + y1) / 2, k };
+}
+function fitView(pts) {
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (const [x, y] of pts) { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); }
+  const pad = 0.12, w = Math.max(x1 - x0, 0.02), h = Math.max(y1 - y0, 0.02);
+  const card = $("riverCard"), cw = card.offsetParent && getComputedStyle(card).position === "absolute" ? card.offsetWidth + 24 : 0;
+  const aw = W - cw;
+  const k = Math.min(aw * (1 - 2 * pad) / w, H * (1 - 2 * pad) / h, worldView().k * 14);
+  return { cx: (x0 + x1) / 2 + cw / 2 / k, cy: (y0 + y1) / 2, k };
+}
+const toScreen = ([x, y]) => [(x - view.cx) * view.k + W / 2, (y - view.cy) * view.k + H / 2];
+function resizeMap() {
+  const r = map.getBoundingClientRect(); dpr = window.devicePixelRatio || 1;
+  W = r.width; H = r.height; map.width = W * dpr; map.height = H * dpr;
+  target = null;
+  if (!W || !H) return;
+  view = selRiver ? fitView(riverPts(selRiver)) : worldView();
+  drawMap();
+}
+function path(ctx, rings, close) {
+  ctx.beginPath();
+  for (const r of rings) {
+    r.forEach((p, i) => { const [x, y] = toScreen(p); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); });
+    if (close) ctx.closePath();
+  }
+}
+function riverPts(id) {
+  const pts = RGEO[id].flat();
+  const r = RIVER_BY_ID[id];
+  if (r.gauges) for (const g of r.gauges) if (GAUGES[g]) pts.push(GAUGES[g].xy);
+  return pts;
+}
+function drawMap() {
+  const c = mctx; c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, W, H);
+  path(c, LAND, true); c.fillStyle = css("--land"); c.fill("evenodd");
+  c.strokeStyle = css("--land-edge"); c.lineWidth = 0.7; c.stroke();
+  path(c, LAKES, true); c.fillStyle = css("--lake"); c.fill();
+  const zoomed = view.k > worldView().k * 1.5;
+  c.lineJoin = c.lineCap = "round";
+  // at world zoom rivers are short, so draw them thicker over a land-colored casing
+  const world = !zoomed, boost = world ? 2 : 1;
+  for (const r of NODATA) {
+    path(c, RGEO[r.id]); c.strokeStyle = css("--nodata");
+    c.lineWidth = (r.id === hoverRiver || r.id === selRiver ? 3 : 1.5) * boost; c.stroke();
+  }
+  for (const r of RIVERS) {
+    const on = r.id === selRiver, hov = r.id === hoverRiver;
+    const lw = (on ? 4 : hov ? 3.5 : 2) * boost;
+    if (world) { path(c, RGEO[r.id]); c.strokeStyle = css("--land"); c.lineWidth = lw + 3; c.stroke(); }
+    path(c, RGEO[r.id]);
+    c.strokeStyle = r.flow_only ? (selRiver && !on ? css("--flow-dim") : css("--flow")) : selRiver && !on ? css("--river-dim") : css("--river");
+    c.lineWidth = lw; c.stroke();
+  }
+  const surf = css("--surface");
+  const labels = [];
+  for (const r of RIVERS) {
+    if (selRiver && r.id !== selRiver) continue;
+    if (world && !selRiver) continue; // world view: rivers only; gauges appear once a river is chosen
+    for (const id of r.gauges) {
+      const g = GAUGES[id]; if (!g) continue;
+      const [x, y] = toScreen(g.xy), sel = id === selGauge, hov = id === hoverGauge;
+      const rad = sel ? 7 : hov ? 6 : zoomed ? 5 : 3.5;
+      c.beginPath(); c.arc(x, y, rad + 2, 0, 7); c.fillStyle = surf; c.fill();
+      if (g.flow_only) { // flow-only gauge: hollow ring in the flow color
+        c.beginPath(); c.arc(x, y, rad - 1, 0, 7); c.lineWidth = 2.5; c.strokeStyle = sel ? css("--ink") : css("--flow"); c.stroke();
+      } else { c.beginPath(); c.arc(x, y, rad, 0, 7); c.fillStyle = sel ? css("--ink") : css("--river"); c.fill(); }
+      if (zoomed) labels.push({ g, x, y, rad, pri: sel ? 2 : hov ? 1 : 0 });
+    }
+  }
+  // labels: selected and hovered first; try right, then left, then below; skip if every spot collides
+  labels.sort((a, b) => b.pri - a.pri);
+  const boxes = [];
+  for (const L of labels) {
+    c.font = (L.pri === 2 ? "600 " : "") + "12px system-ui, sans-serif";
+    const tw = c.measureText(L.g.name).width;
+    const spots = [[L.x + L.rad + 5, L.y + 4], [L.x - L.rad - 5 - tw, L.y + 4], [L.x - tw / 2, L.y + L.rad + 15], [L.x - tw / 2, L.y - L.rad - 6]];
+    const spot = spots.find(([sx, sy]) => !boxes.some(b => sx < b[2] && sx + tw > b[0] && sy - 12 < b[3] && sy + 3 > b[1]));
+    if (!spot) continue;
+    boxes.push([spot[0], spot[1] - 12, spot[0] + tw, spot[1] + 3]);
+    c.fillStyle = css("--ink"); c.lineWidth = 3; c.strokeStyle = surf;
+    c.strokeText(L.g.name, spot[0], spot[1]); c.fillText(L.g.name, spot[0], spot[1]);
+  }
+}
+function animateTo(v) {
+  if (!W || !H) return; // resizeMap sets the view once the canvas has a size
+  const from = { ...view }, t0 = performance.now(), dur = 900;
+  target = v;
+  const step = now => {
+    if (target !== v) return;
+    const t = Math.min(1, (now - t0) / dur), e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    const lk = Math.log(from.k) + (Math.log(v.k) - Math.log(from.k)) * e;
+    view = { cx: from.cx + (v.cx - from.cx) * e, cy: from.cy + (v.cy - from.cy) * e, k: Math.exp(lk) };
+    drawMap();
+    if (t < 1) requestAnimationFrame(step); else target = null;
+  };
+  requestAnimationFrame(step);
+}
+function segDist(px, py, ax, ay, bx, by) {
+  const dx = bx - ax, dy = by - ay, l = dx * dx + dy * dy;
+  let t = l ? ((px - ax) * dx + (py - ay) * dy) / l : 0; t = Math.max(0, Math.min(1, t));
+  return Math.hypot(px - ax - t * dx, py - ay - t * dy);
+}
+function hitTest(mx, my) {
+  let best = null, bd = 12;
+  const worldNow = view.k <= worldView().k * 1.5 && !selRiver;
+  for (const r of RIVERS) {
+    if (selRiver && r.id !== selRiver) continue;
+    if (worldNow) break;
+    for (const id of r.gauges) {
+      const g = GAUGES[id]; if (!g) continue;
+      const [x, y] = toScreen(g.xy), d = Math.hypot(mx - x, my - y);
+      if (d < bd) { bd = d; best = { gauge: id, river: r.id }; }
+    }
+  }
+  if (best) return best;
+  bd = 8;
+  for (const r of [...RIVERS, ...NODATA]) {
+    for (const line of RGEO[r.id]) {
+      let [ax, ay] = toScreen(line[0]);
+      for (let i = 1; i < line.length; i++) {
+        const [bx, by] = toScreen(line[i]), d = segDist(mx, my, ax, ay, bx, by);
+        if (d < bd) { bd = d; best = { river: r.id }; }
+        ax = bx; ay = by;
+      }
+    }
+  }
+  return best;
+}
+let drag = null;
+map.addEventListener("pointerdown", e => { drag = { x: e.clientX, y: e.clientY, cx: view.cx, cy: view.cy, moved: false }; map.setPointerCapture(e.pointerId); });
+map.addEventListener("pointermove", e => {
+  const r = map.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top;
+  if (drag) {
+    const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+    if (Math.hypot(dx, dy) > 3) drag.moved = true;
+    if (drag.moved) { target = null; view = { ...view, cx: drag.cx - dx / view.k, cy: drag.cy - dy / view.k }; drawMap(); map.style.cursor = "grabbing"; return; }
+  }
+  const h = hitTest(mx, my), tip = $("mapTip");
+  const hr = h ? h.river : null, hg = h && h.gauge ? h.gauge : null;
+  if (hr !== hoverRiver || hg !== hoverGauge) { hoverRiver = hr; hoverGauge = hg; drawMap(); }
+  map.style.cursor = h ? "pointer" : "grab";
+  if (h) {
+    tip.textContent = "";
+    const s = document.createElement("strong");
+    s.textContent = hg ? GAUGES[hg].name : RIVER_BY_ID[hr].name;
+    tip.append(s, document.createElement("br"));
+    tip.append(document.createTextNode(hg ? (GAUGES[hg].flow_only ? "Flow gauge on the " : "Gauge on the ") + RIVER_BY_ID[hr].name + ", record from " + GAUGES[hg].first_date.slice(0, 4) + (GAUGES[hg].flow ? ", with flow" : "")
+      : RIVER_BY_ID[hr].gauges ? (RIVER_BY_ID[hr].flow_only ? "Flow record only. Click to explore" : "Click to explore") : "No public water level record"));
+    tip.style.display = "block";
+    tip.style.left = Math.min(mx + 14, W - tip.offsetWidth - 4) + "px"; tip.style.top = (my + 14) + "px";
+  } else tip.style.display = "none";
+});
+map.addEventListener("pointerup", e => {
+  const wasDrag = drag && drag.moved; drag = null; map.style.cursor = "grab";
+  if (wasDrag) return;
+  const r = map.getBoundingClientRect(), h = hitTest(e.clientX - r.left, e.clientY - r.top);
+  if (!h) return;
+  if (h.gauge) { if (h.river !== selRiver) selectRiver(h.river, h.gauge); else selectGauge(h.gauge); }
+  else selectRiver(h.river);
+});
+map.addEventListener("pointerleave", () => { $("mapTip").style.display = "none"; hoverRiver = hoverGauge = null; drawMap(); });
+map.addEventListener("wheel", e => {
+  e.preventDefault(); target = null;
+  const r = map.getBoundingClientRect(), mx = e.clientX - r.left - W / 2, my = e.clientY - r.top - H / 2;
+  const f = Math.exp(-e.deltaY * 0.0015), wk = worldView().k, k = Math.max(wk * 0.9, Math.min(wk * 30, view.k * f));
+  view = { cx: view.cx + mx / view.k - mx / k, cy: view.cy + my / view.k - my / k, k }; drawMap();
+}, { passive: false });
+$("worldBtn").addEventListener("click", () => { selectRiver(null); });
+
+// ---------- river selection ----------
+const riverSel = $("riverSel");
+(function fillSelect() {
+  const o = document.createElement("option"); o.value = ""; o.textContent = "Choose a river"; riverSel.append(o);
+  const regions = [...new Set(RIVERS.map(r => r.region))];
+  for (const reg of regions) {
+    const og = document.createElement("optgroup"); og.label = reg;
+    for (const r of RIVERS.filter(r => r.region === reg)) { const op = document.createElement("option"); op.value = r.id; op.textContent = r.name; og.append(op); }
+    riverSel.append(og);
+  }
+  const og = document.createElement("optgroup"); og.label = "No public water level record";
+  for (const r of NODATA) { const op = document.createElement("option"); op.value = r.id; op.textContent = r.name; og.append(op); }
+  riverSel.append(og);
+})();
+riverSel.addEventListener("change", () => selectRiver(riverSel.value || null));
+
+function selectRiver(id, gaugeId) {
+  stop();
+  selRiver = id; riverSel.value = id || "";
+  $("intro").classList.toggle("hidden", !!id);
+  const r = id ? RIVER_BY_ID[id] : null;
+  $("nodata").classList.toggle("hidden", !(r && !r.gauges));
+  $("riverView").classList.toggle("hidden", !(r && r.gauges));
+  $("riverCard").classList.toggle("hidden", !(r && r.gauges));
+  if (r && r.gauges) { $("rRegion").textContent = r.region; $("rName").textContent = r.name; }
+  animateTo(id ? fitView(riverPts(id)) : worldView());
+  if (!r) { selGauge = null; drawMap(); return; }
+  if (!r.gauges) { $("ndName").textContent = r.name; $("ndNote").textContent = r.note; selGauge = null; drawMap(); return; }
+  $("rRegion").textContent = r.region; $("rName").textContent = r.name;
+  const ab = $("rAbout"); ab.textContent = "";
+  for (const p of r.about) { const e = document.createElement("p"); e.textContent = p; ab.append(e); }
+  const gb = $("gaugeBtns"); gb.textContent = "";
+  for (const gid of r.gauges) {
+    if (!GAUGES[gid]) continue;
+    const b = document.createElement("button"); b.type = "button"; b.dataset.id = gid;
+    b.textContent = GAUGES[gid].name; b.addEventListener("click", () => selectGauge(gid)); gb.append(b);
+  }
+  const avail = r.gauges.filter(g => GAUGES[g]);
+  selectGauge(gaugeId || avail.reduce((a, b) => GAUGES[a].first_date <= GAUGES[b].first_date ? a : b));
+}
+
+// ---------- gauge view ----------
+// S is the gauge's main series (water level, or flow at a flow-only gauge). F is flow beside a
+// level gauge, or null. Playback runs on one absolute day number across both records.
+let S = null, F = null, G = null, day = 0, T0 = 0, T1 = 0, playing = false, lastT = 0;
+const isFlowOnly = () => G && G.flow_only;
+function fmtFlow(v, unit) {
+  const dec = v >= 100 || v === 0 ? 0 : v >= 10 ? 1 : 2;
+  return v.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec }) + " " + (unit === "m3/s" ? "m³/s" : unit);
+}
+const fmtFor = (ser, meta) => v => meta.isFlow ? fmtFlow(v, meta.unit) : fmtVal(v, meta);
+function lastValid(ser) { let i = ser.n - 1; while (i > 0 && Number.isNaN(ser.v[i])) i--; return i; }
+function nearestValid(ser, i) {
+  for (let d = 0; d < 400; d++) {
+    if (i - d >= 0 && i - d < ser.n && !Number.isNaN(ser.v[i - d])) return i - d;
+    if (i + d >= 0 && i + d < ser.n && !Number.isNaN(ser.v[i + d])) return i + d;
+  }
+  return -1;
+}
+const QWORD = ["", "provisional", "estimated"];
+const qTagOf = (ser, i) => ser.q[i] === 1 ? " (provisional)" : ser.q[i] === 2 ? " (estimated)" : "";
+function flagText(meta, ser) {
+  const thin = ser.years.filter(y => y.share < 0.95).length;
+  return "Record starts in " + meta.first_date.slice(0, 4) + ". " +
+    (thin ? thin + " of " + ser.years.length + " years are missing more than 5% of days. " : "Every year has readings on at least 95% of days. ");
+}
+function statsText(meta, ser, noun) {
+  const since = meta.stats_from ? " " + meta.stats_from.label : "", f = fmtFor(ser, meta);
+  return "Lowest daily " + noun + since + ": " + f(ser.lo) + " on " + fmtDate(ser.start + ser.loI) + qTagOf(ser, ser.loI) +
+    ". Highest: " + f(ser.hi) + " on " + fmtDate(ser.start + ser.hiI) + qTagOf(ser, ser.hiI) + ".";
+}
+function fillHistory(ul, items) {
+  ul.textContent = "";
+  for (const h of items) {
+    const li = document.createElement("li"); li.append(document.createTextNode(h.text + " "));
+    if (h.url && /^https?:\/\//.test(h.url)) { const a = document.createElement("a"); a.href = h.url; a.target = "_blank"; a.rel = "noopener"; a.textContent = "(source)"; li.append(a); }
+    ul.append(li);
+  }
+}
+function setLegendColors(box, colors) {
+  for (const k of box.children) if (k.dataset.q != null) k.querySelector("i").style.borderColor = colors[+k.dataset.q];
+}
+function showQualities(box, ser) {
+  const qs = new Set(); for (let i = 0; i < ser.n; i++) if (!Number.isNaN(ser.v[i])) qs.add(ser.q[i]);
+  for (const k of box.children) if (k.dataset.q != null) k.classList.toggle("hidden", !qs.has(+k.dataset.q));
+}
+const levelColors = () => [css("--river"), css("--prov"), css("--est")];
+const flowColors = () => [css("--flow"), css("--flow-prov"), css("--est")];
+
+async function selectGauge(id) {
+  stop();
+  selGauge = id; G = GAUGES[id]; drawMap();
+  for (const b of $("gaugeBtns").children) b.setAttribute("aria-pressed", b.dataset.id === id ? "true" : "false");
+  const s = await series(id), f = G.flow ? await series(id + ":flow") : null;
+  if (selGauge !== id) return;
+  S = s; F = f;
+  buildCoverage(S); if (F) buildCoverage(F);
+  T0 = Math.min(S.start, F ? F.start : Infinity); T1 = Math.max(S.start + S.n - 1, F ? F.start + F.n - 1 : -Infinity);
+  day = S.start + lastValid(S);
+  const sl = $("slider"); sl.max = T1 - T0; sl.value = day - T0;
+  const fo = isFlowOnly(), isRes = G.kind === "reservoir";
+  // main series
+  $("xTitle").textContent = fo ? "Flow at " + G.name + ", " + G.country : (isRes ? "Water surface of " : "Water level at ") + G.name + (isRes ? "" : ", " + G.country);
+  $("xSub").textContent = fo
+    ? G.datum + ". This river has no open water-level record, so this is how much water passes the gauge, computed from its level. The dial runs from the lowest to the highest daily flow on record."
+    : G.datum + ". Shown against this gauge's lowest and highest daily readings " + (G.stats_from ? G.stats_from.label : "since " + G.first_date.slice(0, 4)) + ".";
+  $("xsec").classList.toggle("hidden", fo); $("thNote").classList.toggle("hidden", fo);
+  $("cTitle").textContent = (fo ? "Daily flow" : "Daily readings") + " and 12-month average, " + G.first_date.slice(0, 4) + " to " + G.last_date.slice(0, 4);
+  setLegendColors($("qLegend"), fo ? flowColors() : levelColors()); showQualities($("qLegend"), S);
+  $("stats").textContent = statsText({ ...G, isFlow: fo }, S, fo ? "flow" : "reading");
+  $("flag").textContent = flagText(G, S) + (fo ? "Flow is computed from level, so the highest and lowest flows are the least certain. See About this record, below." : "Older readings are less certain. See About this record, below.");
+  $("gNotes").textContent = (G.public_notes || []).join(" ") + " Source: " + G.source + ".";
+  fillHistory($("gHist"), G.history || []);
+  $("breakNote").textContent = (G.breaks || []).map(b => "Gray line, " + fmtDate(Date.parse(b.date) / 864e5 - DAY0) + ": " + b.label + ".").join(" ");
+  mainChart.set(S, { ...G, isFlow: fo, colors: fo ? flowColors() : levelColors() });
+  // flow beside the level, or the dial alone at a flow-only gauge
+  const fm = fo ? { ...G, isFlow: true, kind: "river flow" } : G.flow ? { ...G.flow, isFlow: true, breaks: [], thresholds: [], stats_from: null } : null;
+  $("flowBox").classList.toggle("hidden", !fm);
+  $("flowCharts").classList.toggle("hidden", !(F && !fo));
+  $("flowAbout").classList.toggle("hidden", !(F && !fo));
+  if (fm && !fo) {
+    const rel = fm.kind === "dam release";
+    $("fTitle").textContent = rel ? "Water released from the dam" : "Flow at " + (fm.same_station ? G.name : fm.offset_note);
+    $("fSub").textContent = fm.unit_long + (rel ? ", a daily average set by the dam's operators, not natural river flow."
+      : ", computed from water level with a rating curve.") + " The dial runs from the lowest to the highest daily value on record.";
+    $("fcTitle").textContent = (rel ? "Daily release" : "Daily flow") + " and 12-month average, " + fm.first_date.slice(0, 4) + " to " + fm.last_date.slice(0, 4) + " (" + (fm.unit === "m3/s" ? "m³/s" : fm.unit) + ")";
+    $("fFlag").textContent = flagText(fm, F) + (rel ? "The release is set by the dam's operators." : "Flow is computed from level, so the highest and lowest flows are the least certain.");
+    $("fStats").textContent = statsText(fm, F, rel ? "release" : "flow");
+    setLegendColors($("fqLegend"), flowColors()); showQualities($("fqLegend"), F);
+    $("fNotes").textContent = fm.notes.join(" ") + " Source: " + fm.source + ". License: " + fm.license + ".";
+    fillHistory($("fHist"), [{ text: "How flow is labeled: " + fm.flag_rule, url: "" }]);
+    flowChart.set(F, { ...fm, colors: flowColors() });
+  } else if (fo) {
+    $("fTitle").textContent = ""; $("fSub").textContent = "";
+  }
+  $("flowBox").classList.toggle("compact", !fo);
+  drawCharts(); update();
+}
+function drawCharts() { if (!S) return; mainChart.draw(); if (F && !isFlowOnly()) flowChart.draw(); }
+function update() {
+  if (!S) return;
+  const di = Math.round(day), i = di - S.start, has = i >= 0 && i < S.n && !Number.isNaN(S.v[i]);
+  const fo = isFlowOnly();
+  $("roDate").textContent = fmtDate(di);
+  $("roVal").textContent = has ? (fo ? fmtFlow(S.v[i], G.unit) : fmtVal(S.v[i], G)) : (fo ? "No flow reading" : "No reading");
+  $("roQ").textContent = has ? ["", "Provisional", "Estimated"][S.q[i]] : "";
+  if (!fo) drawXsec(has ? S.v[i] : null);
+  const fser = fo ? S : F;
+  if (fser) {
+    const j = di - fser.start, fh = j >= 0 && j < fser.n && !Number.isNaN(fser.v[j]);
+    const unit = fo ? G.unit : G.flow.unit;
+    drawDial(fser, fh ? fser.v[j] : null, unit, fo);
+    if (!fo) {
+      $("fVal").textContent = fh ? fmtFlow(fser.v[j], unit) : "No flow reading";
+      $("fDate").textContent = fh ? "" : (j < 0 ? "Flow record starts " + fmtDate(fser.start) : j >= fser.n ? "Flow record ends " + fmtDate(fser.start + lastValid(fser)) : "");
+      $("fQ").textContent = fh ? ["", "Provisional", "Estimated"][fser.q[j]] : "";
+    }
+  }
+  mainChart.cursor(); if (F && !fo) flowChart.cursor();
+}
+const SVGNS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, parent, text) {
+  const e = document.createElementNS(SVGNS, tag);
+  for (const k in attrs) if (attrs[k] != null) e.setAttribute(k, attrs[k]);
+  if (text != null) e.textContent = text;
+  if (parent) parent.append(e);
+  return e;
+}
+// flow dial: a half circle from the lowest to the highest daily flow on record
+function drawDial(ser, val, unit, big) {
+  const svg = $("dial"), w = big ? 280 : 190, h = big ? 150 : 96;
+  svg.setAttribute("viewBox", `0 0 ${w} ${h}`); svg.setAttribute("width", w); svg.setAttribute("height", h); svg.textContent = "";
+  const cx = w / 2, cy = h - (big ? 22 : 16), r = Math.min(w / 2 - 10, cy - 6), sw = big ? 14 : 10;
+  const pt = t => [cx - r * Math.cos(Math.PI * t), cy - r * Math.sin(Math.PI * t)];
+  const arc = (t0, t1) => { const [x0, y0] = pt(t0), [x1, y1] = pt(t1); return `M${x0},${y0} A${r},${r} 0 0 1 ${x1},${y1}`; };
+  el("path", { d: arc(0, 1), fill: "none", stroke: css("--grid"), "stroke-width": sw, "stroke-linecap": "round" }, svg);
+  const span = ser.hi - ser.lo || 1;
+  if (val != null) {
+    const t = Math.max(0, Math.min(1, (val - ser.lo) / span));
+    if (t > 0.002) el("path", { d: arc(0, t), fill: "none", stroke: css("--flow"), "stroke-width": sw, "stroke-linecap": "round" }, svg);
+    const [nx, ny] = pt(t), [ix, iy] = [cx + (nx - cx) * 0.62, cy + (ny - cy) * 0.62];
+    el("line", { x1: cx, y1: cy, x2: ix, y2: iy, stroke: css("--ink"), "stroke-width": 2, "stroke-linecap": "round" }, svg);
+  }
+  el("circle", { cx, cy, r: 3.5, fill: css("--ink") }, svg);
+  const fs = big ? 11 : 10;
+  el("text", { x: 1, y: h - 3, "text-anchor": "start", fill: css("--muted"), "font-size": fs }, svg, "Low " + fmtFlow(ser.lo, unit).replace(/ (m³\/s|cfs)$/, ""));
+  el("text", { x: w - 1, y: h - 3, "text-anchor": "end", fill: css("--muted"), "font-size": fs }, svg, "High " + fmtFlow(ser.hi, unit).replace(/ (m³\/s|cfs)$/, ""));
+  if (big && val != null) el("text", { x: cx, y: cy - r * 0.32, "text-anchor": "middle", fill: css("--ink"), "font-size": 15, "font-weight": 650 }, svg, fmtFlow(val, unit));
+  svg.setAttribute("aria-label", val == null ? "Flow dial: no reading on this date" : "Flow dial: " + fmtFlow(val, unit) + ", between the record low of " + fmtFlow(ser.lo, unit) + " and the record high of " + fmtFlow(ser.hi, unit));
+}
+function drawXsec(val) {
+  const svg = $("xsec"), w = svg.clientWidth || 360, h = 150;
+  svg.setAttribute("viewBox", `0 0 ${w} ${h}`); svg.textContent = "";
+  const range = S.hi - S.lo || 1, top = S.hi + range * 0.12, bot = S.lo - range * 0.22;
+  const y = v => 10 + (top - v) / (top - bot) * (h - 20);
+  const L = 70, R = w - 70, bedY = h - 8;
+  // channel: sloped banks down to a flat bed
+  const bank = `M0,${y(top)} L${L - 30},${y(top)} L${L + 25},${bedY - 6} Q${(L + R) / 2},${bedY + 4} ${R - 25},${bedY - 6} L${R + 30},${y(top)} L${w},${y(top)} L${w},${h} L0,${h} Z`;
+  const clipId = "ch" + Math.random().toString(36).slice(2);
+  const cp = el("clipPath", { id: clipId }, el("defs", {}, svg));
+  el("path", { d: `M${L - 30},${y(top)} L${L + 25},${bedY - 6} Q${(L + R) / 2},${bedY + 4} ${R - 25},${bedY - 6} L${R + 30},${y(top)} Z` }, cp);
+  if (val != null) {
+    const wy = Math.min(y(val), bedY);
+    el("rect", { x: 0, y: wy, width: w, height: h - wy, fill: css("--water-wash"), "clip-path": `url(#${clipId})` }, svg);
+    el("line", { x1: 0, x2: w, y1: wy, y2: wy, stroke: css("--water"), "stroke-width": 2, "clip-path": `url(#${clipId})` }, svg);
+  }
+  el("path", { d: bank, fill: css("--bank"), stroke: css("--bank-edge"), "stroke-width": 1 }, svg);
+  const refs = [
+    { v: S.hi, label: "Record high", color: css("--muted"), side: "left" },
+    { v: S.lo, label: "Record low", color: css("--muted"), side: "left" },
+    ...(G.thresholds || []).filter(t => t.value > bot && t.value < top)
+      .map(t => ({ v: t.value, label: t.label.split(":")[0], color: css("--thresh"), side: "right", dash: "4 3" })),
+  ];
+  for (const r of refs) {
+    r.y = y(r.v);
+    el("line", { x1: L - 6, x2: R + 6, y1: r.y, y2: r.y, stroke: r.color, "stroke-width": 1, "stroke-dasharray": r.dash }, svg);
+  }
+  // keep labels at least 12px apart on each side, pushing them away from the line they belong to only as far as needed
+  for (const side of ["left", "right"]) {
+    const rs = refs.filter(r => r.side === side).sort((a, b) => a.y - b.y);
+    rs.forEach((r, i) => { r.ly = i ? Math.max(r.y, rs[i - 1].ly + 12) : r.y; });
+    const over = rs.length ? rs[rs.length - 1].ly - (h - 4) : 0;
+    if (over > 0) rs.forEach(r => r.ly -= over);
+    for (const r of rs) {
+      const x = side === "left" ? 4 : w - 4, anchor = side === "left" ? "start" : "end";
+      const t = el("text", { x, y: r.ly + 4, "text-anchor": anchor, fill: css("--ink"), "font-size": 11, stroke: css("--surface"), "stroke-width": 3, "paint-order": "stroke" }, svg, r.label);
+      if (Math.abs(r.ly - r.y) > 1) {
+        const bx = side === "left" ? 4 + t.getComputedTextLength() + 3 : w - 4 - t.getComputedTextLength() - 3;
+        const ex = side === "left" ? L - 6 : R + 6;
+        el("polyline", { points: `${bx},${r.ly} ${(bx + ex) / 2},${r.ly} ${ex},${r.y}`, fill: "none", stroke: r.color, "stroke-width": 1 }, svg);
+      }
+    }
+  }
+  const tt = (G.thresholds || []).filter(t => t.value > bot && t.value < top);
+  $("thNote").textContent = tt.length ? "Red dashed lines: " + tt.map(t => t.label).join(". ") + "." : "";
+}
+// coverage: share of days with a reading, per calendar year, from the series itself
+function buildCoverage(ser) {
+  if (ser.years) return;
+  const ys = new Map();
+  for (let i = 0; i < ser.n; i++) {
+    const y = dayToDate(ser.start + i).getUTCFullYear();
+    let o = ys.get(y); if (!o) ys.set(y, o = { year: y, have: 0, est: 0, prov: 0, i0: i, i1: i });
+    o.i1 = i;
+    if (!Number.isNaN(ser.v[i])) { o.have++; if (ser.q[i] === 2) o.est++; if (ser.q[i] === 1) o.prov++; }
+  }
+  ser.years = [...ys.values()];
+  for (const o of ser.years) {
+    const days = (Date.UTC(o.year + 1, 0, 1) - Date.UTC(o.year, 0, 1)) / 864e5;
+    // first and last years count only the days inside the record
+    o.days = (o.year === ser.years[0].year || o.year === ser.years[ser.years.length - 1].year) ? o.i1 - o.i0 + 1 : days;
+    o.share = o.have / o.days;
+  }
+}
+const PADL = 44, PADR = 8, PADT = 8, PADB = 18;
+function niceStep(raw) { const p = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / p; return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * p; }
+// one record chart plus its coverage strip; used for level and for flow
+function makeChart(recId, tipId, covId, covTipId) {
+  const rec = $(recId), rctx = rec.getContext("2d"), cov = $(covId), cctx = cov.getContext("2d");
+  const o = { ser: null, meta: null, img: null, cw: 0, ch: 0 };
+  o.set = (ser, meta) => { o.ser = ser; o.meta = meta; };
+  o.draw = () => {
+    const ser = o.ser, meta = o.meta; if (!ser) return;
+    const r = rec.getBoundingClientRect(), dp = window.devicePixelRatio || 1;
+    o.cw = r.width; o.ch = r.height; rec.width = o.cw * dp; rec.height = o.ch * dp;
+    const c = rctx, cw = o.cw, ch = o.ch; c.setTransform(dp, 0, 0, dp, 0, 0); c.clearRect(0, 0, cw, ch);
+    const pw = cw - PADL - PADR, ph = ch - PADT - PADB, range = ser.allHi - ser.allLo || 1;
+    const lo = meta.isFlow ? Math.max(0, ser.allLo - range * 0.05) : ser.allLo - range * 0.05, hi = ser.allHi + range * 0.05;
+    const yy = v => PADT + (hi - v) / (hi - lo) * ph;
+    c.font = "11px system-ui, sans-serif"; c.fillStyle = css("--muted"); c.textAlign = "right";
+    const step = niceStep((hi - lo) / 3);
+    for (let t = Math.ceil(lo / step) * step; t <= hi; t += step) {
+      c.strokeStyle = css("--grid"); c.lineWidth = 1; c.beginPath(); c.moveTo(PADL, Math.round(yy(t)) + 0.5); c.lineTo(cw - PADR, Math.round(yy(t)) + 0.5); c.stroke();
+      const tv = Math.abs(t) < step / 1e6 ? 0 : t;
+      c.fillText(meta.isFlow && tv >= 10000 ? (tv / 1000).toLocaleString("en-US", { maximumFractionDigits: 1 }) + "k" : tv.toLocaleString("en-US", { maximumFractionDigits: 2 }), PADL - 5, yy(t) + 4);
+    }
+    const y0 = dayToDate(ser.start).getUTCFullYear(), y1 = dayToDate(ser.start + ser.n - 1).getUTCFullYear();
+    const ystep = [1, 2, 5, 10, 20, 25, 50][[1, 2, 5, 10, 20, 25, 50].findIndex(s => (y1 - y0) / s <= 6)] || 50;
+    c.textAlign = "center";
+    for (let yr = Math.ceil(y0 / ystep) * ystep; yr <= y1; yr += ystep) {
+      const i = Date.UTC(yr, 0, 1) / 864e5 - DAY0 - ser.start;
+      if (i < 0) continue;
+      c.fillText(String(yr), PADL + i / (ser.n - 1) * pw, ch - 4);
+    }
+    if (ser.statsI > 0 && meta.stats_from) {
+      const x1 = PADL + ser.statsI / (ser.n - 1) * pw;
+      c.fillStyle = css("--grid"); c.fillRect(PADL, PADT, x1 - PADL, ph);
+      c.fillStyle = css("--ink-2"); c.textAlign = "left"; c.font = "10px system-ui, sans-serif";
+      c.fillText(meta.stats_from.shade, PADL + 3, PADT + 10);
+    }
+    // data as min/max per pixel column, colored by worst quality in the column
+    const cols = Math.max(1, Math.floor(pw)), colors = meta.colors;
+    for (let px = 0; px < cols; px++) {
+      const a = Math.floor(px / cols * ser.n), b = Math.max(a + 1, Math.floor((px + 1) / cols * ser.n));
+      let mn = Infinity, mx = -Infinity, q = 0;
+      for (let i = a; i < b && i < ser.n; i++) { const v = ser.v[i]; if (Number.isNaN(v)) continue; if (v < mn) mn = v; if (v > mx) mx = v; if (ser.q[i] > q) q = ser.q[i]; }
+      if (mn === Infinity) continue;
+      c.fillStyle = colors[q];
+      const top = yy(mx), bt = yy(mn);
+      c.globalAlpha = 0.45;
+      c.fillRect(PADL + px, top - 0.75, 1, Math.max(1.5, bt - top + 1.5));
+      c.globalAlpha = 1;
+    }
+    // trailing 12-month average: one point per pixel column (the last day in the column)
+    c.strokeStyle = css("--ink"); c.lineWidth = 2; c.lineJoin = c.lineCap = "round";
+    c.beginPath();
+    let pen = false;
+    for (let px = 0; px < cols; px++) {
+      const i = Math.min(ser.n - 1, Math.max(Math.floor(px / cols * ser.n), Math.floor((px + 1) / cols * ser.n) - 1));
+      const a = ser.avg[i];
+      if (Number.isNaN(a)) { pen = false; continue; }
+      const x = PADL + px + 0.5, y = yy(a);
+      pen ? c.lineTo(x, y) : c.moveTo(x, y); pen = true;
+    }
+    c.stroke();
+    for (const b of (meta.breaks || [])) {
+      const i = Date.parse(b.date) / 864e5 - DAY0 - ser.start;
+      if (i < 0 || i >= ser.n) continue;
+      const x = Math.round(PADL + i / (ser.n - 1) * pw) + 0.5;
+      c.strokeStyle = css("--ink-2"); c.lineWidth = 1; c.beginPath(); c.moveTo(x, PADT + 10); c.lineTo(x, ch - PADB); c.stroke();
+      c.fillStyle = css("--ink-2"); c.textAlign = "center"; c.font = "10px system-ui, sans-serif"; c.fillText(b.date.slice(0, 4), x, PADT + 7);
+    }
+    for (const t of (meta.thresholds || [])) if (t.value > lo && t.value < hi) {
+      c.strokeStyle = css("--thresh"); c.setLineDash([4, 3]); c.beginPath(); c.moveTo(PADL, yy(t.value)); c.lineTo(cw - PADR, yy(t.value)); c.stroke(); c.setLineDash([]);
+    }
+    o.img = c.getImageData(0, 0, rec.width, rec.height);
+    drawCov();
+  };
+  function drawCov() {
+    const ser = o.ser, r = cov.getBoundingClientRect(), dp = window.devicePixelRatio || 1, w = r.width, h = r.height;
+    cov.width = w * dp; cov.height = h * dp;
+    const c = cctx; c.setTransform(dp, 0, 0, dp, 0, 0); c.clearRect(0, 0, w, h);
+    const pw = w - PADL - PADR, bh = h - 6;
+    c.fillStyle = css("--grid"); c.fillRect(PADL, 2, pw, bh);
+    c.font = "10px system-ui, sans-serif"; c.fillStyle = css("--muted"); c.textAlign = "right";
+    c.fillText("100%", PADL - 5, 10); c.fillText("0%", PADL - 5, bh + 2);
+    for (const y of ser.years) {
+      const x0 = PADL + y.i0 / (ser.n - 1) * pw, x1 = PADL + (y.i1 + 1) / (ser.n - 1) * pw, hh = y.share * bh;
+      c.fillStyle = y.est / Math.max(1, y.have) > 0.5 ? css("--est") : o.meta.colors[0];
+      c.fillRect(x0, 2 + bh - hh, Math.max(0.6, x1 - x0 - (x1 - x0 > 3 ? 1 : 0)), hh);
+    }
+  }
+  o.cursor = hoverI => {
+    if (!o.img) return;
+    const c = rctx, ser = o.ser; c.putImageData(o.img, 0, 0);
+    const dp = window.devicePixelRatio || 1; c.setTransform(dp, 0, 0, dp, 0, 0);
+    const pw = o.cw - PADL - PADR, i = Math.round(day) - ser.start;
+    if (i >= 0 && i < ser.n) {
+      const x = PADL + i / (ser.n - 1) * pw;
+      c.strokeStyle = css("--ink"); c.lineWidth = 1; c.beginPath(); c.moveTo(Math.round(x) + 0.5, PADT); c.lineTo(Math.round(x) + 0.5, o.ch - PADB); c.stroke();
+    }
+    if (hoverI != null) {
+      const hx = PADL + hoverI / (ser.n - 1) * pw;
+      c.strokeStyle = css("--muted"); c.beginPath(); c.moveTo(Math.round(hx) + 0.5, PADT); c.lineTo(Math.round(hx) + 0.5, o.ch - PADB); c.stroke();
+    }
+  };
+  const indexAt = e => { const r = rec.getBoundingClientRect(), pw = o.cw - PADL - PADR; return Math.max(0, Math.min(o.ser.n - 1, Math.round((e.clientX - r.left - PADL) / pw * (o.ser.n - 1)))); };
+  rec.addEventListener("pointermove", e => {
+    if (!o.ser) return;
+    const ser = o.ser, i = nearestValid(ser, indexAt(e)), tip = $(tipId);
+    if (i < 0) { tip.style.display = "none"; return; }
+    if (e.buttons) { day = ser.start + i; $("slider").value = day - T0; update(); }
+    o.cursor(i);
+    const f = fmtFor(ser, o.meta);
+    tip.textContent = "";
+    const s = document.createElement("strong"); s.textContent = f(ser.v[i]);
+    tip.append(s, document.createTextNode("  " + fmtDate(ser.start + i) + (ser.q[i] ? " (" + QWORD[ser.q[i]] + ")" : "")));
+    if (!Number.isNaN(ser.avg[i])) tip.append(document.createElement("br"), document.createTextNode("12-month average: " + f(ser.avg[i])));
+    tip.style.display = "block";
+    const r = rec.getBoundingClientRect();
+    tip.style.left = Math.max(0, Math.min(e.clientX - r.left + 10, o.cw - tip.offsetWidth)) + "px"; tip.style.top = "-44px";
+  });
+  rec.addEventListener("pointerleave", () => { $(tipId).style.display = "none"; o.cursor(); });
+  rec.addEventListener("pointerdown", e => { if (!o.ser) return; stop(); const i = nearestValid(o.ser, indexAt(e)); if (i >= 0) { day = o.ser.start + i; $("slider").value = day - T0; update(); } });
+  cov.addEventListener("pointermove", e => {
+    const ser = o.ser; if (!ser || !ser.years) return;
+    const r = cov.getBoundingClientRect(), pw = r.width - PADL - PADR;
+    const i = Math.round((e.clientX - r.left - PADL) / pw * (ser.n - 1));
+    const y = ser.years.find(q => i >= q.i0 && i <= q.i1), tip = $(covTipId);
+    if (!y) { tip.style.display = "none"; return; }
+    tip.textContent = "";
+    const s = document.createElement("strong"); s.textContent = Math.round(y.share * 100) + "%";
+    tip.append(s, document.createTextNode("  " + y.year + ": " + y.have + " of " + y.days + " days" +
+      (y.est ? ", " + y.est + " estimated" : "") + (y.prov ? ", " + y.prov + " provisional" : "")));
+    tip.style.display = "block";
+    tip.style.left = Math.max(0, Math.min(e.clientX - r.left + 10, r.width - tip.offsetWidth)) + "px"; tip.style.top = "-26px";
+  });
+  cov.addEventListener("pointerleave", () => { $(covTipId).style.display = "none"; });
+  return o;
+}
+const mainChart = makeChart("rec", "recTip", "cov", "covTip");
+const flowChart = makeChart("frec", "frecTip", "fcov", "fcovTip");
+$("slider").addEventListener("input", e => { stop(); day = T0 + +e.target.value; update(); });
+
+// ---------- playback ----------
+function stop() { playing = false; $("playBtn").textContent = "Play"; $("playBtn").setAttribute("aria-label", "Play"); }
+$("playBtn").addEventListener("click", () => {
+  if (!S) return;
+  if (playing) return stop();
+  if (day >= T1 - 1) day = T0;
+  playing = true; lastT = performance.now(); $("playBtn").textContent = "Pause"; $("playBtn").setAttribute("aria-label", "Pause");
+  requestAnimationFrame(tick);
+});
+function tick(now) {
+  if (!playing) return;
+  const dt = Math.min(0.1, (now - lastT) / 1000); lastT = now;
+  day = Math.min(T1, day + dt * +$("speedSel").value);
+  $("slider").value = Math.round(day - T0); update();
+  if (day >= T1) return stop();
+  requestAnimationFrame(tick);
+}
+window.addEventListener("keydown", e => {
+  if (!S || e.target.tagName === "SELECT" || e.target.tagName === "INPUT") return;
+  if (e.key === " ") { e.preventDefault(); $("playBtn").click(); }
+});
+
+// ---------- layout ----------
+(function intro() {
+  const ids = Object.keys(GAUGES), first = ids.reduce((a, b) => GAUGES[a].first_date <= GAUGES[b].first_date ? a : b, ids[0]);
+  const words = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"];
+  $("introTitle").textContent = (words[RIVERS.length] || RIVERS.length) + " rivers, " + (first ? GAUGES[first].first_date.slice(0, 4) : "") + " to today";
+})();
+function fromHash() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (GAUGES[h]) { const r = RIVERS.find(r => r.gauges.includes(h)); selectRiver(r.id, h); }
+  else if (RIVER_BY_ID[h]) selectRiver(h);
+}
+window.addEventListener("hashchange", fromHash);
+new ResizeObserver(() => { resizeMap(); if (S) { drawCharts(); update(); } }).observe($("map"));
+fromHash();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => { drawMap(); if (S) { selectGauge(selGauge); } });
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{
+ "id": "colorado-lake-mead",
+ "river": "colorado",
+ "name": "Lake Mead (Hoover Dam)",
+ "station_name": "Lake Mead Hoover Dam and Powerplant Daily Lake/Reservoir Release - Total-cfs Time Series Data",
+ "station_code": "RISE item 6125 (lchdb2 site 921)",
+ "country": "United States",
+ "lat": 36.0163,
+ "lon": -114.7374,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "dam release",
+ "unit": "cfs",
+ "daily_stat": "mean",
+ "source": "U.S. Bureau of Reclamation, RISE (Reclamation Information Sharing Environment)",
+ "source_url": "https://data.usbr.gov/rise/api/result",
+ "license": "Public domain (U.S. federal government work)",
+ "credit": "U.S. Bureau of Reclamation, Lower Colorado Basin Region",
+ "flag_rule": "RISE has no per-value flags; values from 2025-10-01 (the current water year, plus the previous one until six months after it ends) are provisional, earlier values measured.",
+ "notes": [
+  "This is water released through the dam (turbines, plus bypass tubes and spillways when used), not river flow at a gauge. Dam operators set it under the river's operating rules, so it reflects management decisions as much as weather (Bureau of Reclamation).",
+  "The release record starts in April 1934, before Hoover Dam began storing water in February 1935 (Bureau of Reclamation).",
+  "RISE does not say how release is measured; it is reported as a daily average (Bureau of Reclamation).",
+  "RISE disclaimer: \"Data are provisional and subject to revision unless otherwise noted. Data users are cautioned to consider carefully the provisional nature of the information before using it.\" No value carries its own approval flag, so values from 2025-10-01 on are marked provisional and earlier values measured. This is our rule, the same as for the lake level, not a Reclamation flag (Bureau of Reclamation).",
+  "Each value is the daily average release, stamped at UTC {'07:00': 33803}; dates are Mountain Standard Time days (Bureau of Reclamation).",
+  "RISE result types: {'observed': 33803}; only observed values kept. Dropped 0 empty and 0 negative or fill values; 1 days with zero release are kept (Bureau of Reclamation)."
+ ],
+ "first_date": "1934-04-01",
+ "last_date": "2026-10-16",
+ "n_days": 33802,
+ "coverage_by_decade": [
+  {
+   "decade": 1930,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 1.0,
+   "share_measured": 0.8464,
+   "share_estimated": 0.0,
+   "share_provisional": 0.1536
+  }
+ ]
+}

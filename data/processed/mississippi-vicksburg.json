@@ -1,0 +1,179 @@
+{
+  "id": "mississippi-vicksburg",
+  "river": "mississippi",
+  "name": "Vicksburg",
+  "country": "United States",
+  "lat": 32.311832,
+  "lon": -90.902332,
+  "kind": "river",
+  "source": "USACE CWMS Data API",
+  "source_url": "https://cwms-data.usace.army.mil/cwms-data/timeseries?office=MVK&name=Vicksburg.Stage.Inst.1Day.0.DCP-rev",
+  "station_code": "MVK:Vicksburg.Stage.Inst.1Day.0.DCP-rev",
+  "unit": "ft",
+  "datum": "ft above gauge zero (46.23 ft NGVD29)",
+  "daily_stat": "single reading",
+  "first_date": "1901-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 45938,
+  "coverage_by_decade": [
+    {
+      "decade": 1900,
+      "share_days": 0.9991,
+      "share_measured": 0.9991,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 0.9869,
+      "share_estimated": 0.0131,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9992,
+      "share_measured": 0.9992,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers.",
+  "notes": [
+    "CWMS quality codes in the file: {-2147480957: 7, -2147474557: 41, 0: 45890}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 48 days.",
+    "Dropped 0 fill values (>= 9000, such as 99999) and 5 null values; 0 values flagged missing or rejected.",
+    "One instantaneous reading per day (not a daily mean). In the file's time zone (CST6CDT): 06:00 on 24342 days, 07:00 on 21596 days; in UTC: 12:00 on 45938 days.",
+    "USGS 07289000 returned no recent gage height; no extension.",
+    "USGS lists at least six gauge sites at Vicksburg since 1871, all on the same datum but on a sloping water surface; in 1927 the Corps canal gauge read about 2 ft above the bridge gauge. The median level drops about 10 ft from the 1920s to the 1930s and 1940s; site changes and channel changes may both play a part, and the file does not say which gauge each year uses.",
+    "Gauge zero 46.23 ft NGVD29 per the CWMS MVK location record (USGS 07289000 lists 46.22 ft NGVD29).",
+    "Levels are rounded to 0.01 ft: the API converts from stored meters and returns float noise such as 12.979999999999999."
+  ],
+  "measurement_history": [
+    {
+      "date": "1871-12-10",
+      "fact": "Mississippi River Commission staff gauge at the mouth of the Yazoo diversion canal, 1.5 miles above the bridge, used Dec. 1871 to Sept. 1929.",
+      "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+    },
+    {
+      "date": "1873-05-18",
+      "fact": "Weather Bureau staff gauge half a mile upstream of the bridge site, used May 1873 to Oct. 1919.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+    },
+    {
+      "date": "1919-10-30",
+      "fact": "Weather Bureau gauge moved to the mouth of the Yazoo canal, then to an inclined gauge on the canal from Dec. 1, 1922 to Aug. 31, 1934.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+    },
+    {
+      "date": "1934-09-01",
+      "fact": "Weather Bureau readings moved to a wire-weight gauge at the Vicksburg bridge; nonrecording until Dec. 31, 1962.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+    },
+    {
+      "date": "1963-01-01",
+      "fact": "Water-stage recorder on the left bank near the bridge, 1963 to 1967.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+    },
+    {
+      "date": "1968-01-01",
+      "fact": "Gauge moved 1.1 miles upstream for 1968 to 1976.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+    },
+    {
+      "date": "1977-01-01",
+      "fact": "Gauge moved to the left bank at the downstream side of the Interstate 20 bridge, its present site.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+    },
+    {
+      "date": "not found",
+      "fact": "USGS: all these gauges use the same datum, but readings differ because the water surface slopes between them.",
+      "source_url": "https://water.usgs.gov/nwc/NWC/sw/man/S07289000.html"
+    },
+    {
+      "date": "1927-05-04",
+      "fact": "The 1927 crest read 58.4 ft on the Corps canal gauge and about 56.0 ft on the USGS bridge gauge.",
+      "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+    },
+    {
+      "date": "1950",
+      "fact": "Gauge zero 46.225 ft above 1929 datum (1941 adjustment, Corps bench mark), or 46.16 ft above mean Gulf level.",
+      "source_url": "https://pubs.usgs.gov/wsp/1311/report.pdf"
+    },
+    {
+      "date": "not found",
+      "fact": "USACE lists gauge zero as 46.23 ft NGVD29; NWS lists no datum for this gauge.",
+      "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/Vicksburg?office=MVK"
+    }
+  ],
+  "public_notes": "The Vicksburg record joins readings from at least six gauge locations, all set to the same gauge zero but on a sloping river, so the same water can read differently from one site to the next. In 1927 the canal gauge read about 2 feet higher than the bridge gauge; the Army Corps file does not say which gauge it used in each year."
+}

@@ -1,0 +1,148 @@
+{
+  "id": "parana-posadas",
+  "river": "parana",
+  "name": "Posadas",
+  "country": "Argentina",
+  "lat": -27.366667,
+  "lon": -55.883333,
+  "kind": "river",
+  "source": "Instituto Nacional del Agua (INA) alert system a5 API; Prefectura Naval Argentina gauges",
+  "source_url": "https://alerta.ina.gob.ar/a5/obs/puntual/series/14/observaciones",
+  "station_code": "INA series 14 / PNA 80",
+  "unit": "m",
+  "datum": "m above the local gauge zero (cero de escala); INA does not list the zero's elevation",
+  "daily_stat": "mixed (see notes)",
+  "first_date": "1901-01-02",
+  "last_date": "2026-10-14",
+  "n_days": 45580,
+  "coverage_by_decade": [
+    {
+      "decade": 1900,
+      "share_days": 0.9915,
+      "share_measured": 0.9915,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 0.9962,
+      "share_measured": 0.9962,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 0.9515,
+      "share_measured": 0.9515,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 0.983,
+      "share_measured": 0.983,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.9871,
+      "share_measured": 0.9871,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9945,
+      "share_measured": 0.9945,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9944,
+      "share_measured": 0.9944,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    }
+  ],
+  "license": "INA alert system (alerta.ina.gob.ar); data from Prefectura Naval Argentina gauges. No license is stated on the API or site. Credit INA and Prefectura Naval Argentina; clear reuse terms before publishing.",
+  "notes": [
+    "INA series 14 ('medición directa', variable 'Altura hidrométrica'), station Posadas (INA station 14, PNA code 80), owner PNA.",
+    "INA publishes no per-value quality flag, so every value is marked measured. This includes the most recent days, which INA may still correct.",
+    "46574 raw observations. Days with more than one reading (averaged to a daily mean): 860, from 2014-12-12 to 2024-10-24. Before that each day has a single reading.",
+    "Most common local timestamp by decade: {1900: '07:00', 1910: '07:00', 1920: '07:00', 1930: '07:00', 1940: '07:00', 1950: '07:00', 1960: '07:00', 1970: '07:00', 1980: '06:00', 1990: '06:00', 2000: '04:00', 2010: '04:00', 2020: '00:00'}. These are the times INA stored; the uniform 07:00 before 1980 looks like a loading convention, not a documented reading hour.",
+    "No fill values found.",
+    "INA alert thresholds for this gauge: alert 11 m, evacuation 12 m, low water 9.8 m."
+  ],
+  "measurement_history": [
+    {
+      "date": "current",
+      "fact": "INA metadata: Prefectura Naval Argentina staff gauge (not automatic); INA lists no gauge zero elevation.",
+      "source": "https://alerta.ina.gob.ar/a5/obs/puntual/estaciones?nombre=Posadas&format=json"
+    },
+    {
+      "date": "1994-2006",
+      "fact": "Yacyreta dam, downstream of Posadas, held its reservoir at 76 m from 1994 to 2006.",
+      "source": "https://www.infobae.com/2011/02/20/562324-la-argentina-y-paraguay-inauguran-yacyreta/"
+    },
+    {
+      "date": "2006-04 to 2011-02",
+      "fact": "The reservoir was raised to 78 m in April 2006 and step by step to its design level of 83 m, reached 12-13 Feb 2011.",
+      "source": "https://www.infobae.com/2011/02/20/562324-la-argentina-y-paraguay-inauguran-yacyreta/"
+    },
+    {
+      "date": "2016",
+      "fact": "INA: filling Yacyreta to 83 m caused a significant change in river behavior at Posadas.",
+      "source": "https://repositorio.ina.gob.ar/bitstreams/00d7e25a-a60d-4cf6-989f-d3431002006a/download"
+    },
+    {
+      "date": null,
+      "fact": "Not found: early reading practice, gauge zero or zero changes, gauge moves, recorder or telemetry start, any accuracy statement.",
+      "source": null
+    }
+  ],
+  "public_notes": "Since 1994 Posadas sits in the reservoir of the Yacyreta dam, which was raised in steps until 2011. Levels since then mostly reflect how the dam is run, so they cannot be compared directly with the river before the dam."
+}

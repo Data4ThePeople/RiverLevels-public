@@ -1,0 +1,102 @@
+{
+  "id": "elbe-dresden",
+  "river": "elbe",
+  "name": "Dresden",
+  "country": "Germany",
+  "lat": 51.05446,
+  "lon": 13.738832,
+  "kind": "river",
+  "source": "BfG hyd1d + PEGELONLINE (WSV)",
+  "source_url": "https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS ; https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/501060/W/measurements.json",
+  "station_code": "PEGELONLINE 501060 (uuid 70272185-b2b3-4178-96b8-43bea330dcae); hyd1d DRESDEN",
+  "unit": "cm",
+  "datum": "cm above gauge zero (102.7 m NHN, DHHN2016)",
+  "daily_stat": "mean",
+  "first_date": "1960-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 24359,
+  "coverage_by_decade": [
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9859,
+      "share_measured": 0.8842,
+      "share_estimated": 0.0,
+      "share_provisional": 0.1017
+    }
+  ],
+  "license": "PEGELONLINE part: DL-DE->Zero-2.0 (WSV). hyd1d part: no data license stated by the BfG (see research/datasets/europe.md); clear before republishing.",
+  "notes": [
+    "1960-01-01 to 2026-08-10: BfG hyd1d daily mean W (station DRESDEN), file https://hyd1d.bafg.de/downloads/df.gauging_data_latest.RDS (Last-Modified Tue, 11 Aug 2026 04:43:04 GMT).",
+    "hyd1d values through 2025 are marked measured (validated by the WSV/BfG); values from 2026 are means of PEGELONLINE raw data, not validated, and marked provisional (df.gauging_data help page). hyd1d has no per-value flag.",
+    "Missing days inside the hyd1d span: 0; empty values dropped: 0.",
+    "After hyd1d: PEGELONLINE 15-minute raw W (WASSERSTAND ROHDATEN), daily mean over MEZ days (UTC+1), rounded to whole cm as hyd1d does, only days with at least 90 of 96 values; all marked provisional. 30 days from 2 saved pull(s): 501060_W_20261015T1115Z.json, 501060_W_20261015T1132Z.json.",
+    "Gap left unfilled between the end of hyd1d (2026-08-10) and the first PEGELONLINE day (2026-09-15): 35 days.",
+    "Gauge zero from PEGELONLINE station metadata: 102.7 m. ü. NHN (DHHN2016), valid from 2019-11-01. hyd1d levels are relative to the gauge zero in force at the time. The 2019-11-01 date, shared by most WSV gauges, marks the switch from DHHN92 to DHHN2016, not a physical change, and does not change W.",
+    "Coordinates and river km from PEGELONLINE station metadata (km 55.63, agency STANDORT DRESDEN)."
+  ],
+  "measurement_history": [
+    {
+      "date": "not found",
+      "fact": "Start of readings and early reading hour: not found. The hyd1d record used here starts 1960-01-01.",
+      "source": "https://hyd1d.bafg.de/reference/df.gauging_data.html"
+    },
+    {
+      "date": "about 1890-2000s",
+      "fact": "The Elbe bed lowered for about 140 years, fastest around 1890 to 1904 at gauges from Dresden to Magdeburg (about 3 cm a year); work on the Augustus Bridge, where the gauge sits, may have affected readings directly.",
+      "source": "https://izw.baw.de/publikationen.php?file=mitteilungsblaetter/0/mb74_Glazik.pdf"
+    },
+    {
+      "date": "current",
+      "fact": "The gauge is at the Augustus Bridge and is read automatically by the federal waterway agency.",
+      "source": "https://www.dresden.de/de/stadtraum/umwelt/umwelt/messwerte-online/Pegelstaende_und_Alarmstufen.php"
+    },
+    {
+      "date": "1960-2026",
+      "fact": "Neighbor comparison (hyd1d_stepscan.py) found no gauge-zero step.",
+      "source": "scripts/fetch/hyd1d_stepscan.py"
+    }
+  ],
+  "public_notes": "The level is measured against a fixed mark, not the riverbed, so it is not the water depth. The Elbe bed has worn down over the past century, which can make recent lows read lower than older lows at the same flow. Values from 2026 are unchecked raw readings, and August 11 to September 14, 2026 is missing."
+}

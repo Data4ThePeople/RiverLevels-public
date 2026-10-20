@@ -1,0 +1,218 @@
+{
+  "id": "mississippi-stlouis",
+  "river": "mississippi",
+  "name": "St. Louis",
+  "country": "United States",
+  "lat": 38.629006,
+  "lon": -90.179872,
+  "kind": "river",
+  "source": "USACE CWMS Data API + USGS NWIS (provisional extension)",
+  "source_url": "https://cwms-data.usace.army.mil/cwms-data/timeseries?office=MVS&name=St Louis-Mississippi.Stage.Inst.~1Day.0.MVDhist-rev",
+  "station_code": "MVS:St Louis-Mississippi.Stage.Inst.~1Day.0.MVDhist-rev",
+  "unit": "ft",
+  "datum": "ft above gauge zero (379.58 ft NAVD88)",
+  "daily_stat": "single reading",
+  "first_date": "1861-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 60152,
+  "coverage_by_decade": [
+    {
+      "decade": 1860,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1870,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1880,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1890,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1900,
+      "share_days": 0.9288,
+      "share_measured": 0.9288,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.9986,
+      "share_measured": 0.9986,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9981,
+      "share_measured": 0.9981,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.9484,
+      "share_measured": 0.9351,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0133
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers, U.S. Geological Survey.",
+  "notes": [
+    "CWMS quality codes in the file: {0: 60130}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 0 days.",
+    "Dropped 0 fill values (>= 9000, such as 99999) and 0 null values; 0 values flagged missing or rejected.",
+    "11 days in 2024-03-10 to 2024-03-20 have a second reading (at 09:00) besides the 08:00 reading; kept the 08:00 reading and dropped the extra one.",
+    "One instantaneous reading per day (not a daily mean). In the file's time zone (US/Central): 08:00 on 51750 days, 07:59 on 8357 days, 07:50 on 12 days; in UTC: 14:00 on 30281 days, 13:00 on 21469 days, 13:50 on 8369 days.",
+    "Extended 33 days (2026-09-12 to 2026-10-14) past the CWMS public lag with USGS 07010000 instantaneous gage height at 08:00 local, the CWMS reading hour. Same datum: over 39 overlapping days the median difference was +0.00 ft (largest 0.06 ft). USGS marks these values provisional, and so do we.",
+    "Gauge at the foot of Market Street, river mile 179.6 above the Ohio. Gauge zero 379.58 ft NAVD88 per the CWMS location record and the USGS site record for 07010000.",
+    "A second CWMS series (datman-rev) holds the same gauge; MVDhist-rev was used because it is the Mississippi Valley Division historical file.",
+    "Levels are rounded to 0.01 ft: the API converts from stored meters and returns float noise such as 12.979999999999999."
+  ],
+  "measurement_history": [
+    {
+      "date": "1861-01",
+      "fact": "Mississippi River Commission daily stage record at St. Louis begins in January 1861; NWS reports carry it from January 1890.",
+      "source_url": "https://pubs.usgs.gov/wdr/2005/wdr-il-05/data/disc2004/07010000.htm"
+    },
+    {
+      "date": "1861",
+      "fact": "Daily stage was read by hand from a staff gauge at the foot of Market Street, river mile 179.6.",
+      "source_url": "https://pubs.usgs.gov/sir/2009/5232/pdf/sir2009-5232.pdf"
+    },
+    {
+      "date": "1933-03",
+      "fact": "USGS began running the gauge as a continuous stage and discharge station in March 1933, with a gauge house on the Eads Bridge.",
+      "source_url": "https://pubs.usgs.gov/sir/2009/5232/pdf/sir2009-5232.pdf"
+    },
+    {
+      "date": "1933-03",
+      "fact": "Trade press reports the Corps took over gauge reading from the St. Louis harbormaster in March 1933 (not a publisher source).",
+      "source_url": "https://waterwaysjournal.net/?p=25941"
+    },
+    {
+      "date": "1934-05-05",
+      "fact": "Before May 5, 1934, readings came from a nonrecording gauge 0.4 mile downstream; then a recorder 20 ft downstream until Dec. 9, 1952, at the present datum.",
+      "source_url": "https://pubs.usgs.gov/wdr/2005/wdr-il-05/data/disc2004/07010000.htm"
+    },
+    {
+      "date": "1933",
+      "fact": "USGS says the Market Street staff gauge and the Eads Bridge gauge share the same datum and readings transfer between them.",
+      "source_url": "https://pubs.usgs.gov/sir/2009/5232/pdf/sir2009-5232.pdf"
+    },
+    {
+      "date": "1968",
+      "fact": "Trade press: welded hash marks were added to the Market Street gauge after it was found to be off by a few tenths of a foot.",
+      "source_url": "https://waterwaysjournal.net/?p=25941"
+    },
+    {
+      "date": "1990s",
+      "fact": "Trade press: an electronic platform sending readings by satellite every 15 minutes began replacing daily morning hand readings in the 1990s.",
+      "source_url": "https://waterwaysjournal.net/?p=25941"
+    },
+    {
+      "date": "not found",
+      "fact": "Official hour of the historical daily reading: not found in USGS reports, the USGS 2009 study, or USACE CWMS metadata.",
+      "source_url": "https://pubs.usgs.gov/sir/2009/5232/pdf/sir2009-5232.pdf"
+    },
+    {
+      "date": "2004",
+      "fact": "USGS 2004 report lists gauge zero as 379.94 ft above NGVD29.",
+      "source_url": "https://pubs.usgs.gov/wdr/2005/wdr-il-05/data/disc2004/07010000.htm"
+    },
+    {
+      "date": "not found",
+      "fact": "NWS and USACE list gauge zero as 379.58 ft NAVD88; a document explaining the change from 379.94 NGVD29 was not found.",
+      "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/St%20Louis-Mississippi?office=MVS"
+    },
+    {
+      "date": "1861-2008",
+      "fact": "USGS found stage for a given low flow has dropped over time, likely from channel dikes and less sediment; levees raised high-flow stages.",
+      "source_url": "https://pubs.usgs.gov/sir/2009/5232/pdf/sir2009-5232.pdf"
+    },
+    {
+      "date": "1844-06-27",
+      "fact": "NWS flags three listed crests (1844, 1943, 1951) as measured on an older datum.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/EADM7"
+    }
+  ],
+  "public_notes": "Daily readings go back to 1861, first read by hand from a staff gauge and since 1933 also by a recorder at Eads Bridge, both set to the same gauge zero (the fixed point the river is measured from). USGS found that the same low flow now reads lower on the gauge than it did decades ago, so a low reading today is not directly comparable to one from the 1800s."
+}

@@ -1,0 +1,147 @@
+{
+  "id": "seine-melun",
+  "river": "seine",
+  "name": "Melun",
+  "country": "France",
+  "lat": 48.535543,
+  "lon": 2.658005,
+  "kind": "river",
+  "source": "Hub'Eau hydrometrie API (Schapi / HydroPortail)",
+  "source_url": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/obs_elab?code_entite=F447000101&grandeur_hydro_elab=HIXnJ",
+  "station_code": "F447000101",
+  "unit": "mm",
+  "datum": "mm above the station reference (36.01 m, altimetric system code 3, NGF-IGN69; reference valid from 2004-10-01)",
+  "daily_stat": "max",
+  "first_date": "1900-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 38201,
+  "coverage_by_decade": [
+    {
+      "decade": 1900,
+      "share_days": 1.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 1.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 1.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 1.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 1.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 1.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 0.9863,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.9863
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 1.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 1.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 1.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 0.3997,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.3997
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 0.4249,
+      "share_measured": 0.4249,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9696,
+      "share_measured": 0.9696,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.5898,
+      "share_estimated": 0.0,
+      "share_provisional": 0.4102
+    }
+  ],
+  "license": "Not stated by Hub'Eau or HydroPortail (checked 2026-10-15). French public data usually fall under Licence Ouverte / Etalab 2.0, but that is unconfirmed for this API; clear before republishing. Credit: Hub'Eau / HydroPortail (Schapi, Ministere de la Transition ecologique)",
+  "notes": [
+    "Daily maximum water level (HIXnJ) in millimeters as published. Not converted.",
+    "Quality: code_statut 16 (Donnee validee) with method Mesuree, Calculee or Expertisee (edited by a hydrologist) -> measured; validated with method Reconstituee, Interpolation, Estimee or Valeur forcee, or qualification Estimee -> estimated; any status below 16 (raw, corrected, pre-validated) -> provisional, because the publisher has not validated it. Qualification Douteuse (doubtful) values are kept and counted in these notes. Hub'Eau dates are UTC.",
+    "Flags in the data: statut: {'Donnée corrigée': 30641, 'Donnée validée': 6555, 'Donnée pré-validée': 734, 'Donnée brute': 271}; methode: {'Expertisée': 34897, 'Mesurée': 3089, 'Calculée': 215}; qualification: {'Bonne': 37887, 'Non qualifiée': 283, 'Douteuse': 31}",
+    "Station metadata: strongly influenced by the Vives Eaux dam, so no flow is published; height data described as good quality. Daily observer readings in early years.",
+    "The station reference record starts 2004-10-01; the API gives no earlier reference, so a pre-2004 datum change cannot be ruled out from metadata alone."
+  ],
+  "measurement_history": [
+    {
+      "date": "1885-05-01",
+      "fact": "Station opened; the opening date is the installation of the staff gauge. Daily observer readings are available.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F447000101"
+    },
+    {
+      "date": "1984-2005",
+      "fact": "No values are published from 1984-01-01 to 2005-10-01.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/obs_elab?code_entite=F447000101&grandeur_hydro_elab=HIXnJ"
+    },
+    {
+      "date": "2004-10-01",
+      "fact": "Current station reference (36.01 m, NGF-IGN69) valid from this date; earlier references are not listed.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F447000101"
+    },
+    {
+      "date": "ongoing",
+      "fact": "Strongly influenced by the Vives Eaux dam, so no flow is published; the publisher calls the height data good quality.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F447000101"
+    },
+    {
+      "date": "2016",
+      "fact": "Dam influence was especially large during the 2016 flood while the Vives Eaux dam was being rebuilt.",
+      "source": "https://hubeau.eaufrance.fr/api/v2/hydrometrie/referentiel/stations?code_station=F447000101"
+    }
+  ],
+  "public_notes": "Each value is the highest level of the day, in millimeters, measured just above a dam that holds the river up, so low water here reflects dam operation as much as river flow. There are no values from 1984 to 2005, and the publisher has not validated most values before 1984."
+}

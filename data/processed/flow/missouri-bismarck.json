@@ -1,0 +1,109 @@
+{
+ "id": "missouri-bismarck",
+ "river": "missouri",
+ "name": "Bismarck",
+ "station_name": "MISSOURI RIVER AT BISMARCK, ND",
+ "station_code": "USGS 06342500",
+ "country": "United States",
+ "lat": 46.814167,
+ "lon": -100.821389,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "cfs",
+ "daily_stat": "mean",
+ "source": "U.S. Geological Survey, NWIS daily values (00060, statistic 00003)",
+ "source_url": "https://waterservices.usgs.gov/nwis/dv/",
+ "license": "Public domain (U.S. federal government work)",
+ "credit": "U.S. Geological Survey",
+ "flag_rule": "USGS code A is measured and P provisional; any code with e (estimated) or an ice code is estimated.",
+ "notes": [
+  "USGS computes daily discharge from the gauge's water level through a rating curve (stage-discharge relation), adjusted by shifts after each field measurement, and approves a year of data some months after it ends (USGS).",
+  "River ice in winter changes the level for a given flow, so USGS estimates winter flow by other means; those days are marked estimated (USGS).",
+  "Flow has been regulated by Garrison Dam, about 75 miles upstream, since November 1953 (USGS).",
+  "USGS approval codes: {'A': 31929, 'A:e': 3757, 'P': 240, 'P:e': 98}. A (approved) is measured, P (provisional) is provisional, and any code with e (estimated) or an ice code is estimated (USGS).",
+  "Skipped 0 days with no number (codes such as Ice or Eqp: none) and 0 negative values (USGS)."
+ ],
+ "first_date": "1927-10-01",
+ "last_date": "2026-10-16",
+ "n_days": 36024,
+ "coverage_by_decade": [
+  {
+   "decade": 1920,
+   "share_days": 0.8153,
+   "share_measured": 0.8153,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1930,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 0.9669,
+   "share_estimated": 0.0331,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 0.7026,
+   "share_estimated": 0.2974,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 0.7076,
+   "share_estimated": 0.2924,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.7448,
+   "share_estimated": 0.2552,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 1.0,
+   "share_measured": 0.6421,
+   "share_estimated": 0.2612,
+   "share_provisional": 0.0967
+  }
+ ]
+}

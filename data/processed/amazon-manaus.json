@@ -1,0 +1,154 @@
+{
+  "id": "amazon-manaus",
+  "river": "amazon",
+  "name": "Manaus",
+  "country": "Brazil",
+  "lat": -3.1383,
+  "lon": -60.0272,
+  "kind": "river",
+  "source": "Agencia Nacional de Aguas e Saneamento Basico (ANA), HidroWeb web service",
+  "source_url": "https://www.snirh.gov.br/hidroweb/serieshistoricas (station 14990000); https://telemetriaws1.ana.gov.br/ServiceANA.asmx",
+  "station_code": "14990000",
+  "unit": "cm",
+  "datum": "cm above the Manaus port staff gauge zero, a local arbitrary reference; SGB says to subtract 7.00 m from a reading to refer it to sea level (SGB Amazonas bulletin, 19 May 2017)",
+  "daily_stat": "mean",
+  "first_date": "1902-09-15",
+  "last_date": "2026-10-14",
+  "n_days": 45315,
+  "coverage_by_decade": [
+    {
+      "decade": 1900,
+      "share_days": 1.0,
+      "share_measured": 0.9839,
+      "share_estimated": 0.0161,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 1.0,
+      "share_measured": 0.9978,
+      "share_estimated": 0.0022,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 0.9981,
+      "share_estimated": 0.0019,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 0.9986,
+      "share_estimated": 0.0014,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 0.9989,
+      "share_estimated": 0.0011,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 0.9995,
+      "share_estimated": 0.0005,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 0.9997,
+      "share_estimated": 0.0003,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 0.9989,
+      "share_estimated": 0.0011,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9984,
+      "share_measured": 0.4496,
+      "share_estimated": 0.0485,
+      "share_provisional": 0.5003
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.0,
+      "share_estimated": 0.0,
+      "share_provisional": 1.0
+    }
+  ],
+  "license": "No license on the HidroWeb service itself. The SNIRH metadata record for the national hydrometric network allows reproduction of the data provided the source is cited (https://metadados.snirh.gov.br/geonetwork/srv/api/records/f85dbf06-a869-414c-afc5-bb01869e9156). Credit: Agencia Nacional de Aguas e Saneamento Basico (ANA), HidroWeb.",
+  "notes": [
+    "Datum check: 2274 days where both the historic series and telemetry have a value (2005-06-30 to 2014-12-30); telemetry daily mean minus historic value: median +0.0 cm, mean +1.2 cm, 5th-95th percentile -7.5 to +5.0 cm. A median near zero means the two share the same gauge zero.",
+    "Historic series: ANA HidroSerieHistorica, tipoDados=1 (stage). Where a month exists at consistency level 2 (consistent, reviewed by ANA) we use it; otherwise level 1 (raw) and mark it provisional. Last level-2 date: 2014-12-30. Level-1 days used: 0.",
+    "Per-day status codes from ANA (CotaNNStatus): 251 days flagged 2 'estimated' are marked estimated; 0 days flagged 3 'doubtful' and 0 days flagged 4 'dry staff gauge' are kept as published with their consistency-level quality.",
+    "Daily value: ANA's daily-mean row where published (normally the mean of the 07:00 and 17:00 staff readings); otherwise the mean of the reading rows for that day. Days by source row: {'daily_mean_row': 41009}.",
+    "Historic record ends 2014-12-30. Days after that come from the ANA telemetry feed (DadosHidrometeorologicos, mostly 15-minute readings), averaged to a daily mean (4307 days, marked provisional). Telemetry days with fewer than 12 readings: 205.",
+    "No fill values found in this series; ANA leaves missing days blank.",
+    "Share of days marked estimated by decade: {1900: 0.016, 1910: 0.002, 1920: 0.002, 1930: 0.001, 1940: 0.001, 1960: 0.001, 1990: 0.0, 2000: 0.001, 2010: 0.049}."
+  ],
+  "measurement_history": [
+    {
+      "date": "1902-09",
+      "fact": "Rio Negro levels at the port of Manaus have been measured daily since September 1902.",
+      "source": "https://www.scielo.br/j/aa/a/KH8cBzrnZSQTSppFSB55Bjg/?lang=pt"
+    },
+    {
+      "date": "1902-09 to 2014",
+      "fact": "ANA inventory lists the staff gauge series from 1902-09-01 to 2014-06-01; the ANA historic file used here has reviewed values to 2014-12-30.",
+      "source": "https://telemetriaws1.ana.gov.br/ServiceANA.asmx/HidroInventario?codEstDE=14990000&codEstATE=&tpEst=&nmEst=&nmRio=&codSubBacia=&codBacia=&nmMunicipio=&nmEstado=&sgResp=&sgOper=&telemetrica="
+    },
+    {
+      "date": "2001-06",
+      "fact": "ANA inventory: telemetry starts 2001-06-01, so it overlaps the staff gauge series.",
+      "source": "https://telemetriaws1.ana.gov.br/ServiceANA.asmx/HidroInventario?codEstDE=14990000&codEstATE=&tpEst=&nmEst=&nmRio=&codSubBacia=&codBacia=&nmMunicipio=&nmEstado=&sgResp=&sgOper=&telemetrica="
+    },
+    {
+      "date": "2015-01-01",
+      "fact": "Join: this file uses the reviewed staff gauge series through 2014-12-30 and telemetry daily means from 2015-01-01. On 2,274 days in 2005-2014 that have both, telemetry minus staff gauge has a median of 0 cm and yearly medians between -1.2 and 0 cm, so the two share the same gauge zero and the join is continuous.",
+      "source": "derived from ANA HidroSerieHistorica and DadosHidrometeorologicos, station 14990000"
+    },
+    {
+      "date": "2017",
+      "fact": "SGB: Manaus levels use a local, arbitrary reference tied to the port staff gauge; subtract 7.00 m from a reading to refer it to sea level.",
+      "source": "https://www.sgb.gov.br/sace/boletins/Amazonas/20170519_15-20170519 - 154457.pdf"
+    },
+    {
+      "date": null,
+      "fact": "Not found: who reads the port gauge and at what hour, any documented gauge move or zero change, a CPRM note giving 6.83 m instead of 7.00 m (could not be opened).",
+      "source": null
+    }
+  ],
+  "public_notes": "Manaus has one of the longest river records in the tropics, read daily at the port since 1902. Since 2015 the values come from an automatic sensor and have not yet been reviewed; we checked ten years where both exist and they agree to within about a centimeter on a typical day."
+}

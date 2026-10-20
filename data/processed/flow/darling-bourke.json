@@ -1,0 +1,131 @@
+{
+ "id": "darling-bourke",
+ "river": "murray-darling",
+ "name": "Bourke",
+ "station_name": "DARLING@BOURKE TOWN",
+ "station_code": "425003",
+ "country": "Australia",
+ "lat": -30.087894,
+ "lon": 145.936761,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "m3/s",
+ "daily_stat": "mean",
+ "source": "Bureau of Meteorology, Water Data Online (KiWIS API)",
+ "source_url": "https://www.bom.gov.au/waterdata/services",
+ "license": "CC BY 4.0 (BoM Water Data Online copyright notice)",
+ "credit": "Bureau of Meteorology; data from NSW - Water NSW",
+ "flag_rule": "BoM codes A and B are measured, C estimated, E measured before 1991 and provisional from 1991 on; F dropped.",
+ "notes": [
+  "BoM publishes discharge that the station owner computes from the water level through a rating curve, checked by field flow measurements (Bureau of Meteorology).",
+  "BoM series DMQaQc.Merged.DailyMean.24HR, ts_id 169509010, station 425003 DARLING@BOURKE TOWN; data owner NSW - Water NSW (Bureau of Meteorology).",
+  "Daily mean of the merged quality-controlled record, computed by BoM over 24 hours; the API does not say how many readings fed each early-year mean (Bureau of Meteorology).",
+  "Quality codes (10 quality-A best available Quality; 90 quality-B compromised; 110 quality-C estimate; 140 quality-E unknown): counts {10: 9955, 90: 4023, 110: 232, 140: 5757}. A and B (compromised) are measured, C (estimate) estimated, and E (unknown quality) measured before 1991 and provisional from 1991 on (188 days), where it marks recent unchecked values (Bureau of Meteorology).",
+  "Share of days with code E (unknown quality) by decade: {1970: 1.0, 1980: 0.818, 1990: 0.018, 2020: 0.05}; with code B (compromised): {1890: 1.0, 1990: 0.481, 2000: 0.435, 2010: 0.073, 2020: 0.032} (Bureau of Meteorology).",
+  "Dropped: 28138 empty timestamps, 0 values coded F (missing or incorrect) and 0 negative values (Bureau of Meteorology)."
+ ],
+ "first_date": "1895-02-02",
+ "last_date": "2026-10-16",
+ "n_days": 19967,
+ "coverage_by_decade": [
+  {
+   "decade": 1890,
+   "share_days": 0.1851,
+   "share_measured": 0.1851,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1900,
+   "share_days": 0.0,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1910,
+   "share_days": 0.0,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1920,
+   "share_days": 0.0,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1930,
+   "share_days": 0.0,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1940,
+   "share_days": 0.0,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1950,
+   "share_days": 0.0,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1960,
+   "share_days": 0.0,
+   "share_measured": 0.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1970,
+   "share_days": 0.7527,
+   "share_measured": 0.7527,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 0.9439,
+   "share_measured": 0.9198,
+   "share_estimated": 0.0241,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 0.9734,
+   "share_estimated": 0.0088,
+   "share_provisional": 0.0178
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 0.9973,
+   "share_estimated": 0.0027,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.9751,
+   "share_estimated": 0.0249,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 1.0,
+   "share_measured": 0.946,
+   "share_estimated": 0.0044,
+   "share_provisional": 0.0496
+  }
+ ]
+}

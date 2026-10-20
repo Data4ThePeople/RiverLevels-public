@@ -1,0 +1,136 @@
+{
+  "id": "danube-hofkirchen",
+  "river": "danube",
+  "name": "Hofkirchen",
+  "country": "Germany",
+  "lat": 48.67663,
+  "lon": 13.115164,
+  "kind": "river",
+  "source": "Bayerisches Landesamt für Umwelt, Gewässerkundlicher Dienst Bayern (GKD)",
+  "source_url": "https://www.gkd.bayern.de/de/fluesse/wasserstand/passau/hofkirchen-10088003",
+  "station_code": "10088003",
+  "unit": "cm",
+  "datum": "cm above gauge zero (299.58 m NHN (DHHN2016))",
+  "daily_stat": "mean",
+  "first_date": "1925-11-01",
+  "last_date": "2026-10-14",
+  "n_days": 36873,
+  "coverage_by_decade": [
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 1.0,
+      "share_measured": 0.8842,
+      "share_estimated": 0.0,
+      "share_provisional": 0.1158
+    }
+  ],
+  "license": "CC BY 4.0. Required credit: Datenquelle: Bayerisches Landesamt für Umwelt, www.lfu.bayern.de",
+  "notes": [
+    "Daily mean (Tagesmittelwert) of the water level in cm above gauge zero, from the GKD download center (Gesamtzeitraum, Tageswerte).",
+    "Quality from the GKD Pruefstatus column: 'Geprueft' (checked) -> measured, 'Rohdaten' (raw) -> provisional. Counts in the file: {'Geprueft': 36586, 'Rohdaten': 287}.",
+    "Provisional (Rohdaten) days run from 2026-01-01 to 2026-10-14.",
+    "Rows with an empty daily mean dropped: 0. No fill values (such as -999) found.",
+    "The current, unfinished day is published in its own file and is left out.",
+    "Gauge zero as stated in the file header: 299.58 m NHN (DHHN2016). It is a single current value; the file does not list earlier gauge zeros, so a past datum change would not be visible here.",
+    "Coordinates converted from ETRS89 / UTM 32N (802904 E, 5399685 N) in the file header.",
+    "GKD database query time printed in the file: 01.10.2026 00:00."
+  ],
+  "measurement_history": [
+    {
+      "date": "1925-11-01",
+      "fact": "The GKD daily record starts on this date.",
+      "source": "https://www.gkd.bayern.de/de/fluesse/wasserstand/kelheim/hofkirchen-10088003/download"
+    },
+    {
+      "date": "current",
+      "fact": "Gauge zero 299.58 m NHN (DHHN2016); operated by the federal waterway office for the Danube (WSA Donau MDK). Past gauge zeros are not listed.",
+      "source": "https://www.gkd.bayern.de/de/fluesse/wasserstand/kelheim/hofkirchen-10088003"
+    },
+    {
+      "date": "current",
+      "fact": "Hofkirchen lies on the roughly 70 km free-flowing Danube stretch between Straubing and Vilshofen.",
+      "source": "https://regensburg.bund-naturschutz.de/fileadmin/kreisgruppen/regensburg/Bilder/kreisgruppe/Veranstaltungen/PM_Natur-_und_Kultur-Erlebnis-Schifffahrt-Regensburg-Passau_2024_final.pdf"
+    },
+    {
+      "date": "1964-1966",
+      "fact": "Our comparison with Pfelling shows the gap between the two gauges widening by about 20 cm over 1964 to 1966 at similar flows; which gauge changed, and why, was not found.",
+      "source": "scripts/fetch/gkd_bayern.py output (data/processed/danube-hofkirchen.csv vs danube-pfelling.csv)"
+    },
+    {
+      "date": "not found",
+      "fact": "Early reading method, recorder start date and riverbed change: not found.",
+      "source": "https://www.gkd.bayern.de/de/fluesse/wasserstand/kelheim/hofkirchen-10088003"
+    }
+  ],
+  "public_notes": "The level is measured against a fixed mark below the riverbed, not the depth of the water. Values from January 2026 on are raw readings that the Bavarian agency has not checked yet."
+}

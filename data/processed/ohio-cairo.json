@@ -1,0 +1,204 @@
+{
+  "id": "ohio-cairo",
+  "river": "ohio",
+  "name": "Cairo",
+  "country": "United States",
+  "lat": 36.998568,
+  "lon": -89.159401,
+  "kind": "river",
+  "source": "USACE CWMS Data API + USGS NWIS (provisional extension)",
+  "source_url": "https://cwms-data.usace.army.mil/cwms-data/timeseries?office=MVS&name=Cairo-Ohio.Stage.Inst.~1Day.0.MVDhist-rev",
+  "station_code": "MVS:Cairo-Ohio.Stage.Inst.~1Day.0.MVDhist-rev",
+  "unit": "ft",
+  "datum": "ft above gauge zero (270.03 ft NAVD88)",
+  "daily_stat": "single reading",
+  "first_date": "1858-01-01",
+  "last_date": "2026-10-14",
+  "n_days": 58630,
+  "coverage_by_decade": [
+    {
+      "decade": 1850,
+      "share_days": 0.6329,
+      "share_measured": 0.6329,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1860,
+      "share_days": 0.4703,
+      "share_measured": 0.4703,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1870,
+      "share_days": 0.8133,
+      "share_measured": 0.8133,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1880,
+      "share_days": 0.9964,
+      "share_measured": 0.9964,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1890,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1900,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1910,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1920,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1930,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1940,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1950,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1960,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1970,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1980,
+      "share_days": 0.9986,
+      "share_measured": 0.9986,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 1990,
+      "share_days": 0.9995,
+      "share_measured": 0.9995,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2000,
+      "share_days": 1.0,
+      "share_measured": 1.0,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2010,
+      "share_days": 0.9989,
+      "share_measured": 0.9989,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0
+    },
+    {
+      "decade": 2020,
+      "share_days": 0.956,
+      "share_measured": 0.9427,
+      "share_estimated": 0.0,
+      "share_provisional": 0.0133
+    }
+  ],
+  "license": "Public domain (US federal government work). Credit: U.S. Army Corps of Engineers, U.S. Geological Survey.",
+  "notes": [
+    "CWMS quality codes in the file: {0: 58708}. Code 0 means the value was never screened; CWMS carries no approved/provisional flag for these historical files, so unflagged values are 'measured'. Values flagged as replaced (interpolated, manually changed or graphically estimated) are 'estimated': 0 days.",
+    "Dropped 0 fill values (>= 9000, such as 99999) and 0 null values; 0 values flagged missing or rejected.",
+    "111 days in 2024-03-10 to 2024-06-28 have a second reading (at 09:00) besides the 08:00 reading; kept the 08:00 reading and dropped the extra one.",
+    "One instantaneous reading per day (not a daily mean). In the file's time zone (US/Central): 08:00 on 52019 days, 07:59 on 6566 days, 07:50 on 12 days; in UTC: 14:00 on 30530 days, 13:00 on 21489 days, 13:50 on 6578 days.",
+    "Extended 33 days (2026-09-12 to 2026-10-14) past the CWMS public lag with USGS 370000089094501 instantaneous gage height at 08:00 local, the CWMS reading hour. Same datum: over 44 overlapping days the median difference was +0.00 ft (largest 0.00 ft). USGS marks these values provisional, and so do we.",
+    "Gauge zero 270.03 ft NAVD88 per the CWMS location record. Cairo stage also reflects Mississippi River backwater at the confluence.",
+    "Levels are rounded to 0.01 ft: the API converts from stored meters and returns float noise such as 12.979999999999999."
+  ],
+  "measurement_history": [
+    {
+      "date": "not found",
+      "fact": "A record start in 1858 at Cairo: not found in NWS, USACE CWMS, or USGS pages checked.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
+    },
+    {
+      "date": "1871-12-24",
+      "fact": "NWS low-water list for Cairo begins Dec. 24, 1871, with -1.0 ft, still the lowest listed.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
+    },
+    {
+      "date": "1882-02-25",
+      "fact": "Earliest crest in the NWS historic crest list for Cairo is Feb. 25, 1882.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
+    },
+    {
+      "date": "not found",
+      "fact": "NWS: the Cairo gauge is on the Ohio River but strongly affected by backwater from the Mississippi.",
+      "source_url": "https://www.weather.gov/pah/recordrivers"
+    },
+    {
+      "date": "1929",
+      "fact": "USACE: Ohio River Locks and Dams 52 and 53, upstream of Cairo, were completed in 1929.",
+      "source_url": "https://www.dvidshub.net/news/printable/291004"
+    },
+    {
+      "date": "2018-09-04",
+      "fact": "USACE: Olmsted Locks and Dam opened Sept. 4, 2018; Lock and Dam 53 ended operations Aug. 15, 2018.",
+      "source_url": "https://www.lrd.usace.army.mil/Media/News/Article/3685126/louisville-district-announces-official-closure-of-lock-and-dam-53/"
+    },
+    {
+      "date": "2024-01-16",
+      "fact": "USACE announced official closure of the Lock and Dam 53 project.",
+      "source_url": "https://www.lrd.usace.army.mil/Media/News/Article/3685126/louisville-district-announces-official-closure-of-lock-and-dam-53/"
+    },
+    {
+      "date": "not found",
+      "fact": "NWS lists gauge zero as 270.03 ft NAVD88 and 270.47 ft NGVD29.",
+      "source_url": "https://api.water.noaa.gov/nwps/v1/gauges/CIRI2"
+    },
+    {
+      "date": "not found",
+      "fact": "How early readings were taken, recorder start, and gauge moves: not found in NWS, CWMS, or USGS pages checked.",
+      "source_url": "https://cwms-data.usace.army.mil/cwms-data/locations/Cairo-Ohio?office=MVS"
+    }
+  ],
+  "public_notes": "The Cairo gauge is on the Ohio River just above where it meets the Mississippi, so the Mississippi's level backs up and raises readings here. Publishers checked here do not describe how early readings were taken or whether the gauge moved."
+}

@@ -1,0 +1,76 @@
+{
+ "id": "danube-kienstock",
+ "river": "danube",
+ "name": "Kienstock",
+ "station_name": "Kienstock",
+ "station_code": "HZB 207357",
+ "country": "Austria",
+ "lat": 48.382282,
+ "lon": 15.462576,
+ "same_station": true,
+ "offset_note": "",
+ "kind": "river flow",
+ "unit": "m3/s",
+ "daily_stat": "mean",
+ "source": "eHYD, Hydrographischer Dienst Österreich (BML), yearbook series Q-Tagesmittel; station operator via donau",
+ "source_url": "https://ehyd.gv.at/services/MessstellenExtraData/owf",
+ "license": "CC BY 4.0 (Open Government Data Austria, per the INSPIRE metadata record; not shown on ehyd.gv.at itself)",
+ "credit": "Datenquelle: ehyd.gv.at",
+ "flag_rule": "eHYD gives no per-value flag, so values are measured, except whole months whose station footnote says discharge was computed from filled-in levels, that data were filled ('ergänzt'), or that discharge was affected by ice ('durch Eis beeinflusst'); those are estimated.",
+ "notes": [
+  "Discharge at Kienstock is computed from the water level through a rating curve (Pegelschlüssel); the station master data list these discharge methods (start, end, method): 01.01.1976 to now: Pegelschlüssel-händische Messung; 01.01.1976 to now: unbestimmt-händische Messung (eHYD).",
+  "Daily mean discharge from the eHYD yearbook export, series (10001016,Abfluss,I,Mit,T,1,F,Z,50,,,), period 01.01.1978 00:00,01.01.2024 00:00. eHYD publishes only checked yearbook data, so the series ends with the last published yearbook year, 2023 (eHYD).",
+  "Months marked estimated because a footnote says discharge was computed from filled-in levels or from filled data: 75 (1996-01, 1996-02, 1996-03, 1996-04, 1996-05, 1996-07, 1996-09, 1996-10, 1996-11, 1996-12, 1997-06, 1997-08, 1997-10, 1998-07, 1998-08, 1998-09, 1998-10, 1999-08, 1999-10, 1999-12, 2000-01, 2000-11, 2000-12, 2002-01, 2002-02, 2002-03, 2002-04, 2002-05, 2002-06, 2002-07, 2002-08, 2002-09, 2003-03, 2003-10, 2003-11, 2003-12, 2004-06, 2004-08, 2004-10, 2006-06, 2006-08, 2006-10, 2007-02, 2007-05, 2007-06, 2008-03, 2008-04, 2008-11, 2009-01, 2009-05, 2009-06, 2009-08, 2009-10, 2010-01, 2011-01, 2011-11, 2011-12, 2012-01, 2012-03, 2012-07, 2012-08, 2012-09, 2012-11, 2012-12, 2016-01, 2016-02, 2016-03, 2016-04, 2016-05, 2016-06, 2016-08, 2016-09, 2016-10, 2016-11, 2023-10). The footnotes do not say which days, so every day of those months is marked (eHYD station master data).",
+  "Footnotes say discharge was affected by ice in: 1997: Im Jän,Dez durch Eis beeinflusst; 2005: Im Jän,Feb,Mrz,Apr,Mai,Okt,Nov,Dez durch Eis beeinflusst. Those 10 months are marked estimated, like ice-affected days at USGS and ECCC gauges (eHYD station master data).",
+  "Other discharge footnotes: 01.01.2018: JB 2018: Neuberechnung des Flusskilometers (eHYD).",
+  "Rows in the file: 16801; calendar days missing between first and last value: 0. Gap markers ('Lücke') skipped: 1 (2024-01-01; a marker on the day after the last value only closes the series). Fill values dropped: 0. Negative values dropped: 0 (eHYD).",
+  "Coordinates from the eHYD PegelAktuell map layer, WGS84 (eHYD)."
+ ],
+ "first_date": "1978-01-01",
+ "last_date": "2023-12-31",
+ "n_days": 16801,
+ "coverage_by_decade": [
+  {
+   "decade": 1970,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1980,
+   "share_days": 1.0,
+   "share_measured": 1.0,
+   "share_estimated": 0.0,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 1990,
+   "share_days": 1.0,
+   "share_measured": 0.8152,
+   "share_estimated": 0.1848,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2000,
+   "share_days": 1.0,
+   "share_measured": 0.6581,
+   "share_estimated": 0.3419,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2010,
+   "share_days": 1.0,
+   "share_measured": 0.8242,
+   "share_estimated": 0.1758,
+   "share_provisional": 0.0
+  },
+  {
+   "decade": 2020,
+   "share_days": 1.0,
+   "share_measured": 0.9788,
+   "share_estimated": 0.0212,
+   "share_provisional": 0.0
+  }
+ ]
+}
