@@ -145,10 +145,11 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
   </header>
   <div class="main">
     <div class="mapwrap">
-      <canvas id="map" aria-label="World map of rivers. Blue rivers have long water level records; gray rivers do not." role="img"></canvas>
+      <canvas id="map" aria-label="World map of rivers. Blue rivers have long water level records, blue and green rivers also have flow records, green rivers have flow records only, and gray rivers have no public record." role="img"></canvas>
       <div class="maptools"><button id="worldBtn" type="button">World view</button></div>
       <div class="maplegend">
-        <span class="key"><i style="border-color:var(--river)"></i>Long public water level record</span>
+        <span class="key"><i style="border-color:var(--river)"></i>Water level record</span>
+        <span class="key"><i style="border-top:2px solid var(--river);border-bottom:2px solid var(--flow)"></i>Water level and flow records</span>
         <span class="key"><i style="border-color:var(--flow)"></i>Flow record only</span>
         <span class="key"><i style="border-color:var(--nodata)"></i>No public water level record</span>
         <span class="key"><b style="background:var(--river)"></b>Gauge (zoom in to see)</span>
@@ -164,7 +165,7 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
     <aside class="panel" id="panel" aria-live="polite">
       <div id="intro">
         <h2 id="introTitle"></h2>
-        <p class="nodata-card">Each blue river on the map has at least one gauge with a long daily record of its water level. Click a river or choose one from the list. Where a gauge also has a record of how much water flows past it, the Flow button above the chart shows it. Green rivers have no open water level record but do have a long daily flow record. Gray rivers are major rivers whose history is not openly published.</p>
+        <p class="nodata-card">Each blue river on the map has at least one gauge with a long daily record of its water level. Click a river or choose one from the list. Where a river is drawn blue and green, at least one of its gauges also has a record of how much water flows past it, and the Flow switch above the chart shows it. Green rivers have no open water level record but do have a long daily flow record. Gray rivers are major rivers whose history is not openly published.</p>
         <div class="caveat">
           <p class="figtitle">Before you look: old readings are less certain</p>
           <p>Most readings before the mid-1900s were taken by hand from a marked post in the river, often once a day. Since then, many gauges have moved, had their zero point reset, or been affected by new dams and by riverbeds that wore down over time. Some records have years with missing days, and a few have values the publisher filled in.</p>
@@ -299,6 +300,7 @@ const LAND = P(D.geo.land), LAKES = P(D.geo.lakes);
 const RGEO = {}; for (const k in D.geo.rivers) RGEO[k] = P(D.geo.rivers[k]);
 const RIVERS = D.rivers, NODATA = D.no_data, GAUGES = D.gauges;
 const RIVER_BY_ID = Object.fromEntries([...RIVERS, ...NODATA].map(r => [r.id, r]));
+for (const r of RIVERS) r.has_flow = !r.flow_only && r.gauges.some(g => GAUGES[g] && GAUGES[g].flow); // drawn blue and green
 for (const id in GAUGES) GAUGES[id].xy = proj(GAUGES[id].lon, GAUGES[id].lat);
 
 // ---------- decode gauge series (gzip of int32 deltas, base64) ----------
@@ -374,6 +376,19 @@ function path(ctx, rings, close) {
     if (close) ctx.closePath();
   }
 }
+// the same river line shifted d px to one side, in screen space (used to draw level and flow side by side)
+function offsetPath(ctx, rings, d) {
+  ctx.beginPath();
+  for (const r of rings) {
+    const P = r.map(toScreen), n = P.length;
+    for (let i = 0; i < n; i++) {
+      const a = P[Math.max(0, i - 1)], b = P[Math.min(n - 1, i + 1)];
+      let dx = b[0] - a[0], dy = b[1] - a[1]; const len = Math.hypot(dx, dy) || 1; dx /= len; dy /= len;
+      const x = P[i][0] - dy * d, y = P[i][1] + dx * d;
+      i ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+    }
+  }
+}
 function riverPts(id) {
   const pts = RGEO[id].flat();
   const r = RIVER_BY_ID[id];
@@ -397,9 +412,14 @@ function drawMap() {
     const on = r.id === selRiver, hov = r.id === hoverRiver;
     const lw = (on ? 4 : hov ? 3.5 : 2) * boost;
     if (world) { path(c, RGEO[r.id]); c.strokeStyle = css("--land"); c.lineWidth = lw + 3; c.stroke(); }
-    path(c, RGEO[r.id]);
-    c.strokeStyle = r.flow_only ? (selRiver && !on ? css("--flow-dim") : css("--flow")) : selRiver && !on ? css("--river-dim") : css("--river");
-    c.lineWidth = lw; c.stroke();
+    const dim = selRiver && !on, blue = css(dim ? "--river-dim" : "--river"), green = css(dim ? "--flow-dim" : "--flow");
+    if (r.has_flow) { // level and flow: a thinner blue and green line side by side
+      const half = Math.max(1.2, lw * 0.6);
+      offsetPath(c, RGEO[r.id], half / 2); c.strokeStyle = blue; c.lineWidth = half; c.stroke();
+      offsetPath(c, RGEO[r.id], -half / 2); c.strokeStyle = green; c.lineWidth = half; c.stroke();
+    } else {
+      path(c, RGEO[r.id]); c.strokeStyle = r.flow_only ? green : blue; c.lineWidth = lw; c.stroke();
+    }
   }
   const surf = css("--surface");
   const labels = [];
