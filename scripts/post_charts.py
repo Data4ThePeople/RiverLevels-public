@@ -1,7 +1,7 @@
 """Static charts for posts/world-river-levels, drawn from data/processed only.
 
 House style follows the Data 4 The People dark charts (Sulfur project plot_style.py):
-surface #181A1B, ink #BBBDC0. Level is the page's dark-mode blue, flow its dark-mode aqua,
+surface #181A1B, ink #BBBDC0. Level is the page's dark-mode blue, flow its dark-mode orange,
 thresholds its dark-mode red. Other years are gray, so no chart relies on more than one hue.
 """
 from pathlib import Path
@@ -18,7 +18,7 @@ PROC = ROOT / "data/processed"
 OUT = ROOT / "posts/world-river-levels/images"
 
 SURFACE, INK, INK_DIM, MUTED, GRID = "#181A1B", "#BBBDC0", "#8A9098", "#6B7178", "#2A2D2F"
-LEVEL, FLOW, THRESH, FILL = "#3987e5", "#199e70", "#e66767", "#26292b"
+LEVEL, FLOW, THRESH, FILL = "#3987e5", "#e08a1e", "#e66767", "#26292b"
 CREDIT = "Built by Data 4 The People"
 
 mpl.rcParams.update({

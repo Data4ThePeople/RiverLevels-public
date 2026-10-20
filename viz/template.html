@@ -13,8 +13,8 @@
   --land: #f4f1e8; --land-edge: #cfc9b8; --sea: #cfe3f5; --lake: #b7d3f0;
   --river: #2a78d6; --river-dim: #9ec5f4; --nodata: #b9b7ae;
   --water: #3987e5; --water-wash: rgba(42,120,214,0.18); --bank: #d9d3c4; --bank-edge: #b8b0a0;
-  --prov: #86b6ef; --est: #eb6834; --thresh: #d03b3b; --accent: #2a78d6;
-  --flow: #1baf7a; --flow-prov: #8fd9bd; --flow-dim: #a9dfc9;
+  --prov: #86b6ef; --est: #b0306a; --thresh: #d03b3b; --accent: #2a78d6;
+  --flow: #c96a00; --flow-prov: #efb36b; --flow-dim: #f1cfa3;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -24,8 +24,8 @@
     --land: #2a2925; --land-edge: #45433d; --sea: #12202f; --lake: #1a3350;
     --river: #3987e5; --river-dim: #184f95; --nodata: #5a5955;
     --water: #3987e5; --water-wash: rgba(57,135,229,0.22); --bank: #3d3a33; --bank-edge: #57524a;
-    --prov: #6da7ec; --est: #d95926; --thresh: #e66767; --accent: #3987e5;
-    --flow: #199e70; --flow-prov: #5cc39d; --flow-dim: #125f45;
+    --prov: #6da7ec; --est: #cf3f7c; --thresh: #e66767; --accent: #3987e5;
+    --flow: #e08a1e; --flow-prov: #f5bf7a; --flow-dim: #6b4310;
   }
 }
 :root[data-theme="dark"] {
@@ -35,8 +35,8 @@
   --land: #2a2925; --land-edge: #45433d; --sea: #12202f; --lake: #1a3350;
   --river: #3987e5; --river-dim: #184f95; --nodata: #5a5955;
   --water: #3987e5; --water-wash: rgba(57,135,229,0.22); --bank: #3d3a33; --bank-edge: #57524a;
-  --prov: #6da7ec; --est: #d95926; --thresh: #e66767; --accent: #3987e5;
-  --flow: #199e70; --flow-prov: #5cc39d; --flow-dim: #125f45;
+  --prov: #6da7ec; --est: #cf3f7c; --thresh: #e66767; --accent: #3987e5;
+  --flow: #e08a1e; --flow-prov: #f5bf7a; --flow-dim: #6b4310;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; height: 100%; }
@@ -54,6 +54,7 @@ button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px s
 .mapwrap { position: relative; flex: 1; min-width: 0; background: var(--sea); }
 #map { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
 .maptools { position: absolute; left: 12px; top: 12px; display: flex; gap: 6px; }
+#zoomIn, #zoomOut { min-width: 34px; min-height: 32px; font-size: 17px; line-height: 1; padding: 4px 8px; }
 .maplegend { position: absolute; left: 12px; bottom: 10px; font-size: 12px; color: var(--ink-2); background: color-mix(in srgb, var(--surface) 85%, transparent); padding: 4px 8px; border-radius: 6px; display: flex; gap: 12px; flex-wrap: wrap; }
 .key { display: inline-flex; align-items: center; gap: 5px; }
 .key i { display: inline-block; width: 16px; height: 0; border-top: 2px solid; }
@@ -145,12 +146,12 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
   </header>
   <div class="main">
     <div class="mapwrap">
-      <canvas id="map" aria-label="World map of rivers. Blue rivers have long water level records, blue and green rivers also have flow records, green rivers have flow records only, and gray rivers have no public record." role="img"></canvas>
-      <div class="maptools"><button id="worldBtn" type="button">World view</button></div>
+      <canvas id="map" aria-label="World map of rivers. Solid blue rivers have long water level records, rivers drawn blue beside dashed orange also have flow records, dashed orange rivers have flow records only, and gray rivers have no public record." role="img"></canvas>
+      <div class="maptools"><button id="zoomIn" type="button" aria-label="Zoom in">+</button><button id="zoomOut" type="button" aria-label="Zoom out">&minus;</button><button id="worldBtn" type="button">World view</button></div>
       <div class="maplegend">
         <span class="key"><i style="border-color:var(--river)"></i>Water level record</span>
-        <span class="key"><i style="border-top:2px solid var(--river);border-bottom:2px solid var(--flow)"></i>Water level and flow records</span>
-        <span class="key"><i style="border-color:var(--flow)"></i>Flow record only</span>
+        <span class="key"><i style="border-top:2px solid var(--river);border-bottom:2px dashed var(--flow)"></i>Water level and flow records</span>
+        <span class="key"><i style="border-top:2px dashed var(--flow)"></i>Flow record only</span>
         <span class="key"><i style="border-color:var(--nodata)"></i>No public water level record</span>
         <span class="key"><b style="background:var(--river)"></b>Gauge (zoom in to see)</span>
         <span class="key"><b style="border:2px solid var(--flow);width:9px;height:9px"></b>Flow-only gauge</span>
@@ -165,7 +166,7 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
     <aside class="panel" id="panel" aria-live="polite">
       <div id="intro">
         <h2 id="introTitle"></h2>
-        <p class="nodata-card">Each blue river on the map has at least one gauge with a long daily record of its water level. Click a river or choose one from the list. Where a river is drawn blue and green, at least one of its gauges also has a record of how much water flows past it, and the Flow switch above the chart shows it. Green rivers have no open water level record but do have a long daily flow record. Gray rivers are major rivers whose history is not openly published.</p>
+        <p class="nodata-card">Each blue river on the map has at least one gauge with a long daily record of its water level. Click a river or choose one from the list. Where a river is drawn blue beside a dashed orange line, at least one of its gauges also has a record of how much water flows past it, and the Flow switch above the chart shows it. Dashed orange rivers have no open water level record but do have a long daily flow record. Gray rivers are major rivers whose history is not openly published.</p>
         <div class="caveat">
           <p class="figtitle">Before you look: old readings are less certain</p>
           <p>Many early readings were taken by hand from a marked post in the river, often once a day. Since then, many gauges have moved, had their zero point reset, or been affected by new dams and by riverbeds that wore down over time. Some records have years with missing days, and a few have values the publisher filled in.</p>
@@ -221,7 +222,7 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
         </div>
         <p class="figsub" id="breakNote"></p>
         <div class="legend" id="avgLegend">
-          <span class="key"><i style="border-color:var(--ink)"></i>12-month average (drawn only when 300 of the past 365 days have a reading)</span>
+          <span class="key"><i style="border-color:var(--ink)"></i>Rolling 12-month average: the 365 days up to each date, not a calendar or water year (needs 300 days with a reading)</span>
         </div>
         <div class="legend" id="qLegend">
           <span class="key" data-q="0"><i style="border-color:var(--river)"></i>Daily, measured</span>
@@ -246,7 +247,7 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
             <span class="key" data-q="0"><i style="border-color:var(--flow)"></i>Daily flow, measured</span>
             <span class="key" data-q="1"><i style="border-color:var(--flow-prov)"></i>Daily flow, provisional</span>
             <span class="key" data-q="2"><i style="border-color:var(--est)"></i>Daily flow, estimated</span>
-            <span class="key"><i style="border-color:var(--ink)"></i>12-month average</span>
+            <span class="key"><i style="border-color:var(--ink)"></i>Rolling 12-month average (the 365 days up to each date)</span>
           </div>
           <p class="stats" id="fStats"></p>
         </div>
@@ -300,7 +301,7 @@ const LAND = P(D.geo.land), LAKES = P(D.geo.lakes);
 const RGEO = {}; for (const k in D.geo.rivers) RGEO[k] = P(D.geo.rivers[k]);
 const RIVERS = D.rivers, NODATA = D.no_data, GAUGES = D.gauges;
 const RIVER_BY_ID = Object.fromEntries([...RIVERS, ...NODATA].map(r => [r.id, r]));
-for (const r of RIVERS) r.has_flow = !r.flow_only && r.gauges.some(g => GAUGES[g] && GAUGES[g].flow); // drawn blue and green
+for (const r of RIVERS) r.has_flow = !r.flow_only && r.gauges.some(g => GAUGES[g] && GAUGES[g].flow); // drawn blue beside dashed orange
 for (const id in GAUGES) GAUGES[id].xy = proj(GAUGES[id].lon, GAUGES[id].lat);
 
 // ---------- decode gauge series (gzip of int32 deltas, base64) ----------
@@ -413,12 +414,16 @@ function drawMap() {
     const lw = (on ? 4 : hov ? 3.5 : 2) * boost;
     if (world) { path(c, RGEO[r.id]); c.strokeStyle = css("--land"); c.lineWidth = lw + 3; c.stroke(); }
     const dim = selRiver && !on, blue = css(dim ? "--river-dim" : "--river"), green = css(dim ? "--flow-dim" : "--flow");
-    if (r.has_flow) { // level and flow: a thinner blue and green line side by side
+    if (r.has_flow) { // level and flow: a thin solid blue line beside a dashed orange one
       const half = Math.max(1.2, lw * 0.6);
       offsetPath(c, RGEO[r.id], half / 2); c.strokeStyle = blue; c.lineWidth = half; c.stroke();
-      offsetPath(c, RGEO[r.id], -half / 2); c.strokeStyle = green; c.lineWidth = half; c.stroke();
+      offsetPath(c, RGEO[r.id], -half / 2); c.strokeStyle = green; c.lineWidth = half;
+      c.setLineDash([half * 3, half * 2]); c.lineCap = "butt"; c.stroke(); c.setLineDash([]); c.lineCap = "round";
+    } else if (r.flow_only) { // flow only: a dashed line, so it never relies on color alone
+      path(c, RGEO[r.id]); c.strokeStyle = green; c.lineWidth = lw;
+      c.setLineDash([lw * 2.5, lw * 1.5]); c.lineCap = "butt"; c.stroke(); c.setLineDash([]); c.lineCap = "round";
     } else {
-      path(c, RGEO[r.id]); c.strokeStyle = r.flow_only ? green : blue; c.lineWidth = lw; c.stroke();
+      path(c, RGEO[r.id]); c.strokeStyle = blue; c.lineWidth = lw; c.stroke();
     }
   }
   const surf = css("--surface");
@@ -470,8 +475,8 @@ function segDist(px, py, ax, ay, bx, by) {
   let t = l ? ((px - ax) * dx + (py - ay) * dy) / l : 0; t = Math.max(0, Math.min(1, t));
   return Math.hypot(px - ax - t * dx, py - ay - t * dy);
 }
-function hitTest(mx, my) {
-  let best = null, bd = 12;
+function hitTest(mx, my, touch) {
+  let best = null, bd = touch ? 24 : 12;
   const worldNow = view.k <= worldView().k * 1.5 && !selRiver;
   for (const r of RIVERS) {
     if (selRiver && r.id !== selRiver) continue;
@@ -483,7 +488,7 @@ function hitTest(mx, my) {
     }
   }
   if (best) return best;
-  bd = 8;
+  bd = touch ? 16 : 8;
   for (const r of [...RIVERS, ...NODATA]) {
     for (const line of RGEO[r.id]) {
       let [ax, ay] = toScreen(line[0]);
@@ -496,10 +501,35 @@ function hitTest(mx, my) {
   }
   return best;
 }
-let drag = null;
-map.addEventListener("pointerdown", e => { drag = { x: e.clientX, y: e.clientY, cx: view.cx, cy: view.cy, moved: false }; map.setPointerCapture(e.pointerId); });
+// zoom by factor f about a point given in canvas pixels (mx, my); clamped to the wheel's limits
+function zoomAt(f, mx, my) {
+  target = null;
+  const ox = mx - W / 2, oy = my - H / 2, wk = worldView().k, k = Math.max(wk * 0.9, Math.min(wk * 30, view.k * f));
+  view = { cx: view.cx + ox / view.k - ox / k, cy: view.cy + oy / view.k - oy / k, k }; drawMap();
+}
+let drag = null, pinch = null;
+const touches = new Map();
+const pinchState = () => { const [a, b] = [...touches.values()]; return { d: Math.hypot(a.x - b.x, a.y - b.y), x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }; };
+map.addEventListener("pointerdown", e => {
+  map.setPointerCapture(e.pointerId);
+  if (e.pointerType === "touch") {
+    touches.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (touches.size === 2) { drag = null; pinch = pinchState(); $("mapTip").style.display = "none"; return; }
+  }
+  drag = { x: e.clientX, y: e.clientY, cx: view.cx, cy: view.cy, moved: false };
+});
+const endTouch = e => { touches.delete(e.pointerId); if (touches.size < 2 && pinch) { pinch = null; drag = null; } };
+map.addEventListener("pointercancel", e => { endTouch(e); drag = null; });
 map.addEventListener("pointermove", e => {
   const r = map.getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top;
+  if (touches.has(e.pointerId)) touches.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (pinch && touches.size === 2) { // two fingers: zoom about their midpoint and pan with it
+    const now = pinchState();
+    view = { ...view, cx: view.cx - (now.x - pinch.x) / view.k, cy: view.cy - (now.y - pinch.y) / view.k };
+    zoomAt(now.d / (pinch.d || 1), now.x - r.left, now.y - r.top);
+    pinch = now; return;
+  }
+  if (e.pointerType === "touch" && !drag) return;
   if (drag) {
     const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
     if (Math.hypot(dx, dy) > 3) drag.moved = true;
@@ -521,21 +551,23 @@ map.addEventListener("pointermove", e => {
   } else tip.style.display = "none";
 });
 map.addEventListener("pointerup", e => {
+  const wasPinch = !!pinch || touches.size > 1; endTouch(e);
   const wasDrag = drag && drag.moved; drag = null; map.style.cursor = "grab";
-  if (wasDrag) return;
-  const r = map.getBoundingClientRect(), h = hitTest(e.clientX - r.left, e.clientY - r.top);
+  if (wasDrag || wasPinch) return;
+  const r = map.getBoundingClientRect(), h = hitTest(e.clientX - r.left, e.clientY - r.top, e.pointerType === "touch");
   if (!h) return;
   if (h.gauge) { if (h.river !== selRiver) selectRiver(h.river, h.gauge); else selectGauge(h.gauge); }
   else selectRiver(h.river);
 });
 map.addEventListener("pointerleave", () => { $("mapTip").style.display = "none"; hoverRiver = hoverGauge = null; drawMap(); });
 map.addEventListener("wheel", e => {
-  e.preventDefault(); target = null;
-  const r = map.getBoundingClientRect(), mx = e.clientX - r.left - W / 2, my = e.clientY - r.top - H / 2;
-  const f = Math.exp(-e.deltaY * 0.0015), wk = worldView().k, k = Math.max(wk * 0.9, Math.min(wk * 30, view.k * f));
-  view = { cx: view.cx + mx / view.k - mx / k, cy: view.cy + my / view.k - my / k, k }; drawMap();
+  e.preventDefault();
+  const r = map.getBoundingClientRect();
+  zoomAt(Math.exp(-e.deltaY * 0.0015), e.clientX - r.left, e.clientY - r.top);
 }, { passive: false });
 $("worldBtn").addEventListener("click", () => { selectRiver(null); });
+$("zoomIn").addEventListener("click", () => zoomAt(1.6, W / 2, H / 2));
+$("zoomOut").addEventListener("click", () => zoomAt(1 / 1.6, W / 2, H / 2));
 
 // ---------- river selection ----------
 const riverSel = $("riverSel");
@@ -645,7 +677,7 @@ async function selectGauge(id) {
     fo ? G.datum + ". This river has no open water-level record, so this is how much water passes the gauge, computed from its level. The dial runs from the lowest to the highest daily flow on record."
       : G.datum + ". Shown against this gauge's lowest and highest daily readings " + (G.stats_from ? G.stats_from.label : "since " + G.first_date.slice(0, 4)) + "."] };
   $("xsec").classList.toggle("hidden", fo); $("thNote").classList.toggle("hidden", fo);
-  $("cTitle").textContent = (fo ? "Daily flow" : "Daily readings") + " and 12-month average, " + G.first_date.slice(0, 4) + " to " + G.last_date.slice(0, 4);
+  $("cTitle").textContent = (fo ? "Daily flow" : "Daily readings") + " and rolling 12-month average, " + G.first_date.slice(0, 4) + " to " + G.last_date.slice(0, 4);
   setLegendColors($("qLegend"), fo ? flowColors() : levelColors()); showQualities($("qLegend"), S);
   $("stats").textContent = statsText({ ...G, isFlow: fo }, S, fo ? "flow" : "reading");
   $("flag").textContent = flagText(G, S) + (fo ? "The publisher says provisional flows here are computed from level; it does not say how certified flows are made. See About this record, below." : "Older readings are less certain. See About this record, below.");
@@ -668,7 +700,7 @@ async function selectGauge(id) {
     $("vLevel").textContent = isRes ? "Water surface" : "Water level";
     $("vFlow").textContent = rel ? "Dam release" : "Flow";
     $("viewSw").setAttribute("aria-label", "Show " + (rel ? "dam release" : "flow") + " instead of " + (isRes ? "water surface" : "water level"));
-    $("fcTitle").textContent = (rel ? "Daily release" : "Daily flow") + " and 12-month average, " + fm.first_date.slice(0, 4) + " to " + fm.last_date.slice(0, 4) + " (" + (fm.unit === "m3/s" ? "m³/s" : fm.unit) + ")";
+    $("fcTitle").textContent = (rel ? "Daily release" : "Daily flow") + " and rolling 12-month average, " + fm.first_date.slice(0, 4) + " to " + fm.last_date.slice(0, 4) + " (" + (fm.unit === "m3/s" ? "m³/s" : fm.unit) + ")";
     $("fFlag").textContent = flagText(fm, F) + (rel ? "The release is set by the dam's operators." : "Flow is computed from level, so the highest and lowest flows are the least certain.");
     $("fStats").textContent = statsText(fm, F, rel ? "release" : "flow");
     setLegendColors($("fqLegend"), flowColors()); showQualities($("fqLegend"), F);
@@ -926,7 +958,7 @@ function makeChart(recId, tipId, covId, covTipId) {
     tip.textContent = "";
     const s = document.createElement("strong"); s.textContent = f(ser.v[i]);
     tip.append(s, document.createTextNode("  " + fmtDate(ser.start + i) + (ser.q[i] ? " (" + QWORD[ser.q[i]] + ")" : "")));
-    if (!Number.isNaN(ser.avg[i])) tip.append(document.createElement("br"), document.createTextNode("12-month average: " + f(ser.avg[i])));
+    if (!Number.isNaN(ser.avg[i])) tip.append(document.createElement("br"), document.createTextNode("Rolling 12-month average: " + f(ser.avg[i])));
     tip.style.display = "block";
     const r = rec.getBoundingClientRect();
     tip.style.left = Math.max(0, Math.min(e.clientX - r.left + 10, o.cw - tip.offsetWidth)) + "px"; tip.style.top = "-44px";
