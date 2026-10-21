@@ -128,7 +128,19 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
 @media (prefers-reduced-motion: reduce) { .vswitch .track, .vswitch .knob { transition: none; } }
 #riverView.flowview .lv { display: none !important; }
 #riverView:not(.flowview):not(.fo) .fv { display: none !important; }
-.sect { border-top: 1px solid var(--grid); padding-top: 8px; margin-top: 4px; }
+.sect { border-top: 1px solid var(--grid); padding-top: 14px; margin-top: 10px; }
+.block { display: flex; flex-direction: column; gap: 6px; }
+.block p:empty { display: none; }
+.block .figsub { margin-top: 4px; }
+.block .figtitle + .figsub, .block .figtitle + .flag { margin-top: 0; }
+.keys { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; padding-top: 10px; border-top: 1px dashed var(--grid); }
+.keys .stats { line-height: 1.5; margin-top: 2px; }
+.history .figtitle { margin-bottom: 6px; }
+.history .notes { line-height: 1.5; display: flex; flex-direction: column; gap: 8px; }
+.history .notes p { margin: 0; }
+.history ul { margin-top: 10px; }
+.history li { margin-bottom: 7px; line-height: 1.45; }
+.controls { margin-top: 4px; }
 @container (max-width: 820px) {
   .main { flex-direction: column; overflow-y: auto; }
   .mapwrap { flex: none; height: 340px; }
@@ -212,7 +224,7 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
             <option value="1826">5 years per second</option>
           </select>
         </div>
-        <div class="lv">
+        <div class="lv block sect">
         <p class="figtitle" id="cTitle"></p>
         <div class="chartwrap">
           <canvas id="rec" aria-label="Full daily record for this gauge"></canvas>
@@ -224,6 +236,7 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
           <div class="tip" id="covTip"></div>
         </div>
         <p class="figsub" id="breakNote"></p>
+        <div class="keys">
         <div class="legend" id="avgLegend">
           <span class="key"><i style="border-color:var(--ink)"></i>Rolling 12-month average: the 365 days up to each date, not a calendar or water year (needs 300 days with a reading)</span>
         </div>
@@ -234,7 +247,8 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
         </div>
         <p class="stats" id="stats"></p>
         </div>
-        <div id="flowCharts" class="fv hidden">
+        </div>
+        <div id="flowCharts" class="fv hidden block sect">
           <p class="figtitle" id="fcTitle"></p>
           <p class="flag" id="fFlag"></p>
           <div class="chartwrap">
@@ -246,6 +260,7 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
             <canvas id="fcov" aria-label="Share of days with a flow value, by year"></canvas>
             <div class="tip" id="fcovTip"></div>
           </div>
+          <div class="keys">
           <div class="legend" id="fqLegend">
             <span class="key" data-q="0"><i style="border-color:var(--flow)"></i>Daily flow, measured</span>
             <span class="key" data-q="1"><i style="border-color:var(--flow-prov)"></i>Daily flow, provisional</span>
@@ -253,16 +268,17 @@ footer { font-size: 11px; color: var(--muted); padding: 6px 16px 8px; border-top
             <span class="key"><i style="border-color:var(--ink)"></i>Rolling 12-month average (the 365 days up to each date)</span>
           </div>
           <p class="stats" id="fStats"></p>
+          </div>
         </div>
-        <div class="history">
+        <div class="history sect">
           <div class="lv">
             <p class="figtitle">About this record</p>
-            <p class="notes" id="gNotes"></p>
+            <div class="notes" id="gNotes"></div>
             <ul id="gHist"></ul>
           </div>
           <div id="flowAbout" class="fv hidden">
             <p class="figtitle">About the flow record</p>
-            <p class="notes" id="fNotes"></p>
+            <div class="notes" id="fNotes"></div>
             <ul id="fHist"></ul>
           </div>
         </div>
@@ -701,7 +717,7 @@ async function selectGauge(id) {
   setLegendColors($("qLegend"), fo ? flowColors() : levelColors()); showQualities($("qLegend"), S);
   $("stats").textContent = statsText({ ...G, isFlow: fo }, S, fo ? "flow" : "reading");
   $("flag").textContent = flagText(G, S) + (fo ? "The publisher says provisional flows here are computed from level; it does not say how certified flows are made. See About this record, below." : "Older readings are less certain. See About this record, below.");
-  $("gNotes").textContent = (G.public_notes || []).join(" ") + " Source: " + G.source + ".";
+  fillNotes($("gNotes"), G.public_notes || [], "Source: " + G.source + ".");
   fillHistory($("gHist"), G.history || []);
   $("breakNote").textContent = (G.breaks || []).map(b => "Gray line, " + fmtDate(Date.parse(b.date) / 864e5 - DAY0) + ": " + b.label + ".").join(" ");
   mainChart.set(S, { ...G, isFlow: fo, colors: fo ? flowColors() : levelColors() });
@@ -724,7 +740,7 @@ async function selectGauge(id) {
     $("fFlag").textContent = flagText(fm, F) + (rel ? "The release is set by the dam's operators." : "Flow is computed from level, so the highest and lowest flows are the least certain.");
     $("fStats").textContent = statsText(fm, F, rel ? "release" : "flow");
     setLegendColors($("fqLegend"), flowColors()); showQualities($("fqLegend"), F);
-    $("fNotes").textContent = fm.notes.join(" ") + " Source: " + fm.source + ". License: " + fm.license + ".";
+    fillNotes($("fNotes"), fm.notes, "Source: " + fm.source + ". License: " + fm.license + ".");
     fillHistory($("fHist"), [{ text: "How flow is labeled: " + fm.flag_rule, url: "" }]);
     flowChart.set(F, { ...fm, colors: flowColors() });
   }
@@ -1033,6 +1049,10 @@ window.addEventListener("keydown", e => {
   const words = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"];
   $("introTitle").textContent = (words[RIVERS.length] || RIVERS.length) + " rivers, " + (first ? GAUGES[first].first_date.slice(0, 4) : "") + " to today";
 })();
+// one paragraph per note, so a long record history reads in steps
+function fillNotes(el, notes, source) {
+  el.replaceChildren(...notes.concat(source).map(s => { const p = document.createElement("p"); p.textContent = s; return p; }));
+}
 function fromHash() {
   let h = decodeURIComponent(location.hash.slice(1));
   // "#<gauge>.flow" opens a gauge on its flow view
