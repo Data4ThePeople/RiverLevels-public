@@ -147,6 +147,73 @@ def short_datum(m, unit):
     return f"{UNIT_WORD[unit]} above this gauge's local zero point, not the river's depth"
 
 
+PAGE_URL = "https://data4thepeople.github.io/RiverLevels-public/"
+POST_URL = "https://www.data4thepeople.com/p/world-river-levels"
+REPO_URL = "https://github.com/Data4ThePeople/RiverLevels-public"
+# the publishers behind every gauge on the page, by agency (the per-gauge source lines name the exact API)
+AGENCIES = [
+    "Bundesanstalt für Gewässerkunde (BfG), hyd1d, and PEGELONLINE (WSV), Germany",
+    "Bayerisches Landesamt für Umwelt, Gewässerkundlicher Dienst Bayern (GKD)",
+    "Rijkswaterstaat Waterwebservices, Netherlands",
+    "eHYD, Hydrographischer Dienst Österreich",
+    "Hub'Eau hydrométrie (Schapi), France",
+    "U.S. Army Corps of Engineers, CWMS",
+    "U.S. Bureau of Reclamation, RISE",
+    "U.S. Geological Survey, NWIS",
+    "Environment and Climate Change Canada, Water Survey of Canada",
+    "Agência Nacional de Águas e Saneamento Básico (ANA), Brazil, HidroWeb",
+    "Instituto Nacional del Agua (INA), Argentina",
+    "Dirección de Meteorología e Hidrología (DMH-DINAC), Paraguay",
+    "Bureau of Meteorology, Australia, Water Data Online",
+    "Arctic Great Rivers Observatory (ArcticGRO), Discharge Dataset",
+]
+
+
+def json_ld(rivers, gauges):
+    """Dataset + WebApplication JSON-LD for the page, counted from what the page shows, so Google
+    Dataset Search sees the same gauges, dates and sources as the reader."""
+    firsts = [g["first_date"] for g in gauges.values()] + [g["flow"]["first_date"] for g in gauges.values() if g["flow"]]
+    lasts = [g["last_date"] for g in gauges.values()] + [g["flow"]["last_date"] for g in gauges.values() if g["flow"]]
+    sources = AGENCIES
+    countries = sorted({g["country"] for g in gauges.values()})
+    author = {"@type": "Person", "name": "Eric Pachman", "url": "https://www.data4thepeople.com/authors/eric-pachman"}
+    publisher = {"@type": "Organization", "name": "Data 4 The People", "url": "https://data4thepeople.com"}
+    n_g, n_r, n_c = len(gauges), len(rivers), len(countries)
+    dataset = {
+        "@type": "Dataset", "@id": PAGE_URL + "#dataset",
+        "name": f"World River Levels: daily water level and flow at {n_g} gauges on {n_r} rivers",
+        "description": (f"Daily water level and river flow records for {n_g} gauges on {n_r} rivers in {n_c} countries, "
+                        f"from {min(firsts)} to {max(lasts)}, gathered from public government records. A water level is "
+                        "the height of the water above a fixed mark at the gauge, called the gauge zero, not the depth "
+                        "of the river. Each daily value is labeled measured, provisional or estimated, using the "
+                        "publisher's own flags where they exist. Gaps are left as gaps, and values are stored in the "
+                        "units each agency publishes."),
+        "url": PAGE_URL, "sameAs": REPO_URL, "subjectOf": {"@type": "WebPage", "url": POST_URL},
+        "license": "https://www.data4thepeople.com/terms-of-use", "isAccessibleForFree": True,
+        "creator": author, "publisher": publisher, "inLanguage": "en-US",
+        "temporalCoverage": f"{min(firsts)}/{max(lasts)}",
+        "spatialCoverage": {"@type": "Place", "name": "Rivers in " + ", ".join(countries[:-1]) + " and " + countries[-1]},
+        "variableMeasured": [
+            {"@type": "PropertyValue", "name": "Water level above gauge zero", "unitText": "cm, mm, m or ft, as published"},
+            {"@type": "PropertyValue", "name": "River flow (discharge)", "unitText": "m3/s, L/s or cfs, as published"}],
+        "isBasedOn": sources,
+        "distribution": [{"@type": "DataDownload", "encodingFormat": "application/zip",
+                          "contentUrl": REPO_URL + "/archive/refs/heads/main.zip"}],
+        "creditText": "Data 4 The People, from public records of the agencies listed in the dataset's sources",
+    }
+    app = {
+        "@type": "WebApplication", "@id": PAGE_URL + "#tool", "name": "World River Levels", "url": PAGE_URL,
+        "applicationCategory": "ReferenceApplication", "operatingSystem": "Web browser",
+        "browserRequirements": "Requires JavaScript", "isAccessibleForFree": True,
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "about": {"@id": PAGE_URL + "#dataset"}, "creator": publisher,
+        "description": f"A free interactive map of daily river levels and flow at {n_g} gauges on {n_r} rivers, "
+                       "with a slider and Play button to move through each gauge's record.",
+    }
+    return json.dumps({"@context": "https://schema.org", "@graph": [dataset, app]},
+                      ensure_ascii=False).replace("</", "<\\/")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--out", type=Path, default=ROOT / "dist/index.html", help="output file")
@@ -213,6 +280,7 @@ def main():
         html = html.replace(f"/*{key}*/", "data:image/svg+xml;base64," + svg)
     # shaded relief, made by scripts/relief.py: a separate file next to the page, so the map draws
     # first and the relief (about 2 MB) arrives after it
+    html = html.replace("/*JSONLD*/", json_ld(rivers, gauges))
     html = html.replace("/*RELIEF*/", "relief.jpg")
     html = html.replace("/*RELIEF_META*/null", (ROOT / "viz/relief.json").read_text())
     out = args.out
